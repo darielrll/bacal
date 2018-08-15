@@ -9,4 +9,5 @@
 ################
 # Gradle files #
 ################
-.gradle
+/.gradle
+/gradle
