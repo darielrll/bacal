@@ -1,0 +1,13 @@
+######################
+# Intellijidea files #
+######################
+.idea/workspace.xml
+/build
+/out
+/.idea
+
+
+################
+# Gradle files #
+################
+.gradle
