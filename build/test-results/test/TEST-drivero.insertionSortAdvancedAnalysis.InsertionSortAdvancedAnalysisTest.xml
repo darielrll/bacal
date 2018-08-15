@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2018-07-13T22:11:23" hostname="NI-NTB-183" time="0.341">
+  <properties/>
+  <testcase name="should_return_0_for_the_best_case" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.01"/>
+  <testcase name="should_return_summation_of_length_minus_one_for_worst_case" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.04"/>
+  <testcase name="should_respond_correctly_for_56340_equal_numbers" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.008"/>
+  <testcase name="should_return_zero_for_the_best_case" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.001"/>
+  <testcase name="should_respond_correctly_for_95059_numbers" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.118"/>
+  <testcase name="should_respond_in_less_than_300_milisecond_for_91337_elements" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.045"/>
+  <testcase name="should_respond_in_less_than_300_milisecond_in_best_case_for_a_very_long_list" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.013"/>
+  <testcase name="should_respond_in_less_than_300_milisecond_for_56340_equal_numbers" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.002"/>
+  <testcase name="should_return_swap_number_for_test_1" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_2" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_3" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_4" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_5" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_6" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_7" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_8" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.0"/>
+  <testcase name="should_respond_in_less_than_300_milisecond_for_95059_numbers" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.062"/>
+  <testcase name="should_respond_correctly_for_91337_numbers" classname="drivero.insertionSortAdvancedAnalysis.InsertionSortAdvancedAnalysisTest" time="0.037"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

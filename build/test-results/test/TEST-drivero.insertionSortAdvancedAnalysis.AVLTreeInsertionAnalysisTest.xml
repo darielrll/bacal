@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2018-07-13T22:11:23" hostname="NI-NTB-183" time="0.02">
+  <properties/>
+  <testcase name="should_have_0_shifts_for_4_ordered_asc_elements" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.003"/>
+  <testcase name="should_have_only_one_shift_for_two_ordered_desc_elements" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_1_plus_plus_minus" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_not_have_shifts_for_two_ordered_asc_elements" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_not_have_shifts_for_only_one_element" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_return_swap_number_for_test_3" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_return_swap_number_for_test_4" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_5" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_6" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_7" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_8" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_9" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_return_swap_number_for_test_2_minus_minus_plus" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.0"/>
+  <testcase name="should_have_6_shifts_for_4_ordered_desc_elements" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_not_have_shifts_if_tree_is_empty" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_return_swap_number_for_test_10" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_return_swap_number_for_test_11" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_return_swap_number_for_test_12" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <testcase name="should_have_as_shifts_as_the_summation_of_length_minus_one_for_worst_case" classname="drivero.insertionSortAdvancedAnalysis.AVLTreeInsertionAnalysisTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
