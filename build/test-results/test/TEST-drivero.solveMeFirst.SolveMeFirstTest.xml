@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="drivero.solveMeFirst.SolveMeFirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-13T22:11:24" hostname="NI-NTB-183" time="0.001">
-  <properties/>
-  <testcase name="should_sum_two_numbers" classname="drivero.solveMeFirst.SolveMeFirstTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
