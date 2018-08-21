@@ -4,6 +4,9 @@
 > This is a repository to store my solutions for problems 
 from [Hacker Rank](https://www.hackerrank.com/dashboard)
 
+##### Why _Bacal_?
+> It's Bacal for the initials of: BACk To ALgorithms
+
 ##### Working now in solution for problem?
 * Coin change (Trying to reduce algorithm complexity 
 to reduce response time, applying dynamic programming)
