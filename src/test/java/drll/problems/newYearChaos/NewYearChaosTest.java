@@ -13,7 +13,7 @@ public class NewYearChaosTest {
     @Test
     public void should_return_correct_answer_for_test_case_1() {
 
-        int bribes = NewYearChaos.calculateBribes(new int[]{2, 1, 5, 3, 4});
+        int bribes = NewYearChaos.calculateBribes(new int[]{3, 2, 1});
 
         assertThat(bribes).isEqualTo(3);
     }
@@ -21,13 +21,21 @@ public class NewYearChaosTest {
     @Test
     public void should_return_correct_answer_for_test_case_2() {
 
+        int bribes = NewYearChaos.calculateBribes(new int[]{2, 1, 5, 3, 4});
+
+        assertThat(bribes).isEqualTo(3);
+    }
+
+    @Test
+    public void should_return_correct_answer_for_test_case_3() {
+
         int bribes = NewYearChaos.calculateBribes(new int[]{1, 2, 5, 3, 7, 8, 6, 4});
 
         assertThat(bribes).isEqualTo(7);
     }
 
     @Test
-    public void should_return_correct_answer_for_test_case_3() {
+    public void should_return_correct_answer_for_test_case_4() {
 
         int bribes = NewYearChaos.calculateBribes(buildTestCaseOfLength1000());
 
