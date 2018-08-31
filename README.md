@@ -8,8 +8,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard)
 > It's Bacal for the initials of: BACk To ALgorithms
 
 ##### Working now in solution for problem?
-* Coin change (Trying to reduce algorithm complexity 
-to reduce response time, applying dynamic programming)
+* Finding a new problem
 
 ##### Directory structure to store problems solutions:
 > Under src folder follow this folder structure
