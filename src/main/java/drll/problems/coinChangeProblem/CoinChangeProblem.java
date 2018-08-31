@@ -64,40 +64,6 @@ public class CoinChangeProblem {
         return usingCoin + notUsingCoin;
     }
 
-    /*// Complete the getWays function below.
-    static long getWaysDinamicProgramming(long n, long[] c, int coinIndex,
-                                          HashMap<Long, Long> results) {
-        if(n == 0){
-            return 1;
-        }
-        if(n < 0  || coinIndex >= c.length){
-            return 0;
-        }
-        if(results.containsKey(n)){
-            return results.get(n);
-        }
-
-        long usingCoin;
-        if(results.containsKey(n - c[coinIndex])){
-            usingCoin = results.get(n - c[coinIndex]);
-        }
-        else{
-            usingCoin = getWaysDinamicProgramming(n - c[coinIndex], c, coinIndex, results);
-        }
-        results.put(n - c[coinIndex], usingCoin);
-
-        long notUsingCoin;
-        if(results.containsKey(n)){
-            notUsingCoin = results.get(n);
-        }
-        else {
-            notUsingCoin = getWaysDinamicProgramming(n, c, coinIndex + 1, results);
-        }
-        results.put(n, notUsingCoin);
-
-        return usingCoin + notUsingCoin;
-    }*/
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
