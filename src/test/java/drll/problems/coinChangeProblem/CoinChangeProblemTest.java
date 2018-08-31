@@ -24,7 +24,7 @@ public class CoinChangeProblemTest {
         assertThat(ways).isEqualTo(5);
     }
 
-    @Test()
+    @Test(timeout = 1000)
     public void should_get_correct_answer_for_test_case_3() {
 
         long ways = CoinChangeProblem.getWays(166, new long[]{
@@ -36,7 +36,7 @@ public class CoinChangeProblemTest {
         assertThat(ways).isEqualTo(96190959);
     }
 
-    @Test()
+    @Test(timeout = 1000)
     public void should_get_correct_answer_for_test_case_4() {
 
         long ways = CoinChangeProblem.getWays(219, new long[]{
