@@ -4,4 +4,4 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Medium (Dynamic programming)
+ > Medium (Greedy)
