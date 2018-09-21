@@ -33,12 +33,13 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | Graph Theory (1)              | | |
 | Constructive Algorithms (1)   | | |
 | Warmup (3)                    | | |
+| Implementation (1)            | | |
 
 ###### According to their difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   4    |       |     1    |
+|   3   |   4    |   1   |     1    |
 
 ###### My current classification in Hacker Rank
 
