@@ -4,4 +4,4 @@
  
   ##### Difficulty Level (according to HackerRank)
   
-  > Easy
+  > Easy (Warmup)

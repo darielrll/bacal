@@ -4,7 +4,7 @@
  
 ##### Difficulty Level (according to HackerRank)
  
- > Medium
+ > Medium (Graph Theory)
  
 ##### Resume of the problem:
  
