@@ -32,13 +32,13 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | Sorting (1)                   | | |
 | Graph Theory (1)              | | |
 | Constructive Algorithms (1)   | | |
-| Warmup (2)                    | | |
+| Warmup (3)                    | | |
 
 ###### According to their difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   2   |   4    |       |     1    |
+|   3   |   4    |       |     1    |
 
 ###### My current classification in Hacker Rank
 
