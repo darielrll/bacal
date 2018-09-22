@@ -21,7 +21,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
     src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
 ```
 
-#### Resume for solved problems
+#### Resume for 9 solved problems
 
 ###### According to their classification
 
