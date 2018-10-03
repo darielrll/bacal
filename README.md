@@ -27,25 +27,25 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 
 | Algorithms                    | Data Structures | Mathematics |
 | :--- | --- | --- |
-| Dynamic programming (1)       | | |
-| Greedy (1)                    | | |
-| Sorting (1)                   | | |
-| Graph Theory (1)              | | |
-| Constructive Algorithms (1)   | | |
-| Warmup (3)                    | | |
-| Implementation (1)            | | |
-
+| Dynamic programming (1)       | Trie(1) |                     |
+| Greedy (1)                    |         |                     |
+| Sorting (1)                   |         |                     |
+| Graph Theory (1)              |         |                     |
+| Constructive Algorithms (1)   |         |                     |
+| Warmup (3)                    |         |                     |
+| Implementation (1)            |         |                     |
+          
 ###### According to their difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   4    |   1   |     1    |
+|   3   |   5    |   1   |     1    |
 
 ###### My current classification in Hacker Rank
 
 | Rank   | Points |
 | :---:  |  :---: |
-| 186649 |  348   |
+| 168886 |  393   |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)
