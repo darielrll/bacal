@@ -29,7 +29,7 @@ public class Trie {
         contactPath.add(this);
         Trie prefixNode = this;
         int sufixIndex = 0;
-        for (int i = 0; i < contact.length() - 1; i++) {
+        for (int i = 0; i < contact.length(); i++) {
             if(prefixNode.childs.containsKey(contact.charAt(i))){
                 prefixNode = prefixNode.childs.get(contact.charAt(i));
                 contactPath.add(prefixNode);
@@ -39,7 +39,7 @@ public class Trie {
                 break;
             }
         }
-        for (int i = sufixIndex + 1; i < contact.length(); i++) {
+        for (int i = sufixIndex; i < contact.length(); i++) {
             Trie trie = new Trie(contact.charAt(i));
             prefixNode.childs.put(contact.charAt(i), trie);
             contactPath.add(trie);

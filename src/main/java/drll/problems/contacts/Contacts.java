@@ -1,41 +1,71 @@
 
 package drll.problems.contacts;
 
+import java.io.*;
+import java.math.*;
+import java.text.*;
 import java.util.*;
+import java.util.regex.*;
 
 public class Contacts {
 
-    static void executeOperation(Trie trie, String op, String contact){
-        if("add".equalsIgnoreCase(op)){
-            trie.add(contact);
+    /*
+     * Complete the contacts function below.
+     */
+    static Integer[] contacts(String[][] queries) {
+        /*
+         * Write your code here.
+         */
+        Trie trie = new Trie();
+        List<Integer> result = new ArrayList<>();
+        for(int i = 0; i < queries.length; i++){
+            String op = queries[i][0];
+            String contact = queries[i][1];
+
+            if("add".equalsIgnoreCase(op)){
+                trie.add(contact);
+            }
+            else if("find".equalsIgnoreCase(op)){
+                int words = trie.findPartial(contact);
+                result.add(words);
+            }
+            else{
+                throw new IllegalArgumentException(String.format("Operation [%s] not supported."));
+            }
         }
-        else if("find".equalsIgnoreCase(op)){
-            int words = trie.findPartial(contact);
-            System.out.println(words);
-        }
-        else{
-            throw new IllegalArgumentException(String.format("Operation [%s] not supported."));
-        }
+        return result.toArray(new Integer[result.size()]);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        Trie trie = new Trie();
+        int queriesRows = Integer.parseInt(scanner.nextLine().trim());
 
-        for (int nItr = 0; nItr < n; nItr++) {
-            String[] opContact = scanner.nextLine().split(" ");
+        String[][] queries = new String[queriesRows][2];
 
-            String op = opContact[0];
+        for (int queriesRowItr = 0; queriesRowItr < queriesRows; queriesRowItr++) {
+            String[] queriesRowItems = scanner.nextLine().split(" ");
 
-            String contact = opContact[1];
-
-            executeOperation(trie, op, contact);
+            for (int queriesColumnItr = 0; queriesColumnItr < 2; queriesColumnItr++) {
+                String queriesItem = queriesRowItems[queriesColumnItr];
+                queries[queriesRowItr][queriesColumnItr] = queriesItem;
+            }
         }
 
-        scanner.close();
+        Integer[] result = contacts(queries);
+
+        for (int resultItr = 0; resultItr < result.length; resultItr++) {
+            bufferedWriter.write(String.valueOf(result[resultItr]));
+
+            if (resultItr != result.length - 1) {
+                bufferedWriter.write("\n");
+            }
+        }
+
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
     }
 }

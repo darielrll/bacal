@@ -38,6 +38,16 @@ public class TrieTest {
     }
 
     @Test
+    public void add_should_work_for_test_case3(){
+        subject.add("s");
+        subject.add("ss");
+
+        int contacts = subject.words;
+
+        assertThat(contacts).isEqualTo(2);
+    }
+
+    @Test
     public void find_partial_should_work_for_test_case1(){
         subject.add("hack");
         subject.add("hackerrank");
