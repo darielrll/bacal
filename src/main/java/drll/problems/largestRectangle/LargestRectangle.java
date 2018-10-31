@@ -16,9 +16,51 @@ public class LargestRectangle {
 
         long largestArea = 0;
 
-        HashMap<Integer, Integer> segments = new HashMap<>();
+        LinkedList<Integer> stack = new LinkedList<>();
+
         for (int i = 0; i < h.length; i++) {
-            if(segments.containsKey(h[i])){
+            if (stack.isEmpty()  ||  h[stack.peek()] < h[i]){
+                stack.push(i);
+            } else {
+                int lastTakenOutPosition = stack.pop();
+                while (!stack.isEmpty()  &&  h[stack.peek()] > h[i]){
+                    long area = h[stack.peek()] * (i - stack.peek());
+                    if (area > largestArea){
+                        largestArea = area;
+                    }
+                    lastTakenOutPosition = stack.pop();
+                }
+                h[lastTakenOutPosition] = h[i];
+                stack.push(lastTakenOutPosition);
+                long area = h[lastTakenOutPosition] * (i - lastTakenOutPosition + 1);
+                if (area > largestArea){
+                    largestArea = area;
+                }
+            }
+        }
+        if (stack.size() > 1) {
+            int endPosition = stack.pop();
+            if (h[endPosition] > largestArea) {
+                largestArea = h[endPosition];
+            }
+            while (!stack.isEmpty()){
+                long area = h[stack.peek()] * (endPosition - stack.peek() + 1);
+                if (area > largestArea) {
+                    largestArea = area;
+                }
+                stack.pop();
+            }
+        }
+
+        return largestArea;
+    }
+
+    static long largestRectangle_n2_enhanced(int[] h) {
+        long largestArea = 0;
+
+        Set<Segment> segments = new HashSet<>();
+        for (int i = 0; i < h.length; i++) {
+            if(segments.contains(new Segment(i, i, h[i]))){
                 continue;
             }
             int startPoint = i;
@@ -43,7 +85,7 @@ public class LargestRectangle {
             if(tmpArea > largestArea){
                 largestArea = tmpArea;
             }
-            segments.put(h[i], endPoint - startPoint + 1);
+            segments.add(new Segment(startPoint, endPoint, h[i]));
         }
 
         return largestArea;
@@ -93,5 +135,43 @@ public class LargestRectangle {
         bufferedWriter.close();
 
         scanner.close();
+    }
+}
+
+class Segment{
+    public int start, end, height;
+
+    public Segment(int start, int end, int height) {
+        this.start = start;
+        this.end = end;
+        this.height = height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if(o == null  ||  !(o instanceof Segment)){
+            return false;
+        }
+        Segment other = (Segment)o;
+        if (other.height != height){
+            return false;
+        }
+        Segment first, second;
+        if(start < other.start){
+            first = this;
+            second = other;
+        }
+        else{
+            first = other;
+            second = this;
+        }
+        // false if segments are not overlapped
+        return (first.end - first.start) + (second.end - second.start) > (second.end - first.start);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(start, end, height);
     }
 }
