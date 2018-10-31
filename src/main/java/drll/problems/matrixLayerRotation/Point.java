@@ -1,5 +1,7 @@
 package drll.problems.matrixLayerRotation;
 
+import java.util.Objects;
+
 public class Point {
     public int X;
     public int Y;
@@ -16,6 +18,11 @@ public class Point {
         }
         Point other = (Point)o;
         return X == other.X &&  Y == other.Y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(X, Y);
     }
 
     @Override
