@@ -21,15 +21,15 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
     src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
 ```
 
-#### Resume for 12 solved problems
+#### Resume for 13 solved problems
 
 ###### According to hacker rank classification
 
 | Algorithms                    | Data Structures | Mathematics |
-| :--- | --- | --- |
+| :---                          | ---             | ---         |
 | Dynamic programming (1)       | Trie(1)         | Algebra(1)  |
 | Greedy (1)                    | Stacks(1)       |             |
-| Sorting (1)                   |                 |             |
+| Sorting (1)                   | Array(1)        |             |
 | Graph Theory (1)              |                 |             |
 | Constructive Algorithms (1)   |                 |             |
 | Warmup (3)                    |                 |             |
@@ -39,13 +39,13 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   7    |   1   |     1    |
+|   3   |   7    |   2   |     1    |
 
 ###### My current classification in Hacker Rank
 
 | Rank   | Points |
 | :---:  |  :---: |
-| 155129 |  443   |
+| 137983 |  503   |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)
