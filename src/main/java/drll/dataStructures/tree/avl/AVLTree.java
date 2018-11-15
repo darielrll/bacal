@@ -12,9 +12,9 @@ public class AVLTree<T extends Comparable> {
         return count;
     }
 
-    protected void equalValueDetected(AVLNode<T> node){}
-    protected void preInsertingInLeftSide(AVLNode<T> node){}
-    protected void preInsertingInRightSide(AVLNode<T> node){}
+    protected void equalValueDetected(AVLNode<T> node, T element){}
+    protected void preInsertingInLeftSide(AVLNode<T> node, T element){}
+    protected void preInsertingInRightSide(AVLNode<T> node, T element){}
     protected void preRotateRight(AVLNode<T> primary){}
     protected void preRotateLeft(AVLNode<T> primary){}
 
@@ -28,20 +28,20 @@ public class AVLTree<T extends Comparable> {
         }
     }
 
-    private AVLNode add(AVLNode<T> node, T element){
+    protected AVLNode add(AVLNode<T> node, T element){
         if(node == null){
             count++;
             return new AVLNode(element);
         }
         if(element.compareTo(node.getValue()) == 0){
-            equalValueDetected(node);
+            equalValueDetected(node, element);
             return node;
         }
         //------------------
         //-- right branch -- ?++,?
         //------------------
         if(element.compareTo(node.getValue()) > 0) {
-            preInsertingInRightSide(node);
+            preInsertingInRightSide(node, element);
             State stateBeforeAdd = recordStateAfterAdd(node.getRight());
             node.setRight(add(node.getRight(), element));
             if(isBalancedSubTree(stateBeforeAdd, node.getRight())){
@@ -64,7 +64,7 @@ public class AVLTree<T extends Comparable> {
         //-- left branch -- ?--,?
         //-----------------
         else {
-            preInsertingInLeftSide(node);
+            preInsertingInLeftSide(node, element);
             State stateBeforeAdd = recordStateAfterAdd(node.getLeft());
             node.setLeft(add(node.getLeft(), element));
             if(isBalancedSubTree(stateBeforeAdd, node.getLeft())){

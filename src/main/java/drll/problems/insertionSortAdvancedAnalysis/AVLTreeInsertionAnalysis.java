@@ -3,6 +3,7 @@ package drll.problems.insertionSortAdvancedAnalysis;
 
 import drll.dataStructures.tree.avl.AVLNode;
 import drll.dataStructures.tree.avl.AVLTree;
+import drll.problems.newYearChaos.AVLNodeExtended;
 
 public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
 
@@ -13,8 +14,8 @@ public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
     }
 
     @Override
-    protected void equalValueDetected(AVLNode<InsertionAnalysis> node) {
-        super.equalValueDetected(node);
+    protected void equalValueDetected(AVLNode<InsertionAnalysis> node, InsertionAnalysis element) {
+        super.equalValueDetected(node, element);
 
         node.getValue().twins++;
         if(node.getRight() != null){
@@ -24,15 +25,15 @@ public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
     }
 
     @Override
-    protected void preInsertingInRightSide(AVLNode<InsertionAnalysis> node) {
-        super.preInsertingInRightSide(node);
+    protected void preInsertingInRightSide(AVLNode<InsertionAnalysis> node, InsertionAnalysis element) {
+        super.preInsertingInRightSide(node, element);
 
         node.getValue().familyCount++;
     }
 
     @Override
-    protected void preInsertingInLeftSide(AVLNode<InsertionAnalysis> node) {
-        super.preInsertingInLeftSide(node);
+    protected void preInsertingInLeftSide(AVLNode<InsertionAnalysis> node, InsertionAnalysis element) {
+        super.preInsertingInLeftSide(node, element);
 
         node.getValue().familyCount++;
         if(node.getRight() == null){

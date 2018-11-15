@@ -13,15 +13,15 @@ class AVLExtended extends AVLTree<AVLNodeExtended> {
     }
 
     @Override
-    protected void preInsertingInRightSide(AVLNode<AVLNodeExtended> node) {
-        super.preInsertingInRightSide(node);
+    protected void preInsertingInRightSide(AVLNode<AVLNodeExtended> node, AVLNodeExtended element) {
+        super.preInsertingInRightSide(node, element);
 
         node.getValue().familyCount++;
     }
 
     @Override
-    protected void preInsertingInLeftSide(AVLNode<AVLNodeExtended> node) {
-        super.preInsertingInLeftSide(node);
+    protected void preInsertingInLeftSide(AVLNode<AVLNodeExtended> node, AVLNodeExtended element) {
+        super.preInsertingInLeftSide(node, element);
 
         node.getValue().familyCount++;
 

@@ -1,9 +1,12 @@
 
 package common;
 
+import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Utils {
 
@@ -85,5 +88,15 @@ public class Utils {
             result[i] = integers[i];
         }
         return result;
+    }
+
+    public static Scanner getFileScanner(String testDataFile) {
+        URL resource = Utils.class.getClassLoader().getResource(testDataFile);
+        try {
+            File file = new File(resource.toURI());
+            return new Scanner(file);
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
