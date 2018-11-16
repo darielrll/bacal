@@ -4,7 +4,7 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Hard (Implementation)
+ > Hard (Algorithms | Implementation )
  
  ##### Resume of the problem:
  Rotate a matrix per layers in anti-clockwise direction

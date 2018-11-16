@@ -4,7 +4,7 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Advanced(Sorting)
+ >  Advanced (Algorithms | Sorting)
  
  ##### Resume of the problem:
  Find all inverted pairs of numbers in a list, given that `i < j` if `list[i] > list[j]`,

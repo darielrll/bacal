@@ -4,4 +4,4 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Medium (Greedy)
+ > Medium (Algorithms | Greedy )
