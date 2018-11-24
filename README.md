@@ -21,7 +21,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
     src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
 ```
 
-#### Resume for 13 solved problems
+#### Resume for 14 solved problems
 
 ###### According to hacker rank classification
 
@@ -33,19 +33,20 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | Graph Theory (1)              |                 |             |
 | Constructive Algorithms (1)   |                 |             |
 | Warmup (3)                    |                 |             |
+| Recursion (1)                 |                 |             |
 | Implementation (1)            |                 |             |
           
 ###### According to hacker rank difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   7    |   2   |     1    |
+|   3   |   7    |   3   |     1    |
 
 ###### My current classification in Hacker Rank
 
 | Rank   | Points |
 | :---:  |  :---: |
-| 137983 |  503   |
+| 125015 |  553   |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)

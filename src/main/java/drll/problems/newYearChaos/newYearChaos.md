@@ -4,7 +4,8 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Medium (_But, I could be harder than that I think_)
+ > Medium (Algorithms | Constructive Algorithms) 
+ (_But, I could be harder than that I think_)
  
  ##### Resume of the problem:
 Find the amount of bribes in a list. A bribe happens when a number interchange his position with a 

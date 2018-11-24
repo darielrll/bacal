@@ -1,7 +1,7 @@
- Link to the problem
+## Link to the problem
  
  > https://www.hackerrank.com/challenges/solve-me-first/problem
  
-   ##### Difficulty Level (according to HackerRank)
+##### Difficulty Level (according to HackerRank)
    
-   > Easy (Warmup)
+ > Easy (Algorithms | Warmup)

@@ -4,7 +4,7 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Easy (Warmup)
+ > Easy (Algorithms | Warmup)
  
  ##### Resume of the problem:
 
