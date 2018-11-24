@@ -30,7 +30,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | Dynamic programming (1)       | Trie(1)         | Algebra(1)  |
 | Greedy (1)                    | Stacks(1)       |             |
 | Sorting (1)                   | Array(1)        |             |
-| Graph Theory (1)              |                 |             |
+| Graph Theory (1)              | Linked List(1)  |             |
 | Constructive Algorithms (1)   |                 |             |
 | Warmup (3)                    |                 |             |
 | Recursion (1)                 |                 |             |
@@ -40,13 +40,13 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   7    |   3   |     1    |
+|   3   |   8    |   3   |     1    |
 
 ###### My current classification in Hacker Rank
 
 | Rank   | Points |
 | :---:  |  :---: |
-| 125015 |  553   |
+| 123792 |  558   |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)
