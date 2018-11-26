@@ -11,7 +11,7 @@ public class KFactorization {
 
         Arrays.sort(A);
 
-        if(findNumber(A, n) != -1){
+        if(Arrays.binarySearch(A, n) > 0){
             return new int[]{1, n};
         }
 
@@ -97,30 +97,11 @@ public class KFactorization {
 
     static boolean findNumber(int[] numbers, int[] target){
         for (int i = 0; i < numbers.length; i++) {
-            if(findNumber(target, numbers[i]) == -1){
+            if(Arrays.binarySearch(target, numbers[i]) < 0){
                 return false;
             }
         }
         return true;
-    }
-
-    static int findNumber(int[] list, int number){
-        return findNumber(list, number, 0, list.length);
-    }
-
-    private static int findNumber(int[] list, int number, int init, int end){
-        if(init > end  ||  init >= list.length){
-            return -1;
-        }
-
-        int middle = init + (end - init) / 2;
-        if (list[middle] == number){
-            return middle;
-        }
-        if(number < list[middle]){
-            return findNumber(list, number, init, middle - 1);
-        }
-        return findNumber(list, number, middle + 1, end);
     }
 
     /**
