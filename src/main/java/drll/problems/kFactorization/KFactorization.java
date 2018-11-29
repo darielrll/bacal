@@ -84,9 +84,6 @@ public class KFactorization {
                 continue;
             }
             combination.push(utilNumbers.get(i));
-            if(findCombination(n / utilNumbers.get(i), utilNumbers, combination, end - 1)){
-                return true;
-            }
             if(findCombination(n / utilNumbers.get(i), utilNumbers, combination, end)){
                 return true;
             }
