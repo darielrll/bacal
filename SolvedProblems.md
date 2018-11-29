@@ -18,3 +18,4 @@
 | 13 | [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem)| Data Structures - Arrays | Hard | 60 |
 | 14 | [K Factorization](https://www.hackerrank.com/challenges/k-factorization/problem)| Algorithms - Recursion | Hard | 50 |
 | 15 | [Cycle Detection](https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem)| Data Structures - Linked Lists | Medium | 5  |
+| 16 | [Missing Numbers](https://www.hackerrank.com/challenges/missing-numbers/problem)| Algorithms - Search | Easy | 45  |
