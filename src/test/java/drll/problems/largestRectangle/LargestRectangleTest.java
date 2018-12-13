@@ -1,6 +1,7 @@
 
 package drll.problems.largestRectangle;
 
+import common.Utils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -91,43 +92,8 @@ public class LargestRectangleTest {
     public void should_work_for_test_case_13(){
         String testDataFile = "largestRectangle/testCase8.txt";
 
-        long largestRectangle = LargestRectangle.largestRectangle(buildArrayIntFromFile(testDataFile));
+        long largestRectangle = LargestRectangle.largestRectangle(Utils.buildArrayIntFromFile(testDataFile));
 
         assertThat(largestRectangle).isEqualTo(12984467);
-    }
-
-    private int[] buildArrayIntFromFile(String testDataFile) {
-
-        ArrayList<Integer> numbers = getIntegersInFile(testDataFile);
-
-        int[] result = new int[numbers.size()];
-        for (int i = 0; i < numbers.size(); i++) {
-            result[i] = numbers.get(i);
-        }
-        return result;
-    }
-
-    private ArrayList<Integer> getIntegersInFile(String testDataFile) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        Scanner sc = getFileScanner(testDataFile);
-
-        while (sc.hasNextLine()) {
-            String line = sc.nextLine();
-            String[] lineNumbers = line.split(" ");
-            for (int i = 0; i < lineNumbers.length; i++) {
-                numbers.add(Integer.parseInt(lineNumbers[i]));
-            }
-        }
-        return numbers;
-    }
-
-    private Scanner getFileScanner(String testDataFile) {
-        URL resource = getClass().getClassLoader().getResource(testDataFile);
-        try {
-            File file = new File(resource.toURI());
-            return new Scanner(file);
-        } catch (Exception e) {
-            return null;
-        }
     }
 }

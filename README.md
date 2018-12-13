@@ -21,7 +21,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
     src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
 ```
 
-#### Resume for 15 solved problems
+#### Resume for 16 solved problems
 
 ###### According to hacker rank classification
 
@@ -35,19 +35,19 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | Warmup (3)                    |                 |             |
 | Recursion (1)                 |                 |             |
 | Implementation (1)            |                 |             |
-| Search (1)                    |                 |             |
+| Search (2)                    |                 |             |
           
 ###### According to hacker rank difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   4   |   8    |   3   |     1    |
+|   4   |   9    |   3   |     1    |
 
 ###### My current classification in Hacker Rank
 
 | Rank   | Points |
 | :---:  |  :---: |
-| 113957 |  603   |
+| 109925 |  628   |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)
