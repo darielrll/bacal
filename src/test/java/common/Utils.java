@@ -99,4 +99,29 @@ public class Utils {
             return null;
         }
     }
+
+    public static int[] buildArrayIntFromFile(String testDataFile) {
+
+        ArrayList<Integer> numbers = getIntegersInFile(testDataFile);
+
+        int[] result = new int[numbers.size()];
+        for (int i = 0; i < numbers.size(); i++) {
+            result[i] = numbers.get(i);
+        }
+        return result;
+    }
+
+    private static ArrayList<Integer> getIntegersInFile(String testDataFile) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner sc = getFileScanner(testDataFile);
+
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] lineNumbers = line.split(" ");
+            for (int i = 0; i < lineNumbers.length; i++) {
+                numbers.add(Integer.parseInt(lineNumbers[i]));
+            }
+        }
+        return numbers;
+    }
 }
