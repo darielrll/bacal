@@ -1,19 +1,17 @@
 
 package drll.dataStructures.tree.bit;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@RunWith(MockitoJUnitRunner.class)
 public class FenwickTreeTest {
 
     private FenwickTree subject;
 
-    @Before
+    @BeforeEach
     public void init(){
         subject = new FenwickTree(10);
     }
@@ -228,36 +226,33 @@ public class FenwickTreeTest {
         assertThat(subject.sum(3, 5)).isEqualTo(10l);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_sum_index_is_gt_size(){
-
-        subject.update(11, 5);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(11, 5));
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_sum_index_is_lt_0(){
-
-        subject.update(-1, 5);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(-1, 5));
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_sum_index_is_et_0(){
-
-        subject.update(0, 5);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(0, 5));
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_update_index_is_gt_size(){
-        subject.update(11, 2);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(11, 2));
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_update_index_is_lt_0(){
-        subject.update(-1, 2);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(-1, 2));
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test()
     public void should_throw_index_out_of_bound_exception_if_update_index_is_et_0(){
-        subject.update(0, 2);
+        assertThrows(IndexOutOfBoundsException.class, () -> subject.update(0, 2));
     }
 }

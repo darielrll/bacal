@@ -2,18 +2,11 @@
 package drll.problems.arrayManipulation;
 
 import common.Utils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
-import java.io.File;
-import java.net.URL;
-import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ArrayManipulationTest {
 
     @Test

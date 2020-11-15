@@ -2,18 +2,12 @@
 package drll.problems.largestRectangle;
 
 import common.Utils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
 
-import java.io.*;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Scanner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class LargestRectangleTest {
 
     @Test
@@ -88,7 +82,8 @@ public class LargestRectangleTest {
         assertThat(largestRectangle).isEqualTo(4000);
     }
 
-    @Test(timeout = 3000)
+    @Test()
+    @Timeout(value = 3)
     public void should_work_for_test_case_13(){
         String testDataFile = "largestRectangle/testCase8.txt";
 

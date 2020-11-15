@@ -1,22 +1,13 @@
 
 package drll.problems.matrixLayerRotation;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(MockitoJUnitRunner.class)
 public class PathDiscovererLayerTest {
 
 
     private PathDiscovererLayer pathDiscovererLayer;
-
-    @Before
-    public void init(){
-    }
 
     @Test
     public void should_return_next_point_anti_clockwise_1(){

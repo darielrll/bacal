@@ -1,11 +1,10 @@
 package drll.problems.coinChangeProblem;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class CoinChangeProblemTest {
 
     @Test
@@ -24,7 +23,8 @@ public class CoinChangeProblemTest {
         assertThat(ways).isEqualTo(5);
     }
 
-    @Test(timeout = 1000)
+    @Test()
+    @Timeout(value = 1)
     public void should_get_correct_answer_for_test_case_3() {
 
         long ways = CoinChangeProblem.getWays(166, new long[]{
@@ -36,7 +36,8 @@ public class CoinChangeProblemTest {
         assertThat(ways).isEqualTo(96190959);
     }
 
-    @Test(timeout = 1000)
+    @Test()
+    @Timeout(value = 1)
     public void should_get_correct_answer_for_test_case_4() {
 
         long ways = CoinChangeProblem.getWays(219, new long[]{

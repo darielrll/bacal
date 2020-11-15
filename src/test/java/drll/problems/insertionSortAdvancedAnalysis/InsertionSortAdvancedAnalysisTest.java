@@ -2,13 +2,13 @@
 package drll.problems.insertionSortAdvancedAnalysis;
 
 import common.Utils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(MockitoJUnitRunner.class)
 public class InsertionSortAdvancedAnalysisTest {
 
     @Test
@@ -128,7 +128,8 @@ public class InsertionSortAdvancedAnalysisTest {
         assertThat(swapCount).isEqualTo(2089430676);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_respond_in_less_than_300_milisecond_for_91337_elements(){
         int[] list = buildATestCaseWith_91337_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
@@ -144,7 +145,8 @@ public class InsertionSortAdvancedAnalysisTest {
         assertThat(swapCount).isEqualTo(2265950446L);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_respond_in_less_than_300_milisecond_for_95059_numbers(){
         int[] list = buildATestCaseWith_95059_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
@@ -160,7 +162,8 @@ public class InsertionSortAdvancedAnalysisTest {
         assertThat(swapCount).isEqualTo(0);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_respond_in_less_than_300_milisecond_for_56340_equal_numbers(){
         int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber(1000000,56340);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
@@ -168,7 +171,8 @@ public class InsertionSortAdvancedAnalysisTest {
         assertThat(swapCount).isEqualTo(0);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_respond_in_less_than_300_milisecond_in_best_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 73099);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
@@ -176,7 +180,8 @@ public class InsertionSortAdvancedAnalysisTest {
         assertThat(swapCount).isEqualTo(0);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 100000);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);

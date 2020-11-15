@@ -1,22 +1,12 @@
 
 package drll.problems.contacts;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ContactsTest {
-
-    private Trie trie;
-
-    @Before
-    public void init(){
-        trie = new Trie();
-    }
 
     @Test
     public void should_work_for_test_case1(){
@@ -25,9 +15,9 @@ public class ContactsTest {
         assertThat(contacts).containsExactly(2, 0);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test()
     public void should_throw_ilegal_argument_exception_for_bad_command(){
-        Contacts.contacts(buildTestCase2());
+        assertThrows(IllegalArgumentException.class, () -> Contacts.contacts(buildTestCase2()));
     }
 
     private String[][] buildTestCase1() {
@@ -37,7 +27,6 @@ public class ContactsTest {
                 {"find", "hac"},
                 {"find", "hak"}
         };
-
     }
 
     private String[][] buildTestCase2() {
@@ -46,6 +35,5 @@ public class ContactsTest {
                 {"add", "hackerrank"},
                 {"badCommand", "hac"}
         };
-
     }
 }

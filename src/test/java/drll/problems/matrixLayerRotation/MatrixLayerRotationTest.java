@@ -1,19 +1,10 @@
 
 package drll.problems.matrixLayerRotation;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(MockitoJUnitRunner.class)
 public class MatrixLayerRotationTest {
-
-    @Before
-    public void init(){
-    }
 
     @Test
     public void should_rotate_ones_for_simple_case() {

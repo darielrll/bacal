@@ -1,14 +1,10 @@
 
 package drll.problems.strongPassword;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
+import org.junit.jupiter.api.Test;
 import static drivero.problems.strongPassword.StrongPassword.*;
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class StrongPasswordTest {
 
     @Test

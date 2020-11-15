@@ -1,12 +1,8 @@
 package drll.problems.greedyFlorist;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.*;
-
-@RunWith(MockitoJUnitRunner.class)
 public class GreedyFloristTest {
 
     @Test

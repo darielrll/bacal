@@ -2,19 +2,16 @@
 package drll.problems.insertionSortAdvancedAnalysis;
 
 import common.Utils;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class AVLTreeInsertionAnalysisTest {
 
     private AVLTreeInsertionAnalysis tree;
 
-    @Before
+    @BeforeEach
     public void init(){
         tree = new AVLTreeInsertionAnalysis();
     }

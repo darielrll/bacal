@@ -1,12 +1,11 @@
 
 package drll.problems.triangleNumbers;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class TriangleNumbersTest {
 
     @Test
@@ -29,7 +28,8 @@ public class TriangleNumbersTest {
         assertThat(TriangleNumbers.solve(2)).isEqualTo(-1);
     }
 
-    @Test(timeout = 1000)
+    @Test()
+    @Timeout(value = 1)
     public void should_return_correctly_for_test_case5(){
         assertThat(TriangleNumbers.solve(4654564)).isEqualTo(3);
     }

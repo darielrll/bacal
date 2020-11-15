@@ -1,13 +1,13 @@
 
 package drll.problems.journeyToTheMoon;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class JourneyToTheMoonTest {
 
     @Test
@@ -56,7 +56,8 @@ public class JourneyToTheMoonTest {
         assertThat(pairs).isEqualTo(43723);
     }
 
-    @Test(timeout = 300)
+    @Test()
+    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     public void should_work_for_test_case7() {
 
         long pairs = JourneyToTheMoon.journeyToMoon(100000, new int[][]{{1, 2}, {3, 4}});

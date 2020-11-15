@@ -1,19 +1,15 @@
 
 package drll.problems.kFactorization;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class PrimeIteratorTest {
 
     private PrimeIterator subject;
 
-    @Before
+    @BeforeEach
     public void init(){
         subject = new PrimeIterator();
     }
