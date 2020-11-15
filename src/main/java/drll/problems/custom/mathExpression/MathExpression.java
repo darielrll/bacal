@@ -3,6 +3,38 @@ package drll.problems.custom.mathExpression;
 import java.util.*;
 
 public class MathExpression {
+    public double evalMathExpression(String mathExpression) throws Exception {
+        List<String> postfixNotation = toPostfixNotation(mathExpression);
+        LinkedList<Double> accumlativeResult = new LinkedList<>();
+
+        for (int i = 0; i < postfixNotation.size(); i++) {
+            if(Token.isOperator(postfixNotation.get(i))){
+                Double rightOperand = accumlativeResult.pop();
+                Double leftOperand = accumlativeResult.pop();
+                accumlativeResult.push(calculate(leftOperand, postfixNotation.get(i), rightOperand));
+            }
+            else{
+                accumlativeResult.push(Double.parseDouble(postfixNotation.get(i)));
+            }
+        }
+        return Math.round(accumlativeResult.pop() * 100) / 100.0;
+    }
+
+    private Double calculate(Double leftOperand, String operator, Double rightOperand) throws Exception {
+        switch (operator){
+            case "-":
+                return leftOperand - rightOperand;
+            case "+":
+                return leftOperand + rightOperand;
+            case "*":
+                return leftOperand * rightOperand;
+            case "/":
+                return leftOperand / rightOperand;
+            default:
+                throw new Exception("Not supported operation");
+        }
+    }
+
     public List<String> toPostfixNotation(String mathExpression) throws Exception{
         List<String> prefix = new ArrayList<>();
         Deque<String> operatorsStack = new ArrayDeque<>();
