@@ -1,5 +1,6 @@
 package drll.problems.custom.mathExpression;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,20 +10,27 @@ import static org.assertj.core.api.Assertions.*;
 
 class MathExpressionTest {
 
+    private MathExpression mathExpression;
+
+    @BeforeEach
+    void init(){
+        mathExpression = new MathExpression();
+    }
+
     @Test
     void should_return_39dot5_when_expression_is_4comma5plus35() throws Exception {
-        assertThat(new MathExpression().evalMathExpression("4,5+35")).isEqualTo(39.5);
+        assertThat(mathExpression.evalMathExpression("4,5+35")).isEqualTo(39.5);
     }
 
     @Test
     void should_return_25dot29_when_expression_is_8dot29_plus_17() throws Exception {
-        assertThat(new MathExpression().evalMathExpression("8.29 + 17")).isEqualTo(25.29);
+        assertThat(mathExpression.evalMathExpression("8.29 + 17")).isEqualTo(25.29);
     }
 
     @Test
     void should_return_XX_when_expression_is_3plus4divide3plus6multiplication8minus2() throws Exception {
         // infix:   3+4/3+6*8-2
-        assertThat(new MathExpression().evalMathExpression("3+4/3+6*8-2")).isEqualTo(50.33);
+        assertThat(mathExpression.evalMathExpression("3+4/3+6*8-2")).isEqualTo(50.33);
     }
 
     @Test
@@ -32,7 +40,7 @@ class MathExpressionTest {
         prefix.add("4");
         prefix.add("+");
 
-        assertThat(new MathExpression().toPostfixNotation("3+4")).isEqualTo(prefix);
+        assertThat(mathExpression.toPostfixNotation("3+4")).isEqualTo(prefix);
     }
 
     @Test
@@ -44,7 +52,7 @@ class MathExpressionTest {
         prefix.add("*");
         prefix.add("+");
 
-        assertThat(new MathExpression().toPostfixNotation("3+4*2")).isEqualTo(prefix);
+        assertThat(mathExpression.toPostfixNotation("3+4*2")).isEqualTo(prefix);
     }
 
     @Test
@@ -56,7 +64,7 @@ class MathExpressionTest {
         prefix.add("2");
         prefix.add("+");
 
-        assertThat(new MathExpression().toPostfixNotation("3*4+2")).isEqualTo(prefix);
+        assertThat(mathExpression.toPostfixNotation("3*4+2")).isEqualTo(prefix);
     }
 
     @Test
@@ -66,7 +74,7 @@ class MathExpressionTest {
         prefix.add("35");
         prefix.add("+");
 
-        assertThat(new MathExpression().toPostfixNotation("4,5+35")).isEqualTo(prefix);
+        assertThat(mathExpression.toPostfixNotation("4,5+35")).isEqualTo(prefix);
     }
 
     @Test
@@ -86,7 +94,7 @@ class MathExpressionTest {
         prefix.add("2");
         prefix.add("-");
 
-        assertThat(new MathExpression().toPostfixNotation("3+4/3+6*8-2")).isEqualTo(prefix);
+        assertThat(mathExpression.toPostfixNotation("3+4/3+6*8-2")).isEqualTo(prefix);
     }
 
     @Test
