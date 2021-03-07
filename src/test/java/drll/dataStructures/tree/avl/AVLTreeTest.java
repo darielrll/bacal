@@ -3,21 +3,17 @@ package drll.dataStructures.tree.avl;
 
 import static org.assertj.core.api.Assertions.*;
 
-import common.Utils;
-import drll.dataStructures.tree.avl.AVLNode;
-import drll.dataStructures.tree.avl.AVLTree;
-import drll.dataStructures.tree.avl.BalanceFactor;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-@RunWith(MockitoJUnitRunner.class)
+import common.Utils;
+
+
 public class AVLTreeTest {
 
     private AVLTree<Integer> tree;
 
-    @Before
+    @BeforeEach
     public void init(){
         tree = new AVLTree<>();
     }

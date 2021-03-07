@@ -1,5 +1,6 @@
 # Bacal
 
+
 #### What is this repository for?
 > This is a repository to store my solutions for problems 
 from [Hacker Rank](https://www.hackerrank.com/dashboard). 
@@ -21,31 +22,34 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
     src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
 ```
 
-#### Resume for 9 solved problems
+#### Resume for 19 solved problems
 
-###### According to their classification
+###### According to hacker rank classification
 
 | Algorithms                    | Data Structures | Mathematics |
-| :--- | --- | --- |
-| Dynamic programming (1)       | | |
-| Greedy (1)                    | | |
-| Sorting (1)                   | | |
-| Graph Theory (1)              | | |
-| Constructive Algorithms (1)   | | |
-| Warmup (3)                    | | |
-| Implementation (1)            | | |
-
-###### According to their difficulty level (according to HackerRank)
+| :---                          | ---             | ---         |
+| Dynamic programming (1)       | Trie(1)         | Algebra(1)  |
+| Greedy (1)                    | Stacks(1)       |             |
+| Sorting (1)                   | Array(1)        |             |
+| Graph Theory (1)              | Linked List(1)  |             |
+| Constructive Algorithms (1)   |                 |             |
+| Warmup (3)                    |                 |             |
+| Recursion (1)                 |                 |             |
+| Implementation (1)            |                 |             |
+| Search (2)                    |                 |             |
+| Strings (2)                   |                 |             |
+          
+###### According to hacker rank difficulty level (according to HackerRank)
 
 | Easy  | Medium | Hard  | Advanced |
 | :---: | :---:  | :---: |   :---:  |
-|   3   |   4    |   1   |     1    |
+|   5   |   10   |   3   |     1    |
 
 ###### My current classification in Hacker Rank
 
-| Rank   | Points |
-| :---:  |  :---: |
-| 186649 |  348   |
+| Rank   | Points | Day   | 
+| :---:  |  :---: | :---: |
+| 103560 |  713   | 27/03 |
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)

@@ -1,9 +1,12 @@
 
 package common;
 
+import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Utils {
 
@@ -85,5 +88,40 @@ public class Utils {
             result[i] = integers[i];
         }
         return result;
+    }
+
+    public static Scanner getFileScanner(String testDataFile) {
+        URL resource = Utils.class.getClassLoader().getResource(testDataFile);
+        try {
+            File file = new File(resource.toURI());
+            return new Scanner(file);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static int[] buildArrayIntFromFile(String testDataFile) {
+
+        ArrayList<Integer> numbers = getIntegersInFile(testDataFile);
+
+        int[] result = new int[numbers.size()];
+        for (int i = 0; i < numbers.size(); i++) {
+            result[i] = numbers.get(i);
+        }
+        return result;
+    }
+
+    private static ArrayList<Integer> getIntegersInFile(String testDataFile) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner sc = getFileScanner(testDataFile);
+
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] lineNumbers = line.split(" ");
+            for (int i = 0; i < lineNumbers.length; i++) {
+                numbers.add(Integer.parseInt(lineNumbers[i]));
+            }
+        }
+        return numbers;
     }
 }
