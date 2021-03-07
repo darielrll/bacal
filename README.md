@@ -13,7 +13,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 > - The problem should run local unit tests
 
 #### Working now in solution for problem?
-* [Bonetrousle](https://www.hackerrank.com/challenges/bonetrousle/problem)
+* [Kitty's Calculations on a Tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem)
 
 #### Directory structure to store problems solutions:
 > Under src folder follow this folder structure
