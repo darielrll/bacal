@@ -1,134 +1,115 @@
 
-package drll.problems.bonetrousle;
+package drll.problems.hackerRank.bonetrousle;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-
-import java.util.HashSet;
-import java.util.Set;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class BonetrousleTest {
 
     @Test
-    public void should_respond_correctly_for_test_case_1() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(12, 8, 3);
+    public void should_respond_correctly_for_test_case_1_of_hr() {
+        int sticksToBuy = 12;
+        int boxesForSale = 8;
+        int numberOfBoxesToBuy = 3;
 
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(12);
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertAcceptedCombination(sticksToBuy, numberOfBoxesToBuy, bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_2() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(4, 4, 2);
+    public void should_respond_correctly_for_test_case_2_of_hr() {
+        int sticksToBuy = 10;
+        int boxesForSale = 3;
+        int numberOfBoxesToBuy = 3;
 
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(4);
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertNotExistCombination(bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_3() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(10, 3, 3);
+    public void should_respond_correctly_for_test_case_3_of_hr() {
+        int sticksToBuy = 9;
+        int boxesForSale = 10;
+        int numberOfBoxesToBuy = 2;
 
-        assertThat(bonetrousle.length).isEqualTo(0);
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertAcceptedCombination(sticksToBuy, numberOfBoxesToBuy, bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_4() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(9, 10, 2);
+    public void should_return_NA_when_buy_7_sticks_in_4_boxes_and_exist_10_boxes() {
+        int sticksToBuy = 7;
+        int boxesForSale = 10;
+        int numberOfBoxesToBuy = 4;
 
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(9);
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertNotExistCombination(bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_5() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(22, 7, 6);
-        // falla porque hay valores con 0
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(22);
+    public void should_return_accepted_combination_when_buy_10_sticks_in_4_boxes_and_exist_10_boxes() {
+        int sticksToBuy = 10;
+        int boxesForSale = 10;
+        int numberOfBoxesToBuy = 4;
+
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertAcceptedCombination(sticksToBuy, numberOfBoxesToBuy, bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_6() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(26, 7, 6);
-        // falla porque se repiten valores
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(26);
+    public void should_return_accepted_combination_when_buy_10_sticks_in_2_boxes_and_exist_10_boxes() {
+        int sticksToBuy = 10;
+        int boxesForSale = 10;
+        int numberOfBoxesToBuy = 2;
+
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertAcceptedCombination(sticksToBuy, numberOfBoxesToBuy, bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_7() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(25, 10, 5);
-        // falla porque hay valores con 0
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(25);
+    public void should_return_NA_when_buy_10_sticks_in_1_boxes_and_exist_4_boxes() {
+        int sticksToBuy = 10;
+        int boxesForSale = 4;
+        int numberOfBoxesToBuy = 1;
+
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertNotExistCombination(bonetrousle);
     }
 
     @Test
-    public void should_respond_correctly_for_test_case_8() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(39, 15, 3);
-        // falla porque hay valores con 0
-        Set<Long> result = new HashSet<>();
-        long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
-            boughtStick += bonetrousle[i];
-        }
-        assertThat(boughtStick).isEqualTo(39);
+    public void should_return_accepted_combination_when_buy_4_sticks_in_1_boxes_and_exist_4_boxes() {
+        int sticksToBuy = 4;
+        int boxesForSale = 4;
+        int numberOfBoxesToBuy = 1;
+
+        long[] bonetrousle = Bonetrousle.bonetrousle(sticksToBuy, boxesForSale, numberOfBoxesToBuy);
+
+        assertAcceptedCombination(sticksToBuy, numberOfBoxesToBuy, bonetrousle);
     }
 
-    @Test
-    public void should_respond_correctly_for_test_case_9() {
-        Long[] bonetrousle = Bonetrousle.bonetrousle(95, 20, 10);
-        // falla porque hay valores con 0 y se repiten los 0
-        Set<Long> result = new HashSet<>();
+    private long getBoughtStick(long[] bonetrousle) {
         long boughtStick = 0;
         for (int i = 0; i < bonetrousle.length; i++) {
-            assertThat(result.add(bonetrousle[i])).isTrue();
-            assertThat(bonetrousle[i]).isGreaterThan(0);
             boughtStick += bonetrousle[i];
         }
-        assertThat(boughtStick).isEqualTo(95);
+        return boughtStick;
+    }
+
+    private void assertAcceptedCombination(int sticksToBuy, int numberOfBoxesToBuy, long[] bonetrousle) {
+        assertThat(bonetrousle.length).isEqualTo(numberOfBoxesToBuy);
+        assertThat(getBoughtStick(bonetrousle)).isEqualTo(sticksToBuy);
+    }
+
+    private void assertNotExistCombination(long[] bonetrousle) {
+        assertThat(bonetrousle.length).isEqualTo(1);
+        assertThat(bonetrousle[0]).isEqualTo(-1);
     }
 }
