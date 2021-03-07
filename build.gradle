@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.sonarqube" version "3.1.1"
 }
 
 group 'nisum.bacal'
@@ -15,4 +16,12 @@ dependencies {
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
     testCompile "org.mockito:mockito-core:2.19.0"
     testCompile "org.assertj:assertj-core:3.18.1"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "darielrll_bacal"
+        property "sonar.organization", "darielrll-github"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
