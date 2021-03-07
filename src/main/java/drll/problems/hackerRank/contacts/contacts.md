@@ -4,5 +4,5 @@
  
  ##### Difficulty Level (according to HackerRank)
  
- > Medium (Data Structures | Try )
+ > Medium (Data Structures | Trie )
 

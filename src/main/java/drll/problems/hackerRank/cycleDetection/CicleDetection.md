@@ -4,7 +4,7 @@
  
 ##### Difficulty Level (according to HackerRank)
  
- > Medium (Data Structures | Linked Lists)
+ > Medium (Data Structures | Linked List)
  
 ##### Resume of the problem:
  
