@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
     id "org.sonarqube" version "3.1.1"
 }
 
@@ -16,6 +17,12 @@ dependencies {
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
     testCompile "org.mockito:mockito-core:2.19.0"
     testCompile "org.assertj:assertj-core:3.18.1"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
 
 sonarqube {
