@@ -51,6 +51,9 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 | :---:  |  :---:    | :---:    |
 | 163268 |  828.05   | 07/03/21 |
 
+#### CLI
+`make test` : to run all tests
+
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)
 * [AssertJ](http://joel-costigliola.github.io/assertj/index.html)
