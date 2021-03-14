@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id "org.sonarqube" version "3.1.1"
+    id 'com.adarshr.test-logger' version '2.1.1'
 }
 
 group 'nisum.bacal'
