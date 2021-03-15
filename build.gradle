@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id "org.sonarqube" version "3.1.1"
+    id 'com.adarshr.test-logger' version '2.1.1'
 }
 
 group 'nisum.bacal'
@@ -10,13 +11,16 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
-    testCompile "org.mockito:mockito-core:2.19.0"
-    testCompile "org.assertj:assertj-core:3.18.1"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testImplementation "org.mockito:mockito-core:2.19.0"
+    testImplementation "org.assertj:assertj-core:3.18.1"
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
 
 jacocoTestReport {
@@ -31,4 +35,9 @@ sonarqube {
         property "sonar.organization", "darielrll-github"
         property "sonar.host.url", "https://sonarcloud.io"
     }
+}
+
+tasks.named('test') {
+    // Use junit platform for unit tests.
+    useJUnitPlatform()
 }
