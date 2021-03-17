@@ -18,7 +18,7 @@ public class BigSortingTest {
         "31415926535897932384626433832795",
         "1", "3", "10", "3", "5"};
 
-        String[] result = BigSorting.bigSorting(input);
+        String[] result = Solution.bigSorting(input);
 
         assertThat(result).isEqualTo(new String[]{"1",
                 "3",
@@ -41,7 +41,7 @@ public class BigSortingTest {
                                       "111",
                                       "200"};
 
-        String[] result = BigSorting.bigSorting(input);
+        String[] result = Solution.bigSorting(input);
 
         assertThat(result).isEqualTo(new String[]{"1",
                                                   "2",
@@ -59,11 +59,11 @@ public class BigSortingTest {
         String[] input = buildCaseFromFile("bigSorting/testCase6.txt");
         String[] expected = buildCaseFromFile("bigSorting/testCase6_result.txt");
 
-        String[] result = BigSorting.bigSorting(input);
+        String[] result = Solution.bigSorting(input);
 
         assertThat(result.length).isEqualTo(expected.length);
         for (int i = 0; i < result.length; i++) {
-            if( result[i].compareTo(input[i]) != 0 ){
+            if( result[i].compareTo(expected[i]) != 0 ){
                 assertThat(true).isFalse();
             }
         }
