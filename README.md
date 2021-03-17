@@ -49,7 +49,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard).
 
 | Rank   | Points    | Day      | 
 | :---:  |  :---:    | :---:    |
-| 163268 |  828.05   | 07/03/21 |
+| 163688 |  831.25   | 07/03/21 |
 
 #### CLI
 `make test` : to run all tests

@@ -20,4 +20,10 @@
 | 15 | [Cycle Detection](https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem)| Data Structures - Linked Lists | Medium | 5  | SOLVED |
 | 16 | [Hackerland Radio Transmitters](https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem)| Algorithms - Search | Medium | 25  | SOLVED |
 | 17 | [Missing Numbers](https://www.hackerrank.com/challenges/missing-numbers/problem)| Algorithms - Search | Easy | 45  | SOLVED |
-| 18 | [Big Sorting](https://www.hackerrank.com/challenges/missing-numbers/problem)| Algorithms - Search | Easy | 45  | SOLVED |
+| 18 | [Big Sorting](https://www.hackerrank.com/challenges/big-sorting/problem)| Algorithms - Sorting | Easy | 20  | SOLVED |
+| 19 | [Bonetrousle](https://www.hackerrank.com/challenges/bonetrousle/problem)| Algorithms - Constructive Algorithms | Medium | 50  | SOLVED*1 |
+| 20 | [Common Child](https://www.hackerrank.com/challenges/common-child/problem)| Algorithms - Strings | Medium | 60  | SOLVED |
+| 21 | [Strong Password](https://www.hackerrank.com/challenges/strong-password/problem)| Algorithms - Strings | Easy | 15  | SOLVED |
+
+
+###### 1: The solution is correct, but, the online judge validator is not correctly implemented, I request the feature change
