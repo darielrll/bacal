@@ -3,20 +3,15 @@ package drll.problems.hackerRank.bigSorting;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
 
     // Complete the bigSorting function below.
     static String[] bigSorting(String[] unsorted) {
-
-        HashMap<String, Integer> numbersCount = new HashMap<>();
+        Map<String, Integer> numbersCount = new HashMap<>();
         for (String number : unsorted) {
-            if (numbersCount.containsKey(number)){
-                numbersCount.put(number, numbersCount.get(number) + 1);
-            }
-            else {
-                numbersCount.put(number, 1);
-            }
+            numbersCount.compute(number, (key, value) -> (value == null) ? 1 : value + 1);
         }
 
         String[] sortedKeys = numbersCount.keySet().toArray(new String[0]);
