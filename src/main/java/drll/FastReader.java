@@ -11,6 +11,7 @@ public class FastReader {
     }
 
     public int read() throws IOException {
+
         return inputStream.read();
     }
 }
