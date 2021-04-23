@@ -3,53 +3,39 @@
 
 #### What is this repository for?
 > This is a repository to store my solutions for problems 
-from [Hacker Rank](https://www.hackerrank.com/dashboard). 
+from [Hacker Rank](https://www.hackerrank.com/dashboard), 
+> [Leetcode](https://leetcode.com/) and custom problems. 
 
 #### Why _Bacal_?
-> It's Bacal for the initials of: BACk To ALgorithms
+> It's Bacal for the initials of: **BAC**k to **AL**gorithms
 
 #### Definition of Problem Solved in this repository
-> - The problem should run successfully all test cases provided by hacker rank
+> - The problem should run successfully all test cases provided by the online judge.
 > - The problem should run local unit tests
 
 #### Working now in solution for problem?
-* [Kitty's Calculations on a Tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem)
+* [HackerRank -> Kitty's Calculations on a Tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem)
 
 #### Directory structure to store problems solutions:
-> Under src folder follow this folder structure
+> Under `src` folder follow this folder structure
 ```
-    src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.java
-    src/main/java/drll/problems/<nameOfTheProblem>/NameOfTheProblem.md
+    src/main/java/drll/problems/<problem_source>/<nameOfTheProblem>/NameOfTheProblem.java
+    src/main/java/drll/problems/<problem_source>/<nameOfTheProblem>/NameOfTheProblem.md
 ```
-
-#### Resume for 21 solved problems
-
-###### According to hacker rank classification
-
-| Algorithms                    | Data Structures | Mathematics |
-| :---                          | ---             | ---         |
-| Dynamic programming (1)       | Trie(1)         | Algebra(1)  |
-| Greedy (1)                    | Stacks(1)       |             |
-| Sorting (2)                   | Array(1)        |             |
-| Graph Theory (1)              | Linked List(1)  |             |
-| Constructive Algorithms (2)   |                 |             |
-| Warmup (3)                    |                 |             |
-| Recursion (1)                 |                 |             |
-| Implementation (1)            |                 |             |
-| Search (2)                    |                 |             |
-| Strings (2)                   |                 |             |
           
-###### According to hacker rank difficulty level (according to HackerRank)
+##### Counter of solved problems according to the difficulty classifications of the online judges
 
-| Easy  | Medium | Hard  | Advanced |
-| :---: | :---:  | :---: |   :---:  |
-|   6   |   11   |   3   |     1    |
+| Online Judge Problems| Easy  | Medium | Hard  | Advanced |
+| :---: | :---: | :---:  | :---: |   :---:  |
+| [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |   6   |   11   |   3   |     1    |
+| Leetcode |      |      |      |         |
 
-###### My current classification in Hacker Rank
+##### My current classification in the online judges
 
-| Rank   | Points    | Day      | 
-| :---:  |  :---:    | :---:    |
-| 163688 |  831.25   | 07/03/21 |
+| Online Judge| Rank   | Points    | Update Day      | 
+| :---: | :---:  |  :---:    | :---:    |
+| HackerRank | 163688 |  831.25   | 07/03/21 |
+| Leetcode |  |     |  |
 
 #### CLI
 `make test` : to run all tests
