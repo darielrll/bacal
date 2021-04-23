@@ -1,5 +1,23 @@
 
-## Solved Problems
+## Resume for 21 HackerRank solved problems
+
+### According to hacker rank classification
+
+| Algorithms                    | Data Structures | Mathematics |
+| :---                          | ---             | ---         |
+| Dynamic programming (1)       | Trie(1)         | Algebra(1)  |
+| Greedy (1)                    | Stacks(1)       |             |
+| Sorting (2)                   | Array(1)        |             |
+| Graph Theory (1)              | Linked List(1)  |             |
+| Constructive Algorithms (2)   |                 |             |
+| Warmup (3)                    |                 |             |
+| Recursion (1)                 |                 |             |
+| Implementation (1)            |                 |             |
+| Search (2)                    |                 |             |
+| Strings (2)                   |                 |             |
+
+
+### Solved problems in detail
 
 | No     | Algorithms                    | Classification | Difficulty | Points | Status | 
 | :---:  | :---                          | :---           | :---       | :---:  | :---:  |
