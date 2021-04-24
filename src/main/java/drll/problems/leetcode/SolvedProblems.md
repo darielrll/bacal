@@ -6,7 +6,7 @@
 | Algorithms                | Data Structures   | Mathematics |
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
-| Greedy                    | Stacks            |             |
+| Greedy                    | Stacks            | Math(1)     |
 | Sorting                   | Array             |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
@@ -23,6 +23,7 @@
 | :---:  | :---                          | :---           | :---:       | :---:  |
 | 1  | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | Medium | SOLVED |
 | 2  | [Convert BST to Greater Tree*3](https://leetcode.com/problems/convert-bst-to-greater-tree/)| Tree | Medium | SOLVED |
+| 3  | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)| Tree | Medium | SOLVED |
 
 ###### 1-2: Taking in account only the first related topic for the problem
 ###### 3: This problem is the same as exercise 1, and also is the same solution as problem 1
