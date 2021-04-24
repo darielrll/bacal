@@ -1,5 +1,5 @@
 
-## Resume for 4 Leetcode solved problems
+## Resume for 5 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
 | Greedy                    | Stacks            | Math(1)     |
-| Sorting                   | Array(1)          |             |
+| Sorting                   | Array(2)          |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
 | Warmup                    |                   |             |
@@ -25,6 +25,9 @@
 | 2  | [Convert BST to Greater Tree*3](https://leetcode.com/problems/convert-bst-to-greater-tree/)| Tree | Medium | SOLVED |
 | 3  | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)| Math | Medium | SOLVED |
 | 4  | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| Array | Medium | SOLVED |
+| 5  | [Triangle](https://leetcode.com/problems/triangle/)| Array | Medium | SOLVED |
 
+
+---
 ###### 1-2: Taking in account only the first related topic for the problem
 ###### 3: This problem is the same as exercise 1, and also is the same solution as problem 1
