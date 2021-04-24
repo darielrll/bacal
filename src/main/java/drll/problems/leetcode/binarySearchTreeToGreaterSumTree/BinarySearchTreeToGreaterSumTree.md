@@ -10,30 +10,32 @@
 
 Given a tree like this:
 
-              1    
-           1  1  1    
-        1  2  3  2  1  
-      1 3  6  7  6  3  9    
-    1 4 10 16 19 16 10 4 1  
+                     4    
+           1                  6    
+       0       2          5       7  
+                  3                   8    
 
-Return the position of the first even number given a row
+
+Given the root of a Binary Search Tree (BST), convert it to a Greater Tree such that 
+every key of the original BST is changed to the original key plus sum of all keys greater 
+than the original key in BST.
+
+```
+Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
+Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
+```
  
   
 ##### Notes
  
-I started creating the target row using only the previous row, 
-I made it using boolean operations taking in account that, 
-even + even = even, odd + odd = even, even + odd = odd, so, 
-I used a boolean array where true = even and false = odd. Of course
-this solution raised a time out. So I changed after a few days of 
-struggling my head to this final solution. 
+The interesting part of this exercise was to test it. I had to implement a method to convert the
+in a tree, the idea of this was taking in account this was a binary search tree and exist a way to
+convert it to an array like the input and vice versa.
+
+Given a position `i` in the array, the left child will be in the position `2 * i + 1`, the right 
+child will be at position `2(i + 1)` and the father will be at position `[(i - 1) / 2]`(the integer 
+part of the division)
 
 
-## Final result
 
-For an odd row the even number will be always in position 2, for 
-even rows the position of the even number will be in position
-3 or 4.  
-    3: - if sumatory of naturals number from 0 to (row - 1) is even  
-    4: - otherwise 
 
