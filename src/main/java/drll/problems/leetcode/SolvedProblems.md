@@ -1,12 +1,12 @@
 
-## Resume for 5 Leetcode solved problems
+## Resume for 6 Leetcode solved problems
 
 ### According to leetcode classification*1
 
 | Algorithms                | Data Structures   | Mathematics |
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
-| Greedy                    | Stacks            | Math(1)     |
+| Greedy                    | Stacks            | Math(2)     |
 | Sorting                   | Array(2)          |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
@@ -26,6 +26,7 @@
 | 3  | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)| Math | Medium | SOLVED |
 | 4  | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| Array | Medium | SOLVED |
 | 5  | [Triangle](https://leetcode.com/problems/triangle/)| Array | Medium | SOLVED |
+| 6  | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Easy | SOLVED |
 
 
 ---
