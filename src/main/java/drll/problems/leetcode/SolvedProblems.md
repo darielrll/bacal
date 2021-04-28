@@ -7,7 +7,7 @@
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
 | Greedy                    | Stacks            | Math(2)     |
-| Sorting                   | Array(2)          |             |
+| Sorting                   | Array(3)          |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
 | Warmup                    |                   |             |
@@ -27,6 +27,7 @@
 | 4  | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| Array | Medium | SOLVED |
 | 5  | [Triangle](https://leetcode.com/problems/triangle/)| Array | Medium | SOLVED |
 | 6  | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Easy | SOLVED |
+| 7  | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| Array | Medium | SOLVED |
 
 
 ---

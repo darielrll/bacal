@@ -4,7 +4,7 @@
  
 ##### Difficulty Level (according to Leetcode)
  
- > Medium (Array | Dynamic programming
+ > Medium (Array | Dynamic programming )
  
 ##### Resume of the problem:
 

@@ -1,6 +1,5 @@
 package drll.problems.leetcode.triangle;
 
-import drll.problems.leetcode.triangle.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
