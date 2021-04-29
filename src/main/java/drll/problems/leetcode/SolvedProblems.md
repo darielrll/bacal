@@ -1,5 +1,5 @@
 
-## Resume for 8 Leetcode solved problems
+## Resume for 9 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -29,6 +29,7 @@
 | 6  | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Easy | SOLVED |
 | 7  | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| Array | Medium | SOLVED |
 | 8  | [Unique Paths](https://leetcode.com/problems/unique-paths/)| Array | Medium | SOLVED |
+| 9  | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| Array | Medium | SOLVED |
 
 
 ---
