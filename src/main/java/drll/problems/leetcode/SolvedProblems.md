@@ -1,5 +1,5 @@
 
-## Resume for 6 Leetcode solved problems
+## Resume for 8 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
 | Greedy                    | Stacks            | Math(2)     |
-| Sorting                   | Array(3)          |             |
+| Sorting                   | Array(4)          |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
 | Warmup                    |                   |             |
@@ -28,6 +28,7 @@
 | 5  | [Triangle](https://leetcode.com/problems/triangle/)| Array | Medium | SOLVED |
 | 6  | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Easy | SOLVED |
 | 7  | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| Array | Medium | SOLVED |
+| 8  | [Unique Paths](https://leetcode.com/problems/unique-paths/)| Array | Medium | SOLVED |
 
 
 ---
