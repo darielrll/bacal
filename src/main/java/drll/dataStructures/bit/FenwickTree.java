@@ -1,5 +1,5 @@
 
-package drll.dataStructures.tree.bit;
+package drll.dataStructures.bit;
 
 import java.security.InvalidParameterException;
 import java.util.HashMap;

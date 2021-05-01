@@ -1,8 +1,8 @@
 
 package drll.problems.hackerRank.insertionSortAdvancedAnalysis;
 
-import drll.dataStructures.tree.avl.AVLNode;
-import drll.dataStructures.tree.avl.AVLTree;
+import drll.dataStructures.avl.AVLNode;
+import drll.dataStructures.avl.AVLTree;
 
 public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
 
