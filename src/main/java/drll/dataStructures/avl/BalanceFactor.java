@@ -1,5 +1,5 @@
 
-package drll.dataStructures.tree.avl;
+package drll.dataStructures.avl;
 
 public enum BalanceFactor {
     POSITIVE, NEGATIVE, BALANCED
