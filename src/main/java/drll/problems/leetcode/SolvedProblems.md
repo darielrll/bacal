@@ -1,5 +1,5 @@
 
-## Resume for 10 Leetcode solved problems
+## Resume for 11 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
 | Greedy                    | Stacks            | Math(3)     |
-| Sorting                   | Array(5)          |             |
+| Sorting                   | Array(6)          |             |
 | Graph Theory              | Linked List       |             |
 | Constructive Algorithms   | Tree(2)           |             |
 | Warmup                    |                   |             |
@@ -31,6 +31,7 @@
 | 8  | [Unique Paths](https://leetcode.com/problems/unique-paths/)| Array | Medium | SOLVED |
 | 9  | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| Array | Medium | SOLVED |
 | 10 | [Powerful Integers](https://leetcode.com/problems/powerful-integers/)| Math | Medium | SOLVED |
+| 11 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)| Array | Easy | SOLVED |
 
 
 ---
