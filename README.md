@@ -35,7 +35,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 | Online Judge| Rank   | Points    | Update Day      | 
 | :---: | :---:  |  :---:    | :---:    |
 | HackerRank | 163688 |  831.25   | 07/03/21 |
-| Leetcode | ~ 100 000 |   115  | 04/05/21 |
+| Leetcode | ~ 100 000 |   128  | 04/05/21 |
 
 #### CLI
 `make test` : to run all tests
