@@ -3,6 +3,7 @@ package drll.dataStructures.graph;
 import org.junit.jupiter.api.Test;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -201,5 +202,22 @@ class GraphTest {
 
         InvalidParameterException exception = assertThrows(InvalidParameterException.class, () -> graph.adjacent(7));
         assertThat(exception.getMessage()).isEqualTo("Vertex indexes should be >= 0 and <= 3");
+    }
+
+    @Test
+    void should_iterate_over_all_vertex(){
+        int[][] edges = new int[][]{{1, 2}, {0, 2}, {2, 3}};
+        Graph graph = new Graph(edges);
+
+        List<Integer> vertexGraph = new ArrayList<>();
+        for (Integer vertex : graph.vertex()) {
+            vertexGraph.add(vertex);
+        }
+
+        assertThat(vertexGraph.size()).isEqualTo(4);
+        assertThat(vertexGraph.contains(0)).isTrue();
+        assertThat(vertexGraph.contains(1)).isTrue();
+        assertThat(vertexGraph.contains(2)).isTrue();
+        assertThat(vertexGraph.contains(3)).isTrue();
     }
 }

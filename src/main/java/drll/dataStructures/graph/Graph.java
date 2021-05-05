@@ -3,8 +3,9 @@ package drll.dataStructures.graph;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
-public class Graph {
+public class Graph{
     private final List<List<Integer>> adjacencyList;
     private int edgesCount;
 
@@ -84,6 +85,9 @@ public class Graph {
         return adjacencyList.get(vertex).size();
     }
 
+    public Iterable<Integer> vertex() {
+        return () -> IntStream.range(0, adjacencyList.size()).iterator();
+    }
 
     private boolean isNotValidEdge(int v1, int v2) {
         return isNotValidVertex(v1)  ||  isNotValidVertex(v2);
