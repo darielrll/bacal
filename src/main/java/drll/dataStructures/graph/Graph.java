@@ -33,14 +33,15 @@ public class Graph {
 
     public boolean addEdge(int v1, int v2) {
         if(isNotValidEdge(v1, v2)){
-            throw new InvalidParameterException(String.format("Vertex indexes should be >= 0 and <= %s",
-                    adjacencyList.size() - 1));
+            riseException();
         }
         if(isAdjacent(v1, v2)){
             return false;
         }
         adjacencyList.get(v1).add(v2);
-        adjacencyList.get(v2).add(v1);
+        if(v1 != v2){
+            adjacencyList.get(v2).add(v1);
+        }
         edgesCount++;
         return true;
     }
@@ -49,26 +50,40 @@ public class Graph {
         if(edges == null) {
             return;
         }
-        for (int i = 0; i < edges.length; i++) {
-            addEdge(edges[i][0], edges[i][1]);
+        for (int[] edge : edges) {
+            addEdge(edge[0], edge[1]);
         }
+    }
+
+    public boolean removeEdge(int v1, int v2) {
+        if(isNotValidEdge(v1, v2)){
+            riseException();
+        }
+        if(isAdjacent(v1, v2)){
+            adjacencyList.get(v1).remove(Integer.valueOf(v2));
+            if(v1 != v2){
+                adjacencyList.get(v2).remove(Integer.valueOf(v1));
+            }
+            edgesCount--;
+            return true;
+        }
+        return false;
     }
 
     public List<Integer> adjacent(int vertex) {
         if(isNotValidVertex(vertex)){
-            throw new InvalidParameterException(String.format("Vertex indexes should be >= 0 and <= %s",
-                    adjacencyList.size() - 1));
+            riseException();
         }
         return adjacencyList.get(vertex);
     }
 
     public int vertexDegree(int vertex) {
         if(isNotValidVertex(vertex)){
-            throw new InvalidParameterException(String.format("Vertex indexes should be >= 0 and <= %s",
-                    adjacencyList.size() - 1));
+            riseException();
         }
         return adjacencyList.get(vertex).size();
     }
+
 
     private boolean isNotValidEdge(int v1, int v2) {
         return isNotValidVertex(v1)  ||  isNotValidVertex(v2);
@@ -79,22 +94,27 @@ public class Graph {
     }
 
     private List<List<Integer>> initAdjacencyList(int vertex) {
-        List<List<Integer>> adjacencyList = new ArrayList<>(vertex);
+        List<List<Integer>> edgeList = new ArrayList<>(vertex);
         for (int i = 0; i <= vertex; i++) {
-            adjacencyList.add(new ArrayList<>());
+            edgeList.add(new ArrayList<>());
         }
-        return adjacencyList;
+        return edgeList;
     }
 
     private int calculateVertexCount(int[][] edges) {
         int lastVertex = 0;
-        for (int i = 0; i < edges.length; i++) {
-            for (int j = 0; j < edges[i].length; j++) {
-                if(lastVertex < edges[i][j]){
-                    lastVertex = edges[i][j];
+        for (int[] edge : edges) {
+            for (int i : edge) {
+                if (lastVertex < i) {
+                    lastVertex = i;
                 }
             }
         }
         return lastVertex;
+    }
+
+    private void riseException() {
+        throw new InvalidParameterException(String.format("Vertex indexes should be >= 0 and <= %s",
+                adjacencyList.size() - 1));
     }
 }
