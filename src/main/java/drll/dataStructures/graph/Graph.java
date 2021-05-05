@@ -89,6 +89,7 @@ public class Graph{
         return () -> IntStream.range(0, adjacencyList.size()).iterator();
     }
 
+
     private boolean isNotValidEdge(int v1, int v2) {
         return isNotValidVertex(v1)  ||  isNotValidVertex(v2);
     }
