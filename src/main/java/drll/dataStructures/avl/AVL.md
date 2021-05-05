@@ -1,7 +1,7 @@
 # Data structure: AVL Tree
 
 ##### What is an avl tree?
-> An avl tree is a self-balancing binary search tree balanced
+> An AVL tree is a self-balancing binary search tree balanced
 by height, with balance factor equal to one. 
 Was created by **A**delson-**V**elsky and **L**andis.
 
