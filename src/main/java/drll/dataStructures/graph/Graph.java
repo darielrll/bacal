@@ -16,7 +16,7 @@ public class Graph{
 
     public Graph(int[][] edges) {
         int lastVertex = calculateVertexCount(edges);
-        this.adjacencyList = initAdjacencyList(lastVertex);
+        adjacencyList = initAdjacencyList(lastVertex);
         addEdge(edges);
     }
 
