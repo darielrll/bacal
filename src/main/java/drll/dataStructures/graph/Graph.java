@@ -16,7 +16,7 @@ public class Graph{
 
     public Graph(int[][] edges) {
         int lastVertex = calculateVertexCount(edges);
-        this.adjacencyList = initAdjacencyList(lastVertex);
+        adjacencyList = initAdjacencyList(lastVertex);
         addEdge(edges);
     }
 
@@ -30,6 +30,15 @@ public class Graph{
 
     public boolean isAdjacent(int v1, int v2) {
         return adjacencyList.get(v1).contains(v2);
+    }
+
+    public void addEdge(int[][] edges) {
+        if(edges == null) {
+            return;
+        }
+        for (int[] edge : edges) {
+            addEdge(edge[0], edge[1]);
+        }
     }
 
     public boolean addEdge(int v1, int v2) {
@@ -47,28 +56,19 @@ public class Graph{
         return true;
     }
 
-    public void addEdge(int[][] edges) {
-        if(edges == null) {
-            return;
-        }
-        for (int[] edge : edges) {
-            addEdge(edge[0], edge[1]);
-        }
-    }
-
     public boolean removeEdge(int v1, int v2) {
         if(isNotValidEdge(v1, v2)){
             riseException();
         }
-        if(isAdjacent(v1, v2)){
-            adjacencyList.get(v1).remove(Integer.valueOf(v2));
-            if(v1 != v2){
-                adjacencyList.get(v2).remove(Integer.valueOf(v1));
-            }
-            edgesCount--;
-            return true;
+        if (!isAdjacent(v1, v2)) {
+            return false;
         }
-        return false;
+        adjacencyList.get(v1).remove(Integer.valueOf(v2));
+        if(v1 != v2){
+            adjacencyList.get(v2).remove(Integer.valueOf(v1));
+        }
+        edgesCount--;
+        return true;
     }
 
     public List<Integer> adjacent(int vertex) {
@@ -100,7 +100,7 @@ public class Graph{
 
     private List<List<Integer>> initAdjacencyList(int vertex) {
         List<List<Integer>> edgeList = new ArrayList<>(vertex);
-        for (int i = 0; i <= vertex; i++) {
+        while (vertex-- >= 0) {
             edgeList.add(new ArrayList<>());
         }
         return edgeList;
@@ -109,11 +109,7 @@ public class Graph{
     private int calculateVertexCount(int[][] edges) {
         int lastVertex = 0;
         for (int[] edge : edges) {
-            for (int i : edge) {
-                if (lastVertex < i) {
-                    lastVertex = i;
-                }
-            }
+            lastVertex = Math.max(lastVertex, Math.max(edge[0], edge[1]));
         }
         return lastVertex;
     }
