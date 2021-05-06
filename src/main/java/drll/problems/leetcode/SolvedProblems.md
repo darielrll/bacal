@@ -1,5 +1,5 @@
 
-## Resume for 13 Leetcode solved problems
+## Resume for 14 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -8,7 +8,7 @@
 | Dynamic programming       | Trie              | Algebra     |
 | Greedy                    | Stacks            | Math(3)     |
 | Sorting                   | Array(8)          |             |
-| Graph Theory              | Linked List       |             |
+| Graph Theory              | Linked List(1)    |             |
 | Constructive Algorithms   | Tree(2)           |             |
 | Warmup                    |                   |             |
 | Recursion                 |                   |             |
@@ -34,6 +34,7 @@
 | 11 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)| Array | Easy | SOLVED |
 | 12 | [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)| Array | Medium | SOLVED |
 | 13 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/)| Array | Medium | SOLVED |
+| 14 | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)| Linked List | Medium | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
