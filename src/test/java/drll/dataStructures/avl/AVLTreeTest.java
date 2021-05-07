@@ -37,7 +37,6 @@ public class AVLTreeTest {
 
     @Test
     public void should_function_adding_only_one_element() {
-
         int element = 5;
 
         tree.add(element);
