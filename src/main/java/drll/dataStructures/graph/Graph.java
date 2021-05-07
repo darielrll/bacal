@@ -118,4 +118,9 @@ public class Graph{
         throw new InvalidParameterException(String.format("Vertex indexes should be >= 0 and <= %s",
                 adjacencyList.size() - 1));
     }
+
+    public int addVertex() {
+        adjacencyList.add(new ArrayList<>());
+        return vertexCount() - 1;
+    }
 }

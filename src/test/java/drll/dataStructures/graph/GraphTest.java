@@ -220,4 +220,22 @@ class GraphTest {
         assertThat(vertexGraph.contains(2)).isTrue();
         assertThat(vertexGraph.contains(3)).isTrue();
     }
+
+    @Test
+    void should_return_vertex_count_when_is_added_a_vertex_and_count_increment_in_one(){
+        int vertexCount = 5;
+        Graph graph = new Graph(vertexCount);
+
+        assertThat(graph.addVertex()).isEqualTo(vertexCount);
+        assertThat(graph.vertexCount()).isEqualTo(vertexCount + 1);
+    }
+
+//    @Test
+//    void should_return_true_when_a_valid_vertex_is_removed(){
+//        int vertexCount = 5;
+//        Graph graph = new Graph(vertexCount);
+//
+//        assertThat(graph.removeVertex()).isEqualTo(vertexCount);
+//        assertThat(graph.vertexCount()).isEqualTo(vertexCount + 1);
+//    }
 }
