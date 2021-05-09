@@ -5,7 +5,7 @@
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy (Medium | Array )
+ > Medium ( Array | Greedy )
  
 ##### Resume of the problem:
 
