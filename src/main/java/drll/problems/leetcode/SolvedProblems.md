@@ -1,12 +1,12 @@
 
-## Resume for 15 Leetcode solved problems
+## Resume for 16 Leetcode solved problems
 
 ### According to leetcode classification*1
 
 | Algorithms                | Data Structures   | Mathematics |
 | ---                       | ---               | ---         |
 | Dynamic programming       | Trie              | Algebra     |
-| Greedy                    | Stacks            | Math(3)     |
+| Greedy                    | Stacks            | Math(4)     |
 | Sorting                   | Array(9)          |             |
 | Graph Theory              | Linked List(1)    |             |
 | Constructive Algorithms   | Tree(2)           |             |
@@ -36,7 +36,9 @@
 | 13 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/)| Array | Medium | SOLVED |
 | 14 | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)| Linked List | Medium | SOLVED |
 | 15 | [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/)| Array | Medium | SOLVED |
+| 16 | [Count Primes](https://leetcode.com/problems/count-primes/)| Math | Easy*4 | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
 ###### 3: This problem is the same as exercise 1, and also is the same solution as problem 1
+###### 4: Easy if you know Eratosthenes Crib !!
