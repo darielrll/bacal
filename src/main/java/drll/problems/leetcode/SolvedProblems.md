@@ -41,4 +41,4 @@
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
 ###### 3: This problem is the same as exercise 1, and also is the same solution as problem 1
-###### 4: Easy if you know Eratosthenes Crib !!
+###### 4: Easy if you know Eratosthenes Sieve !!
