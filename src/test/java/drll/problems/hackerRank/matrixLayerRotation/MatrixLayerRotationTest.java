@@ -4,10 +4,10 @@ package drll.problems.hackerRank.matrixLayerRotation;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MatrixLayerRotationTest {
+class MatrixLayerRotationTest {
 
     @Test
-    public void should_rotate_ones_for_simple_case() {
+    void should_rotate_ones_for_simple_case() {
 
         int[][] matrix = buildSimpleCase();
 
@@ -17,7 +17,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_rotate_ones_for_3_rotations_in_simple_case() {
+    void should_rotate_ones_for_3_rotations_in_simple_case() {
 
         int[][] matrix = buildSimpleCase();
 
@@ -27,7 +27,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_be_the_same_simple_case_for_4_rotations() {
+    void should_be_the_same_simple_case_for_4_rotations() {
 
         int[][] matrix = buildSimpleCase();
 
@@ -37,7 +37,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_rotate_twice_for_simple_case_2() {
+    void should_rotate_twice_for_simple_case_2() {
 
         int[][] matrix = buildSimpleCase2();
 
@@ -47,7 +47,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_rotate_3_for_simple_case_3() {
+    void should_rotate_3_for_simple_case_3() {
 
         int[][] matrix = buildSimpleCase2();
 
@@ -57,7 +57,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_rotate_for_hacker_rank_test_case_1() {
+    void should_rotate_for_hacker_rank_test_case_1() {
 
         int[][] matrix = buildHackerRankCase1();
 
@@ -67,7 +67,7 @@ public class MatrixLayerRotationTest {
     }
 
     @Test
-    public void should_rotate_for_hacker_rank_test_case_2() {
+    void should_rotate_for_hacker_rank_test_case_2() {
 
         int[][] matrix = buildHackerRankCase2();
 

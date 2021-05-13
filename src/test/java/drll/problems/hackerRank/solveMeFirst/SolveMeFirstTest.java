@@ -4,10 +4,10 @@ package drll.problems.hackerRank.solveMeFirst;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class SolveMeFirstTest {
+class SolveMeFirstTest {
 
     @Test
-    public void should_sum_two_numbers() {
+    void should_sum_two_numbers() {
 
         int a = 4;
         int b = 5;

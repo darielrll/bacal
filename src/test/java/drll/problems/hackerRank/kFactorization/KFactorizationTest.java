@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class KFactorizationTest {
+class KFactorizationTest {
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
 
         int[] small = KFactorization.kFactorization(12, new int[]{2, 3, 4});
 
@@ -16,7 +16,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
 
         int[] small = KFactorization.kFactorization(15, new int[]{2, 10, 6, 9, 11});
 
@@ -24,7 +24,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case3() {
+    void should_return_correctly_for_test_case3() {
 
         int[] small = KFactorization.kFactorization(12, new int[]{2, 6});
 
@@ -32,7 +32,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case4() {
+    void should_return_correctly_for_test_case4() {
 
         int[] small = KFactorization.kFactorization(72, new int[]{2, 4, 6, 9, 3, 7, 16, 10, 5});
 
@@ -40,7 +40,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case4() {
+    void should_return_correctly_for_hr_test_case4() {
 
         int[] small = KFactorization.kFactorization(964518043, new int[]{4});
 
@@ -48,7 +48,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case5() {
+    void should_return_correctly_for_hr_test_case5() {
 
         int[] small = KFactorization.kFactorization(175840877, new int[]{4, 5, 6, 7, 8, 10, 12, 17, 18, 19});
 
@@ -56,7 +56,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case6() {
+    void should_return_correctly_for_hr_test_case6() {
 
         int[] small = KFactorization.kFactorization(49584742, new int[]{2, 3, 5, 6, 8, 9, 11, 12, 13, 14, 16, 19, 20});
 
@@ -64,7 +64,7 @@ public class KFactorizationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case7() {
+    void should_return_correctly_for_hr_test_case7() {
 
         int[] small = KFactorization.kFactorization(231000000, new int[]{2, 3, 5, 7, 11, 13, 17, 19});
 

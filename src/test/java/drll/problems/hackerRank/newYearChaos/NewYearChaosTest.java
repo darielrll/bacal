@@ -4,10 +4,10 @@ package drll.problems.hackerRank.newYearChaos;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class NewYearChaosTest {
+class NewYearChaosTest {
 
     @Test
-    public void should_return_correct_answer_for_test_case_1() {
+    void should_return_correct_answer_for_test_case_1() {
 
         int bribes = NewYearChaos.calculateBribes(new int[]{3, 2, 1});
 
@@ -15,7 +15,7 @@ public class NewYearChaosTest {
     }
 
     @Test
-    public void should_return_correct_answer_for_test_case_2() {
+    void should_return_correct_answer_for_test_case_2() {
 
         int bribes = NewYearChaos.calculateBribes(new int[]{2, 1, 5, 3, 4});
 
@@ -23,7 +23,7 @@ public class NewYearChaosTest {
     }
 
     @Test
-    public void should_return_correct_answer_for_test_case_3() {
+    void should_return_correct_answer_for_test_case_3() {
 
         int bribes = NewYearChaos.calculateBribes(new int[]{1, 2, 5, 3, 7, 8, 6, 4});
 
@@ -31,7 +31,7 @@ public class NewYearChaosTest {
     }
 
     @Test
-    public void should_return_correct_answer_for_test_case_4() {
+    void should_return_correct_answer_for_test_case_4() {
 
         int bribes = NewYearChaos.calculateBribes(buildTestCaseOfLength1000());
 
@@ -39,7 +39,7 @@ public class NewYearChaosTest {
     }
 
     @Test
-    public void should_return_no_bribes_for_to_chaotic_input_1() {
+    void should_return_no_bribes_for_to_chaotic_input_1() {
 
         int bribes = NewYearChaos.calculateBribes(new int[]{2, 5, 1, 3, 4});
 
@@ -47,7 +47,7 @@ public class NewYearChaosTest {
     }
 
     @Test
-    public void should_return_no_bribes_for_to_chaotic_input_2() {
+    void should_return_no_bribes_for_to_chaotic_input_2() {
 
         int bribes = NewYearChaos.calculateBribes(new int[]{5, 1, 2, 3, 7, 8, 6, 4});
 

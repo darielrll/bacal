@@ -13,12 +13,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>(){{
             add(Arrays.asList(2));
             add(Arrays.asList(3,4));
@@ -32,7 +32,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>(){{
             add(Arrays.asList(-10));
         }};

@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class TrieTest {
+class TrieTest {
 
     private Trie subject;
 
     @BeforeEach
-    public void init(){
+    void init(){
         subject = new Trie();
     }
 
     @Test
-    public void add_should_work_for_test_case1(){
+    void add_should_work_for_test_case1(){
         subject.add("hack");
 
         int contacts = subject.words;
@@ -25,7 +25,7 @@ public class TrieTest {
     }
 
     @Test
-    public void add_should_work_for_test_case2(){
+    void add_should_work_for_test_case2(){
         subject.add("hack");
         subject.add("hackerrank");
 
@@ -35,7 +35,7 @@ public class TrieTest {
     }
 
     @Test
-    public void add_should_work_for_test_case3(){
+    void add_should_work_for_test_case3(){
         subject.add("s");
         subject.add("ss");
 
@@ -45,7 +45,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case1(){
+    void find_partial_should_work_for_test_case1(){
         subject.add("hack");
         subject.add("hackerrank");
 
@@ -55,7 +55,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case2(){
+    void find_partial_should_work_for_test_case2(){
         subject.add("hack");
         subject.add("hackerrank");
 
@@ -65,7 +65,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case3(){
+    void find_partial_should_work_for_test_case3(){
         subject.add("hack");
         subject.add("hackerrank");
 
@@ -75,7 +75,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case4(){
+    void find_partial_should_work_for_test_case4(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -88,7 +88,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case5(){
+    void find_partial_should_work_for_test_case5(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -101,7 +101,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case6(){
+    void find_partial_should_work_for_test_case6(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -114,7 +114,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case7(){
+    void find_partial_should_work_for_test_case7(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -127,7 +127,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case8(){
+    void find_partial_should_work_for_test_case8(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -140,7 +140,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case9(){
+    void find_partial_should_work_for_test_case9(){
         subject.add("s");
         subject.add("ss");
         subject.add("sss");
@@ -153,7 +153,7 @@ public class TrieTest {
     }
 
     @Test
-    public void find_partial_should_work_for_test_case10(){
+    void find_partial_should_work_for_test_case10(){
         subject.add("s");
         subject.add("ss");
 

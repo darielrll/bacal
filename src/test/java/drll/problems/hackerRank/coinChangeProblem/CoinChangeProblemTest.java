@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Timeout;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class CoinChangeProblemTest {
+class CoinChangeProblemTest {
 
     @Test
-    public void should_get_correct_answer_for_test_case_1() {
+    void should_get_correct_answer_for_test_case_1() {
 
         long ways = CoinChangeProblem.getWays(4, new long[]{1, 2, 3});
 
@@ -16,7 +16,7 @@ public class CoinChangeProblemTest {
     }
 
     @Test
-    public void should_get_correct_answer_for_test_case_2() {
+    void should_get_correct_answer_for_test_case_2() {
 
         long ways = CoinChangeProblem.getWays(10, new long[]{2, 5, 3, 6});
 
@@ -25,7 +25,7 @@ public class CoinChangeProblemTest {
 
     @Test()
     @Timeout(value = 1)
-    public void should_get_correct_answer_for_test_case_3() {
+    void should_get_correct_answer_for_test_case_3() {
 
         long ways = CoinChangeProblem.getWays(166, new long[]{
                 5, 37, 8, 39, 33, 17, 22,
@@ -38,7 +38,7 @@ public class CoinChangeProblemTest {
 
     @Test()
     @Timeout(value = 1)
-    public void should_get_correct_answer_for_test_case_4() {
+    void should_get_correct_answer_for_test_case_4() {
 
         long ways = CoinChangeProblem.getWays(219, new long[]{
                 36, 10, 42, 7, 50, 1, 49,

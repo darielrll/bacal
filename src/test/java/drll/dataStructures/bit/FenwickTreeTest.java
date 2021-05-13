@@ -7,27 +7,27 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class FenwickTreeTest {
+class FenwickTreeTest {
 
     private FenwickTree subject;
 
     @BeforeEach
-    public void init(){
+    void init(){
         subject = new FenwickTree(10);
     }
 
     @Test
-    public void should_create_a_new_fenwick_tree(){
+    void should_create_a_new_fenwick_tree(){
         assertThat(subject).isNotNull();
     }
 
     @Test
-    public void size_should_be_0_for_a_new_fenwick_tree(){
+    void size_should_be_0_for_a_new_fenwick_tree(){
         assertThat(subject.getSize()).isEqualTo(10);
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_1(){
+    void should_sum_starting_from1_test_case_1(){
         subject.update(1, 2);
         subject.update(2, 3);
 
@@ -36,7 +36,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_2(){
+    void should_sum_starting_from1_test_case_2(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -47,7 +47,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_3(){
+    void should_sum_starting_from1_test_case_3(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -60,7 +60,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_4(){
+    void should_sum_starting_from1_test_case_4(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -75,7 +75,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_5(){
+    void should_sum_starting_from1_test_case_5(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -92,7 +92,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_6(){
+    void should_sum_starting_from1_test_case_6(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -111,7 +111,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_from1_test_case_7(){
+    void should_sum_starting_from1_test_case_7(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -132,7 +132,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_fromItoJ_test_case_1(){
+    void should_sum_starting_fromItoJ_test_case_1(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -146,7 +146,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_fromItoJ_test_case_2(){
+    void should_sum_starting_fromItoJ_test_case_2(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -160,7 +160,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_fromItoJ_test_case_3(){
+    void should_sum_starting_fromItoJ_test_case_3(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -174,7 +174,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_fromItoJ_test_case_4(){
+    void should_sum_starting_fromItoJ_test_case_4(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -188,7 +188,7 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_sum_starting_fromItoJ_test_case_5(){
+    void should_sum_starting_fromItoJ_test_case_5(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -203,14 +203,14 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void should_update_first_element(){
+    void should_update_first_element(){
         subject.update(1, 5);
 
         assertThat(subject.sum(1)).isEqualTo(5l);
     }
 
     @Test
-    public void should_update_from_ItoJ_test_case_1(){
+    void should_update_from_ItoJ_test_case_1(){
         subject.update(1, 2);
         subject.update(2, 3);
         subject.update(3, 1);
@@ -227,32 +227,32 @@ public class FenwickTreeTest {
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_sum_index_is_gt_size(){
+    void should_throw_index_out_of_bound_exception_if_sum_index_is_gt_size(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(11, 5));
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_sum_index_is_lt_0(){
+    void should_throw_index_out_of_bound_exception_if_sum_index_is_lt_0(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(-1, 5));
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_sum_index_is_et_0(){
+    void should_throw_index_out_of_bound_exception_if_sum_index_is_et_0(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(0, 5));
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_update_index_is_gt_size(){
+    void should_throw_index_out_of_bound_exception_if_update_index_is_gt_size(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(11, 2));
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_update_index_is_lt_0(){
+    void should_throw_index_out_of_bound_exception_if_update_index_is_lt_0(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(-1, 2));
     }
 
     @Test()
-    public void should_throw_index_out_of_bound_exception_if_update_index_is_et_0(){
+    void should_throw_index_out_of_bound_exception_if_update_index_is_et_0(){
         assertThrows(IndexOutOfBoundsException.class, () -> subject.update(0, 2));
     }
 }

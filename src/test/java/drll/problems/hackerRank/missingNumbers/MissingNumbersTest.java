@@ -4,10 +4,10 @@ package drll.problems.hackerRank.missingNumbers;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MissingNumbersTest {
+class MissingNumbersTest {
 
     @Test
-    public void should_response_correctly_for_test_case1(){
+    void should_response_correctly_for_test_case1(){
         int[] original = new int[]{7, 2, 5, 4, 6, 3, 5, 3},
                 missing = new int[]{7, 2, 5, 3, 5, 3};
 
@@ -17,7 +17,7 @@ public class MissingNumbersTest {
     }
 
     @Test
-    public void should_response_correctly_for_test_case2(){
+    void should_response_correctly_for_test_case2(){
         int[] original = new int[]{203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204},
                 missing = new int[]{203, 204, 205, 206, 207, 208, 203, 204, 205, 206};
 

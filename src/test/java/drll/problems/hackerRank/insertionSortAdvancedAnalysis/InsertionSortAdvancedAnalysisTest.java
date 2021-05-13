@@ -9,10 +9,10 @@ import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class InsertionSortAdvancedAnalysisTest {
+class InsertionSortAdvancedAnalysisTest {
 
     @Test
-    public void should_return_0_for_the_best_case(){
+    void should_return_0_for_the_best_case(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 10);
 
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
@@ -21,7 +21,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_summation_of_length_minus_one_for_worst_case() {
+    void should_return_summation_of_length_minus_one_for_worst_case() {
 
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 10);
 
@@ -31,7 +31,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_zero_for_the_best_case() {
+    void should_return_zero_for_the_best_case() {
 
         int[] list = {1, 1, 1, 2, 2};
 
@@ -41,7 +41,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_1() {
+    void should_return_swap_number_for_test_1() {
 
         int[] list = {2, 1, 3, 1, 2};
 
@@ -51,7 +51,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_2() {
+    void should_return_swap_number_for_test_2() {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2, 7};
 
@@ -61,7 +61,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_3() {
+    void should_return_swap_number_for_test_3() {
 
         int[] list = {5, 3, 9, 8};
 
@@ -71,7 +71,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_4() {
+    void should_return_swap_number_for_test_4() {
 
         int[] list = {5, 3, 9, 8, 6};
 
@@ -81,7 +81,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_5() {
+    void should_return_swap_number_for_test_5() {
 
         int[] list = {5, 3, 9, 8, 6, 1};
 
@@ -91,7 +91,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_6() {
+    void should_return_swap_number_for_test_6() {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2};
 
@@ -101,7 +101,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_7() {
+    void should_return_swap_number_for_test_7() {
 
         int[] list = {4, 4, 4, 3, 3, 3, 2, 2, 2};
 
@@ -111,7 +111,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_8() {
+    void should_return_swap_number_for_test_8() {
 
         int[] list = {5, 5, 5, 5, 10, 10, 10, 10, 8, 8, 8, 8};
 
@@ -121,7 +121,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_respond_correctly_for_91337_numbers(){
+    void should_respond_correctly_for_91337_numbers(){
         int[] list = buildATestCaseWith_91337_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -130,7 +130,7 @@ public class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_respond_in_less_than_300_milisecond_for_91337_elements(){
+    void should_respond_in_less_than_300_milisecond_for_91337_elements(){
         int[] list = buildATestCaseWith_91337_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -138,7 +138,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_respond_correctly_for_95059_numbers(){
+    void should_respond_correctly_for_95059_numbers(){
         int[] list = buildATestCaseWith_95059_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -147,7 +147,7 @@ public class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_respond_in_less_than_300_milisecond_for_95059_numbers(){
+    void should_respond_in_less_than_300_milisecond_for_95059_numbers(){
         int[] list = buildATestCaseWith_95059_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -155,7 +155,7 @@ public class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test
-    public void should_respond_correctly_for_56340_equal_numbers(){
+    void should_respond_correctly_for_56340_equal_numbers(){
         int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber(1000000,56340);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -164,7 +164,7 @@ public class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_respond_in_less_than_300_milisecond_for_56340_equal_numbers(){
+    void should_respond_in_less_than_300_milisecond_for_56340_equal_numbers(){
         int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber(1000000,56340);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -173,7 +173,7 @@ public class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_respond_in_less_than_300_milisecond_in_best_case_for_a_very_long_list(){
+    void should_respond_in_less_than_300_milisecond_in_best_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 73099);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -182,7 +182,7 @@ public class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list(){
+    void should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 100000);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 

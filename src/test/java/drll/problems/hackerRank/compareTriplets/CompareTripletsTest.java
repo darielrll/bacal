@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class CompareTripletsTest {
+class CompareTripletsTest {
 
     @Test
-    public void should_work_for_test_case1(){
+    void should_work_for_test_case1(){
         int[] result = CompareTriplets.solve(new int[]{5, 6, 7},
                                             new int[]{3, 6, 10});
 
@@ -16,7 +16,7 @@ public class CompareTripletsTest {
     }
 
     @Test
-    public void should_work_for_test_case2(){
+    void should_work_for_test_case2(){
         int[] result = CompareTriplets.solve(new int[]{17, 28, 30},
                                             new int[]{99, 16, 8});
 

@@ -9,12 +9,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         Integer[] treeValues = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
 
         TreeNode tree = solution.bstToGst(buildTree(treeValues));

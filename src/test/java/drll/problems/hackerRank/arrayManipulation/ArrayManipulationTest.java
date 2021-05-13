@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class ArrayManipulationTest {
+class ArrayManipulationTest {
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         long maxValue = ArrayManipulation.arrayManipulation(10,
                 new int[][]{
                         {1, 5, 3},
@@ -22,7 +22,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
         long maxValue = ArrayManipulation.arrayManipulation(5,
                 new int[][]{
                         {1, 2, 100},
@@ -34,7 +34,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case3() {
+    void should_return_correctly_for_test_case3() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 2, 2},
@@ -49,7 +49,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case4() {
+    void should_return_correctly_for_test_case4() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 2, 2},
@@ -63,7 +63,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case5() {
+    void should_return_correctly_for_test_case5() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 2, 2},
@@ -78,7 +78,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case6() {
+    void should_return_correctly_for_test_case6() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 2, 2},
@@ -94,7 +94,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case7() {
+    void should_return_correctly_for_test_case7() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 2, 2},
@@ -107,7 +107,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case8() {
+    void should_return_correctly_for_test_case8() {
         long maxValue = ArrayManipulation.arrayManipulation(9,
                 new int[][]{
                         {1, 3, 6},
@@ -119,7 +119,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case9() {
+    void should_return_correctly_for_test_case9() {
         long maxValue = ArrayManipulation.arrayManipulation(200,
                 new int[][]{
                         {8, 15, 862970},
@@ -148,7 +148,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case10() {
+    void should_return_correctly_for_test_case10() {
         long maxValue = ArrayManipulation.arrayManipulation(22,
                 new int[][]{
                         {4, 5, 3},
@@ -161,7 +161,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case10_1() {
+    void should_return_correctly_for_test_case10_1() {
         long maxValue = ArrayManipulation.arrayManipulation(23,
                 new int[][]{
                         {4, 5, 3},
@@ -174,7 +174,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case11() {
+    void should_return_correctly_for_test_case11() {
 
         long maxValue = ArrayManipulation.arrayManipulation(4,
                 new int[][]{
@@ -187,7 +187,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case11_1() {
+    void should_return_correctly_for_test_case11_1() {
 
         long maxValue = ArrayManipulation.arrayManipulation(5,
                 new int[][]{
@@ -200,7 +200,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case12() {
+    void should_return_correctly_for_test_case12() {
 
         long maxValue = ArrayManipulation.arrayManipulation(10,
                 new int[][]{
@@ -213,7 +213,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case13() {
+    void should_return_correctly_for_test_case13() {
 
         long maxValue = ArrayManipulation.arrayManipulation(10,
                 new int[][]{
@@ -227,7 +227,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case14() {
+    void should_return_correctly_for_test_case14() {
 
         long maxValue = ArrayManipulation.arrayManipulation(10,
                 new int[][]{
@@ -241,7 +241,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case2() {
+    void should_return_correctly_for_hr_test_case2() {
 
         String testDataFile = "arrayManipulation/testCase2.txt";
 
@@ -253,7 +253,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case3() {
+    void should_return_correctly_for_hr_test_case3() {
 
         String testDataFile = "arrayManipulation/testCase3.txt";
 
@@ -265,7 +265,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case4() {
+    void should_return_correctly_for_hr_test_case4() {
 
         String testDataFile = "arrayManipulation/testCase4.txt";
 
@@ -277,7 +277,7 @@ public class ArrayManipulationTest {
     }
 
     @Test
-    public void should_return_correctly_for_hr_test_case5() {
+    void should_return_correctly_for_hr_test_case5() {
 
         String testDataFile = "arrayManipulation/testCase5.txt";
 

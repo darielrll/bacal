@@ -4,13 +4,12 @@ package drll.problems.hackerRank.matrixLayerRotation;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PathDiscovererLayerTest {
-
+class PathDiscovererLayerTest {
 
     private PathDiscovererLayer pathDiscovererLayer;
 
     @Test
-    public void should_return_next_point_anti_clockwise_1(){
+    void should_return_next_point_anti_clockwise_1(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -21,7 +20,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_2(){
+    void should_return_next_point_anti_clockwise_2(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -36,7 +35,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_3(){
+    void should_return_next_point_anti_clockwise_3(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -51,7 +50,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_4(){
+    void should_return_next_point_anti_clockwise_4(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -66,7 +65,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_5(){
+    void should_return_next_point_anti_clockwise_5(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
@@ -77,7 +76,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_6(){
+    void should_return_next_point_anti_clockwise_6(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
@@ -92,7 +91,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_7(){
+    void should_return_next_point_anti_clockwise_7(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
@@ -107,7 +106,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_8(){
+    void should_return_next_point_anti_clockwise_8(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
@@ -122,7 +121,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_clockwise_9(){
+    void should_return_next_point_clockwise_9(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
@@ -133,7 +132,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_clockwise_10(){
+    void should_return_next_point_clockwise_10(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
@@ -148,7 +147,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_clockwise_11(){
+    void should_return_next_point_clockwise_11(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
@@ -163,7 +162,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_clockwise_12(){
+    void should_return_next_point_clockwise_12(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
@@ -178,7 +177,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_13(){
+    void should_return_next_point_anti_clockwise_13(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
@@ -189,7 +188,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_14(){
+    void should_return_next_point_anti_clockwise_14(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
@@ -204,7 +203,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_15(){
+    void should_return_next_point_anti_clockwise_15(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
@@ -219,7 +218,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_next_point_anti_clockwise_16(){
+    void should_return_next_point_anti_clockwise_16(){
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
@@ -234,7 +233,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_upper_left_corner_in_anti_clockwise_test_1(){
+    void should_return_upper_left_corner_in_anti_clockwise_test_1(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -245,7 +244,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_down_right_corner_in_clockwise_test_1(){
+    void should_return_down_right_corner_in_clockwise_test_1(){
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
@@ -256,7 +255,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_upper_left_corner_in_anti_clockwise_test_2(){
+    void should_return_upper_left_corner_in_anti_clockwise_test_2(){
         int[][] matrix = new int[4][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
@@ -267,7 +266,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_upper_left_corner_in_anti_clockwise_test_3(){
+    void should_return_upper_left_corner_in_anti_clockwise_test_3(){
         int[][] matrix = new int[4][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
@@ -278,7 +277,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_down_right_corner_in_clockwise_test_2(){
+    void should_return_down_right_corner_in_clockwise_test_2(){
         int[][] matrix = new int[4][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
@@ -289,7 +288,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_4_for_2rX2c_matrix(){
+    void should_return_perimeter_4_for_2rX2c_matrix(){
 
         int[][] matrix = new int[2][2];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -300,7 +299,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_12_for_4rX4c_matrix_in_layer_1(){
+    void should_return_perimeter_12_for_4rX4c_matrix_in_layer_1(){
 
         int[][] matrix = new int[4][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -311,7 +310,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_4_for_4rX4c_matrix_in_layer_2(){
+    void should_return_perimeter_4_for_4rX4c_matrix_in_layer_2(){
 
         int[][] matrix = new int[4][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -322,7 +321,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_16_for_6rX4c_matrix_in_layer_1(){
+    void should_return_perimeter_16_for_6rX4c_matrix_in_layer_1(){
 
         int[][] matrix = new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -333,7 +332,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_8_for_6rX4c_matrix_in_layer_2(){
+    void should_return_perimeter_8_for_6rX4c_matrix_in_layer_2(){
 
         int[][] matrix =  new int[6][4];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -344,7 +343,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_16_for_4rX6c_matrix_in_layer_1(){
+    void should_return_perimeter_16_for_4rX6c_matrix_in_layer_1(){
 
         int[][] matrix =  new int[4][6];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
@@ -355,7 +354,7 @@ public class PathDiscovererLayerTest {
     }
 
     @Test
-    public void should_return_perimeter_8_for_4rX6c_matrix_in_layer_2(){
+    void should_return_perimeter_8_for_4rX6c_matrix_in_layer_2(){
 
         int[][] matrix =  new int[4][6];
         pathDiscovererLayer = new PathDiscovererLayer(matrix);

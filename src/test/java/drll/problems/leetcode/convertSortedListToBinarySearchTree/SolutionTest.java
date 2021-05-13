@@ -9,12 +9,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         ListNode linkedList = buildLinkedList(0, -10, -3, 0, 5, 9);
 
         TreeNode treeNode = solution.sortedListToBST(linkedList);
@@ -23,14 +23,14 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
         TreeNode treeNode = solution.sortedListToBST(null);
 
         assertThat(treeNode).isNull();
     }
 
     @Test
-    public void should_return_correctly_for_test_case3() {
+    void should_return_correctly_for_test_case3() {
         ListNode linkedList = buildLinkedList(0, 0);
 
         TreeNode treeNode = solution.sortedListToBST(linkedList);
@@ -39,7 +39,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case4() {
+    void should_return_correctly_for_test_case4() {
         ListNode linkedList = buildLinkedList(0, 1, 3);
 
         TreeNode treeNode = solution.sortedListToBST(linkedList);
@@ -94,12 +94,12 @@ class SolutionTest {
 }
 
 class AVLTreeNode{
-    public TreeNode node;
-    public int height;
+    TreeNode node;
+    int height;
 
-    public AVLTreeNode left, right;
+    AVLTreeNode left, right;
 
-    public AVLTreeNode(TreeNode node, AVLTreeNode left, AVLTreeNode right) {
+    AVLTreeNode(TreeNode node, AVLTreeNode left, AVLTreeNode right) {
         this.node = node;
         this.left = left;
         this.right = right;

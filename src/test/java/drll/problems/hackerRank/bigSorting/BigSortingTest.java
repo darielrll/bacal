@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class BigSortingTest {
+class BigSortingTest {
 
     @Test
-    public void should_order_hr_ex1(){
+    void should_order_hr_ex1(){
         String[] input = new String[]{"6",
         "31415926535897932384626433832795",
         "1", "3", "10", "3", "5"};
@@ -30,7 +30,7 @@ public class BigSortingTest {
     }
 
     @Test
-    public void should_order_hr_ex2(){
+    void should_order_hr_ex2(){
         String[] input = new String[]{"8",
                                       "1",
                                       "2",
@@ -55,7 +55,7 @@ public class BigSortingTest {
     }
 
     @Test
-    public void should_order_hr_testCase6(){
+    void should_order_hr_testCase6(){
         String[] input = buildCaseFromFile("bigSorting/testCase6.txt");
         String[] expected = buildCaseFromFile("bigSorting/testCase6_result.txt");
 

@@ -11,12 +11,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         List<Integer> countDifferentDigits = solution.powerfulIntegers(2, 3, 10);
 
         assertThat(countDifferentDigits.size()).isEqualTo(7);
@@ -30,7 +30,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
         List<Integer> countDifferentDigits = solution.powerfulIntegers(3, 5, 15);
 
         assertThat(countDifferentDigits.size()).isEqualTo(6);
@@ -43,7 +43,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case3() {
+    void should_return_correctly_for_test_case3() {
         List<Integer> countDifferentDigits = solution.powerfulIntegers(2, 1, 10);
 
         assertThat(countDifferentDigits.size()).isEqualTo(4);

@@ -4,10 +4,10 @@ package drll.problems.hackerRank.commonChild;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class CommonChildTest {
+class CommonChildTest {
 
     @Test
-    public void should_work_for_hr_ex_test_case1(){
+    void should_work_for_hr_ex_test_case1(){
         int result = CommonChild.commonChild("ABCD",
                                              "ABDC");
 
@@ -15,7 +15,7 @@ public class CommonChildTest {
     }
 
     @Test
-    public void should_work_for_hr_ex_test_case2(){
+    void should_work_for_hr_ex_test_case2(){
 
         int result = CommonChild.commonChild("HARRY",
                                              "SALLY");
@@ -24,7 +24,7 @@ public class CommonChildTest {
     }
 
     @Test
-    public void should_work_for_hr_ex_test_case3(){
+    void should_work_for_hr_ex_test_case3(){
         int result = CommonChild.commonChild("AA",
                                              "BB");
 
@@ -32,14 +32,14 @@ public class CommonChildTest {
     }
 
     @Test
-    public void should_work_for_hr_ex_test_case4(){
+    void should_work_for_hr_ex_test_case4(){
         int result = CommonChild.commonChild("SHINCHAN", "NOHARAAA");
 
         assertThat(result).isEqualTo(3);
     }
 
     @Test
-    public void should_work_for_hr_ex_test_case5(){
+    void should_work_for_hr_ex_test_case5(){
         int result = CommonChild.commonChild("ABCDEF",
                 "FBDAMN");
 
@@ -47,7 +47,7 @@ public class CommonChildTest {
     }
 
     @Test
-    public void should_work_for_hr_test_case1(){
+    void should_work_for_hr_test_case1(){
         int result = CommonChild.commonChild("WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS",
                                             "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC");
 

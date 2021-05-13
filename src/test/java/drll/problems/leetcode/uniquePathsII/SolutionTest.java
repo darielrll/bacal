@@ -9,12 +9,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         int[][] grid = new int[][]{
                 {0, 0, 0},
                 {0, 1, 0},
@@ -25,7 +25,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case2() {
+    void should_return_correctly_for_test_case2() {
         int[][] grid = new int[][]{
                 {0, 1},
                 {0, 0   }
@@ -35,7 +35,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case3() {
+    void should_return_correctly_for_test_case3() {
         int[][] grid = new int[][]{
                 {0}
         };
@@ -44,7 +44,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case4() {
+    void should_return_correctly_for_test_case4() {
         int[][] grid = new int[][]{
                 {1}
         };
@@ -53,7 +53,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case5() {
+    void should_return_correctly_for_test_case5() {
         int[][] grid = new int[][]{
                 {0, 0}
         };
@@ -62,7 +62,7 @@ class SolutionTest {
     }
 
     @Test
-    public void should_return_correctly_for_test_case6() {
+    void should_return_correctly_for_test_case6() {
         int[][] grid = new int[][]{
                 {0, 1, 0, 0, 0},
                 {0, 0, 0, 0, 0}

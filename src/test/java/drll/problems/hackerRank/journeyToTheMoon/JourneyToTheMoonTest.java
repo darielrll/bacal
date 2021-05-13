@@ -8,31 +8,31 @@ import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class JourneyToTheMoonTest {
+class JourneyToTheMoonTest {
 
     @Test
-    public void should_work_for_test_case1() {
+    void should_work_for_test_case1() {
         long pairs = JourneyToTheMoon.journeyToMoon(4, new int[][]{{0, 2}});
 
         assertThat(pairs).isEqualTo(5);
     }
 
     @Test
-    public void should_work_for_test_case2() {
+    void should_work_for_test_case2() {
         long pairs = JourneyToTheMoon.journeyToMoon(5, new int[][]{{0, 1}, {2, 3}, {0, 4}});
 
         assertThat(pairs).isEqualTo(6);
     }
 
     @Test
-    public void should_work_for_test_case3() {
+    void should_work_for_test_case3() {
         long pairs = JourneyToTheMoon.journeyToMoon(4, new int[][]{{1, 2}, {2, 3}});
 
         assertThat(pairs).isEqualTo(3);
     }
 
     @Test
-    public void should_work_for_test_case4() {
+    void should_work_for_test_case4() {
         long pairs = JourneyToTheMoon.journeyToMoon(10, new int[][]{{0, 2}, {1, 8}, {1, 4},
                 {2, 8}, {2, 6}, {3, 5},
                 {6, 9}});
@@ -41,7 +41,7 @@ public class JourneyToTheMoonTest {
     }
 
     @Test
-    public void should_work_for_test_case5() {
+    void should_work_for_test_case5() {
 
         long pairs = JourneyToTheMoon.journeyToMoon(100, buildTestCase5());
 
@@ -49,7 +49,7 @@ public class JourneyToTheMoonTest {
     }
 
     @Test
-    public void should_work_for_test_case6() {
+    void should_work_for_test_case6() {
 
         long pairs = JourneyToTheMoon.journeyToMoon(500, buildTestCase6());
 
@@ -58,7 +58,7 @@ public class JourneyToTheMoonTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    public void should_work_for_test_case7() {
+    void should_work_for_test_case7() {
 
         long pairs = JourneyToTheMoon.journeyToMoon(100000, new int[][]{{1, 2}, {3, 4}});
 

@@ -9,17 +9,17 @@ import org.junit.jupiter.api.Test;
 import common.Utils;
 
 
-public class AVLTreeTest {
+class AVLTreeTest {
 
     private AVLTree<Integer> tree;
 
     @BeforeEach
-    public void init(){
+    void init(){
         tree = new AVLTree<>();
     }
 
     @Test
-    public void should_not_add_null_values(){
+    void should_not_add_null_values(){
 
         tree = new AVLTree<>();
         tree.add(3);
@@ -36,7 +36,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_function_adding_only_one_element() {
+    void should_function_adding_only_one_element() {
         int element = 5;
 
         tree.add(element);
@@ -49,7 +49,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_not_add_equal_values(){
+    void should_not_add_equal_values(){
         int root = 5;
 
         tree.add(root);
@@ -64,7 +64,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_add_minor_value_to_the_left(){
+    void should_add_minor_value_to_the_left(){
         int rootElement = 5;
         int lessElement = 3;
 
@@ -82,7 +82,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_add_mayor_value_to_the_right(){
+    void should_add_mayor_value_to_the_right(){
         int rootElement = 5;
         int greaterElement = 8;
 
@@ -100,7 +100,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void balance_factor_should_be_negative_after_add_minor_value(){
+    void balance_factor_should_be_negative_after_add_minor_value(){
         int rootElement = 5;
         int lessElement = 3;
 
@@ -115,7 +115,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void balance_factor_should_be_positive_after_add_mayor_value(){
+    void balance_factor_should_be_positive_after_add_mayor_value(){
         int rootElement = 5;
         int greaterElement = 8;
 
@@ -130,7 +130,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void balance_factor_should_be_balanced_after_add_minor_and_mayor_value(){
+    void balance_factor_should_be_balanced_after_add_minor_and_mayor_value(){
         int rootElement = 5;
         int mayorElement = 8;
         int minorElement = 3;
@@ -151,7 +151,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_not_add_an_existing_mayor_value_after_add_minor_and_mayor_value(){
+    void should_not_add_an_existing_mayor_value_after_add_minor_and_mayor_value(){
 
         int rootElement = 5;
         int mayorElement = 8;
@@ -171,7 +171,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_not_add_an_existing_minor_value_after_add_minor_and_mayor_value(){
+    void should_not_add_an_existing_minor_value_after_add_minor_and_mayor_value(){
 
         int rootElement = 5;
         int mayorElement = 8;
@@ -191,7 +191,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_properties_after_height_is_mayor_than_1_adding_a_less_value(){
+    void should_maintain_properties_after_height_is_mayor_than_1_adding_a_less_value(){
 
         int minorValue = 1;
         int root = 5;
@@ -219,7 +219,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_properties_after_height_is_mayor_than_1_adding_a_mayor_value(){
+    void should_maintain_properties_after_height_is_mayor_than_1_adding_a_mayor_value(){
 
         int mayorValue = 10;
         int root = 5;
@@ -247,7 +247,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_1_5_10(){
+    void should_maintain_avl_property_after_insert_1_5_10(){
 
         tree.add(1);
         tree.add(5);
@@ -264,7 +264,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_update_balance_factor_after_insert_1_5_10(){
+    void should_update_balance_factor_after_insert_1_5_10(){
 
         tree.add(1);
         tree.add(5);
@@ -281,7 +281,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_1_5_10_15_20_25(){
+    void should_maintain_avl_property_after_insert_1_5_10_15_20_25(){
 
         tree.add(1);
         tree.add(5);
@@ -297,7 +297,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_1_5_10_15_7(){
+    void should_maintain_avl_property_after_insert_1_5_10_15_7(){
 
         tree.add(1);
         tree.add(5);
@@ -313,7 +313,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_10_5_1(){
+    void should_maintain_avl_property_after_insert_10_5_1(){
 
         tree.add(10);
         tree.add(5);
@@ -330,7 +330,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_update_balance_factor_after_insert_10_5_1(){
+    void should_update_balance_factor_after_insert_10_5_1(){
 
         tree.add(10);
         tree.add(5);
@@ -347,7 +347,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_25_20_15_10_5_1(){
+    void should_maintain_avl_property_after_insert_25_20_15_10_5_1(){
 
         tree.add(25);
         tree.add(20);
@@ -363,7 +363,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_maintain_avl_property_after_insert_15_10_5_1_7(){
+    void should_maintain_avl_property_after_insert_15_10_5_1_7(){
 
         tree.add(15);
         tree.add(10);
@@ -379,7 +379,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_5_9_7(){
+    void should_be_an_avl_after_add_5_9_7(){
 
         tree.add(5);
         tree.add(9);
@@ -396,7 +396,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_9_5_7(){
+    void should_be_an_avl_after_add_9_5_7(){
 
         tree.add(9);
         tree.add(5);
@@ -413,7 +413,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_from_1_to_10(){
+    void should_be_an_avl_after_add_from_1_to_10(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 10);
 
         for(int i = 0; i < list.length; i++){
@@ -425,7 +425,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_from_1_to_100(){
+    void should_be_an_avl_after_add_from_1_to_100(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 100);
 
         for(int i = 0; i < list.length; i++){
@@ -437,7 +437,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_from_10_to_1(){
+    void should_be_an_avl_after_add_from_10_to_1(){
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 10);
 
         for(int i = 0; i < list.length; i++){
@@ -449,7 +449,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_from_100_to_1(){
+    void should_be_an_avl_after_add_from_100_to_1(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 100);
 
         for(int i = 0; i < list.length; i++){
@@ -461,7 +461,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_two_same_ordered_list_in_reverse_order_merged(){
+    void should_be_an_avl_after_add_two_same_ordered_list_in_reverse_order_merged(){
         int[] orderedAscList = Utils.buildTestCasesForAnOrderedList(true, 100);
         int[] orderedDescList = Utils.buildTestCasesForAnOrderedList(false, 100);
 
@@ -476,7 +476,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_two_ordered_list_in_reverse_order_merged(){
+    void should_be_an_avl_after_add_two_ordered_list_in_reverse_order_merged(){
         int[] orderedAscList = Utils.buildTestCasesForAnOrderedList(true, 100);
         int[] orderedDescList = Utils.buildTestCasesForAnOrderedList(false, 100, 200);
 
@@ -491,7 +491,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_1000_random_elements(){
+    void should_be_an_avl_after_add_1000_random_elements(){
         Integer[] list = Utils.buildTestCasesForARandomList(true, 600, 10000);
 
         for(int i = 0; i < list.length; i++){
@@ -503,7 +503,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_a_set_of_1000_random_elements(){
+    void should_be_an_avl_after_add_a_set_of_1000_random_elements(){
         Integer[] list = Utils.buildTestCasesForARandomList(false, 100000, 10000);
 
         for(int i = 0; i < list.length; i++){
@@ -515,7 +515,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void should_be_an_avl_after_add_112_elements(){
+    void should_be_an_avl_after_add_112_elements(){
         String part1 = "480130 735329 810013 140187 972418 357056 334780 854684 478980 34590 180238 567090 935248 834854 514996 950881 104525 874212 160000 528785 770712 201115 830644 535327 668785 241043 946633 645108 184097 251762 97219 664226 503442 907232 320764 992211 264287 171895 846895 259618 722836 543484 343059 658083 378338 858054 125316 999214 248618 285315 527999 535681 2781 358642 71007 671565 116036 17639 833024 300132 785753 930243 480710 805546 353826 317825 797757 134464 6072 161003 394081 728907 704486 253492 386990 599175 111545 28657 598389 360162 313971 642739 895842 833103 1380 966849 21019 633767 500839 854043 450251 802943 784285 930960 608489 654462 765136 922597 788925 771207 83599 699357 500114 304436 952848 403455 419963 580745 432111 534703 457258 262433";
         int[] numbers = Utils.buildTestCasesForVeryLongEntries(part1);
 

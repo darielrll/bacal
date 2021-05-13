@@ -7,23 +7,23 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class AVLTreeInsertionAnalysisTest {
+class AVLTreeInsertionAnalysisTest {
 
     private AVLTreeInsertionAnalysis tree;
 
     @BeforeEach
-    public void init(){
+    void init(){
         tree = new AVLTreeInsertionAnalysis();
     }
 
     @Test
-    public void should_not_have_shifts_if_tree_is_empty(){
+    void should_not_have_shifts_if_tree_is_empty(){
 
         assertThat(tree.getShifts()).isEqualTo(0);
     }
 
     @Test
-    public void should_not_have_shifts_for_only_one_element(){
+    void should_not_have_shifts_for_only_one_element(){
 
         tree.add(new InsertionAnalysis(1));
 
@@ -31,7 +31,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_not_have_shifts_for_two_ordered_asc_elements(){
+    void should_not_have_shifts_for_two_ordered_asc_elements(){
 
         tree.add(new InsertionAnalysis(1));
         tree.add(new InsertionAnalysis(2));
@@ -40,7 +40,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_have_only_one_shift_for_two_ordered_desc_elements(){
+    void should_have_only_one_shift_for_two_ordered_desc_elements(){
 
         tree.add(new InsertionAnalysis(2));
         tree.add(new InsertionAnalysis(1));
@@ -49,7 +49,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_have_6_shifts_for_4_ordered_desc_elements(){
+    void should_have_6_shifts_for_4_ordered_desc_elements(){
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(false, 4);
 
@@ -65,7 +65,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_have_as_shifts_as_the_summation_of_length_minus_one_for_worst_case(){
+    void should_have_as_shifts_as_the_summation_of_length_minus_one_for_worst_case(){
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(false, 10);
 
@@ -77,7 +77,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_have_0_shifts_for_4_ordered_asc_elements(){
+    void should_have_0_shifts_for_4_ordered_asc_elements(){
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(true, 4);
 
@@ -93,7 +93,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_1_plus_plus_minus() {
+    void should_return_swap_number_for_test_1_plus_plus_minus() {
 
         int[] list = {3, 9, 8};
 
@@ -105,7 +105,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_2_minus_minus_plus() {
+    void should_return_swap_number_for_test_2_minus_minus_plus() {
 
         int[] list = {9, 5, 8};
 
@@ -117,7 +117,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_3() {
+    void should_return_swap_number_for_test_3() {
 
         int[] list = {1, 1, 1, 2, 2};
 
@@ -129,7 +129,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_4() {
+    void should_return_swap_number_for_test_4() {
 
         int[] list = {2, 1, 3, 1, 2};
 
@@ -141,7 +141,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_5() {
+    void should_return_swap_number_for_test_5() {
 
         int[] list = {5, 3, 9, 8};
 
@@ -153,7 +153,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_6() {
+    void should_return_swap_number_for_test_6() {
 
         int[] list = {5, 3, 9, 8, 6};
 
@@ -165,7 +165,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_7() {
+    void should_return_swap_number_for_test_7() {
 
         int[] list = {5, 3, 9, 8, 6, 1};
 
@@ -177,7 +177,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_8() {
+    void should_return_swap_number_for_test_8() {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2};
 
@@ -189,7 +189,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_9() {
+    void should_return_swap_number_for_test_9() {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2, 7};
 
@@ -201,7 +201,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_10() {
+    void should_return_swap_number_for_test_10() {
 
         int[] list = {4, 4, 4, 3, 3, 3, 2, 2, 2};
 
@@ -213,7 +213,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_11() {
+    void should_return_swap_number_for_test_11() {
 
         int[] list = {5, 5, 5, 5, 10, 10, 10, 10, 8, 8, 8, 8};
 
@@ -232,7 +232,7 @@ public class AVLTreeInsertionAnalysisTest {
     }
 
     @Test
-    public void should_return_swap_number_for_test_12() {
+    void should_return_swap_number_for_test_12() {
 
         int[] list = {5, 5, 5, 5, 3, 3, 3, 3, 4, 4, 4, 4};
 
