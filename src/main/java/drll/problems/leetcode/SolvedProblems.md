@@ -1,5 +1,5 @@
 
-## Resume for 17 Leetcode solved problems
+## Resume for 18 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -9,7 +9,7 @@
 | Greedy                    | Stacks            | Math(4)     |
 | Sorting                   | Array(9)          |             |
 | Graph Theory              | Linked List(1)    |             |
-| Constructive Algorithms   | Tree(2)           |             |
+| Constructive Algorithms   | Tree(3)           |             |
 | Warmup                    |                   |             |
 | Recursion                 |                   |             |
 | Implementation            |                   |             |
@@ -38,6 +38,7 @@
 | 15 | [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/)| Array | Medium | SOLVED |
 | 16 | [Count Primes](https://leetcode.com/problems/count-primes/)| Math | Easy*4 | SOLVED |
 | 17 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)| Dynamic programming | MEDIUM | SOLVED |
+| 18 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)| Tree | MEDIUM | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
