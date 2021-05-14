@@ -13,12 +13,12 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    public void init(){
+    void init(){
         solution = new Solution();
     }
 
     @Test
-    public void should_return_correctly_for_test_case1() {
+    void should_return_correctly_for_test_case1() {
         TreeNode node = new TreeNode(1,
                 new TreeNode(2,
                         new TreeNode(3),
