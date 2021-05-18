@@ -1,5 +1,7 @@
 package drll.problems.leetcode.uniquePaths;
 
+import java.util.Arrays;
+
 public class Solution {
     public int uniquePaths(int m, int n) {
         int[][] pathsCount = new int[m][n];
@@ -19,9 +21,7 @@ public class Solution {
     }
 
     private void fillFirstRowCol(int[][] pathsCount){
-        for (int i = 0; i < pathsCount[0].length; i++) {
-            pathsCount[0][i] = 1;
-        }
+        Arrays.fill(pathsCount[0], 1);
         for (int i = 0; i < pathsCount.length; i++) {
             pathsCount[i][0] = 1;
         }

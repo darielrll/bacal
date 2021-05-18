@@ -2,7 +2,7 @@
 package drll.problems.hackerRank.strongPassword;
 
 import org.junit.jupiter.api.Test;
-import static drivero.problems.strongPassword.StrongPassword.*;
+import static drll.problems.hackerRank.strongPassword.StrongPassword.minimumNumber;
 import static org.assertj.core.api.Assertions.*;
 
 class StrongPasswordTest {

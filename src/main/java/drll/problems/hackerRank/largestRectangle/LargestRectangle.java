@@ -147,7 +147,7 @@ class Segment{
     @Override
     public boolean equals(Object o) {
 
-        if(o == null  ||  !(o instanceof Segment)){
+        if(!(o instanceof Segment)){
             return false;
         }
         Segment other = (Segment)o;

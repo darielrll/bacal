@@ -1,5 +1,5 @@
 
-package drivero.problems.strongPassword;
+package drll.problems.hackerRank.strongPassword;
 
 public class StrongPassword {
 
