@@ -41,20 +41,18 @@ public class JourneyToTheMoon {
         HashMap<Integer, Set<Integer>> result = new HashMap<>();
 
         // reading astronauts pairs
-        for(int i = 0; i < astronaut.length; i++){
-            Integer firstAstronaut = astronaut[i][0],
-                    secondAstronaut = astronaut[i][1];
+        for (int[] ints : astronaut) {
+            Integer firstAstronaut = ints[0],
+                    secondAstronaut = ints[1];
 
-            if(areBothRegisteredAstronauts(result, firstAstronaut, secondAstronaut)){
+            if (areBothRegisteredAstronauts(result, firstAstronaut, secondAstronaut)) {
                 // astronauts are both registered
                 mergeAstronautsCities(result, firstAstronaut, secondAstronaut);
-            }
-            else {
+            } else {
                 if (areBothNewAstronauts(result, firstAstronaut, secondAstronaut)) {
                     // astronauts are both new, then create a city for them
                     createNewCity(result, firstAstronaut, secondAstronaut);
-                }
-                else {
+                } else {
                     addNewAstronautToCity(result, firstAstronaut, secondAstronaut);
                 }
             }

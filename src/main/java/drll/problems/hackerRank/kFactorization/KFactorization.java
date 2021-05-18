@@ -93,8 +93,8 @@ public class KFactorization {
     }
 
     static boolean findNumber(int[] numbers, int[] target){
-        for (int i = 0; i < numbers.length; i++) {
-            if(Arrays.binarySearch(target, numbers[i]) < 0){
+        for (int number : numbers) {
+            if (Arrays.binarySearch(target, number) < 0) {
                 return false;
             }
         }

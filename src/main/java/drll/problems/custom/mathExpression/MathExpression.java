@@ -7,14 +7,13 @@ public class MathExpression {
         List<String> postfixNotation = toPostfixNotation(mathExpression);
         LinkedList<Double> accumlativeResult = new LinkedList<>();
 
-        for (int i = 0; i < postfixNotation.size(); i++) {
-            if(Token.isOperator(postfixNotation.get(i))){
+        for (String s : postfixNotation) {
+            if (Token.isOperator(s)) {
                 Double rightOperand = accumlativeResult.pop();
                 Double leftOperand = accumlativeResult.pop();
-                accumlativeResult.push(calculate(leftOperand, postfixNotation.get(i), rightOperand));
-            }
-            else{
-                accumlativeResult.push(Double.parseDouble(postfixNotation.get(i)));
+                accumlativeResult.push(calculate(leftOperand, s, rightOperand));
+            } else {
+                accumlativeResult.push(Double.parseDouble(s));
             }
         }
         return Math.round(accumlativeResult.pop() * 100) / 100.0;

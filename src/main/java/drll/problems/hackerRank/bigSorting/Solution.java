@@ -19,9 +19,8 @@ public class Solution {
 
         String[] sortedNumbers = new String[unsorted.length];
         int currentSortedPosition = 0;
-        for (int i = 0; i < sortedKeys.length; i++) {
+        for (String key : sortedKeys) {
 
-            String key = sortedKeys[i];
             Integer keyCount = numbersCount.get(key);
             int end = currentSortedPosition + keyCount;
 

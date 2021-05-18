@@ -2,6 +2,7 @@
 package drll.problems.hackerRank.matrixLayerRotation;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class MatrixLayerRotation {
 
@@ -90,10 +91,8 @@ public class MatrixLayerRotation {
 
     private static void printMatrix(int[][] matrix){
         StringBuffer buffer = new StringBuffer();
-        for (int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix[0].length; j++){
-                buffer.append(matrix[i][j] + " ");
-            }
+        for (int[] ints : matrix) {
+            IntStream.range(0, matrix[0].length).mapToObj(j -> ints[j] + " ").forEach(buffer::append);
             buffer.append(System.getProperty("line.separator"));
         }
         System.out.print(buffer);

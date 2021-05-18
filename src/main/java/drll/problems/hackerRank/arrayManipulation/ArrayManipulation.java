@@ -11,10 +11,10 @@ public class ArrayManipulation {
 
         HashMap<Integer, Long> list = new HashMap<>();
 
-        for (int i = 0; i < queries.length; i++) {
-            int start = queries[i][0];
-            int endPlusOne = queries[i][1] + 1;
-            int value = queries[i][2];
+        for (int[] query : queries) {
+            int start = query[0];
+            int endPlusOne = query[1] + 1;
+            int value = query[2];
 
             list.putIfAbsent(start, 0L);
             list.putIfAbsent(endPlusOne, 0L);

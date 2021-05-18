@@ -15,18 +15,16 @@ public class Contacts {
          */
         Trie trie = new Trie();
         List<Integer> result = new ArrayList<>();
-        for(int i = 0; i < queries.length; i++){
-            String op = queries[i][0];
-            String contact = queries[i][1];
+        for (String[] query : queries) {
+            String op = query[0];
+            String contact = query[1];
 
-            if("add".equalsIgnoreCase(op)){
+            if ("add".equalsIgnoreCase(op)) {
                 trie.add(contact);
-            }
-            else if("find".equalsIgnoreCase(op)){
+            } else if ("find".equalsIgnoreCase(op)) {
                 int words = trie.findPartial(contact);
                 result.add(words);
-            }
-            else{
+            } else {
                 throw new IllegalArgumentException(String.format("Operation [%s] not supported."));
             }
         }

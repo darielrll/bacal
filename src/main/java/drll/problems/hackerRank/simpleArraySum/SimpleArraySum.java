@@ -10,8 +10,7 @@ public class SimpleArraySum {
      */
     public static int simpleArraySum(int[] ar) {
         int result = 0;
-        for(int i = 0; i < ar.length; i++)
-            result += ar[i];
+        for (int j : ar) result += j;
         return result;
     }
 
