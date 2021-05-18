@@ -1,7 +1,5 @@
 package drll.problems.leetcode.uniquePathsII;
 
-import java.util.List;
-
 public class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         if(obstacleGrid.length == 1  &&  obstacleGrid[0].length == 1){
