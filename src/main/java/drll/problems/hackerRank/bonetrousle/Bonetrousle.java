@@ -22,7 +22,7 @@ public class Bonetrousle {
             }
         }
 
-        Long currentSummation = 0l;
+        Long currentSummation = 0L;
         List<Integer> tentativeBoxesToBuy = new ArrayList<>();
         for (int i = 1; i <= boxesForSale; i++) {
             currentSummation += i;
@@ -38,7 +38,7 @@ public class Bonetrousle {
 
         int removedBox = (int) (currentSummation - sticksToBuy);
         long[] boxesToBuy = new long[numberOfBoxesToBuy];
-        boxesToBuy[boxesToBuy.length - 1] = 0l;
+        boxesToBuy[boxesToBuy.length - 1] = 0L;
 
         for (int i = 0, positionCovered = 0; i < tentativeBoxesToBuy.size(); i++) {
             if(tentativeBoxesToBuy.get(i) == removedBox) {
@@ -80,7 +80,7 @@ public class Bonetrousle {
     }
 
     private static long[] notValidCombination() {
-        return new long[]{ -1l };
+        return new long[]{ -1L};
     }
 
     private static long availableSticksToBuy(long boxesForSale) {

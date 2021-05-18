@@ -19,7 +19,7 @@ public class LargestRectangle {
             } else {
                 int lastTakenOutPosition = stack.pop();
                 while (!stack.isEmpty()  &&  h[stack.peek()] > h[i]){
-                    long area = h[stack.peek()] * (i - stack.peek());
+                    long area = (long) h[stack.peek()] * (i - stack.peek());
                     if (area > largestArea){
                         largestArea = area;
                     }
@@ -27,7 +27,7 @@ public class LargestRectangle {
                 }
                 h[lastTakenOutPosition] = h[i];
                 stack.push(lastTakenOutPosition);
-                long area = h[lastTakenOutPosition] * (i - lastTakenOutPosition + 1);
+                long area = (long) h[lastTakenOutPosition] * (i - lastTakenOutPosition + 1);
                 if (area > largestArea){
                     largestArea = area;
                 }
@@ -39,7 +39,7 @@ public class LargestRectangle {
                 largestArea = h[endPosition];
             }
             while (!stack.isEmpty()){
-                long area = h[stack.peek()] * (endPosition - stack.peek() + 1);
+                long area = (long) h[stack.peek()] * (endPosition - stack.peek() + 1);
                 if (area > largestArea) {
                     largestArea = area;
                 }
@@ -76,7 +76,7 @@ public class LargestRectangle {
                     break;
                 }
             }
-            long tmpArea = h[i] * (endPoint - startPoint + 1);
+            long tmpArea = (long) h[i] * (endPoint - startPoint + 1);
             if(tmpArea > largestArea){
                 largestArea = tmpArea;
             }
@@ -94,7 +94,7 @@ public class LargestRectangle {
             int minHeight = h[i];
             for (int j = i + 1; j < h.length; j++) {
                 minHeight = Math.min(minHeight, h[j]);
-                long tmpArea = (j - i + 1) * minHeight;
+                long tmpArea = (long) (j - i + 1) * minHeight;
                 if (tmpArea > largestArea){
                     largestArea = tmpArea;
                 }

@@ -32,7 +32,7 @@ public class FenwickTree {
         long result = 0;
 
         while (i > 0) {
-            tree.putIfAbsent(i, 0l);
+            tree.putIfAbsent(i, 0L);
             result += tree.get(i);
             i -= lessSignificantBit(i);
         }
@@ -58,7 +58,7 @@ public class FenwickTree {
         }
 
         do {
-            tree.putIfAbsent(i, 0l);
+            tree.putIfAbsent(i, 0L);
             tree.put(i, tree.get(i) + value);
             i += lessSignificantBit(i);
         } while (i <= size);
