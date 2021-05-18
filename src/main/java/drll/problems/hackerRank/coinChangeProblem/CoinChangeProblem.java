@@ -9,8 +9,10 @@ public class CoinChangeProblem {
     // Complete the getWays function below.
     static long getWays(long n, long[] c) {
 
-        //return getWays(n, c, 0);
-        //HashMap<Long, Long> result = new HashMap<>();
+        /*
+        return getWays(n, c, 0);
+        HashMap<Long, Long> result = new HashMap<>();
+        */
         return getWaysDinamicProgramming(n, c, 0, new HashMap<>());
     }
 

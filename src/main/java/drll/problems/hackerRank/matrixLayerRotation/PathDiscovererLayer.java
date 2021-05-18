@@ -2,11 +2,11 @@
 package drll.problems.hackerRank.matrixLayerRotation;
 
 public class PathDiscovererLayer {
-    private int[][] matrix;
+    private final int[][] matrix;
 
     private int layer;
     private int direction;
-    private int[][] pathCalculator;
+    private final int[][] pathCalculator;
     private boolean clockwise;
     private Point currentPoint;
 

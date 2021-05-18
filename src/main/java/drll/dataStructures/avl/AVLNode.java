@@ -3,7 +3,7 @@ package drll.dataStructures.avl;
 
 public class AVLNode<T extends Comparable> {
 
-    private T value;
+    private final T value;
     private BalanceFactor balanceFactor;
     private AVLNode<T> left;
     private AVLNode<T> right;

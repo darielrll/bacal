@@ -1,7 +1,7 @@
 package drll.problems.custom.mathExpression;
 
 public class Tokenizer {
-    private String expression;
+    private final String expression;
     private int index;
 
     public Tokenizer(String expression) {

@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 public class FenwickTree {
 
-    private int size;
-    private HashMap<Integer, Long> tree;
+    private final int size;
+    private final HashMap<Integer, Long> tree;
 
     public FenwickTree(int size) {
         this.size = size;

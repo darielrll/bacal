@@ -32,9 +32,9 @@ public class Solution {
 
 class Node{
     public Integer value, accumulate;
-    private Integer row, position;
+    private final Integer row, position;
     private Node rightSibling, leftSibling, leftFather, rightFather;
-    private List<List<Integer>> triangleTree;
+    private final List<List<Integer>> triangleTree;
 
     public Node(int row, int position, List<List<Integer>> triangleTree){
         this.row = row;

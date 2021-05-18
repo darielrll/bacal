@@ -6,9 +6,8 @@ import java.util.List;
 
 public class PrimeIterator{
 
-    private List<Integer> primeNumbers;
+    private final List<Integer> primeNumbers;
     private int currentIndex;
-    private int incToFindNextCandidate;
 
     public PrimeIterator() {
         primeNumbers = new ArrayList<>();
@@ -71,6 +70,5 @@ public class PrimeIterator{
 
     private void init(){
         currentIndex = 0;
-        incToFindNextCandidate = 2;
     }
 }
