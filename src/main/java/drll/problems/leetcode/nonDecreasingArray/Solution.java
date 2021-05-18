@@ -33,19 +33,13 @@ public class Solution {
         if(rightValuesToModify > 1){
             return false;
         }
-        if(nums[fistAscPosition] < nums[secondAscPosition]){
-            return true;
-        }
-        return false;
+        return nums[fistAscPosition] < nums[secondAscPosition];
     }
 
     private boolean canDown(int fistAscPosition, int[] nums){
         if(fistAscPosition == 0){
             return true;
         }
-        if(nums[fistAscPosition + 1] >= nums[fistAscPosition - 1]){
-            return true;
-        }
-        return false;
+        return nums[fistAscPosition + 1] >= nums[fistAscPosition - 1];
     }
 }

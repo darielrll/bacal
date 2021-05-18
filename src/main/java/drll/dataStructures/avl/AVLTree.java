@@ -100,13 +100,10 @@ public class AVLTree<T extends Comparable> {
             // means that the subtree do not suffer variations in height
             return true;
         }
-        if(node.getBalanceFactor().equals(BalanceFactor.BALANCED)){
-            // means that the subtree suffer variations in height but now is balanced
-            return true;
-        }
+        // means that the subtree suffer variations in height but now is balanced
+        return node.getBalanceFactor().equals(BalanceFactor.BALANCED);
         // means that the subtree suffer variations in height and the father
         // subtree needs to be balanced
-        return false;
     }
 
     private AVLNode<T> rotateLeft(AVLNode<T> primary) {
