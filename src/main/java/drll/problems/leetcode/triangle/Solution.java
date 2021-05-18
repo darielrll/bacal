@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
-        Integer min = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
         Node extremeLeft = new Node(triangle.size() - 1, 0, triangle);
         while(extremeLeft != null){
             min = Math.min(min, findMinimunPath(extremeLeft, 0));

@@ -25,10 +25,10 @@ public class Contacts {
                 int words = trie.findPartial(contact);
                 result.add(words);
             } else {
-                throw new IllegalArgumentException(String.format("Operation [%s] not supported."));
+                throw new IllegalArgumentException("Operation [%s] not supported.");
             }
         }
-        return result.toArray(new Integer[result.size()]);
+        return result.toArray(new Integer[0]);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -43,10 +43,7 @@ public class Contacts {
         for (int queriesRowItr = 0; queriesRowItr < queriesRows; queriesRowItr++) {
             String[] queriesRowItems = scanner.nextLine().split(" ");
 
-            for (int queriesColumnItr = 0; queriesColumnItr < 2; queriesColumnItr++) {
-                String queriesItem = queriesRowItems[queriesColumnItr];
-                queries[queriesRowItr][queriesColumnItr] = queriesItem;
-            }
+            System.arraycopy(queriesRowItems, 0, queries[queriesRowItr], 0, 2);
         }
 
         Integer[] result = contacts(queries);

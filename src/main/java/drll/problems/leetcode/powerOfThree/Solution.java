@@ -6,7 +6,7 @@ public class Solution {
             return false;
         }
         double exponent = Math.log10(n) / Math.log10(3);
-        Double decimal = Double.parseDouble(Double.toString(exponent).split("\\.")[1]);
+        double decimal = Double.parseDouble(Double.toString(exponent).split("\\.")[1]);
         return decimal == 0;
     }
 }

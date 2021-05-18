@@ -22,7 +22,7 @@ public class Bonetrousle {
             }
         }
 
-        Long currentSummation = 0L;
+        long currentSummation = 0L;
         List<Integer> tentativeBoxesToBuy = new ArrayList<>();
         for (int i = 1; i <= boxesForSale; i++) {
             currentSummation += i;
