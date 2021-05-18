@@ -101,8 +101,12 @@ public class Utils {
     }
 
     public static int[] buildArrayIntFromFile(String testDataFile) {
+        return buildArrayIntFromFile(testDataFile, " ");
+    }
 
-        ArrayList<Integer> numbers = getIntegersInFile(testDataFile);
+    public static int[] buildArrayIntFromFile(String testDataFile, String separator) {
+
+        ArrayList<Integer> numbers = getIntegersInFile(testDataFile, separator);
 
         int[] result = new int[numbers.size()];
         for (int i = 0; i < numbers.size(); i++) {
@@ -111,13 +115,13 @@ public class Utils {
         return result;
     }
 
-    private static ArrayList<Integer> getIntegersInFile(String testDataFile) {
+    private static ArrayList<Integer> getIntegersInFile(String testDataFile, String separator) {
         ArrayList<Integer> numbers = new ArrayList<>();
         Scanner sc = getFileScanner(testDataFile);
 
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            String[] lineNumbers = line.split(" ");
+            String[] lineNumbers = line.split(separator);
             for (int i = 0; i < lineNumbers.length; i++) {
                 numbers.add(Integer.parseInt(lineNumbers[i]));
             }

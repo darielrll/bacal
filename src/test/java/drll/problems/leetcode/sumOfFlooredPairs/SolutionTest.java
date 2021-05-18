@@ -1,5 +1,7 @@
 package drll.problems.leetcode.sumOfFlooredPairs;
 
+import common.Utils;
+import drll.problems.hackerRank.hackerlandRadioTransmitters.HackerlandRadioTransmitters;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +36,14 @@ class SolutionTest {
     @Test
     void should_return_correctly_for_test_case4() {
         assertThat(solution.sumOfFlooredPairs(new int[]{4, 1, 1, 2, 4}))
+                .isEqualTo(33);
+    }
+
+    @Test
+    void should_return_correctly_for_test_case5() {
+        String testDataFile = "leetcode/sumOfFlooredPairs/testCase5.txt";
+
+        assertThat(solution.sumOfFlooredPairs(Utils.buildArrayIntFromFile(testDataFile, ",")))
                 .isEqualTo(33);
     }
 }
