@@ -5,6 +5,7 @@ import common.Utils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -156,7 +157,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test
     void should_respond_correctly_for_56340_equal_numbers(){
-        int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber(1000000,56340);
+        int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
         assertThat(swapCount).isEqualTo(0);
@@ -165,7 +166,7 @@ class InsertionSortAdvancedAnalysisTest {
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
     void should_respond_in_less_than_300_milisecond_for_56340_equal_numbers(){
-        int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber(1000000,56340);
+        int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
         assertThat(swapCount).isEqualTo(0);
@@ -237,11 +238,9 @@ class InsertionSortAdvancedAnalysisTest {
                 part16);
     }
 
-    private int[] buildTestCasesForVeryLongEntriesOfTheSameNumber(int number, int ocurrences){
-        int[] result = new int[ocurrences];
-        for (int i = 0; i < result.length; i++){
-            result[i] = number;
-        }
+    private int[] buildTestCasesForVeryLongEntriesOfTheSameNumber(){
+        int[] result = new int[56340];
+        Arrays.fill(result, 1000000);
         return result;
     }
 }

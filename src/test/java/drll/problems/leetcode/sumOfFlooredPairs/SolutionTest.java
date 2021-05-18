@@ -1,7 +1,6 @@
 package drll.problems.leetcode.sumOfFlooredPairs;
 
 import common.Utils;
-import drll.problems.hackerRank.hackerlandRadioTransmitters.HackerlandRadioTransmitters;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
