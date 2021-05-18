@@ -53,8 +53,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(false, 4);
 
-        for(int i = 0; i < listOrdered.length; i++){
-            tree.add(new InsertionAnalysis(listOrdered[i]));
+        for (int j : listOrdered) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(6);
@@ -69,8 +69,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(false, 10);
 
-        for(int i = 0; i < listOrdered.length; i++){
-            tree.add(new InsertionAnalysis(listOrdered[i]));
+        for (int j : listOrdered) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(45);
@@ -81,8 +81,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] listOrdered = Utils.buildTestCasesForAnOrderedList(true, 4);
 
-        for(int i = 0; i < listOrdered.length; i++){
-            tree.add(new InsertionAnalysis(listOrdered[i]));
+        for (int j : listOrdered) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(0);
@@ -97,8 +97,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {3, 9, 8};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(1);
@@ -109,8 +109,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {9, 5, 8};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(2);
@@ -121,8 +121,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {1, 1, 1, 2, 2};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(0);
@@ -133,8 +133,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {2, 1, 3, 1, 2};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(4);
@@ -145,8 +145,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 3, 9, 8};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(2);
@@ -157,8 +157,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 3, 9, 8, 6};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(4);
@@ -169,8 +169,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 3, 9, 8, 6, 1};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(9);
@@ -181,8 +181,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(14);
@@ -193,8 +193,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 3, 9, 8, 6, 1, 2, 7};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(16);
@@ -205,8 +205,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {4, 4, 4, 3, 3, 3, 2, 2, 2};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(27);
@@ -217,8 +217,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 5, 5, 5, 10, 10, 10, 10, 8, 8, 8, 8};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(16);
@@ -236,8 +236,8 @@ class AVLTreeInsertionAnalysisTest {
 
         int[] list = {5, 5, 5, 5, 3, 3, 3, 3, 4, 4, 4, 4};
 
-        for(int i = 0; i < list.length; i++){
-            tree.add(new InsertionAnalysis(list[i]));
+        for (int j : list) {
+            tree.add(new InsertionAnalysis(j));
         }
 
         assertThat(tree.getShifts()).isEqualTo(32);

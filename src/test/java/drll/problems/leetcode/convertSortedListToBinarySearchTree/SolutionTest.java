@@ -94,10 +94,11 @@ class SolutionTest {
 }
 
 class AVLTreeNode{
-    TreeNode node;
+    final TreeNode node;
     int height;
 
-    AVLTreeNode left, right;
+    final AVLTreeNode left;
+    final AVLTreeNode right;
 
     AVLTreeNode(TreeNode node, AVLTreeNode left, AVLTreeNode right) {
         this.node = node;

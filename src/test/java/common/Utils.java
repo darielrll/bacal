@@ -72,14 +72,14 @@ public class Utils {
     public static int[] buildTestCasesForVeryLongEntries(String ... partsOfSameEntry){
 
         List<String[]> cases = new ArrayList<>();
-        for (int i = 0; i < partsOfSameEntry.length; i++){
-            cases.add(partsOfSameEntry[i].split(" "));
+        for (String s : partsOfSameEntry) {
+            cases.add(s.split(" "));
         }
 
         List<Integer> numbers = new ArrayList<>();
         for (String[] testCaseSplitted : cases) {
-            for (int i = 0; i < testCaseSplitted.length; i++){
-                numbers.add(Integer.parseInt(testCaseSplitted[i]));
+            for (String s : testCaseSplitted) {
+                numbers.add(Integer.parseInt(s));
             }
         }
         int[] result = new int[numbers.size()];
@@ -122,8 +122,8 @@ public class Utils {
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
             String[] lineNumbers = line.split(separator);
-            for (int i = 0; i < lineNumbers.length; i++) {
-                numbers.add(Integer.parseInt(lineNumbers[i]));
+            for (String lineNumber : lineNumbers) {
+                numbers.add(Integer.parseInt(lineNumber));
             }
         }
         return numbers;

@@ -97,8 +97,8 @@ class BonetrousleTest {
 
     private long getBoughtStick(long[] bonetrousle) {
         long boughtStick = 0;
-        for (int i = 0; i < bonetrousle.length; i++) {
-            boughtStick += bonetrousle[i];
+        for (long l : bonetrousle) {
+            boughtStick += l;
         }
         return boughtStick;
     }
