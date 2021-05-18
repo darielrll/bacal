@@ -15,7 +15,7 @@ public class JourneyToTheMoon {
         Set<Set<Integer>> cities = processAllPairs(astronaut);
 
         // Counting pair for big cities
-        Set<Integer>[] citiesArray = cities.toArray(new HashSet[cities.size()]);
+        HashSet[] citiesArray = cities.toArray(new HashSet[0]);
         long bigCitiesPopulation = citiesArray[citiesArray.length - 1].size();
         for (int i = citiesArray.length - 2; i >= 0 ; i--) {
             result += citiesArray[i].size() * bigCitiesPopulation;
