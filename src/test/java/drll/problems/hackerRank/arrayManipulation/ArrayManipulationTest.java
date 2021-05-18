@@ -273,7 +273,7 @@ class ArrayManipulationTest {
                 getArrayLengthFromTestCaseFile(testDataFile),
                 buildQueriesInTestCaseFile(testDataFile));
 
-        assertThat(maxValue).isEqualTo(7542539201l);
+        assertThat(maxValue).isEqualTo(7542539201L);
     }
 
     @Test
@@ -285,7 +285,7 @@ class ArrayManipulationTest {
                 getArrayLengthFromTestCaseFile(testDataFile),
                 buildQueriesInTestCaseFile(testDataFile));
 
-        assertThat(maxValue).isEqualTo(7496167325l);
+        assertThat(maxValue).isEqualTo(7496167325L);
     }
 
     private int getArrayLengthFromTestCaseFile(String testDataFile) {

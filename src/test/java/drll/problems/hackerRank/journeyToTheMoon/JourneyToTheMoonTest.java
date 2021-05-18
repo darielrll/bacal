@@ -62,7 +62,7 @@ class JourneyToTheMoonTest {
 
         long pairs = JourneyToTheMoon.journeyToMoon(100000, new int[][]{{1, 2}, {3, 4}});
 
-        assertThat(pairs).isEqualTo(4999949998l);
+        assertThat(pairs).isEqualTo(4999949998L);
     }
 
     private static int[][] buildTestCase5(){

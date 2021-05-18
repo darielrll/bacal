@@ -206,7 +206,7 @@ class FenwickTreeTest {
     void should_update_first_element(){
         subject.update(1, 5);
 
-        assertThat(subject.sum(1)).isEqualTo(5l);
+        assertThat(subject.sum(1)).isEqualTo(5L);
     }
 
     @Test
@@ -223,7 +223,7 @@ class FenwickTreeTest {
 
         subject.update(3, 5, 1L);
 
-        assertThat(subject.sum(3, 5)).isEqualTo(10l);
+        assertThat(subject.sum(3, 5)).isEqualTo(10L);
     }
 
     @Test()
