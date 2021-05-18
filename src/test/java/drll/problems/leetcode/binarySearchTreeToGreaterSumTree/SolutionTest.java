@@ -66,7 +66,7 @@ class SolutionTest {
 
     private int getBalancedNodesCount(TreeNode tree) {
         int treeHigh = getTreeHigh(tree);
-        Integer nodesCount = 0;
+        int nodesCount = 0;
         for(int i = 0; i < treeHigh; i++){
             nodesCount += (int)Math.pow(2, i);
         }

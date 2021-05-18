@@ -81,6 +81,6 @@ class BigSortingTest {
             numbers.add(line);
         }
 
-        return numbers.toArray(new String[numbers.size()]);
+        return numbers.toArray(new String[0]);
     }
 }

@@ -51,7 +51,7 @@ public class Utils {
         }
         while (--length > 0);
 
-        return list.toArray(new Integer[list.size()]);
+        return list.toArray(new Integer[0]);
     }
 
     public static int[] mergeArrays(int[] firstList, int[] secondList) {
@@ -83,7 +83,7 @@ public class Utils {
             }
         }
         int[] result = new int[numbers.size()];
-        Integer[] integers = numbers.toArray(new Integer[numbers.size()]);
+        Integer[] integers = numbers.toArray(new Integer[0]);
         for (int i  = 0; i < integers.length; i++){
             result[i] = integers[i];
         }

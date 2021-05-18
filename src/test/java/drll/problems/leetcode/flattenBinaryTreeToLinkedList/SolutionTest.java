@@ -40,7 +40,7 @@ class SolutionTest {
 
     private Integer[] linkedListToArray(TreeNode node, List<Integer> list) {
         if(node == null){
-            return list.toArray(new Integer[list.size()]);
+            return list.toArray(new Integer[0]);
         }
         list.add(node.val);
         return linkedListToArray(node.right, list);
