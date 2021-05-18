@@ -87,7 +87,7 @@ public class AVLTree<T extends Comparable> {
     }
 
     private State recordStateAfterAdd(AVLNode<T> node) {
-        return new State(count, node == null ? null
+        return new State(node == null ? null
                 : node.getBalanceFactor());
     }
 
@@ -156,11 +156,9 @@ public class AVLTree<T extends Comparable> {
     }
 
     static class State{
-        final long countBeforeAdd;
         final BalanceFactor balanceFactor;
 
-        public State(long countBeforeAdd, BalanceFactor bfBeforeAdd) {
-            this.countBeforeAdd = countBeforeAdd;
+        public State(BalanceFactor bfBeforeAdd) {
             this.balanceFactor = bfBeforeAdd;
         }
     }
