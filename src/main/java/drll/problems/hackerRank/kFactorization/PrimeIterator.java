@@ -46,8 +46,8 @@ public class PrimeIterator{
         if(number % 2 == 0  ||  number % 3 == 0){
             return false;
         }
-        Double sqrt = Math.sqrt(number);
-        if (sqrt - sqrt.intValue() == 0){
+        double sqrt = Math.sqrt(number);
+        if (sqrt - (int) sqrt == 0){
             return false;
         }
         int nextCandidatePosition = 2;
