@@ -58,7 +58,7 @@ public class Bonetrousle {
 
     private static boolean tentativeBoxesNotSupportDemand(long sticksToBuy, int numberOfBoxesToBuy,
                                                         Long summation, List<Integer> tentativeBoxesToBuy) {
-        /**
+        /*
          * If summation is different from sticksToBuy means that is need to remove one
          * of the tentative boxes, and the box to remove is the box resulting from the
          * difference summation - sticksToBuy, so, there is no possible combination when

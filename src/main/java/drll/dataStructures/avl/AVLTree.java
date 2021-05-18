@@ -155,7 +155,7 @@ public class AVLTree<T extends Comparable> {
         return node;
     }
 
-    class State{
+    static class State{
         final long countBeforeAdd;
         final BalanceFactor balanceFactor;
 
