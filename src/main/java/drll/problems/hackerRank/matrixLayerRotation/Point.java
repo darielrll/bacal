@@ -3,8 +3,8 @@ package drll.problems.hackerRank.matrixLayerRotation;
 import java.util.Objects;
 
 public class Point {
-    public int X;
-    public int Y;
+    public final int X;
+    public final int Y;
 
     public Point(int x, int y) {
         this.X = x;

@@ -31,8 +31,10 @@ public class Solution {
 
 
 class Node{
-    public Integer value, accumulate;
-    private final Integer row, position;
+    public final Integer value;
+    public Integer accumulate;
+    private final Integer row;
+    private final Integer position;
     private Node rightSibling, leftSibling, leftFather, rightFather;
     private final List<List<Integer>> triangleTree;
 

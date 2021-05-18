@@ -134,7 +134,9 @@ public class LargestRectangle {
 }
 
 class Segment{
-    public int start, end, height;
+    public final int start;
+    public final int end;
+    public final int height;
 
     public Segment(int start, int end, int height) {
         this.start = start;

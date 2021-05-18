@@ -7,10 +7,10 @@ import java.util.List;
 
 public class Trie {
 
-    public Character character;
+    public final Character character;
     public boolean isCompleteWord;
     public int words;
-    public HashMap<Character, Trie> childs;
+    public final HashMap<Character, Trie> childs;
 
     public Trie() {
         this('*');

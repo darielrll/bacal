@@ -4,7 +4,7 @@ package drll.problems.hackerRank.newYearChaos;
 public class AVLNodeExtended implements Comparable<AVLNodeExtended> {
 
     public int familyCount;
-    public Integer value;
+    public final Integer value;
 
     public AVLNodeExtended(Integer value) {
         this.value = value;

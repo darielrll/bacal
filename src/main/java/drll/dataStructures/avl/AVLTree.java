@@ -156,8 +156,8 @@ public class AVLTree<T extends Comparable> {
     }
 
     class State{
-        long countBeforeAdd;
-        BalanceFactor balanceFactor;
+        final long countBeforeAdd;
+        final BalanceFactor balanceFactor;
 
         public State(long countBeforeAdd, BalanceFactor bfBeforeAdd) {
             this.countBeforeAdd = countBeforeAdd;

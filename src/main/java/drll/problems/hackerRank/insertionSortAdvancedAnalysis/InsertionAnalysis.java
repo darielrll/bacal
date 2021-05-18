@@ -3,7 +3,7 @@ package drll.problems.hackerRank.insertionSortAdvancedAnalysis;
 
 public class InsertionAnalysis implements Comparable<InsertionAnalysis>{
 
-    public int value;
+    public final int value;
     public int familyCount;
     public int twins;
 

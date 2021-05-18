@@ -7,7 +7,7 @@ import java.util.*;
 public class CicleDetection {
 
     static class SinglyLinkedListNode {
-        public int data;
+        public final int data;
         public SinglyLinkedListNode next;
 
         public SinglyLinkedListNode(int nodeData) {
