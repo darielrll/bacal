@@ -44,6 +44,6 @@ class SolutionTest {
         String testDataFile = "leetcode/sumOfFlooredPairs/testCase5.txt";
 
         assertThat(solution.sumOfFlooredPairs(Utils.buildArrayIntFromFile(testDataFile, ",")))
-                .isEqualTo(33);
+                .isEqualTo(703074513);
     }
 }
