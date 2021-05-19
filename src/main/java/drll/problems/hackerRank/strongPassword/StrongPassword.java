@@ -88,7 +88,6 @@ public class StrongPassword {
     }
 
     private static boolean containsLowerCase(String password) {
-        Character[] lower_case = {};
         for (int i = 0; i < password.length(); i++) {
             switch (password.charAt(i)) {
                 case 'a':

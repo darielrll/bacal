@@ -22,40 +22,6 @@ public class TriangleNumbers {
         return 4;
     }
 
-    // Complete the solve function below.
-    static int solve_Naive(int n) {
-
-        if(n < 3){
-            return -1;
-        }
-        if(n % 2 == 1){
-            return 2;
-        }
-
-        boolean[] rowStart = {false, true, false};
-        boolean[] rowNext = null;
-        while(n-- > 3){
-            rowNext = new boolean[rowStart.length + 1];
-            for (int i = 1; i < rowNext.length - 1; i++) {
-                boolean upperLeft = true;
-                if(i - 2 >= 0){
-                    upperLeft = rowStart[i - 2];
-                }
-                boolean upper = rowStart[i - 1];
-                boolean upperRigth = rowStart[i];
-                rowNext[i] = upperLeft == upper == upperRigth;
-            }
-            rowStart = rowNext;
-        }
-        for (int i = 1; i < rowNext.length; i++) {
-            if(rowNext[i]){
-                return i + 1;
-            }
-        }
-
-        return -1;
-    }
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {

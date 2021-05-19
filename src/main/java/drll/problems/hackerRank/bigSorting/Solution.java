@@ -32,13 +32,6 @@ public class Solution {
         return sortedNumbers;
     }
 
-    static String[] bigSorting_another_solution(String[] unsorted) {
-
-        Arrays.sort(unsorted, Solution::compare);
-
-        return unsorted;
-    }
-
     static int compare(String number1, String number2){
         int comparision = number1.length() - number2.length();
 
