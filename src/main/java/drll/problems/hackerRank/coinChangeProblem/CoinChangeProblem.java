@@ -17,19 +17,6 @@ public class CoinChangeProblem {
     }
 
     // Complete the getWays function below.
-    static long getWaysRecursiveOnly(long n, long[] c, int coinIndex) {
-
-        if(n == 0){
-            return 1;
-        }
-        if(n < 0  || coinIndex >= c.length){
-            return 0;
-        }
-        return getWaysRecursiveOnly(n - c[coinIndex], c, coinIndex) +
-                getWaysRecursiveOnly(n, c, coinIndex + 1);
-    }
-
-    // Complete the getWays function below.
     // change, coin, ways
     static long getWaysDinamicProgramming(long n, long[] c, int coinIndex,
                                           HashMap<Long, HashMap<Long, Long>> results) {
@@ -64,35 +51,5 @@ public class CoinChangeProblem {
         }
 
         return usingCoin + notUsingCoin;
-    }
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) {
-
-
-        String[] nm = scanner.nextLine().split(" ");
-
-        int n = Integer.parseInt(nm[0]);
-
-        int m = Integer.parseInt(nm[1]);
-
-        long[] c = new long[m];
-
-        String[] cItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int i = 0; i < m; i++) {
-            long cItem = Long.parseLong(cItems[i]);
-            c[i] = cItem;
-        }
-
-        // Print the number of ways of making change for 'n' units using coins having the values given by 'c'
-
-        long ways = getWays(n, c);
-
-        System.out.println(ways);
-
-        scanner.close();
     }
 }

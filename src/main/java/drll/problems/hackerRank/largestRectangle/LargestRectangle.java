@@ -50,60 +50,6 @@ public class LargestRectangle {
         return largestArea;
     }
 
-    static long largestRectangle_n2_enhanced(int[] h) {
-        long largestArea = 0;
-
-        Set<Segment> segments = new HashSet<>();
-        for (int i = 0; i < h.length; i++) {
-            if(segments.contains(new Segment(i, i, h[i]))){
-                continue;
-            }
-            int startPoint = i;
-            for (int j = startPoint - 1; j >= 0; j--) {
-                if (h[i] <= h[j]){
-                    startPoint = j;
-                }
-                else{
-                    break;
-                }
-            }
-            int endPoint = i;
-            for (int j = endPoint + 1; j < h.length; j++) {
-                if (h[i] <= h[j]){
-                    endPoint = j;
-                }
-                else{
-                    break;
-                }
-            }
-            long tmpArea = (long) h[i] * (endPoint - startPoint + 1);
-            if(tmpArea > largestArea){
-                largestArea = tmpArea;
-            }
-            segments.add(new Segment(startPoint, endPoint, h[i]));
-        }
-
-        return largestArea;
-    }
-
-    static long largestRectangle_n2(int[] h) {
-        // rise time out in some test cases
-        long largestArea = 0;
-
-        for (int i = 0; i < h.length; i++) {
-            int minHeight = h[i];
-            for (int j = i + 1; j < h.length; j++) {
-                minHeight = Math.min(minHeight, h[j]);
-                long tmpArea = (long) (j - i + 1) * minHeight;
-                if (tmpArea > largestArea){
-                    largestArea = tmpArea;
-                }
-            }
-        }
-
-        return largestArea;
-    }
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
@@ -130,45 +76,5 @@ public class LargestRectangle {
         bufferedWriter.close();
 
         scanner.close();
-    }
-}
-
-class Segment{
-    public final int start;
-    public final int end;
-    public final int height;
-
-    public Segment(int start, int end, int height) {
-        this.start = start;
-        this.end = end;
-        this.height = height;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-
-        if(!(o instanceof Segment)){
-            return false;
-        }
-        Segment other = (Segment)o;
-        if (other.height != height){
-            return false;
-        }
-        Segment first, second;
-        if(start < other.start){
-            first = this;
-            second = other;
-        }
-        else{
-            first = other;
-            second = this;
-        }
-        // false if segments are not overlapped
-        return (first.end - first.start) + (second.end - second.start) > (second.end - first.start);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(start, end, height);
     }
 }
