@@ -12,7 +12,7 @@
  
  ##### Notes
  - My first solution was this:
-   * I made a double bucle forming pairs(x, y), where `x = arr[i]` and `y = arr[j]`,
+   * I made a double loop forming pairs(x, y), where `x = arr[i]` and `y = arr[j]`,
  then if `x > y` there is an inverted pair. So, I just need to count and return the 
  amount of inverted pairs. And my method was this: 
  ```

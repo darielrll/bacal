@@ -27,7 +27,7 @@ public class KFactorization {
             return new int[]{-1};
         }
 
-        int[][] nDecomposition = factorDescomposition(n);
+        int[][] nDecomposition = factorDecomposition(n);
         List<Integer> targetFactor = getTargetFactors(nDecomposition);
 
         int[] lessCombinationOfFactors = findLessFactorCombination(n, targetFactor, utilNumbers);
@@ -107,7 +107,7 @@ public class KFactorization {
      * @param number
      * @return
      */
-    private static int[][] factorDescomposition(int number){
+    private static int[][] factorDecomposition(int number){
 
         List<Integer> factor = new ArrayList<>();
         List<Integer> exponent = new ArrayList<>();
@@ -141,14 +141,14 @@ public class KFactorization {
         return decomposition;
     }
 
-    private static int[] convertToIntArray(List<Integer> cummulativeSolution) {
-        if(cummulativeSolution == null){
+    private static int[] convertToIntArray(List<Integer> cumulativeSolution) {
+        if(cumulativeSolution == null){
             return null;
         }
-        int[] result = new int[cummulativeSolution.size()];
+        int[] result = new int[cumulativeSolution.size()];
 
-        for (int i = 0; i < cummulativeSolution.size(); i++) {
-            result[i] = cummulativeSolution.get(i);
+        for (int i = 0; i < cumulativeSolution.size(); i++) {
+            result[i] = cumulativeSolution.get(i);
         }
 
         return result;

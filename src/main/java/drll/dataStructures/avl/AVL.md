@@ -9,5 +9,5 @@ Was created by **A**delson-**V**elsky and **L**andis.
 * Was implemented for now only insertion flow
 * In next iterations will be added delete flow
 
-## Enlaces importantes
+## Important links
 * [AVL](https://en.wikipedia.org/wiki/AVL_tree)

@@ -10,12 +10,12 @@ public class CompareTriplets {
     static int[] solve(int[] a, int[] b) {
 
         int resultA = 0;
-        int resutlB = 0;
+        int resultB = 0;
         for(int i = 0; i < a.length; i++){
             if(a[i] > b[i]) resultA++;
-            else if(a[i] < b[i]) resutlB++;
+            else if(a[i] < b[i]) resultB++;
         }
-        return new int[]{resultA, resutlB};
+        return new int[]{resultA, resultB};
     }
 
     private static final Scanner scanner = new Scanner(System.in);

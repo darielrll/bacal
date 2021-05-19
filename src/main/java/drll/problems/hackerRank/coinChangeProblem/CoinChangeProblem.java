@@ -2,7 +2,6 @@
 package drll.problems.hackerRank.coinChangeProblem;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class CoinChangeProblem {
 
@@ -13,12 +12,12 @@ public class CoinChangeProblem {
         return getWays(n, c, 0);
         HashMap<Long, Long> result = new HashMap<>();
         */
-        return getWaysDinamicProgramming(n, c, 0, new HashMap<>());
+        return getWaysDynamicProgramming(n, c, 0, new HashMap<>());
     }
 
     // Complete the getWays function below.
     // change, coin, ways
-    static long getWaysDinamicProgramming(long n, long[] c, int coinIndex,
+    static long getWaysDynamicProgramming(long n, long[] c, int coinIndex,
                                           HashMap<Long, HashMap<Long, Long>> results) {
         if(n == 0){
             return 1;
@@ -34,7 +33,7 @@ public class CoinChangeProblem {
             usingCoin = results.get(n - c[coinIndex]).get(c[coinIndex]);
         }
         else {
-            usingCoin = getWaysDinamicProgramming(n - c[coinIndex], c, coinIndex, results);
+            usingCoin = getWaysDynamicProgramming(n - c[coinIndex], c, coinIndex, results);
             results.get(n - c[coinIndex]).put(c[coinIndex], usingCoin);
         }
 
@@ -45,7 +44,7 @@ public class CoinChangeProblem {
                 notUsingCoin = results.get(n).get(c[coinIndex + 1]);
             }
             else {
-                notUsingCoin = getWaysDinamicProgramming(n, c, coinIndex + 1, results);
+                notUsingCoin = getWaysDynamicProgramming(n, c, coinIndex + 1, results);
                 results.get(n).put(c[coinIndex + 1], notUsingCoin);
             }
         }

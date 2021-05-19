@@ -26,7 +26,7 @@ Complete the function *minOperations* in the editor below.
 minOperations has the following parameter(s):
 - *int arr[n]*: an array of integers
 - *int threshold*: the minimum number of desired equal elements in the array.
-- *int d*: the division pararmeter used to divide an element in a single operation.
+- *int d*: the division parameter used to divide an element in a single operation.
 
 Returns:
 - *int*: the minimum number of operations required to have at least *threshold* number of equal elements 

@@ -187,12 +187,12 @@ class GraphTest {
         int[][] edges = new int[][]{{1, 2}, {0, 2}, {2, 3}};
         Graph graph = new Graph(edges);
 
-        List<Integer> adjacents = graph.adjacent(2);
+        List<Integer> adjacent = graph.adjacent(2);
 
-        assertThat(adjacents.size()).isEqualTo(3);
-        assertThat(adjacents.contains(1)).isTrue();
-        assertThat(adjacents.contains(0)).isTrue();
-        assertThat(adjacents.contains(3)).isTrue();
+        assertThat(adjacent.size()).isEqualTo(3);
+        assertThat(adjacent.contains(1)).isTrue();
+        assertThat(adjacent.contains(0)).isTrue();
+        assertThat(adjacent.contains(3)).isTrue();
     }
 
     @Test

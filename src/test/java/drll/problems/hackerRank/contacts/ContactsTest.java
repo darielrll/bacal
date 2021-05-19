@@ -16,7 +16,7 @@ class ContactsTest {
     }
 
     @Test()
-    void should_throw_ilegal_argument_exception_for_bad_command(){
+    void should_throw_illegal_argument_exception_for_bad_command(){
         assertThrows(IllegalArgumentException.class, () -> Contacts.contacts(buildTestCase2()));
     }
 

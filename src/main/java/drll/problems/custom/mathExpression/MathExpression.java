@@ -5,18 +5,18 @@ import java.util.*;
 public class MathExpression {
     public double evalMathExpression(String mathExpression) throws Exception {
         List<String> postfixNotation = toPostfixNotation(mathExpression);
-        LinkedList<Double> accumlativeResult = new LinkedList<>();
+        LinkedList<Double> accumulativeResult = new LinkedList<>();
 
         for (String s : postfixNotation) {
             if (Token.isOperator(s)) {
-                Double rightOperand = accumlativeResult.pop();
-                Double leftOperand = accumlativeResult.pop();
-                accumlativeResult.push(calculate(leftOperand, s, rightOperand));
+                Double rightOperand = accumulativeResult.pop();
+                Double leftOperand = accumulativeResult.pop();
+                accumulativeResult.push(calculate(leftOperand, s, rightOperand));
             } else {
-                accumlativeResult.push(Double.parseDouble(s));
+                accumulativeResult.push(Double.parseDouble(s));
             }
         }
-        return Math.round(accumlativeResult.pop() * 100) / 100.0;
+        return Math.round(accumulativeResult.pop() * 100) / 100.0;
     }
 
     private Double calculate(Double leftOperand, String operator, Double rightOperand) throws Exception {

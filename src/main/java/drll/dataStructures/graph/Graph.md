@@ -62,5 +62,5 @@ capabilities
     Iterable<Integer> vertex() 
 ```
 
-## Enlaces importantes
+## Important links
 * [Grafo](https://es.wikipedia.org/wiki/Grafo)
