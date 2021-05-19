@@ -80,7 +80,7 @@ public class MathExpression {
             case "/":
                 return 1;
             default:
-                throw new Exception("Unknow operator");
+                throw new Exception("Unknown operator");
         }
     }
 }

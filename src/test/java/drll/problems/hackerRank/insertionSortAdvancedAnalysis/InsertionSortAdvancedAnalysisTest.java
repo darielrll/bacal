@@ -182,7 +182,7 @@ class InsertionSortAdvancedAnalysisTest {
     }
 
     @Test()
-    @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 900, unit = TimeUnit.MILLISECONDS)
     void should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 100000);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);

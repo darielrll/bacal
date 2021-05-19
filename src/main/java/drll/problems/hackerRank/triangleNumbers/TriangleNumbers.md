@@ -34,6 +34,6 @@ struggling my head to this final solution.
 For an odd row the even number will be always in position 2, for 
 even rows the position of the even number will be in position
 3 or 4.  
-    3: - if sumatory of naturals number from 0 to (row - 1) is even  
+    3: - if summary of naturals number from 0 to (row - 1) is even  
     4: - otherwise 
 

@@ -77,8 +77,8 @@ public class Utils {
         }
 
         List<Integer> numbers = new ArrayList<>();
-        for (String[] testCaseSplitted : cases) {
-            for (String s : testCaseSplitted) {
+        for (String[] testCaseSplit : cases) {
+            for (String s : testCaseSplit) {
                 numbers.add(Integer.parseInt(s));
             }
         }

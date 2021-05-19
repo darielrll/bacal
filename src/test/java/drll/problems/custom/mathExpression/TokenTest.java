@@ -26,7 +26,7 @@ class TokenTest {
     }
 
     @Test
-    void should_return_false_when_operator_is_unknow() {
+    void should_return_false_when_operator_is_unknown() {
         assertThat(Token.isOperator("a")).isFalse();
     }
 }

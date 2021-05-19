@@ -33,9 +33,9 @@ public class Solution {
     }
 
     static int compare(String number1, String number2){
-        int comparision = number1.length() - number2.length();
+        int comparison = number1.length() - number2.length();
 
-        if (comparision == 0) {
+        if (comparison == 0) {
             for (int i = 0; i < number1.length(); i++) {
                 int result = number1.charAt(i) - number2.charAt(i);
                 if (result != 0){
@@ -45,6 +45,6 @@ public class Solution {
             return 0;
         }
 
-        return comparision;
+        return comparison;
     }
 }

@@ -63,9 +63,9 @@ class SolutionTest {
         if(avl == null){
             return true;
         }
-        int leftHight = avl.left == null ? 0 : avl.left.height;
-        int rightHight = avl.right == null ? 0 : avl.right.height;
-        if(Math.abs(leftHight - rightHight) > 1){
+        int leftHeight = avl.left == null ? 0 : avl.left.height;
+        int rightHeight = avl.right == null ? 0 : avl.right.height;
+        if(Math.abs(leftHeight - rightHeight) > 1){
             return false;
         }
         if(avl.left != null  &&  avl.node.val < avl.left.node.val){

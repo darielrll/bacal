@@ -49,7 +49,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 * [Git](https://git-scm.com/)
 * [Gradle](https://gradle.org/)
 
-### Enlaces importantes
+### Important Links
 * [Format text in README.md](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 * [How to include tables in README.md](https://help.github.com/articles/organizing-information-with-tables/)
 * [Collection of useful .gitignore templates](https://github.com/github/gitignore)

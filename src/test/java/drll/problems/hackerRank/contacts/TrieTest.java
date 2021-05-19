@@ -69,7 +69,7 @@ class TrieTest {
         subject.add("hack");
         subject.add("hackerrank");
 
-        int contacts = subject.findPartial("noexist");
+        int contacts = subject.findPartial("no-exist");
 
         assertThat(contacts).isEqualTo(0);
     }

@@ -27,9 +27,9 @@ class SolutionTest {
             add(Arrays.asList(4,1,8,3));
         }};
 
-        Integer minimunPath = solution.minimumTotal(triangle);
+        Integer minimumPath = solution.minimumTotal(triangle);
 
-        assertThat(minimunPath).isEqualTo(11);
+        assertThat(minimumPath).isEqualTo(11);
     }
 
     @Test
@@ -38,8 +38,8 @@ class SolutionTest {
             add(Collections.singletonList(-10));
         }};
 
-        Integer minimunPath = solution.minimumTotal(triangle);
+        Integer minimumPath = solution.minimumTotal(triangle);
 
-        assertThat(minimunPath).isEqualTo(-10);
+        assertThat(minimumPath).isEqualTo(-10);
     }
 }

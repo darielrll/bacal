@@ -9,8 +9,8 @@ public class MissingNumbers {
     // Complete the missingNumbers function below.
     static int[] missingNumbers(int[] missing, int[] original) {
 
-        HashMap<Integer, Integer> originalNumbersMap = getMapAnalisis(original);
-        HashMap<Integer, Integer> missingNumbersMap = getMapAnalisis(missing);
+        HashMap<Integer, Integer> originalNumbersMap = getMapAnalysis(original);
+        HashMap<Integer, Integer> missingNumbersMap = getMapAnalysis(missing);
 
         ArrayList<Integer> missingNumbers = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class MissingNumbers {
         return result;
     }
 
-    private static HashMap<Integer, Integer> getMapAnalisis(int[] numbers) {
+    private static HashMap<Integer, Integer> getMapAnalysis(int[] numbers) {
         HashMap<Integer, Integer> numbersMap = new HashMap<>();
 
         for (int i : numbers) {

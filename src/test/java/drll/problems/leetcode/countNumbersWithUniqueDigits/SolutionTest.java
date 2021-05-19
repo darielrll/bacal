@@ -15,15 +15,15 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case1() {
-        Integer countDifferentsDigits = solution.countNumbersWithUniqueDigits(2);
+        Integer countDifferentDigits = solution.countNumbersWithUniqueDigits(2);
 
-        assertThat(countDifferentsDigits).isEqualTo(91);
+        assertThat(countDifferentDigits).isEqualTo(91);
     }
 
     @Test
     void should_return_correctly_for_test_case2() {
-        Integer countDifferentsDigits = solution.countNumbersWithUniqueDigits(0);
+        Integer countDifferentDigits = solution.countNumbersWithUniqueDigits(0);
 
-        assertThat(countDifferentsDigits).isEqualTo(1);
+        assertThat(countDifferentDigits).isEqualTo(1);
     }
 }

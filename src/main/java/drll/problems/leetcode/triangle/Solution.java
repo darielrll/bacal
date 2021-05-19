@@ -7,13 +7,13 @@ public class Solution {
         int min = Integer.MAX_VALUE;
         Node extremeLeft = new Node(triangle.size() - 1, 0, triangle);
         while(extremeLeft != null){
-            min = Math.min(min, findMinimunPath(extremeLeft, 0));
+            min = Math.min(min, findMinimumPath(extremeLeft, 0));
             extremeLeft = extremeLeft.rightSibling();
         }
         return min;
     }
 
-    private Integer findMinimunPath(Node node, Integer summation){
+    private Integer findMinimumPath(Node node, Integer summation){
         if(node == null  ||  node.accumulate <= summation + node.value){
             return Integer.MAX_VALUE;
         }
@@ -23,8 +23,8 @@ public class Solution {
         }
         node.accumulate = summation + node.value;
         return Math.min(
-                findMinimunPath(node.leftFather(), node.accumulate),
-                findMinimunPath(node.rightFather(), node.accumulate)
+                findMinimumPath(node.leftFather(), node.accumulate),
+                findMinimumPath(node.rightFather(), node.accumulate)
         );
     }
 }

@@ -14,9 +14,9 @@ class PathDiscovererLayerTest {
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, false);
 
-        Point nextpoint = pathDiscovererLayer.next();
+        Point nextPoint = pathDiscovererLayer.next();
 
-        assertThat(nextpoint).isEqualTo(new Point(0, 1));
+        assertThat(nextPoint).isEqualTo(new Point(0, 1));
     }
 
     @Test
@@ -70,9 +70,9 @@ class PathDiscovererLayerTest {
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, false);
 
-        Point nextpoint = pathDiscovererLayer.next();
+        Point nextPoint = pathDiscovererLayer.next();
 
-        assertThat(nextpoint).isEqualTo(new Point(1,2));
+        assertThat(nextPoint).isEqualTo(new Point(1,2));
     }
 
     @Test
@@ -126,9 +126,9 @@ class PathDiscovererLayerTest {
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(1, true);
 
-        Point nextpoint = pathDiscovererLayer.next();
+        Point nextPoint = pathDiscovererLayer.next();
 
-        assertThat(nextpoint).isEqualTo(new Point(0, 1));
+        assertThat(nextPoint).isEqualTo(new Point(0, 1));
     }
 
     @Test
@@ -182,9 +182,9 @@ class PathDiscovererLayerTest {
         pathDiscovererLayer = new PathDiscovererLayer(matrix);
         pathDiscovererLayer.prepareForDiscoverPath(2, true);
 
-        Point nextpoint = pathDiscovererLayer.next();
+        Point nextPoint = pathDiscovererLayer.next();
 
-        assertThat(nextpoint).isEqualTo(new Point(1,4));
+        assertThat(nextPoint).isEqualTo(new Point(1,4));
     }
 
     @Test
