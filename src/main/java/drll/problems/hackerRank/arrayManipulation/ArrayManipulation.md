@@ -15,16 +15,16 @@ Given a set of update queries over an array you need to give the maximum amount 
  
  I started using segment tree, but it was taking so much time, after I started to make a solution ordering
  the queries using the end of the range and trying to find local maximums and after take the global, but
- was a very long case that breaks this approach and I can not found where was the error, so, I started
- finding and I found the data structure Fenwick tree, or Binary Indexed Tree(BIT), I started using it to
- solve the exercise but the range update operation was expensive, there are modification that can improve
- the range update in a BIT, but after making other iteration and discuss with a friend he talk to me about
+ was a very long case that breaks this approach, and I can not found where was the error, so, I started
+ finding, and I found the data structure Fenwick tree, or Binary Indexed Tree(BIT), I started using it to
+ solve the exercise, but the range update operation was expensive, there are modification that can improve
+ the range update in a BIT, but after making other iteration and discuss with a friend he talks to me about
  difference arrays and using it I solve de exercise in O(m), where m is the amount of queries. 
 
 
 ## Final result
 
-I implemented BIT data structure for future use, because finally I do not used in the final solution
+I implemented BIT data structure for future use, because finally I do not use in the final solution
 
 ## Some useful links I used
 

@@ -16,7 +16,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 #### Working now in solution for problem?
 * [HackerRank -> Kitty's Calculations on a Tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem)
 
-#### Directory structure to store problems solutions:
+#### Directory structures to store problems solutions:
 > Under `src` folder follow this folder structure
 ```
     src/main/java/drll/problems/<problem_source>/<nameOfTheProblem>/NameOfTheProblem.java
@@ -38,7 +38,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 | Leetcode | ~ 100 000 |   388  | 14/05/21 |
 
 #### CLI
-`make test` : to run all tests
+`make test` to run all tests
 
 #### Libraries used to test
 * [Mockito](http://site.mockito.org/)

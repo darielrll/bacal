@@ -14,7 +14,7 @@
  - My first solution was this:
    * I made a double loop forming pairs(x, y), where `x = arr[i]` and `y = arr[j]`,
  then if `x > y` there is an inverted pair. So, I just need to count and return the 
- amount of inverted pairs. And my method was this: 
+ amount of inverted pairs, and my method was this: 
  ```
  public static int insertionSort(int[] arr) {    
         int result  = 0;
@@ -30,7 +30,7 @@
  ```
 
  
-   - But this solution was not enough for all test cases provided by the online judge,
+   - This solution was not enough for all test cases provided by the online judge,
      because for more than the half of the cases the response was a timeout, that means 
      that this solution was very inefficient. Because I was finding shifts in O(n2) pairs,
      exactly in `n(n-1)/2` pairs.
@@ -112,7 +112,7 @@ class BiNode{
  
  
 * Then my initial method `public static int insertionSort(int[] arr){...}`
- change as follow:
+ change as follows:
  ```
   public static long insertionSort(int[] arr) {
          long result  = 0;
@@ -129,8 +129,7 @@ class BiNode{
  response a timeout.
  
  * After that I introduce the concept of twins nodes, in order to not repeat
- nodes with the same value, then the method to insert new values changed as 
- follow:
+ nodes with the same value, then the method to insert new values changed as follows:
  ```
 public int calculateShifts(BiNode child){
 
@@ -172,7 +171,7 @@ public int calculateShifts(BiNode child){
    * This solution was even better but now again was not enough, 
 because fail for 1 test cases over 14, because for ordered lists, 
 ascendant or descendant the response was  a timeout, and that 
-because the tree is extremely unbalanced, in this case its the 
+because the tree is extremely unbalanced, in this case it's the 
 worst case for the binary tree search. For that reason in my next
 solution I will use binary search tree balanced by height
 

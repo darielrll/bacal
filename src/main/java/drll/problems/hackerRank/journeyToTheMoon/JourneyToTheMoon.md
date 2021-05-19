@@ -8,8 +8,8 @@
  
 ##### Resume of the problem:
  
- Given a list of pairs of astronauts that belong to the same city and a number for the
- total of astronauts, the problem is calculate how many pair of  astronauts can be 
+ Given a list of pairs of astronauts that belong to the same city, and a number for the
+ total of astronauts, the problem is to calculate how many pairs of  astronauts can be 
  formed with the constraint that they should belong to different countries.
  
 ##### Notes
