@@ -131,7 +131,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    void should_respond_in_less_than_300_milisecond_for_91337_elements(){
+    void should_respond_in_less_than_300_millisecond_for_bip39_elements(){
         int[] list = buildATestCaseWith_91337_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -148,7 +148,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    void should_respond_in_less_than_300_milisecond_for_95059_numbers(){
+    void should_respond_in_less_than_300_millisecond_for_95059_numbers(){
         int[] list = buildATestCaseWith_95059_elements();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -165,7 +165,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    void should_respond_in_less_than_300_milisecond_for_56340_equal_numbers(){
+    void should_respond_in_less_than_300_millisecond_for_56340_equal_numbers(){
         int[] list = buildTestCasesForVeryLongEntriesOfTheSameNumber();
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -174,7 +174,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 300, unit = TimeUnit.MILLISECONDS)
-    void should_respond_in_less_than_300_milisecond_in_best_case_for_a_very_long_list(){
+    void should_respond_in_less_than_300_millisecond_in_best_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(true, 73099);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 
@@ -183,7 +183,7 @@ class InsertionSortAdvancedAnalysisTest {
 
     @Test()
     @Timeout(value = 900, unit = TimeUnit.MILLISECONDS)
-    void should_respond_in_less_than_300_milisecond_in_worst_case_for_a_very_long_list(){
+    void should_respond_in_less_than_300_millisecond_in_worst_case_for_a_very_long_list(){
         int[] list = Utils.buildTestCasesForAnOrderedList(false, 100000);
         long swapCount = InsertionSortAdvancedAnalysis.insertionSort(list);
 

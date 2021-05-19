@@ -80,34 +80,34 @@ public class CicleDetection {
             int index = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-            SinglyLinkedList llist = new SinglyLinkedList();
+            SinglyLinkedList list = new SinglyLinkedList();
 
-            int llistCount = scanner.nextInt();
+            int listCount = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-            for (int i = 0; i < llistCount; i++) {
-                int llistItem = scanner.nextInt();
+            for (int i = 0; i < listCount; i++) {
+                int listItem = scanner.nextInt();
                 scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-                llist.insertNode(llistItem);
+                list.insertNode(listItem);
             }
 
             SinglyLinkedListNode extra = new SinglyLinkedListNode(-1);
-            SinglyLinkedListNode temp = llist.head;
+            SinglyLinkedListNode temp = list.head;
 
-            for (int i = 0; i < llistCount; i++) {
+            for (int i = 0; i < listCount; i++) {
                 if (i == index) {
                     extra = temp;
                 }
 
-                if (i != llistCount - 1) {
+                if (i != listCount - 1) {
                     temp = temp.next;
                 }
             }
 
             temp.next = extra;
 
-            boolean result = hasCycle(llist.head);
+            boolean result = hasCycle(list.head);
 
             bufferedWriter.write(String.valueOf(result ? 1 : 0));
             bufferedWriter.newLine();
