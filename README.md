@@ -25,17 +25,17 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
           
 ##### Counter of solved problems according to the difficulty classifications of the online judges
 
-| Online Judge Problems| Easy  | Medium | Hard  | Advanced |
-| :---: | :---: | :---:  | :---: |   :---:  |
-| [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |   6   |   11   |   3   |     1    |
-| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |   4  |   17   |      |         |
+| Online Judge Problems| Easy | Medium | Hard  | Advanced |
+| :---: |:----:| :---:  | :---: |   :---:  |
+| [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |  7   |   11   |   3   |     1    |
+| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  4   |   17   |      |         |
 
 ##### My current classification in the online judges
 
-| Online Judge| Rank   | Points    | Update Day      | 
-| :---: | :---:  |  :---:    | :---:    |
-| HackerRank | 163688 |  831.25   | 07/03/21 |
-| Leetcode | ~ 100 000 |   388  | 14/05/21 |
+| Online Judge|   Rank    | Points | Update Day | 
+| :---: |:---------:|:------:|:----------:|
+| HackerRank |   177623    | 861.25  |  23/12/21   |
+| Leetcode | ~ 100 000 |  388   |  14/05/21  |
 
 #### CLI
 `make test` to run all tests
