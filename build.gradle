@@ -5,7 +5,7 @@ plugins {
     id 'com.adarshr.test-logger' version '2.1.1'
 }
 
-group 'nisum.bacal'
+group 'walmart.bacal'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
