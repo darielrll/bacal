@@ -12,7 +12,7 @@ public class ConnectedCellsInAGrid {
         for (int i = 0; i < matrix.size(); i++) {
             List<Integer> row = matrix.get(i);
             for (int j = 0; j < row.size(); j++) {
-                if(visited(row, j)){
+                if(visited(matrix, i, j)){
                     continue;
                 }
                 int area = getRegionSize(matrix, i, j);
@@ -21,39 +21,44 @@ public class ConnectedCellsInAGrid {
                 }
             }
         }
-
         return maxRegionSize;
     }
 
     private static int getRegionSize(List<List<Integer>> matrix, int row, int col) {
         int[][] movementArray = new int[][]{
-                {-1, 0, 1, 0, -1, -1, 1, 1}, // row
-                {0, 1, 0, 1, -1, 1, 1, -1}  // col
+                // up, right, down, left, upL, upR, downR, downL
+                {  -1,   0,    1,    0,   -1,  -1,    1,     1 }, // row
+                {   0,   1,    0,   -1,   -1,   1,    1,    -1 }  // col
         };
-
-        Queue<Coordinate> region = new ArrayDeque<Coordinate>();
+        int size = 0;
+        final int VISITED_CELL = 2;
+        Queue<Coordinate> region = new ArrayDeque<>();
         region.add(new Coordinate(row, col));
         while(!region.isEmpty()){
             Coordinate coordinate = region.poll();
             for (int i = 0; i < 8; i++) {
-                Coordinate adjacent = new Coordinate(
-                coordinate.row + movementArray[0][i],
-                 coordinate.col + movementArray[1][i]
-                );
-                if(isValidaCoordinate(adjacent, matrix)){
-
+                Coordinate adjacent = new Coordinate(coordinate.row + movementArray[0][i],
+                        coordinate.col + movementArray[1][i]);
+                if(isValidCoordinate(matrix, adjacent)  && !visited(matrix, adjacent.row, adjacent.col)) {
+                    matrix.get(row).set(col, VISITED_CELL);
+                    region.add(adjacent);
+                    size++;
                 }
             }
         }
-
-        return -1;
+        return size;
     }
 
-    private static boolean visited(List<Integer> row, int j) {
-        return row.get(j) != 0  &&  row.get(j) != 1;
+    private static boolean isValidCoordinate(List<List<Integer>> matrix, Coordinate coordinate) {
+        return coordinate.row >= 0  &&  coordinate.row < matrix.size()  &&
+            coordinate.col >= 0  &&  coordinate.col < matrix.get(0).size();
     }
 
-    private static class Coordinate {
+    private static boolean visited(List<List<Integer>> matrix, int row, int col) {
+        return matrix.get(row).get(col) != 0  &&  matrix.get(row).get(col) != 1;
+    }
+
+    static class Coordinate {
         public int row, col;
 
         public Coordinate(int row, int col) {
