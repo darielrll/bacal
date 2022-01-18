@@ -1,6 +1,8 @@
 package drll.problems.hackerRank.connectedCellsInAGrid;
 
 import drll.problems.hackerRank.compareTriplets.CompareTriplets;
+import drll.problems.leetcode.findPeakElement.Solution;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,23 +14,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ConnectedCellsInAGridTest {
+
     @Test
     void should_return_largest_area_is_3(){
-        ConnectedCellsInAGrid connectedCellsInAGrid = new ConnectedCellsInAGrid();
-
         List<List<Integer>> matrix = buildMatrix( new int[][]{
                 {1, 1, 0},
                 {1, 0, 0},
                 {0, 0, 1}
         });
 
-        assertThat(connectedCellsInAGrid.connectedCell(matrix)).isEqualTo(3);
+        assertThat(ConnectedCellsInAGrid.connectedCell(matrix)).isEqualTo(3);
     }
 
     @Test
     void should_return_largest_area_is_5(){
-        ConnectedCellsInAGrid connectedCellsInAGrid = new ConnectedCellsInAGrid();
-
         List<List<Integer>> matrix = buildMatrix( new int[][]{
                 {1, 1, 0, 0},
                 {0, 1, 1, 0},
@@ -36,7 +35,7 @@ class ConnectedCellsInAGridTest {
                 {1, 0, 0, 0}
         });
 
-        assertThat(connectedCellsInAGrid.connectedCell(matrix)).isEqualTo(3);
+        assertThat(ConnectedCellsInAGrid.connectedCell(matrix)).isEqualTo(5);
     }
 
     List<List<Integer>> buildMatrix(int[][] rows){

@@ -8,24 +8,24 @@ import java.util.Queue;
 public class ConnectedCellsInAGrid {
 
     public static int connectedCell(List<List<Integer>> matrix) {
-        int maxRegionArea = 0;
+        int maxRegionSize = 0;
         for (int i = 0; i < matrix.size(); i++) {
             List<Integer> row = matrix.get(i);
             for (int j = 0; j < row.size(); j++) {
                 if(visited(row, j)){
                     continue;
                 }
-                int area = getRegionArea(matrix, i, j);
-                if (area > maxRegionArea) {
-                    maxRegionArea = area;
+                int area = getRegionSize(matrix, i, j);
+                if (area > maxRegionSize) {
+                    maxRegionSize = area;
                 }
             }
         }
 
-        return maxRegionArea;
+        return maxRegionSize;
     }
 
-    private static int getRegionArea(List<List<Integer>> matrix, int row, int col) {
+    private static int getRegionSize(List<List<Integer>> matrix, int row, int col) {
         int[][] movementArray = new int[][]{
                 {-1, 0, 1, 0, -1, -1, 1, 1}, // row
                 {0, 1, 0, 1, -1, 1, 1, -1}  // col
@@ -35,11 +35,11 @@ public class ConnectedCellsInAGrid {
         region.add(new Coordinate(row, col));
         while(!region.isEmpty()){
             Coordinate coordinate = region.poll();
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < 8; i++) {
                 Coordinate adjacent = new Coordinate(
                 coordinate.row + movementArray[0][i],
                  coordinate.col + movementArray[1][i]
-            );
+                );
                 if(isValidaCoordinate(adjacent, matrix)){
 
                 }
