@@ -12,7 +12,7 @@ public class ConnectedCellsInAGrid {
         for (int i = 0; i < matrix.size(); i++) {
             List<Integer> row = matrix.get(i);
             for (int j = 0; j < row.size(); j++) {
-                if(visited(row, j)){
+                if(visited(matrix, i, j)){
                     continue;
                 }
                 int area = getRegionArea(matrix, i, j);
@@ -39,14 +39,20 @@ public class ConnectedCellsInAGrid {
                 Coordinate adjacent = new Coordinate(
                 coordinate.row + movementArray[0][i],
                  coordinate.col + movementArray[1][i]
-            );
-                if(isValidaCoordinate(adjacent, matrix)){
+                );
+                if(isValidaCoordinate(matrix, adjacent)  &&
+                        !visited(matrix, adjacent.row, adjacent.col)){
 
                 }
             }
         }
 
         return -1;
+    }
+
+    private static boolean isValidaCoordinate(List<List<Integer>> matrix, Coordinate coordinate) {
+        return coordinate.row >= 0  &&  coordinate.row < matrix.size()  &&
+            coordinate.col >= 0  &&  coordinate.col < matrix.get(0).size();
     }
 
     private static boolean visited(List<Integer> row, int j) {
