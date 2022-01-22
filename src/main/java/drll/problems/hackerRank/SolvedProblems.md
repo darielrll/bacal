@@ -1,5 +1,5 @@
 
-## Resume for 23 HackerRank solved problems
+## Resume for 24 HackerRank solved problems
 
 ### According to hacker rank classification
 
@@ -14,7 +14,7 @@
 | Recursion (1)               |                 |             |
 | Implementation (1)          |                 |             |
 | Search (3)                  |                 |             |
-| Strings (2)                 |                 |             |
+| Strings (3)                 |                 |             |
 
 
 ### Solved problems in detail
@@ -44,6 +44,7 @@
 | 21  | [Strong Password](https://www.hackerrank.com/challenges/strong-password/problem)                              | Algorithms - Strings                 | Easy       |   15   | SOLVED |
 | 22  | [Insertion Sort - Part 1](https://www.hackerrank.com/challenges/insertionsort1/problem)                       | Algorithms - Sorting                 | Easy       |   30   | SOLVED |
 | 23  | [Connected Cells in a Grid](https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem)           | Algorithms - Search                  | Medium     |   50   | SOLVED |
+| 24  | [Game of Thrones - I](https://www.hackerrank.com/challenges/game-of-thrones/problem)                          | Algorithms - Strings                 | Easy       |   30   | SOLVED |
 
 
 ###### 1: The solution is correct, but, the online judge validator is not correctly implemented, I request the feature change
