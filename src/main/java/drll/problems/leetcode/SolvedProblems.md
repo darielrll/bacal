@@ -1,5 +1,5 @@
 
-## Resume for 24 Leetcode solved problems
+## Resume for 25 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------| ---         |
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(5)     |
-| Sorting                 | Array(11)       |             |
+| Sorting                 | Array(12)       |             |
 | Graph Theory            | Linked List(1)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -45,6 +45,7 @@
 | 22  | [Sort Integers by The Power Value](https://leetcode.com/problems/sort-integers-by-the-power-value/)| Dynamic programming   |   Medium   | SOLVED |
 | 23  | [Detect Capital](https://leetcode.com/problems/detect-capital/)| String                |     Easy      | SOLVED |
 | 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |     Easy      | SOLVED |
+| 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
