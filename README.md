@@ -28,8 +28,8 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 | Online Judge Problems| Easy | Medium | Hard  | Advanced | Total |
 | :---: |:----:|:------:| :---: |   :---:  |:-----:|
 | [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |  8   |   12   |   3   |     1    |  24   |
-| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  7   |   18   |      |         |  25   |
-|  |      |        |      |         |  49   |
+| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  8   |   18   |      |         |  26   |
+|  |      |        |      |         |  50   |
 
 ##### My current classification in the online judges
 
