@@ -1,5 +1,5 @@
 
-## Resume for 26 Leetcode solved problems
+## Resume for 27 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------| ---         |
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(5)     |
-| Sorting                 | Array(13)       |             |
+| Sorting                 | Array(14)       |             |
 | Graph Theory            | Linked List(1)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -47,6 +47,7 @@
 | 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |     Easy      | SOLVED |
 | 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search         |     Easy      | SOLVED |
 | 26  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Array - Binary Search |     Easy      | SOLVED |
+| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array  |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
