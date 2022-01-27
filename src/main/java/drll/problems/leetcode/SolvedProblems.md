@@ -1,5 +1,5 @@
 
-## Resume for 27 Leetcode solved problems
+## Resume for 28 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------| ---         |
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(5)     |
-| Sorting                 | Array(14)       |             |
+| Sorting                 | Array(15)       |             |
 | Graph Theory            | Linked List(1)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -43,11 +43,12 @@
 | 20  | [Incremental Memory Leak](https://leetcode.com/problems/incremental-memory-leak/)| Math                  |   Medium   | SOLVED |
 | 21  | [Rotating the Box](https://leetcode.com/problems/rotating-the-box/)| Array                 |   Medium   | SOLVED |
 | 22  | [Sort Integers by The Power Value](https://leetcode.com/problems/sort-integers-by-the-power-value/)| Dynamic programming   |   Medium   | SOLVED |
-| 23  | [Detect Capital](https://leetcode.com/problems/detect-capital/)| String                |     Easy      | SOLVED |
-| 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |     Easy      | SOLVED |
-| 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search         |     Easy      | SOLVED |
-| 26  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Array - Binary Search |     Easy      | SOLVED |
-| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array  |     Easy      | SOLVED |
+| 23  | [Detect Capital](https://leetcode.com/problems/detect-capital/)| String                |    Easy    | SOLVED |
+| 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |    Easy    | SOLVED |
+| 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search         |    Easy    | SOLVED |
+| 26  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Array - Binary Search |    Easy    | SOLVED |
+| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array  |    Easy    | SOLVED |
+| 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array  |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
