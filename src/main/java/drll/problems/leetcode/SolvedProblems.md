@@ -1,5 +1,5 @@
 
-## Resume for 31 Leetcode solved problems
+## Resume for 32 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion               |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(3)              |                 |             |
+| Strings(4)              |                 |             |
 
 
 ### Solved problems in detail
@@ -52,6 +52,7 @@
 | 29  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array                 |     Easy      | SOLVED |
 | 30  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Array                 |     Easy      | SOLVED |
 | 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String                     |     Easy      | SOLVED |
+| 32  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| String                     |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
