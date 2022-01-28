@@ -1,5 +1,5 @@
 
-## Resume for 30 Leetcode solved problems
+## Resume for 31 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion               |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(2)              |                 |             |
+| Strings(3)              |                 |             |
 
 
 ### Solved problems in detail
@@ -47,10 +47,11 @@
 | 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |    Easy    | SOLVED |
 | 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search         |    Easy    | SOLVED |
 | 26  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Array - Binary Search |    Easy    | SOLVED |
-| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array  |    Easy    | SOLVED |
-| 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array  |   Medium   | SOLVED |
-| 29  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array  |     Easy      | SOLVED |
-| 30  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Array  |     Easy      | SOLVED |
+| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array                 |    Easy    | SOLVED |
+| 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array                 |   Medium   | SOLVED |
+| 29  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array                 |     Easy      | SOLVED |
+| 30  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Array                 |     Easy      | SOLVED |
+| 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String                     |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
