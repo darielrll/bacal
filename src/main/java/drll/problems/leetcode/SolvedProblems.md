@@ -1,5 +1,5 @@
 
-## Resume for 28 Leetcode solved problems
+## Resume for 32 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------| ---         |
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(5)     |
-| Sorting                 | Array(15)       |             |
+| Sorting                 | Array(17)       |             |
 | Graph Theory            | Linked List(1)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion               |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(2)              |                 |             |
+| Strings(4)              |                 |             |
 
 
 ### Solved problems in detail
@@ -36,7 +36,7 @@
 | 13  | [Jump Game II](https://leetcode.com/problems/jump-game-ii/)| Array                 |   Medium   | SOLVED |
 | 14  | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)| Linked List           |   Medium   | SOLVED |
 | 15  | [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/)| Array                 |   Medium   | SOLVED |
-| 16  | [Count Primes](https://leetcode.com/problems/count-primes/)| Math                  |   Easy*4   | SOLVED |
+| 16  | [Count Primes](https://leetcode.com/problems/count-primes/)| Math                  |     Medium      | SOLVED |
 | 17  | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)| Dynamic programming   |   Medium   | SOLVED |
 | 18  | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)| Tree                  |   Medium   | SOLVED |
 | 19  | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)| Strings               |    Easy    | SOLVED |
@@ -47,8 +47,12 @@
 | 24  | [Binary Search](https://leetcode.com/problems/binary-search/)| Array - Binary Search |    Easy    | SOLVED |
 | 25  | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search         |    Easy    | SOLVED |
 | 26  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Array - Binary Search |    Easy    | SOLVED |
-| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array  |    Easy    | SOLVED |
-| 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array  |   Medium   | SOLVED |
+| 27  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)| Array                 |    Easy    | SOLVED |
+| 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array                 |   Medium   | SOLVED |
+| 29  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array                 |    Easy    | SOLVED |
+| 30  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Array                 |    Easy    | SOLVED |
+| 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String                     |    Easy    | SOLVED |
+| 32  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| String                     |    Easy    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
