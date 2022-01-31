@@ -4,7 +4,7 @@ public class Solution {
     public String subStrHash(String s, int power, int modulo, int k, int hashValue) {
         int[] pows = new int[k];
         for (int i = 0; i < k; i++){
-            pows[i] = (int) (Math.pow(power, i) % modulo);
+            pows[i] = power(power, i, modulo);
         }
 
         for (int i = 0, length = s.length() - k + 1; i < length; i++) {
@@ -20,5 +20,14 @@ public class Solution {
             }
         }
         return null;
+    }
+
+    public static int power(int m, int n , int modulo ) {
+        int i = 0;
+        int result = 1;
+        while(i++ < n) {
+            result = (result * m) % modulo;
+        }
+        return result;
     }
 }
