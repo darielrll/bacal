@@ -1,5 +1,5 @@
 
-## Resume for 34 Leetcode solved problems
+## Resume for 35 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -8,7 +8,7 @@
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(5)     |
 | Sorting                 | Array(19)       |             |
-| Graph Theory            | Linked List(1)  |             |
+| Graph Theory            | Linked List(2)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion               |                 |             |
@@ -54,7 +54,8 @@
 | 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String                    |    Easy    | SOLVED |
 | 32  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| String                    |    Easy    | SOLVED |
 | 33  | [Keep Multiplying Found Values by Two](https://leetcode.com/problems/keep-multiplying-found-values-by-two/)| Array - Binary Search |    Easy    | SOLVED |
-| 34  | [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/)| Array |     Medium      | SOLVED |
+| 34  | [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/)| Array |   Medium   | SOLVED |
+| 35  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)| Linked List |    Easy    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
