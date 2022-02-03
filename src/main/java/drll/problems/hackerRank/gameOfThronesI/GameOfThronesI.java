@@ -9,7 +9,7 @@ public class GameOfThronesI {
     public static String gameOfThrones(String anagram) {
         Set<Character> box = new HashSet<>();
 
-        for(int i = 0, n = anagram.length() ; i < n ; i++) {
+        for(int i = 0, length = anagram.length(); i < length; i++) {
             Character character = anagram.charAt(i);
             if(box.contains(character)){
                 box.remove(character);
