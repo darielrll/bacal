@@ -21,16 +21,6 @@ class MiddleOfTheLinkedListTest {
         assertThat(listNode.val).isEqualTo(3);
     }
 
-    private Boolean compareListNodes(MiddleOfTheLinkedList.ListNode a, MiddleOfTheLinkedList.ListNode b){
-        if(a == null  &&  b == null){
-            return true;
-        }
-        if(a == null  ||  b == null){
-            return false;
-        }
-
-    }
-
     @Test
     void should_return_correctly_for_test_case2() {
         MiddleOfTheLinkedList.ListNode root = createListNode(0, 1, 2, 3, 4, 5, 6);
