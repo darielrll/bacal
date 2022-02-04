@@ -1,5 +1,5 @@
 
-## Resume for 36 Leetcode solved problems
+## Resume for 37 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion               |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(4)              |                 |             |
+| Strings(5)              |                 |             |
 
 
 ### Solved problems in detail
@@ -51,12 +51,13 @@
 | 28  | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array                |   Medium   | SOLVED |
 | 29  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array                |    Easy    | SOLVED |
 | 30  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Array                |    Easy    | SOLVED |
-| 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String                    |    Easy    | SOLVED |
-| 32  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| String                    |    Easy    | SOLVED |
+| 31  | [Reverse String](https://leetcode.com/problems/reverse-string/)| String               |    Easy    | SOLVED |
+| 32  | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| String               |    Easy    | SOLVED |
 | 33  | [Keep Multiplying Found Values by Two](https://leetcode.com/problems/keep-multiplying-found-values-by-two/)| Array - Binary Search |    Easy    | SOLVED |
-| 34  | [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/)| Array |   Medium   | SOLVED |
-| 35  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)| Linked List |    Easy    | SOLVED |
-| 36  | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| Linked List |   Medium   | SOLVED |
+| 34  | [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/)| Array                |   Medium   | SOLVED |
+| 35  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)| Linked List          |    Easy    | SOLVED |
+| 36  | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| Linked List          |   Medium   | SOLVED |
+| 37  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| String |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
