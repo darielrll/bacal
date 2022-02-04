@@ -1,5 +1,5 @@
 
-## Resume for 37 Leetcode solved problems
+## Resume for 38 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion               |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(5)              |                 |             |
+| Strings(6)              |                 |             |
 
 
 ### Solved problems in detail
@@ -58,6 +58,7 @@
 | 35  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)| Linked List          |    Easy    | SOLVED |
 | 36  | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| Linked List          |   Medium   | SOLVED |
 | 37  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| String |   Medium   | SOLVED |
+| 38  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/)| String |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
