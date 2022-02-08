@@ -1,20 +1,20 @@
 
-## Resume for 40 Leetcode solved problems
+## Resume for 41 Leetcode solved problems
 
 ### According to leetcode classification*1
 
 | Algorithms              | Data Structures | Mathematics |
 |-------------------------|-----------------| ---         |
-| Dynamic programming(2)  | Trie            | Algebra     |
-| Greedy                  | Stacks          | Math(5)     |
-| Sorting                 | Array(20)        |             |
-| Graph Theory            | Linked List(3)  |             |
-| Constructive Algorithms | Tree(3)         |             |
-| Warmup                  |                 |             |
-| Recursion(1)            |                 |             |
-| Implementation          |                 |             |
-| Search                  |                 |             |
-| Strings(6)              |                 |             |
+| Dynamic programming(2)  | Trie            | Algebra    |
+| Greedy                  | Stacks          | Math(5)    |
+| Sorting                 | Array(21)       |            |
+| Graph Theory            | Linked List(3)  |            |
+| Constructive Algorithms | Tree(3)         |            |
+| Warmup                  |                 |            |
+| Recursion(1)            |                 |            |
+| Implementation          |                 |            |
+| Search                  |                 |            |
+| Strings(6)              |                 |            |
 
 
 ### Solved problems in detail
@@ -60,7 +60,8 @@
 | 37  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| String                |   Medium   | SOLVED |
 | 38  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/)| String                |   Medium   | SOLVED |
 | 39  | [Minimum Sum of Four Digit Number After Splitting Digits](https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/)| Recursion             |    Easy    | SOLVED |
-| 40  | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)| Array                     |     Medium      | SOLVED |
+| 40  | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)| Array                     |   Medium   | SOLVED |
+| 41  | [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/)| Array                     |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem

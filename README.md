@@ -28,15 +28,15 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 | Online Judge Problems| Easy | Medium | Hard  | Advanced | Total |
 | :---: |:----:|:------:| :---: |   :---:  |:-----:|
 | [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |  8   |   13   |   3   |     1    |  25   |
-| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  15  |   25   |      |         |  40   |
-|  |      |        |      |         |  65   |
+| [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  16  |   25   |      |         |  41   |
+|  |      |        |      |         |  66   |
 
 ##### My current classification in the online judges
 
 | Online Judge|  Rank  | Points | Update Day | 
 | :---: |:------:|:------:|:----------:|
 | HackerRank | 151685 | 941.25 |  22/01/22  |
-| Leetcode | 112633 |   633   |  05/02/22  |
+| Leetcode | 112633 |  676   |  07/02/22  |
 
 #### CLI
 `make test` to run all tests
