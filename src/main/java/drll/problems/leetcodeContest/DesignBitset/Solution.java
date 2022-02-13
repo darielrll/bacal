@@ -5,7 +5,7 @@ public class Solution {
         return -1;
     }
 
-    class Bitset {
+    static class Bitset {
         private boolean[] bitset;
         private int count;
 
