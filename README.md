@@ -27,15 +27,15 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 
 | Online Judge Problems| Easy | Medium | Hard  | Advanced | Total |
 | :---: |:----:|:------:| :---: |   :---:  |:-----:|
-| [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |  9   |   13   |   3   |     1    |  26   |
+| [HackerRank](/src/main/java/drll/problems/hackerRank/SolvedProblems.md) |  9   |   14   |   3   |     1    |  27   |
 | [Leetcode](/src/main/java/drll/problems/leetcode/SolvedProblems.md) |  16  |   27   |      |         |  43   |
-|  |      |        |      |         |  69   |
+|  |      |        |      |         |   70   |
 
 ##### My current classification in the online judges
 
 | Online Judge|  Rank  | Points | Update Day | 
 | :---: |:------:|:------:|:----------:|
-| HackerRank | 152792 | 941.25 |  09/02/22  |
+| HackerRank |   138764   |  1001.25  |  17/02/22   |
 | Leetcode | 143932 |  677   |  09/02/22  |
 
 #### CLI
