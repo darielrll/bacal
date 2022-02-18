@@ -2,12 +2,25 @@ package drll.problems.hackerRank.kittysCalculationsOnATree;
 
 import java.io.*;
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class Solution {
 
     public static int[] calculateFormula(int[][] edges, int[][] queries){
-        return new int[]{};
+
+
+
+        int[] formulaResults = new int[queries.length];
+        for (int i = 0; i < queries.length; i++) {
+            int[] query = queries[i];
+            int formulaResult = 0;
+            for (int j = 0; j < query.length - 1; j++) {
+                for (int k = j + 1; k < query.length; k++) {
+
+                }
+            }
+            formulaResults[i] = formulaResult;
+        }
+        return formulaResults;
     }
 
     public static void main(String[] args) throws IOException {
@@ -40,8 +53,8 @@ public class Solution {
 
         int[] formulaCalculation = Solution.calculateFormula(edges, queries);
 
-        for (int i = 0; i < formulaCalculation.length; i++) {
-            bufferedWriter.write(String.valueOf(formulaCalculation[i]));
+        for (int j : formulaCalculation) {
+            bufferedWriter.write(String.valueOf(j));
             bufferedWriter.newLine();
         }
 
