@@ -5,22 +5,54 @@ import java.util.*;
 
 public class Solution {
 
-    public static int[] calculateFormula(int[][] edges, int[][] queries){
+    public static int[] calculateFormula(int[][] edges, int[][] queries) {
 
+        int[][] pathCosts = buildMatrixCosts(edges);
 
+        final int queriesLength = queries.length;
+        final int congruence = (int) (Math.pow(10, 9) + 7);
+        final int[] formulaResults = new int[queriesLength];
 
-        int[] formulaResults = new int[queries.length];
-        for (int i = 0; i < queries.length; i++) {
+        for (int i = 0; i < queriesLength; i++) {
             int[] query = queries[i];
             int formulaResult = 0;
-            for (int j = 0; j < query.length - 1; j++) {
-                for (int k = j + 1; k < query.length; k++) {
+            int queryLength = query.length;
 
+            for (int u = 0; u < queryLength - 1; u++) {
+                for (int v = u + 1; v < queryLength; v++) {
+                    int vertexU = query[u];
+                    int vertexV = query[v];
+                    formulaResult += (vertexU * vertexV * pathCosts[vertexU][vertexV]) % congruence;
                 }
             }
             formulaResults[i] = formulaResult;
         }
         return formulaResults;
+    }
+
+    private static int[][] buildMatrixCosts(int[][] edges) {
+        int edgesCount = edges.length;
+        int[][] pathCosts = new int[edgesCount + 2][edgesCount + 2];
+
+        for (int[] edge : edges) {
+            int v = edge[0];
+            int w = edge[1];
+
+            pathCosts[v][w] = 1;
+            pathCosts[w][v] = 1;
+
+            for (int j = 0; j < pathCosts.length; j++) {
+                if (j == w) {
+                    continue;
+                }
+                if (pathCosts[v][j] != 0) {
+                    pathCosts[j][w] = pathCosts[v][j] + 1;
+                    pathCosts[w][j] = pathCosts[v][j] + 1;
+                }
+            }
+        }
+
+        return pathCosts;
     }
 
     public static void main(String[] args) throws IOException {
@@ -52,11 +84,6 @@ public class Solution {
         }
 
         int[] formulaCalculation = Solution.calculateFormula(edges, queries);
-
-        for (int j : formulaCalculation) {
-            bufferedWriter.write(String.valueOf(j));
-            bufferedWriter.newLine();
-        }
 
         Arrays.stream(formulaCalculation).forEach(formula -> {
             try {
