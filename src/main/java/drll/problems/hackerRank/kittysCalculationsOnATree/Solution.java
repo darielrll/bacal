@@ -5,9 +5,8 @@ import java.util.*;
 
 public class Solution {
 
-    public static int[] calculateFormula(int[][] edges, int[][] queries) {
-
-        int[][] pathCosts = buildMatrixCosts(edges);
+    public static int[] calculateFormula(int nodesCount, int[][] edges, int[][] queries) {
+        int[][] pathCosts = allPairsShortestPathFloydWarshall(nodesCount, edges);
 
         final int queriesLength = queries.length;
         final int congruence = (int) (Math.pow(10, 9) + 7);
@@ -15,14 +14,15 @@ public class Solution {
 
         for (int i = 0; i < queriesLength; i++) {
             int[] query = queries[i];
-            int formulaResult = 0;
             int queryLength = query.length;
 
+            int formulaResult = 0;
             for (int u = 0; u < queryLength - 1; u++) {
                 for (int v = u + 1; v < queryLength; v++) {
-                    int vertexU = query[u];
-                    int vertexV = query[v];
-                    formulaResult += (vertexU * vertexV * pathCosts[vertexU][vertexV]) % congruence;
+                    int vertexU = query[u] % congruence;
+                    int vertexV = query[v] % congruence;
+                    formulaResult += (vertexU % congruence) * (vertexV % congruence) * (pathCosts[vertexU][vertexV] % congruence);
+                    formulaResult %= congruence;
                 }
             }
             formulaResults[i] = formulaResult;
@@ -30,24 +30,24 @@ public class Solution {
         return formulaResults;
     }
 
-    private static int[][] buildMatrixCosts(int[][] edges) {
-        int edgesCount = edges.length;
-        int[][] pathCosts = new int[edgesCount + 2][edgesCount + 2];
+    private static int[][] allPairsShortestPathFloydWarshall(int nodesCount, int[][] edges) {
+        int[][] pathCosts = new int[edges.length + 2][edges.length + 2];
 
         for (int[] edge : edges) {
-            int v = edge[0];
-            int w = edge[1];
+            pathCosts[edge[0]][edge[1]] = 1;
+            pathCosts[edge[1]][edge[0]] = 1;
+        }
 
-            pathCosts[v][w] = 1;
-            pathCosts[w][v] = 1;
-
-            for (int j = 0; j < pathCosts.length; j++) {
-                if (j == w) {
-                    continue;
-                }
-                if (pathCosts[v][j] != 0) {
-                    pathCosts[j][w] = pathCosts[v][j] + 1;
-                    pathCosts[w][j] = pathCosts[v][j] + 1;
+        for (int k = 1; k <= nodesCount; k++) {
+            for (int i = 1, length = pathCosts.length; i < length; i++) {
+                for (int j = 1; j < length; j++) {
+                    if(i == j){
+                        continue;
+                    }
+                    if (pathCosts[i][j] == 0){
+                        pathCosts[i][j] = nodesCount;
+                    }
+                    pathCosts[i][j] = Math.min(pathCosts[i][j], pathCosts[i][k] + pathCosts[k][j]);
                 }
             }
         }
@@ -83,7 +83,7 @@ public class Solution {
             queries[i] = setNodes;
         }
 
-        int[] formulaCalculation = Solution.calculateFormula(edges, queries);
+        int[] formulaCalculation = Solution.calculateFormula(nodesCount, edges, queries);
 
         Arrays.stream(formulaCalculation).forEach(formula -> {
             try {
