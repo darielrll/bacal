@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.CountOperationsToObtainZero;
+package drll.problems.leetcode.CountOperationsToObtainZero;
 
 public class Solution {
     public int countOperations(int num1, int num2) {

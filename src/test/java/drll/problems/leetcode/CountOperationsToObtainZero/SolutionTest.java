@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.CountOperationsToObtainZero;
+package drll.problems.leetcode.CountOperationsToObtainZero;
 
+import drll.problems.leetcode.CountOperationsToObtainZero.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
