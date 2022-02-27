@@ -1,4 +1,4 @@
-package drll.problems.weeklyContest282.CountingWordsWithAGivenPrefix;
+package drll.problems.leetcode.CountingWordsWithAGivenPrefix;
 
 import java.util.Arrays;
 

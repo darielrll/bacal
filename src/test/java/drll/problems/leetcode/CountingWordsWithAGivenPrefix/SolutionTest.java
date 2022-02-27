@@ -1,6 +1,5 @@
-package drll.problems.weeklyContest282.problem1;
+package drll.problems.leetcode.CountingWordsWithAGivenPrefix;
 
-import drll.problems.weeklyContest282.CountingWordsWithAGivenPrefix.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

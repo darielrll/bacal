@@ -1,4 +1,4 @@
-package drll.problems.weeklyContest282.MinimumNumberOfStepsToMakeTwoStringsAnagramII;
+package drll.problems.leetcode.MinimumNumberOfStepsToMakeTwoStringsAnagramII;
 
 import java.util.HashMap;
 

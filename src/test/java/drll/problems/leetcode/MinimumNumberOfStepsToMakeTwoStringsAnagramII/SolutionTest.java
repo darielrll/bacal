@@ -1,6 +1,5 @@
-package drll.problems.weeklyContest282.problem2;
+package drll.problems.leetcode.MinimumNumberOfStepsToMakeTwoStringsAnagramII;
 
-import drll.problems.weeklyContest282.MinimumNumberOfStepsToMakeTwoStringsAnagramII.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
