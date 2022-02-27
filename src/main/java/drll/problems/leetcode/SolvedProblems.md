@@ -1,5 +1,5 @@
 
-## Resume for 43 Leetcode solved problems
+## Resume for 45 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion(1)            |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(6)              |                 |             |
+| Strings(8)              |                 |             |
 
 
 ### Solved problems in detail
@@ -62,8 +62,10 @@
 | 39  | [Minimum Sum of Four Digit Number After Splitting Digits](https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/)| Recursion             |    Easy    | SOLVED |
 | 40  | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)| Array                 |   Medium   | SOLVED |
 | 41  | [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/)| Array                 |    Easy    | SOLVED |
-| 42  | [Smallest Value of the Rearranged Number](https://leetcode.com/problems/smallest-value-of-the-rearranged-number/)| Array                 |     Medium      | SOLVED |
-| 43  | [Minimum Cost to Set Cooking Time](https://leetcode.com/problems/minimum-cost-to-set-cooking-time/)| Math                     |     Medium      | SOLVED |
+| 42  | [Smallest Value of the Rearranged Number](https://leetcode.com/problems/smallest-value-of-the-rearranged-number/)| Array                 |   Medium   | SOLVED |
+| 43  | [Minimum Cost to Set Cooking Time](https://leetcode.com/problems/minimum-cost-to-set-cooking-time/)| Math                  |   Medium   | SOLVED |
+| 44  | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/)| Strings                     |    Easy    | SOLVED |
+| 45  | [Minimum Number of Steps to Make Two Strings Anagram II](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/)| Strings                     |     Medium      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
