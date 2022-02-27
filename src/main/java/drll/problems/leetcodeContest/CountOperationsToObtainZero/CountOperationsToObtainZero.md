@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/contest/weekly-contest-280/problems/count-operations-to-obtain-zero/
+ - https://leetcode.com/problems/count-operations-to-obtain-zero/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Easy ( Math )
  
 ##### Resume of the problem:
 

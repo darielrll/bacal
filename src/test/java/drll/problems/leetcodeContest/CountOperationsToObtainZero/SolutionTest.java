@@ -1,16 +1,16 @@
-package drll.problems.leetcodeContest.Problem1;
+package drll.problems.leetcodeContest.CountOperationsToObtainZero;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Problem1Test {
-    private Problem1 problem1;
+class SolutionTest {
+    private Solution problem1;
 
     @BeforeEach
     void init(){
-        problem1 = new Problem1();
+        problem1 = new Solution();
     }
 
     @Test
