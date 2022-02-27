@@ -1,12 +1,12 @@
 
-## Resume for 45 Leetcode solved problems
+## Resume for 46 Leetcode solved problems
 
 ### According to leetcode classification*1
 
 | Algorithms              | Data Structures | Mathematics |
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
-| Greedy                  | Stacks          | Math(6)     |
+| Greedy                  | Stacks          | Math(7)     |
 | Sorting                 | Array(22)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
@@ -64,8 +64,9 @@
 | 41  | [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/)| Array                 |    Easy    | SOLVED |
 | 42  | [Smallest Value of the Rearranged Number](https://leetcode.com/problems/smallest-value-of-the-rearranged-number/)| Array                 |   Medium   | SOLVED |
 | 43  | [Minimum Cost to Set Cooking Time](https://leetcode.com/problems/minimum-cost-to-set-cooking-time/)| Math                  |   Medium   | SOLVED |
-| 44  | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/)| Strings                     |    Easy    | SOLVED |
-| 45  | [Minimum Number of Steps to Make Two Strings Anagram II](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/)| Strings                     |     Medium      | SOLVED |
+| 44  | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/)| Strings               |    Easy    | SOLVED |
+| 45  | [Minimum Number of Steps to Make Two Strings Anagram II](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/)| Strings               |   Medium   | SOLVED |
+| 46  | [Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero/)| Math                     |     Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
