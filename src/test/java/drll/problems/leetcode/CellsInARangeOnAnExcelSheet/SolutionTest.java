@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.CellsInARangeOnAnExcelSheet;
+package drll.problems.leetcode.CellsInARangeOnAnExcelSheet;
 
+import drll.problems.leetcode.CellsInARangeOnAnExcelSheet.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

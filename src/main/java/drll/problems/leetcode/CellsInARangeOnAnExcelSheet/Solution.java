@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.CellsInARangeOnAnExcelSheet;
+package drll.problems.leetcode.CellsInARangeOnAnExcelSheet;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,7 @@
-package drll.problems.leetcodeContest.AppendKIntegersWithMinimalSum;
+package drll.problems.leetcode.AppendKIntegersWithMinimalSum;
 
 import common.Utils;
+import drll.problems.leetcode.AppendKIntegersWithMinimalSum.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

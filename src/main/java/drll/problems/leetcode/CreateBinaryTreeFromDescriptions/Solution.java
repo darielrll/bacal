@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.CreateBinaryTreeFromDescriptions;
+package drll.problems.leetcode.CreateBinaryTreeFromDescriptions;
 
 import java.util.HashMap;
 

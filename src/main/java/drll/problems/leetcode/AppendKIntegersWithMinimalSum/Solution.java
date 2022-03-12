@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.AppendKIntegersWithMinimalSum;
+package drll.problems.leetcode.AppendKIntegersWithMinimalSum;
 
 import java.util.Arrays;
 
