@@ -1,9 +1,8 @@
-package drll.problems.leetcodeContest.problem3;
+package drll.problems.leetcodeContest.CreateBinaryTreeFromDescriptions;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
@@ -54,15 +53,19 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case3() {
-        Solution.TreeNode expectedBinaryTree = new Solution.TreeNode(
-                1,
-                new Solution.TreeNode(2,
-                        null,
-                        new Solution.TreeNode(3,
-                                new Solution.TreeNode(4),
-                                null)),
-                null
-        );
+        Solution.TreeNode expectedBinaryTree = new Solution.TreeNode(38,
+                new Solution.TreeNode(82,
+                        new Solution.TreeNode(85,
+                                new Solution.TreeNode(74,
+                                        new Solution.TreeNode(13,
+                                                new Solution.TreeNode(39,
+                                                        new Solution.TreeNode(70),
+                                                        null),
+                                                null),
+                                        null),
+                                null),
+                        null),
+                null);
 
 
         Solution.TreeNode binaryTree = solution.createBinaryTree(

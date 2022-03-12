@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem3;
+package drll.problems.leetcodeContest.CreateBinaryTreeFromDescriptions;
 
 import java.util.HashMap;
 
@@ -8,46 +8,41 @@ public class Solution {
         HashMap<Integer, Integer> referenceFathers = new HashMap<>();
         TreeNode root = null;
 
-        for (int i = 0; i < descriptions.length; i++) {
-            int parent = descriptions[i][0];
-            int child = descriptions[i][1];
-            boolean isLeft = descriptions[i][2] == 1;
+        for (int[] description : descriptions) {
+            int parent = description[0];
+            int child = description[1];
+            boolean isLeft = description[2] == 1;
 
             referenceFathers.put(child, parent);
 
-            TreeNode parentNode = null;
-            TreeNode childNode = null;
+            TreeNode parentNode, childNode;
 
-            if(reference.containsKey(parent)){
+            if (reference.containsKey(parent)) {
                 parentNode = reference.get(parent);
-            }
-            else {
+            } else {
                 parentNode = new TreeNode(parent);
                 reference.put(parent, parentNode);
             }
 
-            if(reference.containsKey(child)){
+            if (reference.containsKey(child)) {
                 childNode = reference.get(child);
-            }
-            else {
+            } else {
                 childNode = new TreeNode(child);
                 reference.put(child, childNode);
             }
 
-            if(isLeft){
+            if (isLeft) {
                 parentNode.left = childNode;
-            }
-            else {
+            } else {
                 parentNode.right = childNode;
             }
 
-            if(root == null){
+            if (root == null) {
                 root = parentNode;
-            }
-            else {
-                if(childNode.val == root.val){
+            } else {
+                if (childNode.val == root.val) {
                     root = parentNode;
-                    while(referenceFathers.containsKey(root.val)){
+                    while (referenceFathers.containsKey(root.val)) {
                         root = reference.get(referenceFathers.get(root.val));
                     }
                 }

@@ -1,14 +1,12 @@
-package drll.problems.leetcodeContest.problem1;
+package drll.problems.leetcodeContest.CellsInARangeOnAnExcelSheet;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;

@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem1;
+package drll.problems.leetcodeContest.CellsInARangeOnAnExcelSheet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,19 +6,19 @@ import java.util.List;
 public class Solution {
     public List<String> cellsInRange(String s) {
         char[] capitals = getCapitalAlphabet();
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
 
         Character startColumn = s.charAt(0);
-        Integer startRow = Integer.parseInt(String.valueOf(s.charAt(1)));
+        int startRow = Integer.parseInt(String.valueOf(s.charAt(1)));
         Character endColumn = s.charAt(3);
-        Integer endRow = Integer.parseInt(String.valueOf(s.charAt(4)));
+        int endRow = Integer.parseInt(String.valueOf(s.charAt(4)));
 
         int startColumnIndex = getStartColumnIndex(startColumn, capitals);
         int endColumnIndex = getStartColumnIndex(endColumn, capitals);
 
         for (int column = startColumnIndex; column <= endColumnIndex; column++){
             for (int j = startRow; j <= endRow; j++){
-                result.add(String.valueOf(capitals[column]) + String.valueOf(j));
+                result.add(capitals[column] + String.valueOf(j));
             }
         }
 
@@ -36,32 +36,9 @@ public class Solution {
 
     private char[] getCapitalAlphabet() {
         return new char[]{
-                'A',
-                'B',
-                'C',
-                'D',
-                'E',
-                'F',
-                'G',
-                'H',
-                'I',
-                'J',
-                'K',
-                'L',
-                'M',
-                'N',
-                'O',
-                'P',
-                'Q',
-                'R',
-                'S',
-                'T',
-                'U',
-                'V',
-                'W',
-                'X',
-                'Y',
-                'Z'
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+                'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+                'W', 'X', 'Y', 'Z'
         };
     }
 }
