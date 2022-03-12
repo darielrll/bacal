@@ -1,5 +1,5 @@
 
-## Resume for 46 Leetcode solved problems
+## Resume for 49 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(22)       |             |
+| Sorting                 | Array(24)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(8)              |                 |             |
+| Strings(9)              |                 |             |
 
 
 ### Solved problems in detail
@@ -66,7 +66,10 @@
 | 43  | [Minimum Cost to Set Cooking Time](https://leetcode.com/problems/minimum-cost-to-set-cooking-time/)| Math                  |   Medium   | SOLVED |
 | 44  | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/)| Strings               |    Easy    | SOLVED |
 | 45  | [Minimum Number of Steps to Make Two Strings Anagram II](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/)| Strings               |   Medium   | SOLVED |
-| 46  | [Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero/)| Math                     |     Easy      | SOLVED |
+| 46  | [Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero/)| Math                  |    Easy    | SOLVED |
+| 47  | [Append K Integers With Minimal Sum](https://leetcode.com/problems/append-k-integers-with-minimal-sum/)| Array                 |   Medium   | SOLVED |
+| 48  | [Cells in a Range on an Excel Sheet](https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/)| String                |    Easy    | SOLVED |
+| 49  | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
