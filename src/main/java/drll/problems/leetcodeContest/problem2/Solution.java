@@ -44,7 +44,7 @@ public class Solution {
     }
 
     private int[][] merge(int[][] leftSide, int[][] rightSide) {
-        int[][] ordered = new int[2][leftSide.length + rightSide.length];
+        int[][] ordered = new int[2][leftSide[0].length + rightSide[0].length];
 
         int pointLeft = 0;
         int pointRight = 0;
