@@ -1,5 +1,5 @@
 
-## Resume for 53 Leetcode solved problems
+## Resume for 55 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(27)       |             |
+| Sorting                 | Array(29)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -74,6 +74,8 @@
 | 51  | [Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)| String                |   Medium   | SOLVED |
 | 52  | [Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/)| String                |   Medium   | SOLVED |
 | 53  | [Minimum Operations to Halve Array Sum](https://leetcode.com/problems/minimum-operations-to-halve-array-sum/)| Array                 |   Medium   | SOLVED |
+| 54  | [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/)| Array                 |   Medium   | SOLVED |
+| 55  | [Count Artifacts That Can Be Extracted](https://leetcode.com/problems/count-artifacts-that-can-be-extracted/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
