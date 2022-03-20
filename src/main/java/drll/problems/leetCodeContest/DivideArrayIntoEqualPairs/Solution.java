@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.DivideArrayIntoEqualPairs;
 
 import java.util.Arrays;
 
