@@ -1,5 +1,5 @@
 
-## Resume for 49 Leetcode solved problems
+## Resume for 51 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(24)       |             |
+| Sorting                 | Array(25)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(9)              |                 |             |
+| Strings(10)             |                 |             |
 
 
 ### Solved problems in detail
@@ -70,6 +70,8 @@
 | 47  | [Append K Integers With Minimal Sum](https://leetcode.com/problems/append-k-integers-with-minimal-sum/)| Array                 |   Medium   | SOLVED |
 | 48  | [Cells in a Range on an Excel Sheet](https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/)| String                |    Easy    | SOLVED |
 | 49  | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/)| Array                 |   Medium   | SOLVED |
+| 50  | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)| Array                 |    Easy    | SOLVED |
+| 51  | [Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)| String                |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
