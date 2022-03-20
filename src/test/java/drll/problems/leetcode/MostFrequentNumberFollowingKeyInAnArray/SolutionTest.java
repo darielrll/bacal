@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.MostFrequentNumberFollowingKeyInAnArray;
+package drll.problems.leetcode.MostFrequentNumberFollowingKeyInAnArray;
 
+import drll.problems.leetcode.MostFrequentNumberFollowingKeyInAnArray.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

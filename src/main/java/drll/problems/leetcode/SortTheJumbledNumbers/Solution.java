@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.SortTheJumbledNumbers;
+package drll.problems.leetcode.SortTheJumbledNumbers;
 
 public class Solution {
     public int[] sortJumbled(int[] mapping, int[] nums) {

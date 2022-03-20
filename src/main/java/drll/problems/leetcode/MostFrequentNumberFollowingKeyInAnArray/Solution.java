@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.MostFrequentNumberFollowingKeyInAnArray;
+package drll.problems.leetcode.MostFrequentNumberFollowingKeyInAnArray;
 
 import java.util.HashMap;
 import java.util.Map;
