@@ -33,10 +33,10 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 
 ##### My current classification in the online judges
 
-| Online Judge |  Rank  | Points  | Update Day | Trend* ▲▼  ◄► |
-|:------------:|:------:|:-------:|:----------:|:-------------:|
-|  HackerRank  | 138764 | 1001.25 |  17/02/22  |      ◄►       |
-|   Leetcode   |   138488   |   699   |  27/02/22   |      ▼ 1      |
+| Online Judge |    Rank    | Points  | Update Day | Trend* ▲▼  ◄► |
+|:------------:|:----------:|:-------:|:----------:|:-------------:|
+|  HackerRank  |   136106   | 1020.63 |  20/03/22  |      ▼ 1      |
+|   Leetcode   |   637256   |   802   |  20/03/22  |      ◄►       |
 *: Trend of the observed ranking
 
 #### CLI
