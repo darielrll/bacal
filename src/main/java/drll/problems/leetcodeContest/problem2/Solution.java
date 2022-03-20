@@ -1,28 +1,8 @@
 package drll.problems.leetcodeContest.problem2;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Solution {
     public int[] sortJumbled(int[] mapping, int[] nums) {
         int[] shuffledDecimals = shuffledDecimals(mapping, nums);
-        //Map<Integer, Integer> mapped = collectMapping(nums, shuffledDecimals);
-
-//        int[] test = {6, 5, 4, 3, 2, 1};
-//        int[] mergedNumbers = mergeSortJumbled(shuffledDecimals, nums);
-//
-//        Arrays.sort(shuffledDecimals);
-//
-//
-//        int[] sortJumbled = new int[nums.length];
-//
-//        for (int i = 0; i < shuffledDecimals.length; i++) {
-//            sortJumbled[i] = mapped.get(shuffledDecimals[i]);
-//        }
-//
-//        return sortJumbled;
         return mergeSortJumbled(shuffledDecimals, nums);
     }
 
@@ -80,18 +60,6 @@ public class Solution {
         }
 
         return ordered;
-    }
-
-    private Map<Integer, Integer> collectMapping(int[] nums, Integer[] shuffledDecimals) {
-        Map<Integer, Integer> mapped = new HashMap<>();
-
-        for (int i = 0; i < shuffledDecimals.length; i++) {
-            if (!mapped.containsKey(shuffledDecimals[i])) {
-                mapped.put(shuffledDecimals[i], nums[i]);
-            }
-        }
-
-        return mapped;
     }
 
     public int[] shuffledDecimals(int[] mapping, int[] nums){
