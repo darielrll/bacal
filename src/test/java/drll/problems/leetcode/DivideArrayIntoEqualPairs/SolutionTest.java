@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.DivideArrayIntoEqualPairs;
+package drll.problems.leetcode.DivideArrayIntoEqualPairs;
 
+import drll.problems.leetcode.DivideArrayIntoEqualPairs.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,5 @@
 
-## Resume for 51 Leetcode solved problems
+## Resume for 53 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(25)       |             |
+| Sorting                 | Array(27)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -72,6 +72,8 @@
 | 49  | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/)| Array                 |   Medium   | SOLVED |
 | 50  | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)| Array                 |    Easy    | SOLVED |
 | 51  | [Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)| String                |   Medium   | SOLVED |
+| 52  | [Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/)| String                |   Medium   | SOLVED |
+| 53  | [Minimum Operations to Halve Array Sum](https://leetcode.com/problems/minimum-operations-to-halve-array-sum/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
