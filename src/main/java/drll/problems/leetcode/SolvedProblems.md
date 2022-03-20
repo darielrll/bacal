@@ -1,5 +1,5 @@
 
-## Resume for 49 Leetcode solved problems
+## Resume for 55 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(24)       |             |
+| Sorting                 | Array(29)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(9)              |                 |             |
+| Strings(10)             |                 |             |
 
 
 ### Solved problems in detail
@@ -70,6 +70,12 @@
 | 47  | [Append K Integers With Minimal Sum](https://leetcode.com/problems/append-k-integers-with-minimal-sum/)| Array                 |   Medium   | SOLVED |
 | 48  | [Cells in a Range on an Excel Sheet](https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/)| String                |    Easy    | SOLVED |
 | 49  | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/)| Array                 |   Medium   | SOLVED |
+| 50  | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)| Array                 |    Easy    | SOLVED |
+| 51  | [Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)| String                |   Medium   | SOLVED |
+| 52  | [Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/)| String                |   Medium   | SOLVED |
+| 53  | [Minimum Operations to Halve Array Sum](https://leetcode.com/problems/minimum-operations-to-halve-array-sum/)| Array                 |   Medium   | SOLVED |
+| 54  | [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/)| Array                 |   Medium   | SOLVED |
+| 55  | [Count Artifacts That Can Be Extracted](https://leetcode.com/problems/count-artifacts-that-can-be-extracted/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
