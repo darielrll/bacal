@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem2;
+package drll.problems.leetcodeContest.SortTheJumbledNumbers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

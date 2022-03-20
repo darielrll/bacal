@@ -1,5 +1,5 @@
 
-## Resume for 55 Leetcode solved problems
+## Resume for 57 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(29)       |             |
+| Sorting                 | Array(31)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -76,6 +76,8 @@
 | 53  | [Minimum Operations to Halve Array Sum](https://leetcode.com/problems/minimum-operations-to-halve-array-sum/)| Array                 |   Medium   | SOLVED |
 | 54  | [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/)| Array                 |   Medium   | SOLVED |
 | 55  | [Count Artifacts That Can Be Extracted](https://leetcode.com/problems/count-artifacts-that-can-be-extracted/)| Array                 |   Medium   | SOLVED |
+| 56  | [Most Frequent Number Following Key In an Array](https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/)| Array                 |    Easy    | SOLVED |
+| 57  | [Sort the Jumbled Numbers](https://leetcode.com/problems/sort-the-jumbled-numbers/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem

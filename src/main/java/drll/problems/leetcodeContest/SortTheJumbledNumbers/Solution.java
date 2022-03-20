@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem2;
+package drll.problems.leetcodeContest.SortTheJumbledNumbers;
 
 public class Solution {
     public int[] sortJumbled(int[] mapping, int[] nums) {
@@ -31,7 +31,7 @@ public class Solution {
         int pointOrdered = 0;
 
         while(pointLeft < leftSide[0].length  &&  pointRight < rightSide[0].length){
-            if (leftSide[0][pointLeft] < rightSide[0][pointRight]) {
+            if (leftSide[0][pointLeft] <= rightSide[0][pointRight]) {
                 ordered[0][pointOrdered] = leftSide[0][pointLeft];
                 ordered[1][pointOrdered] = leftSide[1][pointLeft];
                 pointLeft++;
