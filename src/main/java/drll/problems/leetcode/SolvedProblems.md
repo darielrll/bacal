@@ -78,6 +78,8 @@
 | 55  | [Count Artifacts That Can Be Extracted](https://leetcode.com/problems/count-artifacts-that-can-be-extracted/)| Array                 |   Medium   | SOLVED |
 | 56  | [Most Frequent Number Following Key In an Array](https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/)| Array                 |    Easy    | SOLVED |
 | 57  | [Sort the Jumbled Numbers](https://leetcode.com/problems/sort-the-jumbled-numbers/)| Array                 |   Medium   | SOLVED |
+| 58  | [Minimum Number of Operations to Convert Time](https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/)| String                |    Easy    | SOLVED |
+| 59  | [Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
