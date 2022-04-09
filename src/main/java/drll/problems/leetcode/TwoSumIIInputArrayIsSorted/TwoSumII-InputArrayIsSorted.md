@@ -4,6 +4,6 @@
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array )
+ > Medium ( Array )
  
 ##### Resume of the problem
