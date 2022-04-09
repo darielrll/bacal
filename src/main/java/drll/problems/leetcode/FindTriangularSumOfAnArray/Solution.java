@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leetcode.FindTriangularSumOfAnArray;
 
 public class Solution {
     public int triangularSum(int[] nums) {

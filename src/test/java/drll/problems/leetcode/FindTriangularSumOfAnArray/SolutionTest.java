@@ -1,10 +1,10 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.FindTriangularSumOfAnArray;
 
+import drll.problems.leetcode.FindTriangularSumOfAnArray.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;
@@ -16,16 +16,11 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case1() {
-        assertThat(solution.minBitFlips(10, 7)).isEqualTo(3);
+        assertThat(solution.triangularSum(new int[]{1,2,3,4,5})).isEqualTo(8);
     }
 
     @Test
     void should_return_correctly_for_test_case2() {
-        assertThat(solution.minBitFlips(3, 4)).isEqualTo(3);
-    }
-
-    @Test
-    void should_return_correctly_for_test_case4() {
-        assertThat(solution.minBitFlips(10, 82)).isEqualTo(3);
+        assertThat(solution.triangularSum(new int[]{5})).isEqualTo(5);
     }
 }

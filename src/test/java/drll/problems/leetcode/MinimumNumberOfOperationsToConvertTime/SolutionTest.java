@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.MinimumNumberOfOperationsToConvertTime;
+package drll.problems.leetcode.MinimumNumberOfOperationsToConvertTime;
 
+import drll.problems.leetcode.MinimumNumberOfOperationsToConvertTime.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

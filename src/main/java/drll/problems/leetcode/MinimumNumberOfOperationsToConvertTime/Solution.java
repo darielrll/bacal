@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.MinimumNumberOfOperationsToConvertTime;
+package drll.problems.leetcode.MinimumNumberOfOperationsToConvertTime;
 
 public class Solution {
     public int convertTime(String current, String correct) {
