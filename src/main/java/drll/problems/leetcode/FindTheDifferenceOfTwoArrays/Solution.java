@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem1;
+package drll.problems.leetcode.FindTheDifferenceOfTwoArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

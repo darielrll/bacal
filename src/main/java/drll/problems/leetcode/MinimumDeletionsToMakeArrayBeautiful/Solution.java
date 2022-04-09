@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.problem2;
+package drll.problems.leetcode.MinimumDeletionsToMakeArrayBeautiful;
 
 public class Solution {
     public int minDeletion(int[] nums) {

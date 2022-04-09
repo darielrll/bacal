@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.problem2;
+package drll.problems.leetcode.MinimumDeletionsToMakeArrayBeautiful;
 
+import drll.problems.leetcode.MinimumDeletionsToMakeArrayBeautiful.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

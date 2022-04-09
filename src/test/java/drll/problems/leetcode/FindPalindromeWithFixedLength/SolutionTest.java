@@ -1,10 +1,10 @@
-package drll.problems.leetcodeContest.problem3;
+package drll.problems.leetcode.FindPalindromeWithFixedLength;
 
+import drll.problems.leetcode.FindPalindromeWithFixedLength.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;

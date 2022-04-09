@@ -1,12 +1,12 @@
-package drll.problems.leetcodeContest.problem1;
+package drll.problems.leetcode.FindTheDifferenceOfTwoArrays;
 
+import drll.problems.leetcode.FindTheDifferenceOfTwoArrays.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;

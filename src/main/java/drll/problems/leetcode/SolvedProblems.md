@@ -1,5 +1,5 @@
 
-## Resume for 57 Leetcode solved problems
+## Resume for 61 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(31)       |             |
+| Sorting                 | Array(34)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation          |                 |             |
 | Search                  |                 |             |
-| Strings(10)             |                 |             |
+| Strings(11)             |                 |             |
 
 
 ### Solved problems in detail
@@ -80,6 +80,8 @@
 | 57  | [Sort the Jumbled Numbers](https://leetcode.com/problems/sort-the-jumbled-numbers/)| Array                 |   Medium   | SOLVED |
 | 58  | [Minimum Number of Operations to Convert Time](https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/)| String                |    Easy    | SOLVED |
 | 59  | [Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)| Array                 |   Medium   | SOLVED |
+| 60  | [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/)| Array                 |    Easy    | SOLVED |
+| 61  | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/)| Array                 |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
