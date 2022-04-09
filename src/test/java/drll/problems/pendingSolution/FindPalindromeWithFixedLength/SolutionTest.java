@@ -1,6 +1,6 @@
-package drll.problems.leetcode.FindPalindromeWithFixedLength;
+package drll.problems.pendingSolution.FindPalindromeWithFixedLength;
 
-import drll.problems.leetcode.FindPalindromeWithFixedLength.Solution;
+import drll.problems.pendingSolution.FindPalindromeWithFixedLength.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package drll.problems.leetcode.FindPalindromeWithFixedLength;
+package drll.problems.pendingSolution.FindPalindromeWithFixedLength;
 
 public class Solution {
     public long[] kthPalindrome(int[] queries, int intLength) {

@@ -1,4 +1,4 @@
-package drll.dataStructures.generators;
+package drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators;
 
 import java.util.Iterator;
 

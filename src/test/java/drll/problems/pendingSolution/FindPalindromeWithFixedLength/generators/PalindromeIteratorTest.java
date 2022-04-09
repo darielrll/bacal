@@ -1,5 +1,6 @@
-package drll.dataStructures.generators;
+package drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators;
 
+import drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators.PalindromeNumberIterator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
