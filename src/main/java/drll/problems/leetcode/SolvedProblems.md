@@ -1,5 +1,5 @@
 
-## Resume for 61 Leetcode solved problems
+## Resume for 63 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting                 | Array(32)       |             |
+| Sorting(1)              | Array(33)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -83,6 +83,8 @@
 | 59  | [Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)                                                 | Array               |   Medium   | SOLVED |
 | 60  | [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/)                                             | Array               |    Easy    | SOLVED |
 | 61  | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/)                             | Array               |   Medium   | SOLVED |
+| 62  | [Largest Number After Digit Swaps by Parity](https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/)                           | Sorting             |    Easy    | SOLVED |
+| 63  | [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/)                                           | Array               |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
