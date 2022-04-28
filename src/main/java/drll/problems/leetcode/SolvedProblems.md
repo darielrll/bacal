@@ -1,5 +1,5 @@
 
-## Resume for 63 Leetcode solved problems
+## Resume for 65 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting(1)              | Array(33)       |             |
+| Sorting(1)              | Array(35)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -85,6 +85,8 @@
 | 61  | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/)                             | Array               |   Medium   | SOLVED |
 | 62  | [Largest Number After Digit Swaps by Parity](https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/)                           | Sorting             |    Easy    | SOLVED |
 | 63  | [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/)                                           | Array               |   Medium   | SOLVED |
+| 64  | [Count Lattice Points Inside a Circle](https://leetcode.com/problems/count-lattice-points-inside-a-circle/)                                       | Array               |   Medium   | SOLVED |
+| 65  | [Intersection of Multiple Arrays](https://leetcode.com/problems/intersection-of-multiple-arrays/)                                                 | Array               |    Easy    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
