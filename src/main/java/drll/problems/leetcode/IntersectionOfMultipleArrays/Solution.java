@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.IntersectionOfMultipleArrays;
+package drll.problems.leetcode.IntersectionOfMultipleArrays;
 
 import java.util.ArrayList;
 import java.util.HashMap;

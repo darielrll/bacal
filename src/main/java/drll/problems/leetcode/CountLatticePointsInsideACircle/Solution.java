@@ -1,4 +1,4 @@
-package drll.problems.leetcodeContest.CountLatticePointsInsideACircle;
+package drll.problems.leetcode.CountLatticePointsInsideACircle;
 
 import java.util.ArrayList;
 import java.util.HashSet;

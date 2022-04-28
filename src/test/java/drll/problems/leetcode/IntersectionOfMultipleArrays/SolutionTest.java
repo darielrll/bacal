@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.IntersectionOfMultipleArrays;
+package drll.problems.leetcode.IntersectionOfMultipleArrays;
 
+import drll.problems.leetcode.IntersectionOfMultipleArrays.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,6 @@
-package drll.problems.leetcodeContest.CountLatticePointsInsideACircle;
+package drll.problems.leetcode.CountLatticePointsInsideACircle;
 
+import drll.problems.leetcode.CountLatticePointsInsideACircle.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
