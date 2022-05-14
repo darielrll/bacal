@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.FindTheKBeautyOfANumber;
+package drll.problems.leetcode.FindTheKBeautyOfANumber;
 
+import drll.problems.leetcode.FindTheKBeautyOfANumber.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

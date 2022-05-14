@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.FindTheKBeautyOfANumber;
+package drll.problems.leetcode.FindTheKBeautyOfANumber;
 
 public class Solution {
     public int divisorSubstrings(int num, int k) {
