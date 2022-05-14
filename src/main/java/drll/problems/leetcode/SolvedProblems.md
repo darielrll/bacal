@@ -1,5 +1,5 @@
 
-## Resume for 65 Leetcode solved problems
+## Resume for 66 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting(1)              | Array(35)       |             |
+| Sorting(1)              | Array(36)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(3)         |             |
 | Warmup                  |                 |             |
@@ -87,6 +87,7 @@
 | 63  | [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/)                                           | Array               |   Medium   | SOLVED |
 | 64  | [Count Lattice Points Inside a Circle](https://leetcode.com/problems/count-lattice-points-inside-a-circle/)                                       | Array               |   Medium   | SOLVED |
 | 65  | [Intersection of Multiple Arrays](https://leetcode.com/problems/intersection-of-multiple-arrays/)                                                 | Array               |    Easy    | SOLVED |
+| 66  | [Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number/)                                                 | Array               |    Easy    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
