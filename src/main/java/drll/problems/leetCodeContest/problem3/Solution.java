@@ -8,7 +8,7 @@ import java.util.List;
 public class Solution {
     public int totalSteps(int[] nums) {
 
-        
+
 //        int lastUpTendencyStart = 0;
 //        int lastUpTendencyEnd = 0;
 //        int lastUpNumber = nums[0];
