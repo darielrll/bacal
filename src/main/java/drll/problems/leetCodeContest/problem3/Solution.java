@@ -11,9 +11,7 @@ public class Solution {
                 (o1, o2) -> Math.abs(o2.difference) - Math.abs(o1.difference)
         );
 
-        for (int i = 0; i < nums1.length; i++) {
-            squareDifferences.add(new SquareDifference(nums1[i], nums2[i]));
-        }
+        buildPriorityDifferenceQueue(nums1, nums2, squareDifferences);
 
         List<SquareDifference> tmpList = new ArrayList<>();
         boolean hasModifications = false;
@@ -83,6 +81,12 @@ public class Solution {
         }
 
         return sumSquareDifference;
+    }
+
+    private void buildPriorityDifferenceQueue(int[] nums1, int[] nums2, PriorityQueue<SquareDifference> squareDifferences) {
+        for (int i = 0; i < nums1.length; i++) {
+            squareDifferences.add(new SquareDifference(nums1[i], nums2[i]));
+        }
     }
 
     class SquareDifference{
