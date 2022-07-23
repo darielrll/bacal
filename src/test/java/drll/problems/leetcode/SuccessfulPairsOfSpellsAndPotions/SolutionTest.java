@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.SuccessfulPairsOfSpellsAndPotions;
+package drll.problems.leetcode.SuccessfulPairsOfSpellsAndPotions;
 
+import drll.problems.leetcode.SuccessfulPairsOfSpellsAndPotions.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.SuccessfulPairsOfSpellsAndPotions;
+package drll.problems.leetcode.SuccessfulPairsOfSpellsAndPotions;
 
 import java.util.Arrays;
 

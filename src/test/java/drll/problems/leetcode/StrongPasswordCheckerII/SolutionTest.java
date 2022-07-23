@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.StrongPasswordCheckerII;
+package drll.problems.leetcode.StrongPasswordCheckerII;
 
+import drll.problems.leetcode.StrongPasswordCheckerII.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

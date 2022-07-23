@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/problems/binary-search/
+ - https://leetcode.com/problems/strong-password-checker-ii/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Easy ( String )
  
 ##### Resume of the problem:
 
