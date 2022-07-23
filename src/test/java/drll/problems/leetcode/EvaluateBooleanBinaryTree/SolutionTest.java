@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.EvaluateBooleanBinaryTree;
+package drll.problems.leetcode.EvaluateBooleanBinaryTree;
 
+import drll.problems.leetcode.EvaluateBooleanBinaryTree.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
