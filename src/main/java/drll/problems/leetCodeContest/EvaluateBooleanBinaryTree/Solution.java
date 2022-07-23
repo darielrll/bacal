@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.EvaluateBooleanBinaryTree;
 
 public class Solution {
     public boolean evaluateTree(TreeNode root) {

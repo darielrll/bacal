@@ -1,6 +1,5 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.EvaluateBooleanBinaryTree;
 
-import apple.laf.JRSUIUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
