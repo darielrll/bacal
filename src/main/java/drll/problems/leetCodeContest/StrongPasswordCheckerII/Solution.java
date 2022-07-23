@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.StrongPasswordCheckerII;
 
 public class Solution {
     public boolean strongPasswordCheckerII(String password) {
