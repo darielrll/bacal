@@ -1,10 +1,10 @@
-package drll.problems.leetCodeContest.problem3;
+package drll.problems.leetcode.DesignANumberContainerSystem;
 
+import drll.problems.leetcode.DesignANumberContainerSystem.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;

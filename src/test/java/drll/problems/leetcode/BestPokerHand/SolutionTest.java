@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.BestPokerHand;
 
+import drll.problems.leetcode.BestPokerHand.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

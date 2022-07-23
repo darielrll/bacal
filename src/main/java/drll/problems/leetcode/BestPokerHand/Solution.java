@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.BestPokerHand;
 
 import java.util.HashMap;
 import java.util.Map;

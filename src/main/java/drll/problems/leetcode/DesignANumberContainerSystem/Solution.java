@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem3;
+package drll.problems.leetcode.DesignANumberContainerSystem;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
