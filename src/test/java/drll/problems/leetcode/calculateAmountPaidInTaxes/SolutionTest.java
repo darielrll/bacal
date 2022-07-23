@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.calculateAmountPaidInTaxes;
+package drll.problems.leetcode.calculateAmountPaidInTaxes;
 
+import drll.problems.leetcode.calculateAmountPaidInTaxes.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

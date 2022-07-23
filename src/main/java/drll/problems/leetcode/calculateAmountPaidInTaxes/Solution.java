@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.calculateAmountPaidInTaxes;
+package drll.problems.leetcode.calculateAmountPaidInTaxes;
 
 public class Solution {
     public double calculateTax(int[][] brackets, int income) {
