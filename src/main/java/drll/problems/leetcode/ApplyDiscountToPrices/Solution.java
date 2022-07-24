@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leetcode.ApplyDiscountToPrices;
 
 import java.text.DecimalFormat;
 
@@ -12,8 +12,8 @@ public class Solution {
             if(isValidPrice(priceString)){
                 double price = Double.parseDouble(priceString.substring(1));
                 price = price - price * discount / 100;
-                DecimalFormat formato1 = new DecimalFormat("0.00");
-                String format = formato1.format(price);
+                DecimalFormat format1 = new DecimalFormat("0.00");
+                String format = format1.format(price);
                 buffer.append("$");
                 buffer.append(format);
             }

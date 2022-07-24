@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/problems/binary-search/
+ - https://leetcode.com/problems/apply-discount-to-prices/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Medium ( String )
  
 ##### Resume of the problem:
 

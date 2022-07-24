@@ -1,10 +1,10 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.RearrangeCharactersToMakeTargetString;
 
+import drll.problems.leetcode.RearrangeCharactersToMakeTargetString.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution binarySearch;

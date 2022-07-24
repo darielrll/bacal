@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.RearrangeCharactersToMakeTargetString;
 
 import java.util.HashMap;
 import java.util.HashSet;
