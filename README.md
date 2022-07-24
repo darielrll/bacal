@@ -36,7 +36,7 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 | Online Judge |  Rank  | Points  | Update Day | Trend* ▲▼  ◄► |
 |:------------:|:------:|:-------:|:----------:|:-------------:|
 |  HackerRank  | 132835 | 1040.63 |  09/04/22  |       ▲       |
-|   Leetcode   | 614010 |   901   |  28/05/22  |       ▼       |
+|   Leetcode   | 602513 |  1105   |  24/07/22  |       ▼       |
 *: Trend of the observed ranking
 
 #### CLI
