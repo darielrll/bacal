@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.NodeWithHighestEdgeScore;
+package drll.problems.leetcode.NodeWithHighestEdgeScore;
 
 public class Solution {
     public int edgeScore(int[] edges) {

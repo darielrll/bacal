@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.LargestLocalValuesInAMatrix;
+package drll.problems.leetcode.LargestLocalValuesInAMatrix;
 
+import drll.problems.leetcode.LargestLocalValuesInAMatrix.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

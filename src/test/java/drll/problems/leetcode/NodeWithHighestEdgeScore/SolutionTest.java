@@ -1,6 +1,7 @@
-package drll.problems.leetCodeContest.NodeWithHighestEdgeScore;
+package drll.problems.leetcode.NodeWithHighestEdgeScore;
 
 import common.Utils;
+import drll.problems.leetcode.NodeWithHighestEdgeScore.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

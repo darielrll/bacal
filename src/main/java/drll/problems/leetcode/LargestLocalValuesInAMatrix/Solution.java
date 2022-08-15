@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.LargestLocalValuesInAMatrix;
+package drll.problems.leetcode.LargestLocalValuesInAMatrix;
 
 public class Solution {
     public int[][] largestLocal(int[][] grid) {
