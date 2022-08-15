@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.MergeSimilarItems;
 
+import drll.problems.leetcode.MergeSimilarItems.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

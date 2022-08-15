@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetcode.MergeSimilarItems;
 
 import java.net.Inet4Address;
 import java.util.*;

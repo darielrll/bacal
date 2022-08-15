@@ -1,5 +1,5 @@
 
-## Resume for 81 Leetcode solved problems
+## Resume for 82 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(7)     |
-| Sorting(1)              | Array(43)       |             |
+| Sorting(1)              | Array(44)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(4)         |             |
 | Warmup                  |                 |             |
@@ -103,6 +103,7 @@
 | 79  | [Decode the Message](https://leetcode.com/problems/decode-the-message/)                                                                                                   | String              |    Easy    | SOLVED |
 | 80  | [Largest Local Values in a Matrix](https://leetcode.com/problems/largest-local-values-in-a-matrix/)                                                                       | Array               |    Easy    | SOLVED |
 | 81  | [Node With Highest Edge Score](https://leetcode.com/problems/node-with-highest-edge-score/)                                                                               | Array               |   Medium   | SOLVED |
+| 82  | [Node With Highest Edge Score](https://leetcode.com/problems/merge-similar-items/)                                                                                        | Array               |    Easy    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
