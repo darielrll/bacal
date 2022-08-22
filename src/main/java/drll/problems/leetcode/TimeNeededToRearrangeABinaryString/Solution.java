@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.TimeNeededToRearrangeABinaryString;
+package drll.problems.leetcode.TimeNeededToRearrangeABinaryString;
 
 import java.util.HashMap;
 import java.util.LinkedList;

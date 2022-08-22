@@ -1,5 +1,5 @@
 
-## Resume for 86 Leetcode solved problems
+## Resume for 87 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion(1)            |                 |             |
 | Implementation(1)       |                 |             |
 | Search                  |                 |             |
-| String(19)              |                 |             |
+| String(20)              |                 |             |
 | Binary Search(1)        |                 |             |
 
 
@@ -108,6 +108,7 @@
 | 84  | [Minimum Hours of Training to Win a Competition](https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/)                                           | Array               |    Easy    | SOLVED |
 | 85  | [Largest Palindromic Number](https://leetcode.com/problems/largest-palindromic-number/)                                                                                   | String              |   Medium   | SOLVED |
 | 86  | [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/)                                             | Tree                |   Medium   | SOLVED |
+| 87  | [Time Needed to Rearrange a Binary String](https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/)                                                       | Tree                |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem

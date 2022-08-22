@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.TimeNeededToRearrangeABinaryString;
+package drll.problems.leetcode.TimeNeededToRearrangeABinaryString;
 
+import drll.problems.leetcode.TimeNeededToRearrangeABinaryString.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
