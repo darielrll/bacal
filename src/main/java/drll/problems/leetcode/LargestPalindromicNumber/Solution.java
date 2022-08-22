@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.LargestPalindromicNumber;
+package drll.problems.leetcode.LargestPalindromicNumber;
 
 import java.util.*;
 

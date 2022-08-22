@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.LargestPalindromicNumber;
+package drll.problems.leetcode.LargestPalindromicNumber;
 
+import drll.problems.leetcode.LargestPalindromicNumber.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

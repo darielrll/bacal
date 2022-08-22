@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.MinimumHoursOfTrainingToWinACompetition;
+package drll.problems.leetcode.MinimumHoursOfTrainingToWinACompetition;
 
 public class Solution {
     public int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {

@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.AmountOfTimeForBinaryTreeToBeInfected;
+package drll.problems.leetcode.AmountOfTimeForBinaryTreeToBeInfected;
 
 import java.util.*;
 

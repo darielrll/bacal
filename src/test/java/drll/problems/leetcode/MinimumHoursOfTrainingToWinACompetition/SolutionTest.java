@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.MinimumHoursOfTrainingToWinACompetition;
+package drll.problems.leetcode.MinimumHoursOfTrainingToWinACompetition;
 
+import drll.problems.leetcode.MinimumHoursOfTrainingToWinACompetition.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
