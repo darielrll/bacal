@@ -1,0 +1,14 @@
+## Link to the problem
+ 
+ - https://leetcode.com/problems/largest-palindromic-number/
+ 
+##### Difficulty Level (according to Leetcode)
+ 
+ > Medium ( String )
+ 
+##### Resume of the problem:
+
+
+
+##### Notes
+  
