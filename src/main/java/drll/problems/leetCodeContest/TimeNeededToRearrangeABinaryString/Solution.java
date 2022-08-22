@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leetCodeContest.TimeNeededToRearrangeABinaryString;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,7 +9,6 @@ public class Solution {
         HashMap<Integer, Character> positions = new HashMap<>();
         positions.put(0, s.charAt(0));
         Queue<Integer[]> inversions = new LinkedList<>();
-
 
         for (int i = 1; i < s.length(); i++) {
             positions.put(i, s.charAt(i));
@@ -22,14 +21,17 @@ public class Solution {
         Queue<Integer[]> tmp = new LinkedList<>();
         while (!inversions.isEmpty()){
             Integer[] poll = inversions.poll();
-            positions.replace(poll[0], '1');
-            positions.replace(poll[1], '0');
+            Integer positionOne = poll[0];
+            Integer positionTwo = poll[1];
 
-            if(poll[0] - 1 >= 0  &&  positions.get(poll[0] - 1) == '0'){
-                tmp.add(new Integer[]{poll[0] - 1, poll[0]});
+            positions.replace(positionOne, '1');
+            positions.replace(positionTwo, '0');
+
+            if(positionOne - 1 >= 0  &&  positions.get(positionOne - 1) == '0'){
+                tmp.add(new Integer[]{positionOne - 1, positionOne});
             }
-            if(poll[1] + 1 < s.length()  &&  positions.get(poll[1] + 1) == '1'){
-                tmp.add(new Integer[]{poll[1], poll[1] + 1});
+            if(positionTwo + 1 < s.length()  &&  positions.get(positionTwo + 1) == '1'){
+                tmp.add(new Integer[]{positionTwo, positionTwo + 1});
             }
 
             if(inversions.isEmpty()){
