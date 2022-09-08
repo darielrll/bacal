@@ -4,8 +4,11 @@ public class Solution {
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
         long[] subSums = buildConsecutiveSums(runningCosts);
 
-        int[] a = new int[]{-1, 2, 5, 0};
-        SegmentTree tree = new SegmentTree(a);
+        int[] a = new int[]{-1, 2, 5, 0, 6, 3};
+        SegmentTree treeTest = new SegmentTree(a);
+
+
+        SegmentTree tree = new SegmentTree(chargeTimes);
 
         int maxConsecutive = 0;
         for (int k = 1; k <= chargeTimes.length - 1; k++) {
@@ -126,7 +129,7 @@ class SegmentTree{
 
     private boolean isNodeSubsetOfInterval(int nodePosition, int leftInterval, int rightInterval) {
         SegmentTreeNode node = tree[nodePosition];
-        return leftInterval <= node.leftMost  &&  node.rightMost <= rightInterval;
+        return leftInterval <= node.leftMost  ||  node.rightMost <= rightInterval;
     }
 }
 class SegmentTreeNode{
