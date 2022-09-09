@@ -23,6 +23,12 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case2() {
+        assertThat(solution.maximumRobots(new int[]{3,6,1,3,4}, new int[]{2,1,3,4,5}, 93))
+                .isEqualTo(5);
+    }
+
+    @Test
+    void should_return_correctly_for_test_case3() {
         assertThat(solution.maximumRobots(new int[]{11,12,19}, new int[]{10,8,7}, 19))
                 .isZero();
     }
@@ -64,9 +70,17 @@ class SolutionTest {
     void should_return_correctly_for_test_case8() {
         int[][] testData = Utils.getIntegersListInFile("MaximumNumberOfRobotsWithinBudget/testCase1.txt");
 
-
         long budget = 1628295986L;
         assertThat(solution.maximumRobots(testData[0], testData[1], budget))
                 .isEqualTo(592);
+    }
+
+    @Test
+    void should_return_correctly_for_test_case9() {
+        int[][] testData = Utils.getIntegersListInFile("MaximumNumberOfRobotsWithinBudget/testCase2.txt");
+
+        long budget = 134733783981999L;
+        assertThat(solution.maximumRobots(testData[0], testData[1], budget))
+                .isEqualTo(26177);
     }
 }

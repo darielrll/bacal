@@ -6,31 +6,28 @@ public class Solution {
         SegmentTree tree = new SegmentTree(chargeTimes);
 
         int maxConsecutive = 0;
-        for (int k = 1; k <= chargeTimes.length - 1; k++) {
+        int consecutiveRobots = 1;
+        while (consecutiveRobots <= chargeTimes.length) {
             int windowStart = 0;
-            int windowEnd = windowStart + k - 1;
             boolean findNextK = false;
-            while (windowEnd <= chargeTimes.length - 1){
+            while (windowStart + consecutiveRobots <= chargeTimes.length){
 
-                int maxCharge = tree.getMax(windowStart, windowEnd);
-                long sum = getSubSum(subSums, windowStart, windowEnd);
+                int maxCharge = tree.getMaxQuery(windowStart, windowStart + consecutiveRobots - 1);
+                long sum = getSubSum(subSums, windowStart, windowStart + consecutiveRobots - 1);
 
-                long totalCost = maxCharge + k * sum;
+                long totalCost = maxCharge + consecutiveRobots * sum;
                 if(totalCost <= budget){
-                   maxConsecutive = k;
+                   maxConsecutive = consecutiveRobots;
                    findNextK = true;
+                   break;
                 }
-
                 windowStart++;
-                windowEnd++;
             }
-
             if(!findNextK){
                 break;
             }
+            consecutiveRobots++;
         }
-
-
         return maxConsecutive;
     }
 
@@ -64,17 +61,16 @@ public class Solution {
 }
 
 class SegmentTree{
-    private final SegmentTreeNode[] tree;
+    private final int[] tree;
 
     public SegmentTree(int[] numbers) {
-        //tree = new SegmentTreeNode[2 * numbers.length ];
-        tree = new SegmentTreeNode[numbers.length * 4];
+        tree = new int[numbers.length * 4];
         buildTree(tree, numbers, 1, 0, numbers.length - 1);
     }
 
-    private void buildTree(SegmentTreeNode[] tree, int[] numbers, int nodePosition, int leftMost, int rightMost) {
+    private void buildTree(int[] tree, int[] numbers, int nodePosition, int leftMost, int rightMost) {
         if(leftMost == rightMost){
-            tree[nodePosition] = new SegmentTreeNode(leftMost, rightMost, numbers[leftMost]);
+            tree[nodePosition] = numbers[leftMost];
         }
         else{
             int leftChildPosition = 2 * nodePosition;
@@ -85,47 +81,40 @@ class SegmentTree{
             int rightChildLeftMost = (leftMost + rightMost) / 2 + 1;
             buildTree(tree, numbers, rightChildPosition, rightChildLeftMost, rightMost);
 
-            int nodeValue = Math.max(tree[leftChildPosition].max, tree[rightChildPosition].max);
-            tree[nodePosition] = new SegmentTreeNode(leftMost, rightMost, nodeValue);
+            int nodeValue = Math.max(tree[leftChildPosition], tree[rightChildPosition]);
+            tree[nodePosition] = nodeValue;
         }
     }
 
-    public int getMax(int i, int j) {
-        return getMax(1, i, j);
+    public int getMaxQuery(int i, int j) {
+        return getMaxQuery(1, 0, (tree.length / 4) - 1, i, j);
     }
 
-    private int getMax(int nodePosition, int leftInterval, int rightInterval) {
-        if(isNodeRangeSubSetOfInterval(nodePosition, leftInterval, rightInterval)){
-            return tree[nodePosition].max;
+    private int getMaxQuery(int nodePosition, int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+        if(nodeRangeDoNotIntersectInterval(nodeLeftMost, nodeRightMost, leftInterval, rightInterval)){
+            return Integer.MIN_VALUE;
         }
-        if(haveNodeRangeIntersectionWithInterval(nodePosition, leftInterval , rightInterval)){
-            return Math.max(
-                    getMax(2 * nodePosition, leftInterval, rightInterval),
-                    getMax(2 * nodePosition + 1, leftInterval, rightInterval)
-            );
+        if(isNodeRangeSubSetOfInterval(nodeLeftMost, nodeRightMost, leftInterval, rightInterval)){
+            return tree[nodePosition];
         }
-        return Integer.MIN_VALUE;
+
+        int leftNode = 2 * nodePosition;
+        int nodeLeftRightMost = (nodeLeftMost + nodeRightMost) / 2;
+
+        int rightNode = 2 * nodePosition + 1;
+        int nodeRightLeftMost = (nodeLeftMost + nodeRightMost) / 2 + 1;
+
+        return Math.max(
+                getMaxQuery(leftNode, nodeLeftMost, nodeLeftRightMost, leftInterval, rightInterval),
+                getMaxQuery(rightNode, nodeRightLeftMost, nodeRightMost, leftInterval, rightInterval)
+        );
     }
 
-    private boolean haveNodeRangeIntersectionWithInterval(int nodePosition, int leftInterval, int rightInterval) {
-        SegmentTreeNode node = tree[nodePosition];
-        return (leftInterval <= node.leftMost  &&  node.leftMost <= rightInterval  &&  rightInterval <= node.rightMost)  ||
-                (node.leftMost <= leftInterval  &&  leftInterval <= node.rightMost  &&  node.rightMost <= rightInterval)  ||
-                (node.leftMost <= leftInterval  &&  rightInterval <= node.rightMost);
+    private static boolean nodeRangeDoNotIntersectInterval(int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+        return nodeRightMost < leftInterval || rightInterval < nodeLeftMost;
     }
 
-    private boolean isNodeRangeSubSetOfInterval(int nodePosition, int leftInterval, int rightInterval) {
-        SegmentTreeNode node = tree[nodePosition];
-        return leftInterval <= node.leftMost  &&  node.rightMost <= rightInterval;
-    }
-}
-class SegmentTreeNode{
-    int leftMost, rightMost;
-    int max;
-
-    public SegmentTreeNode(int leftMost, int rightMost, Integer number) {
-        this.leftMost = leftMost;
-        this.rightMost = rightMost;
-        max = number;
+    private boolean isNodeRangeSubSetOfInterval(int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+        return leftInterval <= nodeLeftMost  &&  nodeRightMost <= rightInterval;
     }
 }
