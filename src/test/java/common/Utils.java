@@ -128,4 +128,30 @@ public class Utils {
         }
         return numbers;
     }
+
+    public static int[][] getIntegersListInFile(String testDataFile) {
+        ArrayList<ArrayList<Integer>> numbers = new ArrayList<>();
+        Scanner sc = getFileScanner(testDataFile);
+
+        while (sc.hasNextLine()) {
+            ArrayList<Integer> numberList = new ArrayList<>();
+            String line = sc.nextLine();
+            line = line.substring(1, line.length() - 1);
+            String[] lineNumbers = line.split(",");
+            for (String lineNumber : lineNumbers) {
+                numberList.add(Integer.parseInt(lineNumber));
+            }
+            numbers.add(numberList);
+        }
+
+        int[][] result = new int[numbers.size()][];
+        for (int i = 0; i < numbers.size(); i++) {
+            int[] tmp = new int[numbers.get(i).size()];
+            for (int j = 0; j < numbers.get(i).size(); j++) {
+                tmp[j] = numbers.get(i).get(j);
+            }
+            result[i] = tmp;
+        }
+        return result;
+    }
 }
