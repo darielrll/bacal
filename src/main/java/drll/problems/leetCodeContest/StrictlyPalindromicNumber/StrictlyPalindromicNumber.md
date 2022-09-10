@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/problems/binary-search/
+ - https://leetcode.com/contest/biweekly-contest-86/problems/strictly-palindromic-number/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Medium ( Math )
  
 ##### Resume of the problem:
 

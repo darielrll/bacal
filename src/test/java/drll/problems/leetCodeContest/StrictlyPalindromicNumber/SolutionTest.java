@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.StrictlyPalindromicNumber;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,16 +15,11 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case1() {
-        assertThat(solution.findSubarrays(new int[]{4,2,4})).isTrue();
+        assertThat(solution.isStrictlyPalindromic(9)).isFalse();
     }
 
     @Test
     void should_return_correctly_for_test_case2() {
-        assertThat(solution.findSubarrays(new int[]{0,0,0})).isTrue();
-    }
-
-    @Test
-    void should_return_correctly_for_test_case3() {
-        assertThat(solution.findSubarrays(new int[]{1,2,3,4,5})).isFalse();
+        assertThat(solution.isStrictlyPalindromic(4)).isFalse();
     }
 }

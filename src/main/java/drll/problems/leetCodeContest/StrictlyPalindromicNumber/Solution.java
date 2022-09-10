@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leetCodeContest.StrictlyPalindromicNumber;
 
 public class Solution {
     public boolean isStrictlyPalindromic(int n) {

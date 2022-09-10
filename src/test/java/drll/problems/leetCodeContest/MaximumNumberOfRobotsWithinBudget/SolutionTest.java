@@ -1,11 +1,10 @@
-package drll.problems.leetCodeContest.problem4;
+package drll.problems.leetCodeContest.MaximumNumberOfRobotsWithinBudget;
 
 import common.Utils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;
