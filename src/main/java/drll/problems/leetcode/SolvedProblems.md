@@ -1,5 +1,5 @@
 
-## Resume for 87 Leetcode solved problems
+## Resume for 93 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(8)     |
-| Sorting(1)              | Array(48)       |             |
+| Sorting(1)              | Array(50)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(5)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation(1)       |                 |             |
 | Search                  |                 |             |
-| String(20)              |                 |             |
+| String(21)              |                 |             |
 | Binary Search(1)        |                 |             |
 
 
@@ -90,7 +90,7 @@
 | 66 | [Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number/)                                                                             | Array               |    Easy    | SOLVED |
 | 67 | [Check if Number Has Equal Digit Count and Digit Value](https://leetcode.com/contest/biweekly-contest-79/problems/check-if-number-has-equal-digit-count-and-digit-value/) | String              |    Easy    | SOLVED |
 | 68 | [Best Poker Hand](https://leetcode.com/problems/best-poker-hand/)                                                                                                         | Array               |    Easy    | SOLVED |
-| 69 | [Design a Number Container System](https://leetcode.com/problems/design-a-number-container-system/)                                                                       | Implemantation      |   Medium   | SOLVED |
+| 69 | [Design a Number Container System](https://leetcode.com/problems/design-a-number-container-system/)                                                                       | Implementation      |   Medium   | SOLVED |
 | 70 | [Calculate Amount Paid in Taxes](https://leetcode.com/problems/calculate-amount-paid-in-taxes/)                                                                           | Array               |    Easy    | SOLVED |
 | 71 | [Evaluate Boolean Binary Tree](https://leetcode.com/problems/evaluate-boolean-binary-tree/)                                                                               | Tree                |    Easy    | SOLVED |
 | 72 | [Strong Password Checker II](https://leetcode.com/problems/strong-password-checker-ii/)                                                                                   | String              |    Easy    | SOLVED |
@@ -112,6 +112,9 @@
 | 88 | [Find Subarrays With Equal Sum](https://leetcode.com/contest/biweekly-contest-86/problems/find-subarrays-with-equal-sum/)                                                 | Array               |   Easy     | SOLVED |
 | 89 | [Strictly Palindromic Number](https://leetcode.com/contest/biweekly-contest-86/problems/strictly-palindromic-number/)                                                     | Math                |   Medium   | SOLVED |
 | 90 | [Maximum Number of Robots Within Budget](https://leetcode.com/problems/maximum-number-of-robots-within-budget/)                                                           | Array               |   Hard     | SOLVED |
+| 91 | [Longest Subsequence With Limited Sum](https://leetcode.com/contest/weekly-contest-308/problems/longest-subsequence-with-limited-sum/)                                    | Array               |   Easy     | SOLVED |
+| 92 | [Removing Stars From a String](https://leetcode.com/contest/weekly-contest-308/problems/removing-stars-from-a-string/)                                                    | String              |   Medium   | SOLVED |
+| 93 | [Minimum Amount of Time to Collect Garbage](https://leetcode.com/contest/weekly-contest-308/problems/minimum-amount-of-time-to-collect-garbage/)                          | Array               |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
