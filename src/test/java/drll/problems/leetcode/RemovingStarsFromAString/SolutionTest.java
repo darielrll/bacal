@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.LongestSubsequenceWithLimitedSum;
+package drll.problems.leetcode.RemovingStarsFromAString;
 
+import drll.problems.leetcode.RemovingStarsFromAString.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,13 +16,11 @@ class SolutionTest {
 
     @Test
     void should_return_correctly_for_test_case1() {
-        assertThat(solution.answerQueries(new int[]{4,5,2,1}, new int[]{3,10,21}))
-                .isEqualTo(new int[]{2,3,4});
+        assertThat(solution.removeStars("leet**cod*e")).isEqualTo("lecoe");
     }
 
     @Test
     void should_return_correctly_for_test_case2() {
-        assertThat(solution.answerQueries(new int[]{2,3,4,5}, new int[]{1}))
-                .isEqualTo(new int[]{0});
+        assertThat(solution.removeStars("erase*****")).isEqualTo("");
     }
 }

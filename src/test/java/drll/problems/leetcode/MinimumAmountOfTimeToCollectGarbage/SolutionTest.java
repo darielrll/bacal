@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.MinimumAmountOfTimeToCollectGarbage;
+package drll.problems.leetcode.MinimumAmountOfTimeToCollectGarbage;
 
+import drll.problems.leetcode.MinimumAmountOfTimeToCollectGarbage.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
