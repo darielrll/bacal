@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem3;
+package drll.problems.leetCodeContest.MinimumAmountOfTimeToCollectGarbage;
 
 import java.util.ArrayList;
 import java.util.Arrays;

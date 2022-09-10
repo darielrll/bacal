@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem1;
+package drll.problems.leetCodeContest.LongestSubsequenceWithLimitedSum;
 
 import java.util.Arrays;
 

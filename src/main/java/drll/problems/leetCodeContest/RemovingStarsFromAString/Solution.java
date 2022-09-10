@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leetCodeContest.RemovingStarsFromAString;
 
 import java.util.LinkedList;
 import java.util.Stack;
