@@ -1,6 +1,7 @@
-package drll.problems.leetCodeContest.MaximumNumberOfRobotsWithinBudget;
+package drll.problems.leetcode.MaximumNumberOfRobotsWithinBudget;
 
 import common.Utils;
+import drll.problems.leetcode.MaximumNumberOfRobotsWithinBudget.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

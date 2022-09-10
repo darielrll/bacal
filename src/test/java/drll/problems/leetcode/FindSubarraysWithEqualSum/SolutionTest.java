@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.FindSubarraysWithEqualSum;
+package drll.problems.leetcode.FindSubarraysWithEqualSum;
 
+import drll.problems.leetcode.FindSubarraysWithEqualSum.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

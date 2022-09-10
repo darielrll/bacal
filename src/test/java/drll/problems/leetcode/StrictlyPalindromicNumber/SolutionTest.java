@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.StrictlyPalindromicNumber;
+package drll.problems.leetcode.StrictlyPalindromicNumber;
 
+import drll.problems.leetcode.StrictlyPalindromicNumber.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.MaximumNumberOfRobotsWithinBudget;
+package drll.problems.leetcode.MaximumNumberOfRobotsWithinBudget;
 
 public class Solution {
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {

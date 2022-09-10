@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.FindSubarraysWithEqualSum;
+package drll.problems.leetcode.FindSubarraysWithEqualSum;
 
 public class Solution {
     public boolean findSubarrays(int[] nums) {
