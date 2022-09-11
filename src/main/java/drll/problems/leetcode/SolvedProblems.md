@@ -1,5 +1,5 @@
 
-## Resume for 93 Leetcode solved problems
+## Resume for 94 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,7 +7,7 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(8)     |
-| Sorting(1)              | Array(50)       |             |
+| Sorting(1)              | Array(51)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(5)         |             |
 | Warmup                  |                 |             |
@@ -115,6 +115,7 @@
 | 91 | [Longest Subsequence With Limited Sum](https://leetcode.com/contest/weekly-contest-308/problems/longest-subsequence-with-limited-sum/)                                    | Array               |   Easy     | SOLVED |
 | 92 | [Removing Stars From a String](https://leetcode.com/contest/weekly-contest-308/problems/removing-stars-from-a-string/)                                                    | String              |   Medium   | SOLVED |
 | 93 | [Minimum Amount of Time to Collect Garbage](https://leetcode.com/contest/weekly-contest-308/problems/minimum-amount-of-time-to-collect-garbage/)                          | Array               |   Medium   | SOLVED |
+| 94 | [Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/)                                                                                                 | Array               |   Medium   | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
