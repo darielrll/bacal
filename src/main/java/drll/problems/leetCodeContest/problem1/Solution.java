@@ -1,25 +1,73 @@
 package drll.problems.leetCodeContest.problem1;
 
 public class Solution {
-    public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
+    public int countDaysTogether(String arriveAlice, String leaveAlice,
+                                 String arriveBob, String leaveBob) {
 
         Date[] aliceDates = getTripDates(arriveAlice, leaveAlice);
         Date[] bobDates = getTripDates(arriveBob, leaveBob);
 
-        if(aliceDates[1].compareTo(bobDates[0]) < 0 ||  bobDates[1].compareTo(aliceDates[0]) < 0){
-            return 0;
+        int[] monthLineSweep = new int[13];
+        for (int i = aliceDates[0].month; i <= aliceDates[1].month; i++) {
+            monthLineSweep[i]++;
         }
-        if(isSubSetAofB(aliceDates, bobDates)){
-            return differenceInDays(aliceDates[0], aliceDates[1]);
-        }
-        if(isSubSetAofB(bobDates, aliceDates)){
-            return differenceInDays(bobDates[0], bobDates[1]);
+        for (int i = bobDates[0].month; i <= bobDates[1].month; i++) {
+            monthLineSweep[i]++;
         }
 
-        if(bobDates[0].compareTo(aliceDates[0]) < 0){
-            return differenceInDays(aliceDates[0], bobDates[1]);
+        int windowStart = 1;
+        while(windowStart < monthLineSweep.length  &&  monthLineSweep[windowStart] != 2){
+           windowStart++;
         }
-        return differenceInDays(bobDates[0], aliceDates[1]);
+
+        if(windowStart == 13){
+            return 0;
+        }
+
+        int windowEnd = windowStart;
+        while(windowEnd + 1 < monthLineSweep.length  &&  monthLineSweep[windowEnd + 1] == 2){
+            windowEnd++;
+        }
+
+        int daysTogether = 0;
+
+        Date start = getStartDate(windowStart, aliceDates, bobDates);
+        Date end = getEndDate(windowEnd, aliceDates, bobDates);
+
+        for (int i = windowStart; i <= windowEnd; i++) {
+
+        }
+
+        return daysTogether;
+
+//        Date[] aliceDates = getTripDates(arriveAlice, leaveAlice);
+//        Date[] bobDates = getTripDates(arriveBob, leaveBob);
+//
+//        if(aliceDates[1].compareTo(bobDates[0]) < 0 ||  bobDates[1].compareTo(aliceDates[0]) < 0){
+//            return 0;
+//        }
+//        if(isSubSetAofB(aliceDates, bobDates)){
+//            return differenceInDays(aliceDates[0], aliceDates[1]);
+//        }
+//        if(isSubSetAofB(bobDates, aliceDates)){
+//            return differenceInDays(bobDates[0], bobDates[1]);
+//        }
+//
+//        if(bobDates[0].compareTo(aliceDates[0]) < 0){
+//            return differenceInDays(aliceDates[0], bobDates[1]);
+//        }
+//        return differenceInDays(bobDates[0], aliceDates[1]);
+    }
+
+    private Date getEndDate(int windowEnd, Date[] aliceDates, Date[] bobDates) {
+        if(aliceDates[1].month == bobDates[1].month){
+            if(aliceDates[1])
+        }
+        return null;
+    }
+
+    private Date getStartDate(int windowStart, Date[] aliceDates, Date[] bobDates) {
+        return null;
     }
 
     private boolean isSubSetAofB(Date[] dateA, Date[] dateB) {

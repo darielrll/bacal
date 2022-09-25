@@ -44,4 +44,12 @@ class SolutionTest {
                 "02-04", "09-01"))
                 .isEqualTo(27);
     }
+
+    @Test
+    void should_return_correctly_for_test_case5() {
+        assertThat(solution.countDaysTogether(
+                "01-15", "11-12",
+                "01-15", "02-03"))
+                .isEqualTo(20);
+    }
 }
