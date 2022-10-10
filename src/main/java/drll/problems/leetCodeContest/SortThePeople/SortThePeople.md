@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/problems/binary-search/
+ - https://leetcode.com/problems/sort-the-people/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Easy ( Array )
  
 ##### Resume of the problem:
 

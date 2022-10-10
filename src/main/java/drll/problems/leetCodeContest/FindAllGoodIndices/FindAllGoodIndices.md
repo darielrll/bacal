@@ -1,10 +1,10 @@
 ## Link to the problem
  
- - https://leetcode.com/problems/binary-search/
+ - https://leetcode.com/problems/find-all-good-indices/
  
 ##### Difficulty Level (according to Leetcode)
  
- > Easy ( Array | Binary Search )
+ > Medium ( Array )
  
 ##### Resume of the problem:
 

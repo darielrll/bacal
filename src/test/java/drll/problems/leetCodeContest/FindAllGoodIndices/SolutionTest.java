@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem3;
+package drll.problems.leetCodeContest.FindAllGoodIndices;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;
@@ -56,5 +55,17 @@ class SolutionTest {
                 1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,
                 1000000,1000000,1000000,482896,250330,20230,570399,972746,999408}, 12)).
                 isEqualTo(Arrays.asList(14,15,16,17,18,19));
+    }
+
+    @Test
+    void should_return_correctly_for_test_case7() {
+        assertThat(solution.goodIndices(new int[]{8,4,3,5,8,5,10}, 2)).
+                isEqualTo(Arrays.asList(2));
+    }
+
+    @Test
+    void should_return_correctly_for_test_case8() {
+        assertThat(solution.goodIndices(new int[]{478184,863008,716977,921182,182844,350527,541165,881224}, 1)).
+                isEqualTo(Arrays.asList(1,2,3,4,5,6));
     }
 }
