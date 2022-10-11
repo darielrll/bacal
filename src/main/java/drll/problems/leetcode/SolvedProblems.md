@@ -1,5 +1,5 @@
 
-## Resume for 96 Leetcode solved problems
+## Resume for 99 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -7,14 +7,14 @@
 |-------------------------|-----------------|-------------|
 | Dynamic programming(2)  | Trie            | Algebra     |
 | Greedy                  | Stacks          | Math(9)     |
-| Sorting(1)              | Array(52)       |             |
+| Sorting(1)              | Array(54)       |             |
 | Graph Theory            | Linked List(3)  |             |
 | Constructive Algorithms | Tree(5)         |             |
 | Warmup                  |                 |             |
 | Recursion(1)            |                 |             |
 | Implementation(1)       |                 |             |
 | Search                  |                 |             |
-| String(21)              |                 |             |
+| String(22)              |                 |             |
 | Binary Search(1)        |                 |             |
 
 
@@ -118,6 +118,9 @@
 | 94 | [Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/)                                                                                                 | Array               |   Medium   | SOLVED |
 | 95 | [Count Days Spent Together](https://leetcode.com/problems/count-days-spent-together/)                                                                                     | Math                |   Easy     | SOLVED |
 | 96 | [Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/)                                                     | Array               |  Medium    | SOLVED |
+| 97 | [Most Frequent Even Element](https://leetcode.com/problems/most-frequent-even-element/)                                                                                   | Array               |  Easy      | SOLVED |
+| 98 | [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/)                                                                                 | String              |  Medium    | SOLVED |
+| 99 | [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)                                           | Array               |  Medium    | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
