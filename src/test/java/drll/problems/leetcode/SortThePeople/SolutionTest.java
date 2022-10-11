@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.SortThePeople;
+package drll.problems.leetcode.SortThePeople;
 
+import drll.problems.leetcode.SortThePeople.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

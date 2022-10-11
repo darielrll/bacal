@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.FindAllGoodIndices;
+package drll.problems.leetcode.FindAllGoodIndices;
 
 import java.util.ArrayList;
 import java.util.List;

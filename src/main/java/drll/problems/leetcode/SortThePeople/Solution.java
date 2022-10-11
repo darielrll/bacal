@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.SortThePeople;
+package drll.problems.leetcode.SortThePeople;
 
 import java.util.Arrays;
 import java.util.Comparator;

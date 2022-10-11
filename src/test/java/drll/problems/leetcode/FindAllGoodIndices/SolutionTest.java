@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.FindAllGoodIndices;
+package drll.problems.leetcode.FindAllGoodIndices;
 
+import drll.problems.leetcode.FindAllGoodIndices.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
