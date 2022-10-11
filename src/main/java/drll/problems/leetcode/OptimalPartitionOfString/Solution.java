@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.OptimalPartitionOfString;
+package drll.problems.leetcode.OptimalPartitionOfString;
 
 import java.util.HashSet;
 import java.util.Set;

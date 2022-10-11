@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.MaximumMatchingOfPlayersWithTrainers;
+package drll.problems.leetcode.MaximumMatchingOfPlayersWithTrainers;
 
 import java.util.Arrays;
 

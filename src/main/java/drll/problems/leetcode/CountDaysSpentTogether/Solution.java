@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.CountDaysSpentTogether;
+package drll.problems.leetcode.CountDaysSpentTogether;
 
 public class Solution {
     public int countDaysTogether(String arriveAlice, String leaveAlice,

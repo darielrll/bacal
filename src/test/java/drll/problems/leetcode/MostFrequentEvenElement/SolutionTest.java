@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.MostFrequentEvenElement;
+package drll.problems.leetcode.MostFrequentEvenElement;
 
+import drll.problems.leetcode.MostFrequentEvenElement.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

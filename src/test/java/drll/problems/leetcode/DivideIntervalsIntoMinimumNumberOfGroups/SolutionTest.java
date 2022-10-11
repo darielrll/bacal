@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.DivideIntervalsIntoMinimumNumberOfGroups;
+package drll.problems.leetcode.DivideIntervalsIntoMinimumNumberOfGroups;
 
+import drll.problems.leetcode.DivideIntervalsIntoMinimumNumberOfGroups.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

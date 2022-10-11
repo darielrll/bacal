@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.MostFrequentEvenElement;
+package drll.problems.leetcode.MostFrequentEvenElement;
 
 import java.util.HashMap;
 import java.util.Map;

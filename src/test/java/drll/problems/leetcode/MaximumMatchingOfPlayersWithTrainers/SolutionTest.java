@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.MaximumMatchingOfPlayersWithTrainers;
+package drll.problems.leetcode.MaximumMatchingOfPlayersWithTrainers;
 
+import drll.problems.leetcode.MaximumMatchingOfPlayersWithTrainers.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

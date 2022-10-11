@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.OptimalPartitionOfString;
+package drll.problems.leetcode.OptimalPartitionOfString;
 
+import drll.problems.leetcode.OptimalPartitionOfString.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

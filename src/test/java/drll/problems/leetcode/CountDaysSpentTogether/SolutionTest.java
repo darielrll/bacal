@@ -1,5 +1,6 @@
-package drll.problems.leetCodeContest.CountDaysSpentTogether;
+package drll.problems.leetcode.CountDaysSpentTogether;
 
+import drll.problems.leetcode.CountDaysSpentTogether.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
