@@ -104,6 +104,6 @@ In this case, it is impossible to build 3 hotels under the conditions.
 Therefore, the answer is 0.
 
 ##### Notes
-
+ In this link are the test cases: https://github.com/kilian-hu/hackerrank-solutions/tree/master/certificates/problem-solving-intermediate/hotel-construction/test-cases
 
 ## Final result
