@@ -5,14 +5,13 @@ import java.util.Map;
 
 public class Solution {
     public int mostFrequentEven(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i] % 2 == 0){
-                if(map.containsKey(nums[i])){
-                    map.replace(nums[i], map.get(nums[i]) + 1);
-                }
-                else{
-                    map.put(nums[i], 1);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                if (map.containsKey(num)) {
+                    map.replace(num, map.get(num) + 1);
+                } else {
+                    map.put(num, 1);
                 }
             }
         }

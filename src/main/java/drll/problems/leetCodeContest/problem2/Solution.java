@@ -6,8 +6,8 @@ import java.util.Set;
 public class Solution {
     public int partitionString(String s) {
         Set<Character> partition = new HashSet<>();
-        int count = 0;
-        for (int i = 0; i < s.length(); i++) {
+        int count = 1;
+        for (int i = 0, length = s.length(); i < length; i++) {
             Character character = s.charAt(i);
 
             if(partition.contains(character)){
@@ -17,6 +17,6 @@ public class Solution {
 
             partition.add(character);
         }
-        return count + 1;
+        return count;
     }
 }
