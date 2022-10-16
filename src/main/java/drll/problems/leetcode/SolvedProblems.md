@@ -1,5 +1,5 @@
 
-## Resume for 99 Leetcode solved problems
+## Resume for 100 Leetcode solved problems
 
 ### According to leetcode classification*1
 
@@ -14,7 +14,7 @@
 | Recursion(1)            |                 |             |
 | Implementation(1)       |                 |             |
 | Search                  |                 |             |
-| String(22)              |                 |             |
+| String(23)              |                 |             |
 | Binary Search(1)        |                 |             |
 
 
@@ -121,6 +121,7 @@
 | 97 | [Most Frequent Even Element](https://leetcode.com/problems/most-frequent-even-element/)                                                                                   | Array               |  Easy      | SOLVED |
 | 98 | [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/)                                                                                 | String              |  Medium    | SOLVED |
 | 99 | [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)                                           | Array               |  Medium    | SOLVED |
+|100 | [Number of Valid Clock Times](https://leetcode.com/problems/number-of-valid-clock-times/)                                                                                 | String              |  Easy      | SOLVED |
 
 ---
 ###### 1-2: Taking in account only the first related topic for the problem
