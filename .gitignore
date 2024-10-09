@@ -5,6 +5,8 @@
 /out
 /.idea
 *.iml
+# exceptions
+!/build/jacoco/
 
 
 ################
