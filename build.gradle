@@ -5,28 +5,34 @@ plugins {
     id 'com.adarshr.test-logger' version '2.1.1'
 }
 
-group 'walmart.bacal'
+group 'diru.bacal'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 17
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
+ext {
+    junitJupiterVersion = '5.8.2'
+    mockitoVersion = '4.3.1'
+    assertjVersion = '3.22.0'
+}
+
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testImplementation 'org.mockito:mockito-core:4.3.1'
-    testImplementation 'org.assertj:assertj-core:3.22.0'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
 
     // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled true
+        xml.required.set(true)
+        html.required.set(true)
     }
 }
 
