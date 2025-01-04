@@ -1,7 +1,5 @@
 package drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators;
 
-import drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators.PalindromeNumberIterator;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
