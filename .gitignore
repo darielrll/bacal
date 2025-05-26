@@ -9,6 +9,8 @@
 # exceptions
 !build/jacoco/
 !build/jacoco/**/*
+!build/jacocoHtml/
+!build/jacocoHtml/**/*
 
 
 ################

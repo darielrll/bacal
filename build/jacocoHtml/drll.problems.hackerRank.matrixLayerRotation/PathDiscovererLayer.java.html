@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PathDiscovererLayer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.matrixLayerRotation</a> &gt; <span class="el_source">PathDiscovererLayer.java</span></div><h1>PathDiscovererLayer.java</h1><pre class="source lang-java linenums">
+package drll.problems.hackerRank.matrixLayerRotation;
+
+public class PathDiscovererLayer {
+    private final int[][] matrix;
+
+    private int layer;
+    private int direction;
+    private final int[][] pathCalculator;
+    private boolean clockwise;
+    private Point currentPoint;
+
+<span class="fc" id="L13">    public PathDiscovererLayer(int[][] matrix) {</span>
+<span class="fc" id="L14">        this.matrix = matrix;</span>
+
+        /*
+         *              --&gt; anti-clockwise
+         *              &lt;-- clockwise
+         *
+         *               0       1     2     3
+         *            ____________________________
+         * f(y) -&gt; 0  |   1  |   0   | -1 |  0   |
+         *            ----------------------------
+         * c(x) -&gt; 1  |   0  |   1   | 0  |  -1  |
+         *            ----------------------------
+         *            | down | right | up | left |
+         *
+         * */
+<span class="fc" id="L29">        pathCalculator = new int[][]{{1, 0, -1, 0},</span>
+                                      {0, 1, 0, -1}};
+<span class="fc" id="L31">    }</span>
+
+    public void prepareForDiscoverPath(int layer, boolean clockwise) {
+<span class="fc" id="L34">        this.layer = layer;</span>
+<span class="fc" id="L35">        this.clockwise = clockwise;</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(clockwise){</span>
+<span class="fc" id="L37">            direction = 3;</span>
+<span class="fc" id="L38">            currentPoint = new Point(layer + getWith(layer) - 2,</span>
+<span class="fc" id="L39">                                     layer + getLong(layer) - 2);</span>
+        }
+        else{
+<span class="fc" id="L42">            direction = 0;</span>
+<span class="fc" id="L43">            currentPoint = new Point(layer -1, layer -1);</span>
+        }
+<span class="fc" id="L45">    }</span>
+
+    public Point peek(){
+<span class="fc" id="L48">        return currentPoint;</span>
+    }
+
+    public Point next(){
+
+<span class="fc" id="L53">        Point nextPoint = calculateNextPoint();</span>
+
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        while(!pointBelongToLayer(nextPoint)){</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            if(clockwise){</span>
+<span class="fc" id="L57">                direction = (4 - (5 - direction) % 4 ) % 4;</span>
+            }
+            else{
+<span class="fc" id="L60">                direction = (direction + 1) % 4;</span>
+            }
+<span class="fc" id="L62">            nextPoint = calculateNextPoint();</span>
+        }
+<span class="fc" id="L64">        currentPoint = nextPoint;</span>
+<span class="fc" id="L65">        return currentPoint;</span>
+    }
+
+    private boolean pointBelongToLayer(Point point) {
+
+<span class="fc bfc" id="L70" title="All 4 branches covered.">        if(direction == 0  ||  direction == 2){</span>
+            // vertical
+<span class="fc bfc" id="L72" title="All 4 branches covered.">            return point.Y &gt;= layer - 1  &amp;&amp;  point.Y &lt; (layer + getLong(layer) - 1);</span>
+        }
+        else{
+            // horizontal
+<span class="fc bfc" id="L76" title="All 4 branches covered.">            return point.X &gt;= layer - 1  &amp;&amp;  point.X &lt; (layer + getWith(layer) - 1);</span>
+        }
+    }
+
+    private Point calculateNextPoint(){
+<span class="fc" id="L81">        return new Point(currentPoint.X + pathCalculator[1][direction],</span>
+                         currentPoint.Y + pathCalculator[0][direction]);
+    }
+
+    public int calculateLayerPerimeter(int layer) {
+<span class="fc" id="L86">        return 2 * (getWith(layer) - 2 + getLong(layer));</span>
+    }
+
+    private int getLong(int layer){
+<span class="fc" id="L90">        return matrix.length - (layer - 1) * 2;</span>
+    }
+
+    private int getWith(int layer){
+<span class="fc" id="L94">        return matrix[0].length - (layer - 1) * 2;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

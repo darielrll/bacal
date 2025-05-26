@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PrimeIterator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.kFactorization</a> &gt; <span class="el_source">PrimeIterator.java</span></div><h1>PrimeIterator.java</h1><pre class="source lang-java linenums">
+package drll.problems.hackerRank.kFactorization;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrimeIterator{
+
+    private final List&lt;Integer&gt; primeNumbers;
+    private int currentIndex;
+
+<span class="fc" id="L12">    public PrimeIterator() {</span>
+<span class="fc" id="L13">        primeNumbers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L14">        primeNumbers.add(2);</span>
+<span class="fc" id="L15">        primeNumbers.add(3);</span>
+
+<span class="fc" id="L17">        init();</span>
+<span class="fc" id="L18">    }</span>
+
+    public long nextPrimeNumber(){
+<span class="pc bpc" id="L21" title="1 of 4 branches missed.">        if (currentIndex == 0  ||  primeNumbers.size() &lt; currentIndex + 1){</span>
+<span class="fc" id="L22">            currentIndex++;</span>
+<span class="fc" id="L23">            return currentPrimeNumber();</span>
+        }
+<span class="fc" id="L25">        int nextPrimeCandidate = currentPrimeNumber() + 2;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        while (!isPrime(nextPrimeCandidate)){</span>
+<span class="fc" id="L27">            nextPrimeCandidate += 2;</span>
+        }
+<span class="fc" id="L29">        primeNumbers.add(nextPrimeCandidate);</span>
+<span class="fc" id="L30">        currentIndex++;</span>
+<span class="fc" id="L31">        return currentPrimeNumber();</span>
+    }
+
+    public int currentPrimeNumber(){
+<span class="fc" id="L35">        return primeNumbers.get(currentIndex);</span>
+    }
+
+    public void reset(){
+<span class="fc" id="L39">        init();</span>
+<span class="fc" id="L40">    }</span>
+
+    public boolean isPrime(int number){
+<span class="fc bfc" id="L43" title="All 4 branches covered.">        if(number == 2  ||  number == 3){</span>
+<span class="fc" id="L44">            return true;</span>
+        }
+<span class="fc bfc" id="L46" title="All 4 branches covered.">        if(number % 2 == 0  ||  number % 3 == 0){</span>
+<span class="fc" id="L47">            return false;</span>
+        }
+<span class="fc" id="L49">        double sqrt = Math.sqrt(number);</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (sqrt - (int) sqrt == 0){</span>
+<span class="fc" id="L51">            return false;</span>
+        }
+<span class="fc" id="L53">        int nextCandidatePosition = 2;</span>
+<span class="fc" id="L54">        sqrt += 1;</span>
+<span class="fc" id="L55">        int i = 5;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        while(i &lt;= sqrt){</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">            if(number % i == 0){</span>
+<span class="fc" id="L58">                return false;</span>
+            }
+<span class="fc" id="L60">            i += nextCandidatePosition;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if(nextCandidatePosition == 2){</span>
+<span class="fc" id="L62">                nextCandidatePosition = 4;</span>
+            }
+            else {
+<span class="fc" id="L65">                nextCandidatePosition = 2;</span>
+            }
+        }
+<span class="fc" id="L68">        return true;</span>
+    }
+
+    private void init(){
+<span class="fc" id="L72">        currentIndex = 0;</span>
+<span class="fc" id="L73">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

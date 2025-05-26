@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Graph.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.dataStructures.graph</a> &gt; <span class="el_source">Graph.java</span></div><h1>Graph.java</h1><pre class="source lang-java linenums">package drll.dataStructures.graph;
+
+import java.security.InvalidParameterException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+
+public class Graph{
+    private final List&lt;List&lt;Integer&gt;&gt; adjacencyList;
+    private int edgesCount;
+
+<span class="fc" id="L12">    public Graph(int vertex) {</span>
+<span class="fc" id="L13">        adjacencyList = initAdjacencyList(vertex - 1);</span>
+<span class="fc" id="L14">        edgesCount = 0;</span>
+<span class="fc" id="L15">    }</span>
+
+<span class="fc" id="L17">    public Graph(int[][] edges) {</span>
+<span class="fc" id="L18">        int lastVertex = calculateVertexCount(edges);</span>
+<span class="fc" id="L19">        adjacencyList = initAdjacencyList(lastVertex);</span>
+<span class="fc" id="L20">        addEdge(edges);</span>
+<span class="fc" id="L21">    }</span>
+
+    public int vertexCount() {
+<span class="fc" id="L24">        return adjacencyList.size();</span>
+    }
+
+    public int edgeCount() {
+<span class="fc" id="L28">        return edgesCount;</span>
+    }
+
+    public boolean isAdjacent(int v1, int v2) {
+<span class="fc" id="L32">        return adjacencyList.get(v1).contains(v2);</span>
+    }
+
+    public void addEdge(int[][] edges) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(edges == null) {</span>
+<span class="fc" id="L37">            return;</span>
+        }
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        for (int[] edge : edges) {</span>
+<span class="fc" id="L40">            addEdge(edge[0], edge[1]);</span>
+        }
+<span class="fc" id="L42">    }</span>
+
+    public boolean addEdge(int v1, int v2) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if(isNotValidEdge(v1, v2)){</span>
+<span class="nc" id="L46">            riseException();</span>
+        }
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if(isAdjacent(v1, v2)){</span>
+<span class="fc" id="L49">            return false;</span>
+        }
+<span class="fc" id="L51">        adjacencyList.get(v1).add(v2);</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if(v1 != v2){</span>
+<span class="fc" id="L53">            adjacencyList.get(v2).add(v1);</span>
+        }
+<span class="fc" id="L55">        edgesCount++;</span>
+<span class="fc" id="L56">        return true;</span>
+    }
+
+    public boolean removeEdge(int v1, int v2) {
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if(isNotValidEdge(v1, v2)){</span>
+<span class="nc" id="L61">            riseException();</span>
+        }
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (!isAdjacent(v1, v2)) {</span>
+<span class="fc" id="L64">            return false;</span>
+        }
+<span class="fc" id="L66">        adjacencyList.get(v1).remove(Integer.valueOf(v2));</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if(v1 != v2){</span>
+<span class="fc" id="L68">            adjacencyList.get(v2).remove(Integer.valueOf(v1));</span>
+        }
+<span class="fc" id="L70">        edgesCount--;</span>
+<span class="fc" id="L71">        return true;</span>
+    }
+
+    public List&lt;Integer&gt; adjacent(int vertex) {
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        if(isNotValidVertex(vertex)){</span>
+<span class="nc" id="L76">            riseException();</span>
+        }
+<span class="fc" id="L78">        return adjacencyList.get(vertex);</span>
+    }
+
+    public int vertexDegree(int vertex) {
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if(isNotValidVertex(vertex)){</span>
+<span class="nc" id="L83">            riseException();</span>
+        }
+<span class="fc" id="L85">        return adjacencyList.get(vertex).size();</span>
+    }
+
+    public Iterable&lt;Integer&gt; vertex() {
+<span class="fc" id="L89">        return () -&gt; IntStream.range(0, adjacencyList.size()).iterator();</span>
+    }
+
+
+    private boolean isNotValidEdge(int v1, int v2) {
+<span class="pc bpc" id="L94" title="1 of 4 branches missed.">        return isNotValidVertex(v1)  ||  isNotValidVertex(v2);</span>
+    }
+
+    private boolean isNotValidVertex(int vertex) {
+<span class="fc bfc" id="L98" title="All 4 branches covered.">        return vertex &lt; 0 || vertex &gt;= adjacencyList.size();</span>
+    }
+
+    private List&lt;List&lt;Integer&gt;&gt; initAdjacencyList(int vertex) {
+<span class="fc" id="L102">        List&lt;List&lt;Integer&gt;&gt; edgeList = new ArrayList&lt;&gt;(vertex);</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        while (vertex-- &gt;= 0) {</span>
+<span class="fc" id="L104">            edgeList.add(new ArrayList&lt;&gt;());</span>
+        }
+<span class="fc" id="L106">        return edgeList;</span>
+    }
+
+    private int calculateVertexCount(int[][] edges) {
+<span class="fc" id="L110">        int lastVertex = 0;</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        for (int[] edge : edges) {</span>
+<span class="fc" id="L112">            lastVertex = Math.max(lastVertex, Math.max(edge[0], edge[1]));</span>
+        }
+<span class="fc" id="L114">        return lastVertex;</span>
+    }
+
+    private void riseException() {
+<span class="fc" id="L118">        throw new InvalidParameterException(String.format(&quot;Vertex indexes should be &gt;= 0 and &lt;= %s&quot;,</span>
+<span class="fc" id="L119">                adjacencyList.size() - 1));</span>
+    }
+
+    public int addVertex() {
+<span class="fc" id="L123">        adjacencyList.add(new ArrayList&lt;&gt;());</span>
+<span class="fc" id="L124">        return vertexCount() - 1;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

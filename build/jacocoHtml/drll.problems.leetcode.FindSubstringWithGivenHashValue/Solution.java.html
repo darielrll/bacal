@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.FindSubstringWithGivenHashValue</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.FindSubstringWithGivenHashValue;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public String subStrHash(String s, int power, int modulo, int k, int hashValue) {
+<span class="fc" id="L5">        int[] pows = new int[k];</span>
+<span class="fc bfc" id="L6" title="All 2 branches covered.">        for (int i = 0; i &lt; k; i++){</span>
+<span class="fc" id="L7">            pows[i] = power(power, i, modulo);</span>
+        }
+
+<span class="pc bpc" id="L10" title="1 of 2 branches missed.">        for (int i = 0, length = s.length() - k + 1; i &lt; length; i++) {</span>
+<span class="fc" id="L11">            String substring = s.substring(i, i + k);</span>
+
+<span class="fc" id="L13">            int subStringHash = 0;</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            for (int j = 0; j &lt; k; j++) {</span>
+<span class="fc" id="L15">                subStringHash += (substring.charAt(j) - 'a' + 1) * pows[j] % modulo;</span>
+            }
+
+<span class="fc bfc" id="L18" title="All 2 branches covered.">            if(subStringHash % modulo == hashValue){</span>
+<span class="fc" id="L19">                return substring;</span>
+            }
+        }
+<span class="nc" id="L22">        return null;</span>
+    }
+
+    public static int power(int m, int n , int modulo ) {
+<span class="fc" id="L26">        int i = 0;</span>
+<span class="fc" id="L27">        int result = 1;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        while(i++ &lt; n) {</span>
+<span class="fc" id="L29">            result = (result * m) % modulo;</span>
+        }
+<span class="fc" id="L31">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

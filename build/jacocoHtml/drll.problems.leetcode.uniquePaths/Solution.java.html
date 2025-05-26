@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.uniquePaths</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.uniquePaths;
+
+import java.util.Arrays;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public int uniquePaths(int m, int n) {
+<span class="fc" id="L7">        int[][] pathsCount = new int[m][n];</span>
+
+<span class="fc" id="L9">        fillFirstRowCol(pathsCount);</span>
+
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 1; i &lt; pathsCount.length; i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            for (int j = 1; j &lt; pathsCount[0].length; j++) {</span>
+<span class="fc" id="L13">                int upperPathCount = pathsCount[i - 1][j];</span>
+<span class="fc" id="L14">                int leftPathCount = pathsCount[i][j - 1];</span>
+
+<span class="fc" id="L16">                pathsCount[i][j] = upperPathCount + leftPathCount;</span>
+            }
+        }
+
+<span class="fc" id="L20">        return pathsCount[pathsCount.length - 1][pathsCount[0].length - 1];</span>
+    }
+
+    private void fillFirstRowCol(int[][] pathsCount){
+<span class="fc" id="L24">        Arrays.fill(pathsCount[0], 1);</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (int i = 0; i &lt; pathsCount.length; i++) {</span>
+<span class="fc" id="L26">            pathsCount[i][0] = 1;</span>
+        }
+<span class="fc" id="L28">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

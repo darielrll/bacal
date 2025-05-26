@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MinimumCostToSetCookingTime.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.MinimumCostToSetCookingTime</a> &gt; <span class="el_source">MinimumCostToSetCookingTime.java</span></div><h1>MinimumCostToSetCookingTime.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.MinimumCostToSetCookingTime;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L6">public class MinimumCostToSetCookingTime {</span>
+    public int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {
+<span class="fc" id="L8">        List&lt;String&gt; cookTimes = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        if(targetSeconds &lt; 100){</span>
+<span class="fc" id="L10">            cookTimes.add(String.valueOf(targetSeconds));</span>
+        }
+
+<span class="fc" id="L13">        int minutes = targetSeconds / 60;</span>
+<span class="fc" id="L14">        int seconds = targetSeconds % 60;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        if(minutes == 100){</span>
+<span class="fc" id="L16">            minutes--;</span>
+<span class="fc" id="L17">            seconds += 60;</span>
+        }
+        do{
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            String secondsString = seconds &lt; 10 ? &quot;0&quot; + seconds : Integer.toString(seconds);</span>
+<span class="fc" id="L21">            cookTimes.add(String.valueOf(minutes).concat(secondsString));</span>
+
+<span class="fc" id="L23">            minutes--;</span>
+<span class="fc" id="L24">            seconds += 60;</span>
+        }
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        while (minutes &gt;= 0  &amp;&amp;  seconds &lt;= 99);</span>
+
+<span class="fc" id="L28">        int minCostSetTime = Integer.MAX_VALUE;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        for (String time : cookTimes) {</span>
+<span class="fc" id="L30">            int cookTime = getMinCostSetTime(startAt, moveCost, pushCost, time);</span>
+
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            if (cookTime &lt; minCostSetTime) {</span>
+<span class="fc" id="L33">                minCostSetTime = cookTime;</span>
+            }
+<span class="fc" id="L35">        }</span>
+
+<span class="fc" id="L37">        return minCostSetTime;</span>
+    }
+
+    private int getMinCostSetTime(int startAt, int moveCost, int pushCost, String cookTime) {
+<span class="fc" id="L41">        int currentButton = startAt;</span>
+<span class="fc" id="L42">        int minCostSetTime = 0;</span>
+<span class="fc" id="L43">        char[] charArray = cookTime.toCharArray();</span>
+
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (char c : charArray) {</span>
+<span class="fc" id="L46">            int targetButton = Integer.parseInt(String.valueOf(c));</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (currentButton != targetButton) {</span>
+<span class="fc" id="L48">                minCostSetTime += moveCost;</span>
+<span class="fc" id="L49">                currentButton = targetButton;</span>
+            }
+<span class="fc" id="L51">            minCostSetTime += pushCost;</span>
+        }
+
+<span class="fc" id="L54">        return minCostSetTime;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

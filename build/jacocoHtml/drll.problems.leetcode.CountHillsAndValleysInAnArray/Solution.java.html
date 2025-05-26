@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.CountHillsAndValleysInAnArray</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.CountHillsAndValleysInAnArray;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public int countHillValley(int[] nums) {
+<span class="fc" id="L5">        int count = 0;</span>
+
+<span class="fc bfc" id="L7" title="All 2 branches covered.">        for (int i = 1; i &lt; nums.length - 1; i++) {</span>
+<span class="fc bfc" id="L8" title="All 2 branches covered.">            if(isSameValley(nums, i - 1, i)){</span>
+<span class="fc" id="L9">                continue;</span>
+            }
+<span class="fc" id="L11">            int leftNeighbor = nums[i - 1];</span>
+
+<span class="fc" id="L13">            int findRightNeighborPosition = i + 1;</span>
+<span class="fc bfc" id="L14" title="All 4 branches covered.">            while (findRightNeighborPosition &lt; nums.length - 1  &amp;&amp; isSameValley(nums, findRightNeighborPosition, i)){</span>
+<span class="fc" id="L15">                findRightNeighborPosition++;</span>
+            }
+<span class="fc" id="L17">            int rightNeighbor = nums[findRightNeighborPosition];</span>
+
+<span class="fc bfc" id="L19" title="All 4 branches covered.">            if(isHill(leftNeighbor, rightNeighbor, nums[i])  ||  isValley(leftNeighbor, rightNeighbor, nums[i])){</span>
+<span class="fc" id="L20">                count++;</span>
+            }
+        }
+
+<span class="fc" id="L24">        return count;</span>
+    }
+
+    private boolean isValley(int leftNeighbor, int rightNeighbor, int nums) {
+<span class="pc bpc" id="L28" title="1 of 4 branches missed.">        return leftNeighbor &gt; nums &amp;&amp; nums &lt; rightNeighbor;</span>
+    }
+
+    private boolean isHill(int leftNeighbor, int rightNeighbor, int nums) {
+<span class="pc bpc" id="L32" title="1 of 4 branches missed.">        return leftNeighbor &lt; nums &amp;&amp; nums &gt; rightNeighbor;</span>
+    }
+
+    private boolean isSameValley(int[] nums, int findRightNeighborPosition, int i) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        return nums[findRightNeighborPosition] == nums[i];</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

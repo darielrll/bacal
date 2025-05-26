@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.RearrangeCharactersToMakeTargetString</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.RearrangeCharactersToMakeTargetString;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+<span class="fc" id="L8">public class Solution {</span>
+    public int rearrangeCharacters(String s, String target) {
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        if(s.length() &lt; target.length()){</span>
+<span class="fc" id="L11">            return 0;</span>
+        }
+
+<span class="fc" id="L14">        HashMap&lt;Character, Integer&gt; targetCharCount = getCharacterIntegerHashMap(target);</span>
+
+<span class="fc" id="L16">        HashMap&lt;Character, Integer&gt; sCharCount = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int i = 0; i &lt; s.length(); i++) {</span>
+<span class="fc" id="L18">            char charAt = s.charAt(i);</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            if(targetCharCount.containsKey(charAt)){</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                if(sCharCount.containsKey(charAt)){</span>
+<span class="fc" id="L21">                    sCharCount.put(charAt, sCharCount.get(charAt) + 1);</span>
+                }
+                else {
+<span class="fc" id="L24">                    sCharCount.put(charAt, 1);</span>
+                }
+            }
+        }
+
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if(sCharCount.size() != targetCharCount.size()){</span>
+<span class="fc" id="L30">            return 0;</span>
+        }
+
+<span class="fc" id="L33">        int maximumNumber = 1000;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (Map.Entry&lt;Character, Integer&gt; entry : sCharCount.entrySet()) {</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if(maximumNumber &gt; entry.getValue() / targetCharCount.get(entry.getKey())){</span>
+<span class="fc" id="L36">                maximumNumber = entry.getValue() / targetCharCount.get(entry.getKey());</span>
+            }
+<span class="fc" id="L38">        }</span>
+
+<span class="fc" id="L40">        return maximumNumber;</span>
+    }
+
+    private HashMap&lt;Character, Integer&gt; getCharacterIntegerHashMap(String target) {
+<span class="fc" id="L44">        HashMap&lt;Character, Integer&gt; targetCharCount = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int i = 0; i &lt; target.length(); i++) {</span>
+<span class="fc" id="L46">            char charAt = target.charAt(i);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if(targetCharCount.containsKey(charAt)){</span>
+<span class="fc" id="L48">                targetCharCount.put(charAt, targetCharCount.get(charAt) + 1);</span>
+            }
+            else {
+<span class="fc" id="L51">                targetCharCount.put(charAt, 1);</span>
+            }
+        }
+<span class="fc" id="L54">        return targetCharCount;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

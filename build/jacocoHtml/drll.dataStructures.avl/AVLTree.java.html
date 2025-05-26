@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AVLTree.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.dataStructures.avl</a> &gt; <span class="el_source">AVLTree.java</span></div><h1>AVLTree.java</h1><pre class="source lang-java linenums">
+package drll.dataStructures.avl;
+
+public class AVLTree&lt;T extends Comparable&gt; {
+
+    private long count;
+    private AVLNode&lt;T&gt; root;
+
+<span class="fc" id="L9">    public AVLTree() {}</span>
+
+    public long getCount() {
+<span class="fc" id="L12">        return count;</span>
+    }
+
+<span class="fc" id="L15">    protected void equalValueDetected(AVLNode&lt;T&gt; node, T element){}</span>
+<span class="fc" id="L16">    protected void preInsertingInLeftSide(AVLNode&lt;T&gt; node, T element){}</span>
+<span class="fc" id="L17">    protected void preInsertingInRightSide(AVLNode&lt;T&gt; node, T element){}</span>
+<span class="fc" id="L18">    protected void preRotateRight(AVLNode&lt;T&gt; primary){}</span>
+<span class="fc" id="L19">    protected void preRotateLeft(AVLNode&lt;T&gt; primary){}</span>
+
+    public AVLNode&lt;T&gt; getRoot() {
+<span class="fc" id="L22">        return root;</span>
+    }
+
+    public final void add(T element){
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if(element != null){</span>
+<span class="fc" id="L27">            root = add(root, element);</span>
+        }
+<span class="fc" id="L29">    }</span>
+
+    protected AVLNode add(AVLNode&lt;T&gt; node, T element){
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if(node == null){</span>
+<span class="fc" id="L33">            count++;</span>
+<span class="fc" id="L34">            return new AVLNode(element);</span>
+        }
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(element.compareTo(node.getValue()) == 0){</span>
+<span class="fc" id="L37">            equalValueDetected(node, element);</span>
+<span class="fc" id="L38">            return node;</span>
+        }
+        //------------------
+        //-- right branch -- ?++,?
+        //------------------
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        if(element.compareTo(node.getValue()) &gt; 0) {</span>
+<span class="fc" id="L44">            preInsertingInRightSide(node, element);</span>
+<span class="fc" id="L45">            State stateBeforeAdd = recordStateAfterAdd(node.getRight());</span>
+<span class="fc" id="L46">            node.setRight(add(node.getRight(), element));</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if(isBalancedSubTree(stateBeforeAdd, node.getRight())){</span>
+<span class="fc" id="L48">                return node;</span>
+            }
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if (BalanceFactor.BALANCED.equals(node.getBalanceFactor())) {</span>
+<span class="fc" id="L51">                node.setBalanceFactor(BalanceFactor.POSITIVE);</span>
+            }
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            else if (BalanceFactor.NEGATIVE.equals(node.getBalanceFactor())) {</span>
+<span class="fc" id="L54">                node.setBalanceFactor(BalanceFactor.BALANCED);</span>
+            }
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            else if (BalanceFactor.POSITIVE.equals(node.getRight().getBalanceFactor())) {</span>
+<span class="fc" id="L57">                node = rotateLeft(node);</span>
+            }
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">            else if (BalanceFactor.NEGATIVE.equals(node.getRight().getBalanceFactor())) {</span>
+<span class="fc" id="L60">                node = rotateComplexToASide(node, false);</span>
+            }
+<span class="fc" id="L62">        }</span>
+        //-----------------
+        //-- left branch -- ?--,?
+        //-----------------
+        else {
+<span class="fc" id="L67">            preInsertingInLeftSide(node, element);</span>
+<span class="fc" id="L68">            State stateBeforeAdd = recordStateAfterAdd(node.getLeft());</span>
+<span class="fc" id="L69">            node.setLeft(add(node.getLeft(), element));</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">            if(isBalancedSubTree(stateBeforeAdd, node.getLeft())){</span>
+<span class="fc" id="L71">                return node;</span>
+            }
+<span class="fc bfc" id="L73" title="All 2 branches covered.">            if (BalanceFactor.BALANCED.equals(node.getBalanceFactor())) {</span>
+<span class="fc" id="L74">                node.setBalanceFactor(BalanceFactor.NEGATIVE);</span>
+            }
+<span class="fc bfc" id="L76" title="All 2 branches covered.">            else if (BalanceFactor.POSITIVE.equals(node.getBalanceFactor())) {</span>
+<span class="fc" id="L77">                node.setBalanceFactor(BalanceFactor.BALANCED);</span>
+            }
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            else if (BalanceFactor.NEGATIVE.equals(node.getLeft().getBalanceFactor())) {</span>
+<span class="fc" id="L80">                node = rotateRight(node);</span>
+            }
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">            else if (BalanceFactor.POSITIVE.equals(node.getLeft().getBalanceFactor())) {</span>
+<span class="fc" id="L83">                node = rotateComplexToASide(node, true);</span>
+            }
+        }
+<span class="fc" id="L86">        return node;</span>
+    }
+
+    private State recordStateAfterAdd(AVLNode&lt;T&gt; node) {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        return new State(node == null ? null</span>
+<span class="fc" id="L91">                : node.getBalanceFactor());</span>
+    }
+
+    private boolean isBalancedSubTree(State stateBeforeAdd, AVLNode node){
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        if(stateBeforeAdd.balanceFactor == null){</span>
+            // means that a leaf was added
+<span class="fc" id="L97">            return false;</span>
+        }
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        if(stateBeforeAdd.balanceFactor.equals(node.getBalanceFactor())){</span>
+            // means that the subtree do not suffer variations in height
+<span class="fc" id="L101">            return true;</span>
+        }
+        // means that the subtree suffer variations in height but now is balanced
+<span class="fc" id="L104">        return node.getBalanceFactor().equals(BalanceFactor.BALANCED);</span>
+        // means that the subtree suffer variations in height and the father
+        // subtree needs to be balanced
+    }
+
+    private AVLNode&lt;T&gt; rotateLeft(AVLNode&lt;T&gt; primary) {
+<span class="fc" id="L110">        preRotateLeft(primary);</span>
+
+<span class="fc" id="L112">        AVLNode&lt;T&gt; secondary = primary.getRight();</span>
+<span class="fc" id="L113">        primary.setRight(secondary.getLeft());</span>
+<span class="fc" id="L114">        secondary.setLeft(primary);</span>
+
+<span class="fc" id="L116">        primary.setBalanceFactor(BalanceFactor.BALANCED);</span>
+<span class="fc" id="L117">        secondary.setBalanceFactor(BalanceFactor.BALANCED);</span>
+
+<span class="fc" id="L119">        return secondary;</span>
+    }
+
+    private AVLNode&lt;T&gt; rotateRight(AVLNode&lt;T&gt; primary) {
+<span class="fc" id="L123">        preRotateRight(primary);</span>
+
+<span class="fc" id="L125">        AVLNode&lt;T&gt; secondary = primary.getLeft();</span>
+<span class="fc" id="L126">        primary.setLeft(secondary.getRight());</span>
+<span class="fc" id="L127">        secondary.setRight(primary);</span>
+
+<span class="fc" id="L129">        primary.setBalanceFactor(BalanceFactor.BALANCED);</span>
+<span class="fc" id="L130">        secondary.setBalanceFactor(BalanceFactor.BALANCED);</span>
+
+<span class="fc" id="L132">        return secondary;</span>
+    }
+
+    private AVLNode&lt;T&gt; rotateComplexToASide(AVLNode&lt;T&gt; node, boolean toRightSide){
+<span class="fc bfc" id="L136" title="All 2 branches covered.">        BalanceFactor keyBalanceFactor = toRightSide ? node.getLeft().getRight().getBalanceFactor()</span>
+<span class="fc" id="L137">                                                    : node.getRight().getLeft().getBalanceFactor();</span>
+
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        if (toRightSide){</span>
+<span class="fc" id="L140">            node.setLeft(rotateLeft(node.getLeft()));</span>
+<span class="fc" id="L141">            node = rotateRight(node);</span>
+        }
+        else{
+<span class="fc" id="L144">            node.setRight(rotateRight(node.getRight()));</span>
+<span class="fc" id="L145">            node = rotateLeft(node);</span>
+        }
+
+<span class="fc bfc" id="L148" title="All 2 branches covered.">        if(BalanceFactor.POSITIVE.equals(keyBalanceFactor)){</span>
+<span class="fc" id="L149">            node.getLeft().setBalanceFactor(BalanceFactor.NEGATIVE);</span>
+        }
+<span class="fc bfc" id="L151" title="All 2 branches covered.">        else if(BalanceFactor.NEGATIVE.equals(keyBalanceFactor)){</span>
+<span class="fc" id="L152">            node.getRight().setBalanceFactor(BalanceFactor.POSITIVE);</span>
+        }
+
+<span class="fc" id="L155">        return node;</span>
+    }
+
+    static class State{
+        final BalanceFactor balanceFactor;
+
+<span class="fc" id="L161">        public State(BalanceFactor bfBeforeAdd) {</span>
+<span class="fc" id="L162">            this.balanceFactor = bfBeforeAdd;</span>
+<span class="fc" id="L163">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

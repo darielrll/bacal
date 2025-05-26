@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bonetrousle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.bonetrousle</a> &gt; <span class="el_source">Bonetrousle.java</span></div><h1>Bonetrousle.java</h1><pre class="source lang-java linenums">
+package drll.problems.hackerRank.bonetrousle;
+
+import java.io.*;
+import java.util.*;
+
+<span class="nc" id="L7">public class Bonetrousle {</span>
+    /*
+     * Complete the bonetrousle function below.
+     */
+    static long[] bonetrousle(long sticksToBuy, long boxesForSale, int numberOfBoxesToBuy) {
+
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if( demandIsNotSupported(sticksToBuy, boxesForSale) ){</span>
+<span class="fc" id="L14">            return notValidCombination();</span>
+        }
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        if(buyOnlyOneBox(numberOfBoxesToBuy)) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            if(existBoxWithSticksToBuy(sticksToBuy, boxesForSale)) {</span>
+<span class="fc" id="L18">                return new long[]{sticksToBuy};</span>
+            }
+            else {
+<span class="fc" id="L21">                return notValidCombination();</span>
+            }
+        }
+
+<span class="fc" id="L25">        long currentSummation = 0L;</span>
+<span class="fc" id="L26">        List&lt;Integer&gt; tentativeBoxesToBuy = new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        for (int i = 1; i &lt;= boxesForSale; i++) {</span>
+<span class="fc" id="L28">            currentSummation += i;</span>
+<span class="fc" id="L29">            tentativeBoxesToBuy.add(i);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            if(currentSummation &gt;= sticksToBuy){</span>
+<span class="fc" id="L31">                break;</span>
+            }
+        }
+
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if(tentativeBoxesNotSupportDemand(sticksToBuy, numberOfBoxesToBuy, currentSummation, tentativeBoxesToBuy)) {</span>
+<span class="fc" id="L36">            return notValidCombination();</span>
+        }
+
+<span class="fc" id="L39">        int removedBox = (int) (currentSummation - sticksToBuy);</span>
+<span class="fc" id="L40">        long[] boxesToBuy = new long[numberOfBoxesToBuy];</span>
+<span class="fc" id="L41">        boxesToBuy[boxesToBuy.length - 1] = 0L;</span>
+
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        for (int i = 0, positionCovered = 0; i &lt; tentativeBoxesToBuy.size(); i++) {</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">            if(tentativeBoxesToBuy.get(i) == removedBox) {</span>
+<span class="fc" id="L45">                continue;</span>
+            }
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if(positionCovered &lt; boxesToBuy.length - 1) {</span>
+<span class="fc" id="L48">                boxesToBuy[positionCovered] = Long.valueOf(tentativeBoxesToBuy.get(i));</span>
+<span class="fc" id="L49">                positionCovered++;</span>
+            }
+            else {
+<span class="fc" id="L52">                boxesToBuy[boxesToBuy.length - 1] += tentativeBoxesToBuy.get(i);</span>
+            }
+        }
+
+<span class="fc" id="L56">        return boxesToBuy;</span>
+    }
+
+    private static boolean tentativeBoxesNotSupportDemand(long sticksToBuy, int numberOfBoxesToBuy,
+                                                        Long summation, List&lt;Integer&gt; tentativeBoxesToBuy) {
+        /*
+         * If summation is different from sticksToBuy means that is need to remove one
+         * of the tentative boxes, and the box to remove is the box resulting from the
+         * difference summation - sticksToBuy, so, there is no possible combination when
+         * tentative boxes - 1 is less than the number of boxes to buy.
+         */
+<span class="fc bfc" id="L67" title="All 4 branches covered.">        return summation != sticksToBuy  &amp;&amp;  tentativeBoxesToBuy.size() - 1 &lt; numberOfBoxesToBuy;</span>
+    }
+
+    private static boolean demandIsNotSupported(long sticksToBuy, long boxesForSale) {
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        return sticksToBuy &gt; availableSticksToBuy(boxesForSale);</span>
+    }
+
+    private static boolean existBoxWithSticksToBuy(long sticksToBuy, long boxesForSale) {
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        return sticksToBuy &lt;= boxesForSale;</span>
+    }
+
+    private static boolean buyOnlyOneBox(int numberOfBoxesToBuy) {
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        return numberOfBoxesToBuy == 1;</span>
+    }
+
+    private static long[] notValidCombination() {
+<span class="fc" id="L83">        return new long[]{ -1L};</span>
+    }
+
+    private static long availableSticksToBuy(long boxesForSale) {
+<span class="fc" id="L87">        return boxesForSale * ( boxesForSale + 1 ) / 2;</span>
+    }
+
+<span class="fc" id="L90">    private static final Scanner scanner = new Scanner(System.in);</span>
+
+    public static void main(String[] args) throws IOException {
+<span class="nc" id="L93">        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(&quot;OUTPUT_PATH&quot;)));</span>
+
+<span class="nc" id="L95">        int t = Integer.parseInt(scanner.nextLine().trim());</span>
+
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        for (int tItr = 0; tItr &lt; t; tItr++) {</span>
+<span class="nc" id="L98">            String[] nkb = scanner.nextLine().split(&quot; &quot;);</span>
+
+<span class="nc" id="L100">            long n = Long.parseLong(nkb[0].trim());</span>
+
+<span class="nc" id="L102">            long k = Long.parseLong(nkb[1].trim());</span>
+
+<span class="nc" id="L104">            int b = Integer.parseInt(nkb[2].trim());</span>
+
+<span class="nc" id="L106">            long[] result = bonetrousle(n, k, b);</span>
+
+<span class="nc bnc" id="L108" title="All 2 branches missed.">            if(result.length == 0){</span>
+<span class="nc" id="L109">                bufferedWriter.write(&quot;-1&quot;);</span>
+            }
+            else {
+<span class="nc bnc" id="L112" title="All 2 branches missed.">                for (int resultItr = 0; resultItr &lt; result.length; resultItr++) {</span>
+<span class="nc" id="L113">                    bufferedWriter.write(String.valueOf(result[resultItr]));</span>
+
+<span class="nc bnc" id="L115" title="All 2 branches missed.">                    if (resultItr != result.length - 1) {</span>
+<span class="nc" id="L116">                        bufferedWriter.write(&quot; &quot;);</span>
+                    }
+                }
+            }
+
+<span class="nc" id="L121">            bufferedWriter.newLine();</span>
+        }
+
+<span class="nc" id="L124">        bufferedWriter.close();</span>
+<span class="nc" id="L125">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

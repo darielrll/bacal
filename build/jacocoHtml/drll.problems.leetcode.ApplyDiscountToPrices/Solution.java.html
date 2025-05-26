@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.ApplyDiscountToPrices</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.ApplyDiscountToPrices;
+
+import java.text.DecimalFormat;
+
+<span class="nc" id="L5">public class Solution {</span>
+    public String discountPrices(String sentence, int discount) {
+<span class="nc" id="L7">        StringBuffer buffer = new StringBuffer();</span>
+
+<span class="nc" id="L9">        String[] prices = sentence.split(&quot; &quot;);</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">        for (int i = 0; i &lt; prices.length; i++) {</span>
+<span class="nc" id="L11">            String priceString = prices[i];</span>
+<span class="nc bnc" id="L12" title="All 2 branches missed.">            if(isValidPrice(priceString)){</span>
+<span class="nc" id="L13">                double price = Double.parseDouble(priceString.substring(1));</span>
+<span class="nc" id="L14">                price = price - price * discount / 100;</span>
+<span class="nc" id="L15">                DecimalFormat format1 = new DecimalFormat(&quot;0.00&quot;);</span>
+<span class="nc" id="L16">                String format = format1.format(price);</span>
+<span class="nc" id="L17">                buffer.append(&quot;$&quot;);</span>
+<span class="nc" id="L18">                buffer.append(format);</span>
+<span class="nc" id="L19">            }</span>
+            else{
+<span class="nc" id="L21">                buffer.append(priceString);</span>
+            }
+<span class="nc bnc" id="L23" title="All 2 branches missed.">            if(i &lt; prices.length - 1){</span>
+<span class="nc" id="L24">                buffer.append(&quot; &quot;);</span>
+            }
+        }
+
+<span class="nc" id="L28">        return buffer.toString();</span>
+    }
+
+    private boolean isValidPrice(String priceString) {
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if(priceString.startsWith(&quot;$&quot;)){</span>
+            try{
+<span class="nc" id="L34">                Double.parseDouble(priceString.substring(1));</span>
+<span class="nc" id="L35">                return true;</span>
+            }
+<span class="nc" id="L37">            catch (Exception e){</span>
+<span class="nc" id="L38">                return false;</span>
+            }
+        }
+<span class="nc" id="L41">        return false;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

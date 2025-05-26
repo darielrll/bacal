@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LargestRectangle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.largestRectangle</a> &gt; <span class="el_source">LargestRectangle.java</span></div><h1>LargestRectangle.java</h1><pre class="source lang-java linenums">
+package drll.problems.hackerRank.largestRectangle;
+
+import java.io.*;
+import java.util.*;
+
+<span class="nc" id="L7">public class LargestRectangle {</span>
+
+    // Complete the largestRectangle function below.
+    static long largestRectangle(int[] h) {
+
+<span class="fc" id="L12">        long largestArea = 0;</span>
+
+<span class="fc" id="L14">        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        for (int i = 0; i &lt; h.length; i++) {</span>
+<span class="fc bfc" id="L17" title="All 4 branches covered.">            if (stack.isEmpty()  ||  h[stack.peek()] &lt; h[i]){</span>
+<span class="fc" id="L18">                stack.push(i);</span>
+            } else {
+<span class="fc" id="L20">                int lastTakenOutPosition = stack.pop();</span>
+<span class="fc bfc" id="L21" title="All 4 branches covered.">                while (!stack.isEmpty()  &amp;&amp;  h[stack.peek()] &gt; h[i]){</span>
+<span class="fc" id="L22">                    long area = (long) h[stack.peek()] * (i - stack.peek());</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">                    if (area &gt; largestArea){</span>
+<span class="fc" id="L24">                        largestArea = area;</span>
+                    }
+<span class="fc" id="L26">                    lastTakenOutPosition = stack.pop();</span>
+<span class="fc" id="L27">                }</span>
+<span class="fc" id="L28">                h[lastTakenOutPosition] = h[i];</span>
+<span class="fc" id="L29">                stack.push(lastTakenOutPosition);</span>
+<span class="fc" id="L30">                long area = (long) h[lastTakenOutPosition] * (i - lastTakenOutPosition + 1);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">                if (area &gt; largestArea){</span>
+<span class="fc" id="L32">                    largestArea = area;</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (stack.size() &gt; 1) {</span>
+<span class="fc" id="L37">            int endPosition = stack.pop();</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            if (h[endPosition] &gt; largestArea) {</span>
+<span class="fc" id="L39">                largestArea = h[endPosition];</span>
+            }
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            while (!stack.isEmpty()){</span>
+<span class="fc" id="L42">                long area = (long) h[stack.peek()] * (endPosition - stack.peek() + 1);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">                if (area &gt; largestArea) {</span>
+<span class="fc" id="L44">                    largestArea = area;</span>
+                }
+<span class="fc" id="L46">                stack.pop();</span>
+<span class="fc" id="L47">            }</span>
+        }
+
+<span class="fc" id="L50">        return largestArea;</span>
+    }
+
+<span class="fc" id="L53">    private static final Scanner scanner = new Scanner(System.in);</span>
+
+    public static void main(String[] args) throws IOException {
+<span class="nc" id="L56">        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(&quot;OUTPUT_PATH&quot;)));</span>
+
+<span class="nc" id="L58">        int n = scanner.nextInt();</span>
+<span class="nc" id="L59">        scanner.skip(&quot;(\r\n|[\n\r\u2028\u2029\u0085])?&quot;);</span>
+
+<span class="nc" id="L61">        int[] h = new int[n];</span>
+
+<span class="nc" id="L63">        String[] hItems = scanner.nextLine().split(&quot; &quot;);</span>
+<span class="nc" id="L64">        scanner.skip(&quot;(\r\n|[\n\r\u2028\u2029\u0085])?&quot;);</span>
+
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="nc" id="L67">            int hItem = Integer.parseInt(hItems[i]);</span>
+<span class="nc" id="L68">            h[i] = hItem;</span>
+        }
+
+<span class="nc" id="L71">        long result = largestRectangle(h);</span>
+
+<span class="nc" id="L73">        bufferedWriter.write(String.valueOf(result));</span>
+<span class="nc" id="L74">        bufferedWriter.newLine();</span>
+
+<span class="nc" id="L76">        bufferedWriter.close();</span>
+
+<span class="nc" id="L78">        scanner.close();</span>
+<span class="nc" id="L79">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
