@@ -1,5 +1,12 @@
+
+`Codacy`
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/59718005b743430ab2c6e4ac34344586)](https://app.codacy.com/gh/darielrll/bacal/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/59718005b743430ab2c6e4ac34344586)](https://app.codacy.com/gh/darielrll/bacal/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
+`Sonar`
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=darielrll_bacal&metric=coverage)](https://sonarcloud.io/summary/new_code?id=darielrll_bacal)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=darielrll_bacal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=darielrll_bacal)
+
 # Bacal
 
 
