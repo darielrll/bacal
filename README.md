@@ -1,4 +1,4 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=darielrll/bacal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=darielrll/bacal)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=darielrll_bacal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=darielrll_bacal)
 # Bacal
 
 
