@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.DesignANumberContainerSystem</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.DesignANumberContainerSystem;
+
+import java.util.HashMap;
+import java.util.PriorityQueue;
+
+<span class="fc" id="L6">public class Solution {</span>
+    public Object[] testNumberContainer(String[] instructions, int[][] parameters) {
+<span class="fc" id="L8">        NumberContainers numberContainers = new NumberContainers();</span>
+<span class="fc" id="L9">        Object[] response = new Object[instructions.length];</span>
+<span class="fc" id="L10">        response[0] = null;</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 1; i &lt; instructions.length; i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            if (&quot;find&quot;.equals(instructions[i])) {</span>
+<span class="fc" id="L13">                response[i] = numberContainers.find(parameters[i][0]);</span>
+            } else {
+<span class="fc" id="L15">                numberContainers.change(parameters[i][0], parameters[i][1]);</span>
+<span class="fc" id="L16">                response[i] = null;</span>
+            }
+        }
+<span class="fc" id="L19">        return response;</span>
+    }
+}
+
+class NumberContainers {
+    private final HashMap&lt;Integer, Integer&gt; indexMap;
+    private final HashMap&lt;Integer, PriorityQueue&lt;Integer&gt;&gt; numberMap;
+
+<span class="fc" id="L27">    public NumberContainers() {</span>
+<span class="fc" id="L28">        indexMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L29">        numberMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L30">    }</span>
+
+    public int find(int number) {
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if(numberMap.containsKey(number)){</span>
+<span class="fc" id="L34">            return numberMap.get(number).peek();</span>
+        }
+<span class="fc" id="L36">        return -1;</span>
+    }
+
+    public void change(int index, int number) {
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if(indexMap.containsKey(index)){</span>
+<span class="fc" id="L41">            replaceIndex(index, number);</span>
+        }
+        else {
+<span class="fc" id="L44">            addNewIndex(index, number);</span>
+        }
+<span class="fc" id="L46">    }</span>
+
+    private void addNewIndex(int index, int number) {
+<span class="fc" id="L49">        PriorityQueue&lt;Integer&gt; indexes = getIntegerPriorityQueue(number);</span>
+<span class="fc" id="L50">        indexes.add(index);</span>
+<span class="fc" id="L51">        numberMap.putIfAbsent(number, indexes);</span>
+<span class="fc" id="L52">        indexMap.put(index, number);</span>
+<span class="fc" id="L53">    }</span>
+
+    private void replaceIndex(int index, int number) {
+<span class="fc" id="L56">        removeIndexFromNumber(index);</span>
+<span class="fc" id="L57">        updatePairNumberIndex(index, number);</span>
+
+<span class="fc" id="L59">        indexMap.replace(index, number);</span>
+<span class="fc" id="L60">    }</span>
+
+    private void updatePairNumberIndex(int index, int number) {
+<span class="fc" id="L63">        PriorityQueue&lt;Integer&gt; indexes = getIntegerPriorityQueue(number);</span>
+
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if(numberMap.containsKey(number)){</span>
+<span class="fc" id="L66">            indexes.remove(index);</span>
+        }
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        if(!indexes.contains(index)){</span>
+<span class="fc" id="L69">            indexes.add(index);</span>
+        }
+
+<span class="fc" id="L72">        numberMap.putIfAbsent(number, indexes);</span>
+<span class="fc" id="L73">    }</span>
+
+    private void removeIndexFromNumber(int index) {
+<span class="fc" id="L76">        Integer numberToBeReplaced = indexMap.get(index);</span>
+<span class="fc" id="L77">        PriorityQueue&lt;Integer&gt; indexes = numberMap.get(numberToBeReplaced);</span>
+<span class="fc" id="L78">        indexes.remove(index);</span>
+
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (indexes.isEmpty()){</span>
+<span class="fc" id="L81">            numberMap.remove(numberToBeReplaced);</span>
+        }
+        else {
+<span class="fc" id="L84">            numberMap.replace(numberToBeReplaced, indexes);</span>
+        }
+<span class="fc" id="L86">    }</span>
+
+    private PriorityQueue&lt;Integer&gt; getIntegerPriorityQueue(int number) {
+<span class="fc bfc" id="L89" title="All 2 branches covered.">        return numberMap.containsKey(number)</span>
+<span class="fc" id="L90">                ? numberMap.get(number)</span>
+<span class="fc" id="L91">                : new PriorityQueue&lt;&gt;();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

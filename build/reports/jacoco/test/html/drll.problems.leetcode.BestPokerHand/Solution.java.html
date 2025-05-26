@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.BestPokerHand</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.BestPokerHand;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L6">public class Solution {</span>
+    public String bestHand(int[] ranks, char[] suits) {
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        if(flush(suits)){</span>
+<span class="fc" id="L9">            return &quot;Flush&quot;;</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        } else if (theSameOfAKind(ranks, 3)) {</span>
+<span class="fc" id="L11">            return &quot;Three of a Kind&quot;;</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        } else if (theSameOfAKind(ranks, 2)) {</span>
+<span class="fc" id="L13">            return &quot;Pair&quot;;</span>
+        }
+<span class="nc" id="L15">        return &quot;High Card&quot;;</span>
+    }
+
+    private boolean flush(char[] suits) {
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        for (int i = 1; i &lt; suits.length; i++) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            if(suits[i - 1] != suits[i]){</span>
+<span class="fc" id="L21">                return false;</span>
+            }
+        }
+<span class="fc" id="L24">        return true;</span>
+    }
+
+    private boolean theSameOfAKind(int[] ranks, int count) {
+<span class="fc" id="L28">        HashMap&lt;Integer, Integer&gt; ranksCount = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        for (int currentRank : ranks) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            if (ranksCount.containsKey(currentRank)) {</span>
+<span class="fc" id="L31">                ranksCount.replace(currentRank, ranksCount.get(currentRank) + 1);</span>
+            } else {
+<span class="fc" id="L33">                ranksCount.put(currentRank, 1);</span>
+            }
+        }
+
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (Map.Entry&lt;Integer, Integer&gt; entry : ranksCount.entrySet()){</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            if(entry.getValue() &gt;= count){</span>
+<span class="fc" id="L39">                return true;</span>
+            }
+<span class="fc" id="L41">        }</span>
+<span class="fc" id="L42">        return false;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

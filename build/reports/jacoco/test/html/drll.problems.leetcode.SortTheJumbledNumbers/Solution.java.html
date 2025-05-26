@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.SortTheJumbledNumbers</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.SortTheJumbledNumbers;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public int[] sortJumbled(int[] mapping, int[] nums) {
+<span class="fc" id="L5">        int[] shuffledDecimals = shuffledDecimals(mapping, nums);</span>
+<span class="fc" id="L6">        return mergeSortJumbled(shuffledDecimals, nums);</span>
+    }
+
+    private int[] mergeSortJumbled(int[] shuffledDecimals, int[] nums){
+<span class="fc" id="L10">        return mergeSort(shuffledDecimals, nums, 0, shuffledDecimals.length - 1)[1];</span>
+    }
+
+    private int[][] mergeSort(int[] shuffledDecimals, int[] nums, int start, int end) {
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if(start == end){</span>
+<span class="fc" id="L15">            return new int[][]{</span>
+                    new int[]{shuffledDecimals[start]},
+                    new int[]{nums[start]}
+            };
+        }
+<span class="fc" id="L20">        int middle = (start + end) / 2;</span>
+<span class="fc" id="L21">        int[][] leftSide = mergeSort(shuffledDecimals, nums, start, middle);</span>
+<span class="fc" id="L22">        int[][] rightSide = mergeSort(shuffledDecimals, nums,middle + 1, end);</span>
+<span class="fc" id="L23">        return merge(leftSide, rightSide);</span>
+    }
+
+    private int[][] merge(int[][] leftSide, int[][] rightSide) {
+<span class="fc" id="L27">        int[][] ordered = new int[2][leftSide[0].length + rightSide[0].length];</span>
+
+<span class="fc" id="L29">        int pointLeft = 0;</span>
+<span class="fc" id="L30">        int pointRight = 0;</span>
+<span class="fc" id="L31">        int pointOrdered = 0;</span>
+
+<span class="pc bpc" id="L33" title="1 of 4 branches missed.">        while(pointLeft &lt; leftSide[0].length  &amp;&amp;  pointRight &lt; rightSide[0].length){</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">            if (leftSide[0][pointLeft] &lt;= rightSide[0][pointRight]) {</span>
+<span class="fc" id="L35">                ordered[0][pointOrdered] = leftSide[0][pointLeft];</span>
+<span class="fc" id="L36">                ordered[1][pointOrdered] = leftSide[1][pointLeft];</span>
+<span class="fc" id="L37">                pointLeft++;</span>
+            }
+            else{
+<span class="fc" id="L40">                ordered[0][pointOrdered] = rightSide[0][pointRight];</span>
+<span class="fc" id="L41">                ordered[1][pointOrdered] = rightSide[1][pointRight];</span>
+<span class="fc" id="L42">                pointRight++;</span>
+            }
+<span class="fc" id="L44">            pointOrdered++;</span>
+        }
+
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if(pointLeft &lt; leftSide[0].length){</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            for (int i = pointLeft; i &lt; leftSide[0].length; i++) {</span>
+<span class="fc" id="L49">                ordered[0][pointOrdered] = leftSide[0][i];</span>
+<span class="fc" id="L50">                ordered[1][pointOrdered] = leftSide[1][i];</span>
+<span class="fc" id="L51">                pointOrdered++;</span>
+            }
+        }
+        else{
+<span class="nc bnc" id="L55" title="All 2 branches missed.">            for (int i = pointRight; i &lt; rightSide[0].length; i++) {</span>
+<span class="nc" id="L56">                ordered[0][pointOrdered] = rightSide[0][i];</span>
+<span class="nc" id="L57">                ordered[1][pointOrdered] = rightSide[1][i];</span>
+<span class="nc" id="L58">                pointOrdered++;</span>
+            }
+        }
+
+<span class="fc" id="L62">        return ordered;</span>
+    }
+
+    public int[] shuffledDecimals(int[] mapping, int[] nums){
+<span class="fc" id="L66">        int[] shuffledDecimals = new int[nums.length];</span>
+
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        for (int i = 0; i &lt; nums.length; i++) {</span>
+<span class="fc" id="L69">            shuffledDecimals[i] = convertToShuffled(mapping, nums[i]);</span>
+        }
+
+<span class="fc" id="L72">        return shuffledDecimals;</span>
+    }
+
+    private int convertToShuffled(int[] mapping, int num) {
+<span class="fc" id="L76">        char[] numString = String.valueOf(num).toCharArray();</span>
+<span class="fc" id="L77">        StringBuilder builder = new StringBuilder();</span>
+
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        for (char c : numString) {</span>
+<span class="fc" id="L80">            builder.append(mapping[Integer.parseInt(String.valueOf(c))]);</span>
+        }
+
+<span class="fc" id="L83">        return Integer.parseInt(builder.toString());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

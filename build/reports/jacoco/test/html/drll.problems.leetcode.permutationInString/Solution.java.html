@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.permutationInString</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.permutationInString;
+
+import java.util.HashMap;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public boolean checkInclusion(String s1, String s2) {
+<span class="fc bfc" id="L7" title="All 2 branches covered.">        if(s1.length() &gt; s2.length()){</span>
+<span class="fc" id="L8">            return false;</span>
+        }
+<span class="fc" id="L10">        final HashMap&lt;Character, Integer&gt; s1Characters = getCharacterIntegerHashMap(s1, 0 , s1.length() - 1);</span>
+<span class="fc" id="L11">        s2 += '*';</span>
+<span class="fc" id="L12">        final boolean[] includedCharacters = new boolean[s2.length()];</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 0, length = s2.length(); i &lt; length; i++) {</span>
+<span class="fc" id="L14">            includedCharacters[i] = s1Characters.containsKey(s2.charAt(i));</span>
+        }
+
+<span class="fc" id="L17">        int s1PermutationLength = 0;</span>
+<span class="fc" id="L18">        int i = 0;</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        while (i &lt; includedCharacters.length) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            if(includedCharacters[i]){</span>
+<span class="fc" id="L21">                s1PermutationLength++;</span>
+            }
+            else{
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                if(s1PermutationLength &gt;= s1.length()){</span>
+<span class="fc" id="L25">                    int s2startFinding = i - s1PermutationLength;</span>
+<span class="fc" id="L26">                    HashMap&lt;Character, Integer&gt; rollingHashMap = getCharacterIntegerHashMap(s2, s2startFinding, s2startFinding + s1.length() - 1);</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                    while (s2startFinding &lt;= i - s1.length()) {</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">                        if(s1Characters.equals(rollingHashMap)){</span>
+<span class="fc" id="L29">                            return true;</span>
+                        }
+<span class="fc" id="L31">                        removeRollingCharacter(rollingHashMap, s2.charAt(s2startFinding));</span>
+<span class="fc" id="L32">                        addRollingCharacter(rollingHashMap, s2.charAt(s2startFinding + s1.length()));</span>
+<span class="fc" id="L33">                        s2startFinding++;</span>
+                    }
+<span class="fc" id="L35">                }</span>
+                else {
+<span class="fc" id="L37">                    s1PermutationLength = 0;</span>
+                }
+            }
+<span class="fc" id="L40">            i++;</span>
+        }
+<span class="fc" id="L42">        return false;</span>
+    }
+
+    private void addRollingCharacter(HashMap&lt;Character, Integer&gt; rollingHashMap, Character charToInclude) {
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        rollingHashMap.put(charToInclude, rollingHashMap.containsKey(charToInclude)</span>
+<span class="fc" id="L47">                ? rollingHashMap.get(charToInclude) + 1</span>
+<span class="fc" id="L48">                : 1);</span>
+<span class="fc" id="L49">    }</span>
+
+    private void removeRollingCharacter(HashMap&lt;Character, Integer&gt; rollingHashMap, Character charToExclude) {
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (rollingHashMap.get(charToExclude) == 1) {</span>
+<span class="fc" id="L53">            rollingHashMap.remove(charToExclude);</span>
+        } else {
+<span class="fc" id="L55">            rollingHashMap.put(charToExclude, rollingHashMap.get(charToExclude) - 1);</span>
+        }
+<span class="fc" id="L57">    }</span>
+
+    private HashMap&lt;Character, Integer&gt; getCharacterIntegerHashMap(String s1, int start, int endIncluded) {
+<span class="fc" id="L60">        HashMap&lt;Character, Integer&gt; s1Characters = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        for (int i = start; i &lt;= endIncluded; i++) {</span>
+<span class="fc" id="L62">            addRollingCharacter(s1Characters, s1.charAt(i));</span>
+        }
+<span class="fc" id="L64">        return s1Characters;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

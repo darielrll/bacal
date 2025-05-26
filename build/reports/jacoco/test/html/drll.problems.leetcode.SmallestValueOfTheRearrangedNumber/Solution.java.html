@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.SmallestValueOfTheRearrangedNumber</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.SmallestValueOfTheRearrangedNumber;
+
+import java.util.Arrays;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public long smallestNumber(long num) {
+<span class="fc" id="L7">        boolean negative = false;</span>
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        if(num &lt; 0){</span>
+<span class="fc" id="L9">            num *= -1;</span>
+<span class="fc" id="L10">            negative = true;</span>
+        }
+<span class="fc" id="L12">        char[] numberCharacters = String.valueOf(num).toCharArray();</span>
+<span class="fc" id="L13">        int[] digits = new int[numberCharacters.length];</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        for (int i = 0; i &lt; numberCharacters.length; i++) {</span>
+<span class="fc" id="L15">            digits[i] = Integer.parseInt(String.valueOf(numberCharacters[i]));</span>
+        }
+<span class="fc" id="L17">        Arrays.sort(digits);</span>
+
+<span class="fc" id="L19">        StringBuilder number = new StringBuilder();</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if(negative){</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            for (int i = digits.length - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L22">                number.append(digits[i]);</span>
+            }
+<span class="fc" id="L24">            return -1 * Long.parseLong(number.toString());</span>
+        }
+
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if(digits[0] == 0){</span>
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">            for (int i = 0, length = digits.length; i &lt; length; i++) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                if(digits[i] != 0){</span>
+<span class="fc" id="L30">                    digits[0] = digits[i];</span>
+<span class="fc" id="L31">                    digits[i] = 0;</span>
+<span class="fc" id="L32">                    break;</span>
+                }
+            }
+        }
+
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (int digit : digits) {</span>
+<span class="fc" id="L38">            number.append(digit);</span>
+        }
+<span class="fc" id="L40">        return Long.parseLong(number.toString());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

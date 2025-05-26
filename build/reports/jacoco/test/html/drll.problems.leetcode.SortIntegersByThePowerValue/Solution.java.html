@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.SortIntegersByThePowerValue</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.SortIntegersByThePowerValue;
+
+import java.util.*;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public int getKth(int lo, int hi, int k) {
+<span class="fc" id="L7">        int[][] numberPowerSteps = new int[hi - lo + 1][2];</span>
+<span class="fc" id="L8">        Map&lt;Integer, Integer&gt; history = new HashMap&lt;&gt;();</span>
+
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        for (int i = lo; i &lt;= hi; i++) {</span>
+<span class="fc" id="L11">            numberPowerSteps[i - lo][0] = i;</span>
+<span class="fc" id="L12">            numberPowerSteps[i - lo][1] = getPowerValue(i, history);</span>
+        }
+
+<span class="fc" id="L15">        Arrays.sort(numberPowerSteps, Comparator.comparingInt(pair -&gt; pair[1]));</span>
+
+<span class="fc" id="L17">        return numberPowerSteps[k - 1][0];</span>
+    }
+
+    public int getPowerValue(int number, Map&lt;Integer, Integer&gt; history) {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if(number == 1){</span>
+<span class="fc" id="L22">            return 0;</span>
+        }
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if(history.containsKey(number)) {</span>
+<span class="fc" id="L25">            return history.get(number);</span>
+        }
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if(number % 2 == 0) {</span>
+<span class="fc" id="L28">            history.put(number, 1 + getPowerValue(number / 2, history));</span>
+        }
+        else{
+<span class="fc" id="L31">            history.put(number, 1 + getPowerValue(3 * number + 1, history));</span>
+        }
+<span class="fc" id="L33">        return history.get(number);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Contacts.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.contacts</a> &gt; <span class="el_source">Contacts.java</span></div><h1>Contacts.java</h1><pre class="source lang-java linenums">
+package drll.problems.hackerRank.contacts;
+
+import java.io.*;
+import java.util.*;
+
+<span class="nc" id="L7">public class Contacts {</span>
+
+    /*
+     * Complete the contacts function below.
+     */
+    static Integer[] contacts(String[][] queries) {
+        /*
+         * Write your code here.
+         */
+<span class="fc" id="L16">        Trie trie = new Trie();</span>
+<span class="fc" id="L17">        List&lt;Integer&gt; result = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for (String[] query : queries) {</span>
+<span class="fc" id="L19">            String op = query[0];</span>
+<span class="fc" id="L20">            String contact = query[1];</span>
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">            if (&quot;add&quot;.equalsIgnoreCase(op)) {</span>
+<span class="fc" id="L23">                trie.add(contact);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            } else if (&quot;find&quot;.equalsIgnoreCase(op)) {</span>
+<span class="fc" id="L25">                int words = trie.findPartial(contact);</span>
+<span class="fc" id="L26">                result.add(words);</span>
+<span class="fc" id="L27">            } else {</span>
+<span class="fc" id="L28">                throw new IllegalArgumentException(&quot;Operation [%s] not supported.&quot;);</span>
+            }
+        }
+<span class="fc" id="L31">        return result.toArray(new Integer[0]);</span>
+    }
+
+<span class="fc" id="L34">    private static final Scanner scanner = new Scanner(System.in);</span>
+
+    public static void main(String[] args) throws IOException {
+<span class="nc" id="L37">        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(&quot;OUTPUT_PATH&quot;)));</span>
+
+<span class="nc" id="L39">        int queriesRows = Integer.parseInt(scanner.nextLine().trim());</span>
+
+<span class="nc" id="L41">        String[][] queries = new String[queriesRows][2];</span>
+
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        for (int queriesRowItr = 0; queriesRowItr &lt; queriesRows; queriesRowItr++) {</span>
+<span class="nc" id="L44">            String[] queriesRowItems = scanner.nextLine().split(&quot; &quot;);</span>
+
+<span class="nc" id="L46">            System.arraycopy(queriesRowItems, 0, queries[queriesRowItr], 0, 2);</span>
+        }
+
+<span class="nc" id="L49">        Integer[] result = contacts(queries);</span>
+
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (int resultItr = 0; resultItr &lt; result.length; resultItr++) {</span>
+<span class="nc" id="L52">            bufferedWriter.write(String.valueOf(result[resultItr]));</span>
+
+<span class="nc bnc" id="L54" title="All 2 branches missed.">            if (resultItr != result.length - 1) {</span>
+<span class="nc" id="L55">                bufferedWriter.write(&quot;\n&quot;);</span>
+            }
+        }
+
+<span class="nc" id="L59">        bufferedWriter.newLine();</span>
+
+<span class="nc" id="L61">        bufferedWriter.close();</span>
+<span class="nc" id="L62">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.MaximumNumberOfRobotsWithinBudget</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.MaximumNumberOfRobotsWithinBudget;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
+<span class="fc" id="L5">        long[] subSums = buildConsecutiveSums(runningCosts);</span>
+<span class="fc" id="L6">        SegmentTree tree = new SegmentTree(chargeTimes);</span>
+
+<span class="fc" id="L8">        int maxConsecutive = 0;</span>
+<span class="fc" id="L9">        int consecutiveRobots = 1;</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        while (consecutiveRobots &lt;= chargeTimes.length) {</span>
+<span class="fc" id="L11">            int windowStart = 0;</span>
+<span class="fc" id="L12">            boolean findNextK = false;</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            while (windowStart + consecutiveRobots &lt;= chargeTimes.length){</span>
+
+<span class="fc" id="L15">                int maxCharge = tree.getMaxQuery(windowStart, windowStart + consecutiveRobots - 1);</span>
+<span class="fc" id="L16">                long sum = getSubSum(subSums, windowStart, windowStart + consecutiveRobots - 1);</span>
+
+<span class="fc" id="L18">                long totalCost = maxCharge + consecutiveRobots * sum;</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">                if(totalCost &lt;= budget){</span>
+<span class="fc" id="L20">                   maxConsecutive = consecutiveRobots;</span>
+<span class="fc" id="L21">                   findNextK = true;</span>
+<span class="fc" id="L22">                   break;</span>
+                }
+<span class="fc" id="L24">                windowStart++;</span>
+<span class="fc" id="L25">            }</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            if(!findNextK){</span>
+<span class="fc" id="L27">                break;</span>
+            }
+<span class="fc" id="L29">            consecutiveRobots++;</span>
+<span class="fc" id="L30">        }</span>
+<span class="fc" id="L31">        return maxConsecutive;</span>
+    }
+
+    private long getSubSum(long[] subSums, int windowStart, int windowEnd) {
+<span class="fc bfc" id="L35" title="All 4 branches covered.">        if(windowStart == windowEnd  &amp;&amp;  windowEnd == 0){</span>
+<span class="fc" id="L36">            return subSums[windowEnd];</span>
+        }
+<span class="pc bpc" id="L38" title="1 of 4 branches missed.">        if(windowStart == windowEnd  &amp;&amp;  windowEnd &gt; 0){</span>
+<span class="fc" id="L39">            return subSums[windowEnd] - subSums[windowStart - 1];</span>
+        }
+<span class="fc bfc" id="L41" title="All 4 branches covered.">        if(windowStart == 0  &amp;&amp;  windowEnd == subSums.length - 1){</span>
+<span class="fc" id="L42">            return subSums[windowEnd];</span>
+        }
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if(windowStart == 0){</span>
+<span class="fc" id="L45">            return subSums[windowEnd];</span>
+        }
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if(windowEnd == subSums.length - 1){</span>
+<span class="fc" id="L48">            return subSums[windowEnd] - subSums[windowStart - 1];</span>
+        }
+<span class="fc" id="L50">        return subSums[windowEnd + 1] - subSums[windowStart - 1] - (subSums[windowEnd + 1] - subSums[windowEnd]);</span>
+    }
+
+    private long[] buildConsecutiveSums(int[] numbers){
+<span class="fc" id="L54">        long[] subSums = new long[numbers.length];</span>
+<span class="fc" id="L55">        subSums[0] = numbers[0];</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        for (int i = 1; i &lt; numbers.length; i++) {</span>
+<span class="fc" id="L57">            subSums[i] = subSums[i - 1] + numbers[i];</span>
+        }
+<span class="fc" id="L59">        return subSums;</span>
+    }
+}
+
+class SegmentTree{
+    private final int[] tree;
+
+<span class="fc" id="L66">    public SegmentTree(int[] numbers) {</span>
+<span class="fc" id="L67">        tree = new int[numbers.length * 4];</span>
+<span class="fc" id="L68">        buildTree(tree, numbers, 1, 0, numbers.length - 1);</span>
+<span class="fc" id="L69">    }</span>
+
+    private void buildTree(int[] tree, int[] numbers, int nodePosition, int leftMost, int rightMost) {
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        if(leftMost == rightMost){</span>
+<span class="fc" id="L73">            tree[nodePosition] = numbers[leftMost];</span>
+        }
+        else{
+<span class="fc" id="L76">            int leftChildPosition = 2 * nodePosition;</span>
+<span class="fc" id="L77">            int leftChildRightMost = (leftMost + rightMost) / 2;</span>
+<span class="fc" id="L78">            buildTree(tree, numbers, leftChildPosition, leftMost, leftChildRightMost);</span>
+
+<span class="fc" id="L80">            int rightChildPosition = 2 * nodePosition + 1;</span>
+<span class="fc" id="L81">            int rightChildLeftMost = (leftMost + rightMost) / 2 + 1;</span>
+<span class="fc" id="L82">            buildTree(tree, numbers, rightChildPosition, rightChildLeftMost, rightMost);</span>
+
+<span class="fc" id="L84">            int nodeValue = Math.max(tree[leftChildPosition], tree[rightChildPosition]);</span>
+<span class="fc" id="L85">            tree[nodePosition] = nodeValue;</span>
+        }
+<span class="fc" id="L87">    }</span>
+
+    public int getMaxQuery(int i, int j) {
+<span class="fc" id="L90">        return getMaxQuery(1, 0, (tree.length / 4) - 1, i, j);</span>
+    }
+
+    private int getMaxQuery(int nodePosition, int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        if(nodeRangeDoNotIntersectInterval(nodeLeftMost, nodeRightMost, leftInterval, rightInterval)){</span>
+<span class="fc" id="L95">            return Integer.MIN_VALUE;</span>
+        }
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        if(isNodeRangeSubSetOfInterval(nodeLeftMost, nodeRightMost, leftInterval, rightInterval)){</span>
+<span class="fc" id="L98">            return tree[nodePosition];</span>
+        }
+
+<span class="fc" id="L101">        int leftNode = 2 * nodePosition;</span>
+<span class="fc" id="L102">        int nodeLeftRightMost = (nodeLeftMost + nodeRightMost) / 2;</span>
+
+<span class="fc" id="L104">        int rightNode = 2 * nodePosition + 1;</span>
+<span class="fc" id="L105">        int nodeRightLeftMost = (nodeLeftMost + nodeRightMost) / 2 + 1;</span>
+
+<span class="fc" id="L107">        return Math.max(</span>
+<span class="fc" id="L108">                getMaxQuery(leftNode, nodeLeftMost, nodeLeftRightMost, leftInterval, rightInterval),</span>
+<span class="fc" id="L109">                getMaxQuery(rightNode, nodeRightLeftMost, nodeRightMost, leftInterval, rightInterval)</span>
+        );
+    }
+
+    private static boolean nodeRangeDoNotIntersectInterval(int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+<span class="fc bfc" id="L114" title="All 4 branches covered.">        return nodeRightMost &lt; leftInterval || rightInterval &lt; nodeLeftMost;</span>
+    }
+
+    private boolean isNodeRangeSubSetOfInterval(int nodeLeftMost, int nodeRightMost, int leftInterval, int rightInterval) {
+<span class="fc bfc" id="L118" title="All 4 branches covered.">        return leftInterval &lt;= nodeLeftMost  &amp;&amp;  nodeRightMost &lt;= rightInterval;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.FindTheDifferenceOfTwoArrays</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.FindTheDifferenceOfTwoArrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+<span class="fc" id="L7">public class Solution {</span>
+    public List&lt;List&lt;Integer&gt;&gt; findDifference(int[] nums1, int[] nums2) {
+<span class="fc" id="L9">        Arrays.sort(nums1);</span>
+<span class="fc" id="L10">        Arrays.sort(nums2);</span>
+
+<span class="fc" id="L12">        List&lt;List&lt;Integer&gt;&gt; answer = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L14">        answer.add(complement(nums1, nums2));</span>
+<span class="fc" id="L15">        answer.add(complement(nums2, nums1));</span>
+
+<span class="fc" id="L17">        return answer;</span>
+    }
+
+    private List&lt;Integer&gt; complement(int[] a, int[] b) {
+<span class="fc" id="L21">        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L23">        int lengthB = b.length - 1;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (!contains(b, a[0], 0, lengthB)) {</span>
+<span class="fc" id="L25">            list.add(a[0]);</span>
+        }
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (int i = 1; i &lt; a.length; i++) {</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            if(a[i] == a[i - 1]){</span>
+<span class="fc" id="L29">                continue;</span>
+            }
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            if (!contains(b, a[i], 0, lengthB)) {</span>
+<span class="fc" id="L32">                list.add(a[i]);</span>
+            }
+        }
+
+<span class="fc" id="L36">        return list;</span>
+    }
+
+    private boolean contains(int[] nums, int target, int start, int end) {
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (start &gt; end) {</span>
+<span class="fc" id="L41">            return false;</span>
+        }
+<span class="fc" id="L43">        int middlePosition = (start + end) / 2;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (nums[middlePosition] == target) {</span>
+<span class="fc" id="L45">            return true;</span>
+        }
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        return nums[middlePosition] &gt; target</span>
+<span class="fc" id="L48">                ? contains(nums, target, start, middlePosition - 1)</span>
+<span class="fc" id="L49">                : contains(nums, target, middlePosition + 1, end);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

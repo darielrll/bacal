@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.hackerRank.hotelConstruction</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.hackerRank.hotelConstruction;
+
+import java.util.*;
+
+<span class="nc" id="L5">public class Solution {</span>
+    // Complete the bigSorting function below.
+    public static int numberOfWays(List&lt;List&lt;Integer&gt;&gt; roads) {
+<span class="fc" id="L8">        HashMap&lt;Integer, List&lt;Integer&gt;&gt; graph = buildGraph(roads);</span>
+
+<span class="fc" id="L10">        int numberOfWays = 0;</span>
+<span class="fc" id="L11">        int totalCities = roads.size() + 1;</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for(Map.Entry&lt;Integer, List&lt;Integer&gt;&gt; entry : graph.entrySet()) {</span>
+<span class="fc" id="L13">            numberOfWays = Math.max(numberOfWays,</span>
+<span class="fc" id="L14">                    numberOfWaysCombinations(entry.getKey(), graph, totalCities));</span>
+<span class="fc" id="L15">        }</span>
+
+<span class="fc" id="L17">        return numberOfWays;</span>
+    }
+
+    private static int numberOfWaysCombinations(Integer key, HashMap&lt;Integer, List&lt;Integer&gt;&gt; graph, int totalCities) {
+<span class="fc" id="L21">        int numberOfWays = 0;</span>
+
+<span class="fc" id="L23">        Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L24">        queue.add(key);</span>
+<span class="fc" id="L25">        boolean[] visited = new boolean[totalCities + 1];</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        while(!queue.isEmpty()){</span>
+<span class="fc" id="L27">            LinkedList&lt;Integer&gt; tmp = new LinkedList&lt;&gt;();</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            while(!queue.isEmpty()){</span>
+<span class="fc" id="L29">                Integer city = queue.poll();</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">                if(!visited[city]){</span>
+<span class="fc" id="L31">                    visited[city] = true;</span>
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">                    if(graph.containsKey(city)){</span>
+<span class="fc" id="L33">                        List&lt;Integer&gt; list = graph.get(city);</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                        for (Integer neighbor : list){</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">                            if(!visited[neighbor]){</span>
+<span class="fc" id="L36">                                tmp.add(neighbor);</span>
+                            }
+<span class="fc" id="L38">                        }</span>
+                    }
+                }
+<span class="fc" id="L41">            }</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">            if(tmp.size() &gt;= 3){</span>
+<span class="fc" id="L43">                numberOfWays += numberOfWaysCombinations(tmp.size());</span>
+            }
+<span class="fc" id="L45">            queue = tmp;</span>
+<span class="fc" id="L46">        }</span>
+<span class="fc" id="L47">        return numberOfWays;</span>
+    }
+
+    private static HashMap&lt;Integer, List&lt;Integer&gt;&gt; buildGraph(List&lt;List&lt;Integer&gt;&gt; roads) {
+<span class="fc" id="L51">        HashMap&lt;Integer, List&lt;Integer&gt;&gt; graph = new HashMap&lt;&gt;();</span>
+
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (List&lt;Integer&gt; road : roads){</span>
+<span class="fc" id="L54">            int source = road.get(0);</span>
+<span class="fc" id="L55">            int target = road.get(1);</span>
+<span class="fc" id="L56">            addEdge(graph, source, target);</span>
+<span class="fc" id="L57">            addEdge(graph, target, source);</span>
+<span class="fc" id="L58">        }</span>
+<span class="fc" id="L59">        return graph;</span>
+    }
+
+    private static void addEdge(HashMap&lt;Integer, List&lt;Integer&gt;&gt; graph, int source, int target){
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if(graph.containsKey(source)){</span>
+<span class="fc" id="L64">            List&lt;Integer&gt; list = graph.get(source);</span>
+<span class="fc" id="L65">            list.add(target);</span>
+<span class="fc" id="L66">            graph.replace(source, list);</span>
+<span class="fc" id="L67">        }</span>
+        else{
+<span class="fc" id="L69">            List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L70">            list.add(target);</span>
+<span class="fc" id="L71">            graph.put(source, list);</span>
+        }
+<span class="fc" id="L73">    }</span>
+
+    private static int numberOfWaysCombinations(int citiesAtSameLevel) {
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if(citiesAtSameLevel == 3){</span>
+<span class="fc" id="L77">            return 1;</span>
+        }
+<span class="fc" id="L79">        return factorial(citiesAtSameLevel)/(6 * factorial(citiesAtSameLevel - 3));</span>
+    }
+
+    private static int factorial(int citiesAtSameLevel) {
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if(citiesAtSameLevel == 1){</span>
+<span class="fc" id="L84">            return 1;</span>
+        }
+<span class="fc" id="L86">        return citiesAtSameLevel * factorial(citiesAtSameLevel - 1);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

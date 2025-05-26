@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.SortEvenAndOddIndicesIndependently</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.SortEvenAndOddIndicesIndependently;
+
+import java.util.Arrays;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public int[] sortEvenOdd(int[] nums) {
+<span class="fc" id="L7">        int[] oddIndex = new int[nums.length / 2];</span>
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        int[] evenIndex = new int[nums.length % 2 == 0 ? nums.length / 2 : nums.length / 2 + 1];</span>
+
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        for (int i = 1; i &lt; nums.length; i += 2){</span>
+<span class="fc" id="L11">            oddIndex[i/2] = nums[i];</span>
+        }
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 0; i &lt; nums.length; i += 2){</span>
+<span class="fc" id="L14">            evenIndex[i/2] = nums[i];</span>
+        }
+<span class="fc" id="L16">        Arrays.sort(oddIndex);</span>
+<span class="fc" id="L17">        Arrays.sort(evenIndex);</span>
+
+<span class="fc" id="L19">        int[] sortEvenOdd = new int[nums.length];</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        for (int i = oddIndex.length - 1; i &gt;= 0; i--){</span>
+<span class="fc" id="L21">            sortEvenOdd[(oddIndex.length - i - 1) * 2 + 1] = oddIndex[i];</span>
+        }
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 0; i &lt; evenIndex.length; i++){</span>
+<span class="fc" id="L24">            sortEvenOdd[i * 2] = evenIndex[i];</span>
+        }
+
+<span class="fc" id="L27">        return sortEvenOdd;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

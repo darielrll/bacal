@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.flattenBinaryTreeToLinkedList</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.flattenBinaryTreeToLinkedList;
+
+import drll.problems.leetcode.binarySearchTreeToGreaterSumTree.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+<span class="fc" id="L23">class Solution {</span>
+    public void flatten(TreeNode root) {
+<span class="fc" id="L25">        List&lt;TreeNode&gt; nodeList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L26">        linkedListToArray(root, nodeList);</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (int i = 0; i &lt; nodeList.size() - 1; i++) {</span>
+<span class="fc" id="L28">            nodeList.get(i).left = null;</span>
+<span class="fc" id="L29">            nodeList.get(i).right = nodeList.get(i + 1);</span>
+        }
+<span class="fc" id="L31">    }</span>
+
+    private void linkedListToArray(TreeNode node, List&lt;TreeNode&gt; list) {
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if(node == null){</span>
+<span class="fc" id="L35">            return;</span>
+        }
+<span class="fc" id="L37">        list.add(node);</span>
+<span class="fc" id="L38">        linkedListToArray(node.left, list);</span>
+<span class="fc" id="L39">        linkedListToArray(node.right, list);</span>
+<span class="fc" id="L40">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

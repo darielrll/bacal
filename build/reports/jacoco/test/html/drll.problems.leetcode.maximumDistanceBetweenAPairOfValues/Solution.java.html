@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.maximumDistanceBetweenAPairOfValues</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.maximumDistanceBetweenAPairOfValues;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public int maxDistance(int[] nums1, int[] nums2) {
+<span class="fc" id="L5">        int maxDistance = 0;</span>
+<span class="fc" id="L6">        int lastCoverPosition = Math.min(nums1.length, nums2.length);</span>
+<span class="pc bpc" id="L7" title="1 of 4 branches missed.">        for(int i = 0, nums2Index = 0; i &lt; lastCoverPosition  &amp;&amp;  nums2Index &lt; nums2.length; i++){</span>
+<span class="fc" id="L8">            nums2Index = lessThanToTheRight(nums2, nums1[i], Math.max(i, nums2Index), nums2.length - 1);</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">            if(nums2Index - i &gt; maxDistance){</span>
+<span class="fc" id="L10">                maxDistance = nums2Index - i;</span>
+            }
+        }
+
+<span class="fc" id="L14">        return maxDistance;</span>
+    }
+
+    private int lessThanToTheRight(int[] nums, int target, int init, int end){
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if(init &gt; end){</span>
+<span class="fc" id="L19">            return -1;</span>
+        }
+<span class="fc" id="L21">        int middle = (init + end) / 2;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if(nums[middle] &gt;= target){</span>
+<span class="fc" id="L23">            return Math.max(middle, lessThanToTheRight(nums, target, middle + 1, end));</span>
+        }
+<span class="fc" id="L25">        return lessThanToTheRight(nums, target, init, middle - 1);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

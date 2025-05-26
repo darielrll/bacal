@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.CountDaysSpentTogether</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.CountDaysSpentTogether;
+
+<span class="fc" id="L3">public class Solution {</span>
+    public int countDaysTogether(String arriveAlice, String leaveAlice,
+                                 String arriveBob, String leaveBob) {
+
+<span class="fc" id="L7">        Date aliceArrive = new Date(arriveAlice);</span>
+<span class="fc" id="L8">        Date aliceLeave =  new Date(leaveAlice);</span>
+<span class="fc" id="L9">        Date bobArrive = new Date(arriveBob);</span>
+<span class="fc" id="L10">        Date bobLeave =  new Date(leaveBob);</span>
+
+<span class="fc" id="L12">        int[] daysOfMonth = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};</span>
+<span class="fc" id="L13">        int[] monthEndIndex = new int[daysOfMonth.length];</span>
+
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (int i = 1; i &lt; daysOfMonth.length; i++) {</span>
+<span class="fc" id="L16">            monthEndIndex[i] = monthEndIndex[i - 1] + daysOfMonth[i];</span>
+        }
+
+<span class="fc" id="L19">        int[] daysLineSweep = new int[366];</span>
+
+<span class="fc" id="L21">        for (int start = monthEndIndex[aliceArrive.month - 1] + aliceArrive.day,</span>
+<span class="fc" id="L22">                 end = monthEndIndex[aliceLeave.month - 1] + aliceLeave.day;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">             start &lt;= end; start++) {</span>
+<span class="fc" id="L24">            daysLineSweep[start]++;</span>
+        }
+
+<span class="fc" id="L27">        int daysTogether = 0;</span>
+
+<span class="fc" id="L29">        for (int start = monthEndIndex[bobArrive.month - 1] + bobArrive.day,</span>
+<span class="fc" id="L30">                 end = monthEndIndex[bobLeave.month - 1] + bobLeave.day;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">             start &lt;= end; start++) {</span>
+<span class="fc" id="L32">            daysLineSweep[start]++;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if(daysLineSweep[start] == 2){</span>
+<span class="fc" id="L34">                daysTogether++;</span>
+            }
+        }
+
+<span class="fc" id="L38">        return daysTogether;</span>
+    }
+
+    static class Date {
+        private final int day, month;
+
+<span class="fc" id="L44">        public Date(String date) {</span>
+<span class="fc" id="L45">            String[] dateInformation = date.split(&quot;-&quot;);</span>
+
+<span class="fc" id="L47">            month = Integer.parseInt(dateInformation[0]);</span>
+<span class="fc" id="L48">            day = Integer.parseInt(dateInformation[1]);</span>
+<span class="fc" id="L49">        }</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

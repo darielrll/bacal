@@ -11,6 +11,8 @@
 !build/jacoco/**/*
 !build/jacocoHtml/
 !build/jacocoHtml/**/*
+!build/reports/
+!build/reports/**/*
 
 
 ################

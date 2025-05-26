@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Solution.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bacal</a> &gt; <a href="index.source.html" class="el_package">drll.problems.leetcode.DecodeTheMessage</a> &gt; <span class="el_source">Solution.java</span></div><h1>Solution.java</h1><pre class="source lang-java linenums">package drll.problems.leetcode.DecodeTheMessage;
+
+import java.util.HashMap;
+
+<span class="fc" id="L5">public class Solution {</span>
+    public String decodeMessage(String key, String message) {
+<span class="fc" id="L7">        StringBuilder decodedMessage = new StringBuilder();</span>
+
+<span class="fc" id="L9">        HashMap&lt;Character, Character&gt; table = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L10">        char firstLetter = 97;</span>
+<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        for (int i = 0; i &lt; key.length(); i++) {</span>
+<span class="fc" id="L12">            Character character = key.charAt(i);</span>
+<span class="fc bfc" id="L13" title="All 4 branches covered.">            if(!character.equals(' ')  &amp;&amp;  !table.containsKey(character)){</span>
+<span class="fc" id="L14">                table.put(character, firstLetter);</span>
+<span class="fc" id="L15">                firstLetter++;</span>
+            }
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            if(firstLetter &gt; 122){</span>
+<span class="fc" id="L18">                break;</span>
+            }
+        }
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int i = 0; i &lt; message.length(); i++) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            if(message.charAt(i) == ' '){</span>
+<span class="fc" id="L24">                decodedMessage.append(' ');</span>
+            }
+            else {
+<span class="fc" id="L27">                decodedMessage.append(table.get(message.charAt(i)));</span>
+            }
+        }
+
+<span class="fc" id="L31">        return decodedMessage.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
