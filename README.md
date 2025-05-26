@@ -1,3 +1,4 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=darielrll/bacal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=darielrll/bacal)
 # Bacal
 
 
@@ -56,4 +57,3 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
 * [How to include tables in README.md](https://help.github.com/articles/organizing-information-with-tables/)
 * [Collection of useful .gitignore templates](https://github.com/github/gitignore)
 * [Algorithms and Data structures online visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-
