@@ -1,4 +1,4 @@
-package drll.dataStructures.graph;
+package drll.data_structures.graph;
 
 import org.junit.jupiter.api.Test;
 

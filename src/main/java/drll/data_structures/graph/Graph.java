@@ -1,4 +1,4 @@
-package drll.dataStructures.graph;
+package drll.data_structures.graph;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;

@@ -1,5 +1,5 @@
 
-package drll.dataStructures.bit;
+package drll.data_structures.bit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,5 @@
 
-package drll.dataStructures.avl;
+package drll.data_structures.avl;
 
 import static org.assertj.core.api.Assertions.*;
 
