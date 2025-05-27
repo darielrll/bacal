@@ -1,6 +1,6 @@
 package drll.problems.leetcode.flattenBinaryTreeToLinkedList;
 
-import drll.problems.leetcode.binarySearchTreeToGreaterSumTree.TreeNode;
+import drll.problems.leetcode.binary_search_tree_to_greater_sum_tree.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
