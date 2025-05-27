@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem2;
+package drll.problems.leet_code_contest.problem2;
 
 public class Solution {
     static class DataStream {

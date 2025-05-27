@@ -1,4 +1,4 @@
-package drll.problems.leetCodeContest.problem4;
+package drll.problems.leet_code_contest.problem4;
 
 public class Solution {
     public int search(int target) {
