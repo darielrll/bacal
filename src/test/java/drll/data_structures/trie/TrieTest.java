@@ -1,4 +1,4 @@
-package drll.data_structures.Trie;
+package drll.data_structures.trie;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

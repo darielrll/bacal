@@ -1,4 +1,4 @@
-package drll.data_structures.Trie;
+package drll.data_structures.trie;
 
 import java.util.ArrayList;
 import java.util.List;
