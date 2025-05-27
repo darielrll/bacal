@@ -1,5 +1,5 @@
 
-package drll.problems.hackerRank.bigSorting;
+package drll.problems.hackerRank.big_sorting;
 
 import common.Utils;
 import org.junit.jupiter.api.Test;

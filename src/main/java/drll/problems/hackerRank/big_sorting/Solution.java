@@ -1,5 +1,5 @@
 
-package drll.problems.hackerRank.bigSorting;
+package drll.problems.hackerRank.big_sorting;
 
 import java.util.Arrays;
 import java.util.HashMap;
