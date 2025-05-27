@@ -1,6 +1,5 @@
 package drll.problems.leetcode.RemoveNthNodeFromEndOfList;
 
-import drll.problems.leetcode.MiddleOfTheLinkedList.binarySearch.MiddleOfTheLinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
