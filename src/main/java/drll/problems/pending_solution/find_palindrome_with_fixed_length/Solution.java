@@ -1,4 +1,4 @@
-package drll.problems.pendingSolution.FindPalindromeWithFixedLength;
+package drll.problems.pending_solution.find_palindrome_with_fixed_length;
 
 public class Solution {
     public long[] kthPalindrome(int[] queries, int intLength) {

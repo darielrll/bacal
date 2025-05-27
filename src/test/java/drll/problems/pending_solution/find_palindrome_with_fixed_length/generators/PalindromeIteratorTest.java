@@ -1,4 +1,4 @@
-package drll.problems.pendingSolution.FindPalindromeWithFixedLength.generators;
+package drll.problems.pending_solution.find_palindrome_with_fixed_length.generators;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;

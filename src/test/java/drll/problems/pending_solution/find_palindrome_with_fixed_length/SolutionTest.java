@@ -1,6 +1,5 @@
-package drll.problems.pendingSolution.FindPalindromeWithFixedLength;
+package drll.problems.pending_solution.find_palindrome_with_fixed_length;
 
-import drll.problems.pendingSolution.FindPalindromeWithFixedLength.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
