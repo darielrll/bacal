@@ -1,6 +1,5 @@
-package drll.problems.leetcode.ApplyDiscountToPrices;
+package drll.problems.leetcode.apply_discount_to_prices;
 
-import drll.problems.leetcode.ApplyDiscountToPrices.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

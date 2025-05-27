@@ -1,6 +1,5 @@
-package drll.problems.leetcode.AllDivisionsWithTheHighestScoreOfABinaryArray;
+package drll.problems.leetcode.all_divisions_with_the_highest_score_of_a_binary_array;
 
-import drll.problems.leetcode.AllDivisionsWithTheHighestScoreOfABinaryArray.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

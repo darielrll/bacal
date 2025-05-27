@@ -1,4 +1,4 @@
-package drll.problems.leetcode.ApplyDiscountToPrices;
+package drll.problems.leetcode.apply_discount_to_prices;
 
 import java.text.DecimalFormat;
 

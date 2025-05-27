@@ -1,7 +1,5 @@
-package drll.problems.leetcode.AmountOfTimeForBinaryTreeToBeInfected;
+package drll.problems.leetcode.amount_of_time_for_binary_tree_to_be_infected;
 
-import drll.problems.leetcode.AmountOfTimeForBinaryTreeToBeInfected.Solution;
-import drll.problems.leetcode.AmountOfTimeForBinaryTreeToBeInfected.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
