@@ -7,12 +7,12 @@
 *.iml
 
 # exceptions
-!build/jacoco/
-!build/jacoco/**/*
-!build/jacocoHtml/
-!build/jacocoHtml/**/*
-!build/reports/
-!build/reports/**/*
+# !build/jacoco/
+# !build/jacoco/**/*
+# !build/jacocoHtml/
+# !build/jacocoHtml/**/*
+# !build/reports/
+# !build/reports/**/*
 
 
 ################
