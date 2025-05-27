@@ -31,6 +31,9 @@ jobs:
       - name: Run tests
         run: ./gradlew test
 
+      - name: Run tests
+        run: ./gradlew jacocoTestReport
+
       - name: Upload coverage to Codacy
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
