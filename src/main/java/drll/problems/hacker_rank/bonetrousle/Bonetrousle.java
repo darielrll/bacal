@@ -1,7 +1,6 @@
 
 package drll.problems.hacker_rank.bonetrousle;
 
-import java.io.*;
 import java.util.*;
 
 public class Bonetrousle {
@@ -85,42 +84,5 @@ public class Bonetrousle {
 
     private static long availableSticksToBuy(long boxesForSale) {
         return boxesForSale * ( boxesForSale + 1 ) / 2;
-    }
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        int t = Integer.parseInt(scanner.nextLine().trim());
-
-        for (int tItr = 0; tItr < t; tItr++) {
-            String[] nkb = scanner.nextLine().split(" ");
-
-            long n = Long.parseLong(nkb[0].trim());
-
-            long k = Long.parseLong(nkb[1].trim());
-
-            int b = Integer.parseInt(nkb[2].trim());
-
-            long[] result = bonetrousle(n, k, b);
-
-            if(result.length == 0){
-                bufferedWriter.write("-1");
-            }
-            else {
-                for (int resultItr = 0; resultItr < result.length; resultItr++) {
-                    bufferedWriter.write(String.valueOf(result[resultItr]));
-
-                    if (resultItr != result.length - 1) {
-                        bufferedWriter.write(" ");
-                    }
-                }
-            }
-
-            bufferedWriter.newLine();
-        }
-
-        bufferedWriter.close();
     }
 }

@@ -1,7 +1,6 @@
 
 package drll.problems.hacker_rank.journey_to_the_moon;
 
-import java.io.*;
 import java.util.*;
 
 public class JourneyToTheMoon {
@@ -113,42 +112,5 @@ public class JourneyToTheMoon {
                                                 Integer firstAstronaut, Integer secondAstronaut) {
         return !(astronautsByCity.containsKey(firstAstronaut)  ||
                 astronautsByCity.containsKey(secondAstronaut));
-    }
-
-
-
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) throws IOException {
-
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        String[] np = scanner.nextLine().split(" ");
-
-        int n = Integer.parseInt(np[0]);
-
-        int p = Integer.parseInt(np[1]);
-
-        int[][] astronaut = new int[p][2];
-
-        for (int i = 0; i < p; i++) {
-            String[] astronautRowItems = scanner.nextLine().split(" ");
-            scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-            for (int j = 0; j < 2; j++) {
-                int astronautItem = Integer.parseInt(astronautRowItems[j]);
-                astronaut[i][j] = astronautItem;
-            }
-        }
-
-        long result = journeyToMoon(n, astronaut);
-
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
-
-        scanner.close();
     }
 }
