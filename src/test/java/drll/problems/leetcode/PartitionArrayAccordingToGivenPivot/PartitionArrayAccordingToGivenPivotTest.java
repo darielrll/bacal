@@ -1,6 +1,6 @@
 package drll.problems.leetcode.PartitionArrayAccordingToGivenPivot;
 
-import drll.problems.leetcode.partitionArrayAccordingToGivenPivot.Solution;
+import drll.problems.leetcode.partition_array_according_to_given_pivot.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
