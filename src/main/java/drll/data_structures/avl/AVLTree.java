@@ -1,7 +1,7 @@
 
 package drll.data_structures.avl;
 
-public class AVLTree<T extends Comparable> {
+public class AVLTree<T extends Comparable<T>> {
 
     private long count;
     private AVLNode<T> root;
@@ -28,10 +28,10 @@ public class AVLTree<T extends Comparable> {
         }
     }
 
-    protected AVLNode add(AVLNode<T> node, T element){
+    protected AVLNode<T> add(AVLNode<T> node, T element){
         if(node == null){
             count++;
-            return new AVLNode(element);
+            return new AVLNode<>(element);
         }
         if(element.compareTo(node.getValue()) == 0){
             equalValueDetected(node, element);
@@ -91,7 +91,7 @@ public class AVLTree<T extends Comparable> {
                 : node.getBalanceFactor());
     }
 
-    private boolean isBalancedSubTree(State stateBeforeAdd, AVLNode node){
+    private boolean isBalancedSubTree(State stateBeforeAdd, AVLNode<T> node){
         if(stateBeforeAdd.balanceFactor == null){
             // means that a leaf was added
             return false;

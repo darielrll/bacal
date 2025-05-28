@@ -1,7 +1,7 @@
 
 package drll.data_structures.avl;
 
-public class AVLNode<T extends Comparable> {
+public class AVLNode<T extends Comparable<T>> {
 
     private final T value;
     private BalanceFactor balanceFactor;
