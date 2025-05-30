@@ -2,6 +2,11 @@
 package drll.problems.hacker_rank.common_child;
 
 public class CommonChild {
+
+    private CommonChild() {
+        throw new IllegalStateException("Utility class");
+    }
+
     // Complete the commonChild function below.
     static int commonChild(String s1, String s2) {
         
