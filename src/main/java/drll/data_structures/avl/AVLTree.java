@@ -49,9 +49,11 @@ public class AVLTree<T extends Comparable<T>> {
         //---------------------------
         if (listener != null)
             listener.preInsertingInRightSide(node, element);
-        State stateBeforeAdd = recordStateAfterAdd(node.getRight());
+        BalanceFactor balanceFactorBeforeAdd = node.getRight() == null
+                ? null
+                : node.getRight().getBalanceFactor();
         node.setRight(add(node.getRight(), element));
-        if(isBalancedSubTree(stateBeforeAdd, node.getRight())){
+        if(isBalancedSubTree(balanceFactorBeforeAdd, node.getRight().getBalanceFactor())){
             return node;
         }
         switch(node.getBalanceFactor()){
@@ -67,7 +69,7 @@ public class AVLTree<T extends Comparable<T>> {
                     node = rotateLeft(node);
                 }
                 else if (NEGATIVE.equals(rightBalanceFactor)) {
-                    node = rotateComplexToASide(node, false);
+                    node = rotateLeftComplex(node);
                 }
                 break;
         }
@@ -80,9 +82,11 @@ public class AVLTree<T extends Comparable<T>> {
         //--------------------------
         if (listener != null)
             listener.preInsertingInLeftSide(node, element);
-        State stateBeforeAdd = recordStateAfterAdd(node.getLeft());
+        BalanceFactor balanceFactorBeforeAdd = node.getLeft() == null
+                ? null
+                : node.getLeft().getBalanceFactor();
         node.setLeft(add(node.getLeft(), element));
-        if(isBalancedSubTree(stateBeforeAdd, node.getLeft())){
+        if(isBalancedSubTree(balanceFactorBeforeAdd, node.getLeft().getBalanceFactor())){
             return node;
         }
         switch(node.getBalanceFactor()){
@@ -98,44 +102,24 @@ public class AVLTree<T extends Comparable<T>> {
                     node = rotateRight(node);
                 }
                 else if (POSITIVE.equals(leftBalanceFactor)) {
-                    node = rotateComplexToASide(node, true);
+                    node = rotateRightComplex(node);
                 }
                 break;
         }
         return node;
     }
 
-    private State recordStateAfterAdd(AVLNode<T> node) {
-        return new State(node == null ? null
-                : node.getBalanceFactor());
-    }
-
-    private boolean isBalancedSubTree(State stateBeforeAdd, AVLNode<T> node){
-        if(stateBeforeAdd.balanceFactor == null){
-            // means that a leaf was added
-            return false;
-        }
-        if(stateBeforeAdd.balanceFactor.equals(node.getBalanceFactor())){
-            // means that the subtree do not suffer variations in height
-            return true;
-        }
-        // means that the subtree suffer variations in height but now is balanced
-        return node.getBalanceFactor().equals(BALANCED);
-        // means that the subtree suffer variations in height and the father
-        // subtree needs to be balanced
-    }
-
-    private boolean isBalancedSubTree(BalanceFactor balanceFactorBeforeAdd, AVLNode<T> node){
+    private boolean isBalancedSubTree(BalanceFactor balanceFactorBeforeAdd, BalanceFactor balanceFactorActual){
         if(balanceFactorBeforeAdd == null){
             // means that a leaf was added
             return false;
         }
-        if(balanceFactorBeforeAdd.equals(node.getBalanceFactor())){
+        if(balanceFactorBeforeAdd.equals(balanceFactorActual)){
             // means that the subtree do not suffer variations in height
             return true;
         }
         // means that the subtree suffer variations in height but now is balanced
-        return node.getBalanceFactor().equals(BALANCED);
+        return BALANCED.equals(balanceFactorActual);
         // means that the subtree suffer variations in height and the father
         // subtree needs to be balanced
     }
@@ -168,34 +152,34 @@ public class AVLTree<T extends Comparable<T>> {
         return secondary;
     }
 
-    private AVLNode<T> rotateComplexToASide(AVLNode<T> node, boolean toRightSide){
-        BalanceFactor keyBalanceFactor = toRightSide ? node.getLeft().getRight().getBalanceFactor()
-                                                    : node.getRight().getLeft().getBalanceFactor();
+    private AVLNode<T> rotateRightComplex(AVLNode<T> node){
+        BalanceFactor pivotBalanceFactor = node.getLeft().getRight().getBalanceFactor();
 
-        if (toRightSide){
-            node.setLeft(rotateLeft(node.getLeft()));
-            node = rotateRight(node);
-        }
-        else{
-            node.setRight(rotateRight(node.getRight()));
-            node = rotateLeft(node);
-        }
+        node.setLeft(rotateLeft(node.getLeft()));
+        node = rotateRight(node);
 
-        if(POSITIVE.equals(keyBalanceFactor)){
-            node.getLeft().setBalanceFactor(NEGATIVE);
-        }
-        else if(NEGATIVE.equals(keyBalanceFactor)){
-            node.getRight().setBalanceFactor(POSITIVE);
-        }
+        adjustBalanceAfterDoubleRotation(node, pivotBalanceFactor);
 
         return node;
     }
 
-    static class State{
-        final BalanceFactor balanceFactor;
+    private AVLNode<T> rotateLeftComplex(AVLNode<T> node){
+        BalanceFactor pivotBalanceFactor = node.getRight().getLeft().getBalanceFactor();
 
-        public State(BalanceFactor bfBeforeAdd) {
-            this.balanceFactor = bfBeforeAdd;
+        node.setRight(rotateRight(node.getRight()));
+        node = rotateLeft(node);
+
+        adjustBalanceAfterDoubleRotation(node, pivotBalanceFactor);
+
+        return node;
+    }
+
+    private void adjustBalanceAfterDoubleRotation(AVLNode<T> node, BalanceFactor pivotChildBalance) {
+        if(POSITIVE.equals(pivotChildBalance)){
+            node.getLeft().setBalanceFactor(NEGATIVE);
+        }
+        else if(NEGATIVE.equals(pivotChildBalance)){
+            node.getRight().setBalanceFactor(POSITIVE);
         }
     }
 }
