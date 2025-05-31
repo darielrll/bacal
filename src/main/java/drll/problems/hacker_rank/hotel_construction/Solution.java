@@ -3,6 +3,10 @@ package drll.problems.hacker_rank.hotel_construction;
 import java.util.*;
 
 public class Solution {
+
+    private Solution() {
+        throw new IllegalStateException("Utility class");
+    }
     // Complete the bigSorting function below.
     public static int numberOfWays(List<List<Integer>> roads) {
         HashMap<Integer, List<Integer>> graph = buildGraph(roads);
