@@ -56,10 +56,10 @@ public class Solution {
         HashMap<Integer, List<Integer>> graph = new HashMap<>();
 
         for (List<Integer> road : roads){
-            int source = road.get(0);
-            int target = road.get(1);
-            addEdge(graph, source, target);
-            addEdge(graph, target, source);
+            int fromCity = road.get(0);
+            int toCity = road.get(1);
+            addEdge(graph, fromCity, toCity);
+            addEdge(graph, toCity, fromCity);
         }
         return graph;
     }
