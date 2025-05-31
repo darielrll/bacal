@@ -24,27 +24,32 @@ public class Solution {
         queue.add(key);
         boolean[] visited = new boolean[totalCities + 1];
         while(!queue.isEmpty()){
-            LinkedList<Integer> tmp = new LinkedList<>();
-            while(!queue.isEmpty()){
-                Integer city = queue.poll();
-                if(!visited[city]){
-                    visited[city] = true;
-                    if(graph.containsKey(city)){
-                        List<Integer> list = graph.get(city);
-                        for (Integer neighbor : list){
-                            if(!visited[neighbor]){
-                                tmp.add(neighbor);
-                            }
+            List<Integer> nextLevel = collectUnvisitedNeighbors(graph, queue, visited);
+            if(nextLevel.size() >= 3){
+                numberOfWays += numberOfWaysCombinations(nextLevel.size());
+            }
+            queue.addAll(nextLevel);
+        }
+        return numberOfWays;
+    }
+
+    private static List<Integer> collectUnvisitedNeighbors(HashMap<Integer, List<Integer>> graph, Queue<Integer> queue, boolean[] visited) {
+        List<Integer> nextLevel = new LinkedList<>();
+        while(!queue.isEmpty()){
+            Integer city = queue.poll();
+            if(!visited[city]){
+                visited[city] = true;
+                if(graph.containsKey(city)){
+                    List<Integer> list = graph.get(city);
+                    for (Integer neighbor : list){
+                        if(!visited[neighbor]){
+                            nextLevel.add(neighbor);
                         }
                     }
                 }
             }
-            if(tmp.size() >= 3){
-                numberOfWays += numberOfWaysCombinations(tmp.size());
-            }
-            queue = tmp;
         }
-        return numberOfWays;
+        return nextLevel;
     }
 
     private static HashMap<Integer, List<Integer>> buildGraph(List<List<Integer>> roads) {
