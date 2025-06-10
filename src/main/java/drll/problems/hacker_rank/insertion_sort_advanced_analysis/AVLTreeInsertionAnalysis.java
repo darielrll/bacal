@@ -15,21 +15,18 @@ public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
             @Override
             public void equalValueDetected(AVLNode<InsertionAnalysis> node, InsertionAnalysis element) {
                 node.getValue().twins++;
-                if(node.getRight() != null){
-                    shifts += 1 + node.getRight().getValue().twins +
-                            node.getRight().getValue().familyCount;
-                }
+                AVLNode<InsertionAnalysis> nodeRight = node.getRight();
+                if(nodeRight == null) return;
+                shifts += 1 + nodeRight.getValue().twins +
+                        nodeRight.getValue().familyCount;
             }
 
             @Override
             public void preInsertingInLeftSide(AVLNode<InsertionAnalysis> node, InsertionAnalysis element) {
                 node.getValue().familyCount++;
-                if(node.getRight() == null){
-                    shifts += 1 + node.getValue().twins;
-                }
-                else{
-                    shifts += 1 + node.getValue().twins +
-                            1 + node.getRight().getValue().twins +
+                shifts += 1 + node.getValue().twins;
+                if(node.getRight() != null){
+                    shifts += 1 + node.getRight().getValue().twins +
                             node.getRight().getValue().familyCount;
                 }
             }
@@ -42,23 +39,31 @@ public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
             @Override
             public void preRotateRight(AVLNode<InsertionAnalysis> primary) {
                 // update family count for node base of rotation
-                int primaryRight = primary.getRight() == null
-                        ? 0
-                        : 1 + primary.getRight().getValue().familyCount
-                        + primary.getRight().getValue().twins;
-                int primaryLeft = primary.getLeft().getRight() == null
-                        ? 0
-                        : 1 + primary.getLeft().getRight().getValue().familyCount
-                        + primary.getLeft().getRight().getValue().twins;
+                int primaryRight = 0;
+                AVLNode<InsertionAnalysis> right = primary.getRight();
+                if( right != null) {
+                    primaryRight = 1 + right.getValue().familyCount
+                                     + right.getValue().twins;
+                }
+
+                int primaryLeft = 0;
+                AVLNode<InsertionAnalysis> leftSubtreeRightChild = primary.getLeft().getRight();
+                if(leftSubtreeRightChild != null){
+                    primaryLeft = 1 + leftSubtreeRightChild.getValue().familyCount
+                                    + leftSubtreeRightChild.getValue().twins;
+                }
+
                 primary.getValue().familyCount = primaryRight + primaryLeft;
 
                 // update family count for future root node
                 int secondaryRight = 1 + primary.getValue().familyCount
-                        + primary.getValue().twins;
-                int secondaryLeft = primary.getLeft().getLeft() == null
-                        ? 0
-                        : 1 + primary.getLeft().getLeft().getValue().familyCount
-                        + primary.getLeft().getLeft().getValue().twins;
+                                       + primary.getValue().twins;
+                int secondaryLeft = 0;
+                AVLNode<InsertionAnalysis> leftSubtreeLeftChild = primary.getLeft().getLeft();
+                if(leftSubtreeLeftChild != null) {
+                    secondaryLeft =  1 + leftSubtreeLeftChild.getValue().familyCount
+                                       + leftSubtreeLeftChild.getValue().twins;
+                }
                 primary.getLeft().getValue().familyCount = secondaryRight + secondaryLeft;
             }
 
