@@ -33,30 +33,29 @@ public class AVLTreeInsertionAnalysis extends AVLTree<InsertionAnalysis> {
             @Override
             public void preRotateRight(AVLNode<InsertionAnalysis> primary) {
                 // update family count for node base of rotation
-                //int primaryRight = 0;
-                int primaryRight = calculateSide(primary.getRight());
-                int primaryLeft = calculateSide(primary.getLeft().getRight());
-                primary.getValue().familyCount = primaryRight + primaryLeft;
+                primary.getValue().familyCount =
+                        calculateFamilyCount(primary.getRight(), primary.getLeft().getRight());
 
                 // update family count for future root node
-                int secondaryRight = calculateSide(primary);
-                int secondaryLeft = calculateSide(primary.getLeft().getLeft());
-                primary.getLeft().getValue().familyCount = secondaryRight + secondaryLeft;
+                primary.getLeft().getValue().familyCount =
+                        calculateFamilyCount(primary, primary.getLeft().getLeft());
             }
 
             @Override
             public void preRotateLeft(AVLNode<InsertionAnalysis> primary) {
                 // update family count for node base of rotation
-                int primaryLeft = calculateSide(primary.getLeft());
-                int primaryRight = calculateSide(primary.getRight().getLeft());
-                primary.getValue().familyCount = primaryLeft + primaryRight;
+                primary.getValue().familyCount =
+                        calculateFamilyCount(primary.getLeft(), primary.getRight().getLeft());
 
                 // update family count for future root node
-                int secondaryLeft = calculateSide(primary);
-                int secondaryRight = calculateSide(primary.getRight().getRight());
-                primary.getRight().getValue().familyCount = secondaryRight + secondaryLeft;
+                primary.getRight().getValue().familyCount =
+                        calculateFamilyCount(primary, primary.getRight().getRight());
             }
         });
+    }
+
+    public int calculateFamilyCount(AVLNode<InsertionAnalysis> sideOne, AVLNode<InsertionAnalysis> sideTwo) {
+        return calculateSide(sideOne) + calculateSide(sideTwo);
     }
 
     public int calculateSide(AVLNode<InsertionAnalysis> node){
