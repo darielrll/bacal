@@ -1,7 +1,6 @@
 
 package drll.problems.hacker_rank.largest_rectangle;
 
-import java.io.*;
 import java.util.*;
 
 public class LargestRectangle {
@@ -19,18 +18,12 @@ public class LargestRectangle {
             } else {
                 int lastTakenOutPosition = stack.pop();
                 while (!stack.isEmpty()  &&  h[stack.peek()] > h[i]){
-                    long area = (long) h[stack.peek()] * (i - stack.peek());
-                    if (area > largestArea){
-                        largestArea = area;
-                    }
+                    largestArea = updateLargestArea(h[stack.peek()], i - stack.peek(), largestArea);
                     lastTakenOutPosition = stack.pop();
                 }
                 h[lastTakenOutPosition] = h[i];
                 stack.push(lastTakenOutPosition);
-                long area = (long) h[lastTakenOutPosition] * (i - lastTakenOutPosition + 1);
-                if (area > largestArea){
-                    largestArea = area;
-                }
+                largestArea = updateLargestArea(h[lastTakenOutPosition], i - lastTakenOutPosition + 1, largestArea);
             }
         }
         if (stack.size() > 1) {
@@ -39,14 +32,19 @@ public class LargestRectangle {
                 largestArea = h[endPosition];
             }
             while (!stack.isEmpty()){
-                long area = (long) h[stack.peek()] * (endPosition - stack.peek() + 1);
-                if (area > largestArea) {
-                    largestArea = area;
-                }
-                stack.pop();
+                largestArea = updateLargestArea(h[stack.peek()], endPosition - stack.pop() + 1, largestArea);
             }
         }
 
         return largestArea;
+    }
+
+    private static long updateLargestArea(int a, int b, long largestArea){
+        long area = calculateRectangleArea(a, b);
+        return Math.max(area, largestArea);
+    }
+
+    private static long calculateRectangleArea(int a, int b){
+        return (long) a * b;
     }
 }
