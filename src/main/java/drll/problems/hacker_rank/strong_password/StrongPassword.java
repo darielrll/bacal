@@ -3,6 +3,8 @@ package drll.problems.hacker_rank.strong_password;
 
 public class StrongPassword {
 
+    private StrongPassword() { }
+
     public static int minimumNumber(int length, String password) {
 
         if (length <= 2) {
@@ -33,20 +35,10 @@ public class StrongPassword {
 
     private static boolean containsSpecialCharacter(String password) {
         for (int i = 0; i < password.length(); i++) {
-            switch (password.charAt(i)) {
-                case '!':
-                case '@':
-                case '#':
-                case '$':
-                case '%':
-                case '^':
-                case '&':
-                case '*':
-                case '(':
-                case ')':
-                case '-':
-                case '+':
-                    return true;
+            char c = password.charAt(i);
+            if(c == '!'  || c == '@' || c == '#' || c == '$' || c == '%' || c == '^' ||
+               c == '&' || c == '*' || c == '(' || c == ')' || c == '-' || c == '+') {
+                return true;
             }
         }
         return false;
@@ -54,34 +46,14 @@ public class StrongPassword {
 
     private static boolean containsUpperCase(String password) {
         for (int i = 0; i < password.length(); i++) {
-            switch (password.charAt(i)) {
-                case 'A':
-                case 'B':
-                case 'C':
-                case 'D':
-                case 'E':
-                case 'F':
-                case 'G':
-                case 'H':
-                case 'I':
-                case 'J':
-                case 'K':
-                case 'L':
-                case 'M':
-                case 'N':
-                case 'O':
-                case 'P':
-                case 'Q':
-                case 'R':
-                case 'S':
-                case 'T':
-                case 'U':
-                case 'V':
-                case 'W':
-                case 'X':
-                case 'Y':
-                case 'Z':
-                    return true;
+            char c = password.charAt(i);
+            if(c == 'A' || c == 'B' || c == 'C' || c == 'D' || c == 'E' ||
+               c == 'F' || c == 'G' || c == 'H' || c == 'I' || c == 'J' ||
+               c == 'K' || c == 'L' || c == 'M' || c == 'N' || c == 'O' ||
+               c == 'P' || c == 'Q' || c == 'R' || c == 'S' || c == 'T' ||
+               c == 'U' || c == 'V' || c == 'W' || c == 'X' || c == 'Y' ||
+               c == 'Z') {
+                return true;
             }
         }
         return false;
@@ -89,57 +61,27 @@ public class StrongPassword {
 
     private static boolean containsLowerCase(String password) {
         for (int i = 0; i < password.length(); i++) {
-            switch (password.charAt(i)) {
-                case 'a':
-                case 'b':
-                case 'c':
-                case 'd':
-                case 'e':
-                case 'f':
-                case 'g':
-                case 'h':
-                case 'i':
-                case 'j':
-                case 'k':
-                case 'l':
-                case 'm':
-                case 'n':
-                case 'o':
-                case 'p':
-                case 'q':
-                case 'r':
-                case 's':
-                case 't':
-                case 'u':
-                case 'v':
-                case 'w':
-                case 'x':
-                case 'y':
-                case 'z':
-                    return true;
+            char c = password.charAt(i);
+            if(c == 'a' || c == 'b' || c == 'c' || c == 'd' || c == 'e' ||
+               c == 'f' || c == 'g' || c == 'h' || c == 'i' || c == 'j' ||
+               c == 'k' || c == 'l' || c == 'm' || c == 'n' || c == 'o' ||
+               c == 'p' || c == 'q' || c == 'r' || c == 's' || c == 't' ||
+               c == 'u' || c == 'v' || c == 'w' || c == 'x' || c == 'y' ||
+               c == 'z') {
+                return true;
             }
         }
-
         return false;
     }
 
     private static boolean containNumbers(String password) {
         for (int i = 0; i < password.length(); i++) {
-            switch (password.charAt(i)) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    return true;
+            char c = password.charAt(i);
+            if(c == '0' || c == '1' || c == '2' || c == '3' || c == '4' ||
+               c == '5' || c == '6' || c == '7' || c == '8' || c == '9') {
+                return true;
             }
         }
-
         return false;
     }
 }

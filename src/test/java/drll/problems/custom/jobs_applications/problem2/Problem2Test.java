@@ -9,13 +9,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Problem2Test {
-    private Problem2 problem2;
-
-    @BeforeEach
-    void init(){
-        problem2 = new Problem2();
-    }
-
     @Test
     void should_return_correctly_for_test_case1() {
         List<String> discounts = new ArrayList<>();
