@@ -1,8 +1,6 @@
 
 package drll.problems.hacker_rank.new_year_chaos;
 
-import java.util.Scanner;
-
 public class NewYearChaos {
 
     static int calculateBribes(int[] q) {
