@@ -11,31 +11,13 @@ public class Solution {
         for (int[] description : descriptions) {
             int parent = description[0];
             int child = description[1];
-            boolean isLeft = description[2] == 1;
 
             referenceFathers.put(child, parent);
 
-            TreeNode parentNode, childNode;
+            TreeNode parentNode = getTreeNode(reference, parent);
+            TreeNode childNode = getTreeNode(reference, child);
 
-            if (reference.containsKey(parent)) {
-                parentNode = reference.get(parent);
-            } else {
-                parentNode = new TreeNode(parent);
-                reference.put(parent, parentNode);
-            }
-
-            if (reference.containsKey(child)) {
-                childNode = reference.get(child);
-            } else {
-                childNode = new TreeNode(child);
-                reference.put(child, childNode);
-            }
-
-            if (isLeft) {
-                parentNode.left = childNode;
-            } else {
-                parentNode.right = childNode;
-            }
+            updateParentChild(description, parentNode, childNode);
 
             if (root == null) {
                 root = parentNode;
@@ -50,6 +32,26 @@ public class Solution {
         }
 
         return root;
+    }
+
+    private static void updateParentChild(int[] description, TreeNode parentNode, TreeNode childNode) {
+        boolean isLeft = description[2] == 1;
+        if (isLeft) {
+            parentNode.left = childNode;
+        } else {
+            parentNode.right = childNode;
+        }
+    }
+
+    private static TreeNode getTreeNode(HashMap<Integer, TreeNode> reference, int parent) {
+        TreeNode parentNode;
+        if (reference.containsKey(parent)) {
+            parentNode = reference.get(parent);
+        } else {
+            parentNode = new TreeNode(parent);
+            reference.put(parent, parentNode);
+        }
+        return parentNode;
     }
 
     static class TreeNode {
