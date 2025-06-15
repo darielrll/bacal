@@ -7,29 +7,8 @@ public class Solution {
     public List<Integer> maxScoreIndices(int[] nums) {
         int[][] counts = new int[3][nums.length + 1];
 
-        // counting 0 from left to right
-        for (int i = 0, length = nums.length; i < length; i++) {
-            if(i == 0  &&  nums[i] == 0){
-                counts[0][ i + 1 ] = 1;
-                continue;
-            }
-            if(nums[i] == 0){
-                counts[0][ i + 1 ] = 1 + counts[0][ i ];
-            }
-            else{
-                counts[0][ i + 1 ] = counts[0][ i ];
-            }
-        }
-
-        // counting 1 from right to left
-        for (int i = nums.length - 1; i >= 0; i--) {
-            if(nums[i] == 1){
-                counts[1][ i ] = 1 + counts[1][ i + 1 ];
-            }
-            else{
-                counts[1][ i ] = counts[1][ i + 1 ];
-            }
-        }
+        count0FromLeftToRight(nums, counts);
+        count1FromRightToLeft(nums, counts);
 
         // adding vertical
         for (int i = 0, length = counts[0].length; i < length; i++) {
@@ -50,5 +29,31 @@ public class Solution {
             }
         }
         return maxScoreIndices;
+    }
+
+    private static void count1FromRightToLeft(int[] nums, int[][] counts) {
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if(nums[i] == 1){
+                counts[1][ i ] = 1 + counts[1][ i + 1 ];
+            }
+            else{
+                counts[1][ i ] = counts[1][ i + 1 ];
+            }
+        }
+    }
+
+    private static void count0FromLeftToRight(int[] nums, int[][] counts) {
+        for (int i = 0, length = nums.length; i < length; i++) {
+            if(i == 0  &&  nums[i] == 0){
+                counts[0][ i + 1 ] = 1;
+                continue;
+            }
+            if(nums[i] == 0){
+                counts[0][ i + 1 ] = 1 + counts[0][ i ];
+            }
+            else{
+                counts[0][ i + 1 ] = counts[0][ i ];
+            }
+        }
     }
 }
