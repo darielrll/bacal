@@ -20,18 +20,13 @@ public class MathExpression {
     }
 
     private Double calculate(Double leftOperand, String operator, Double rightOperand) throws Exception {
-        switch (operator){
-            case "-":
-                return leftOperand - rightOperand;
-            case "+":
-                return leftOperand + rightOperand;
-            case "*":
-                return leftOperand * rightOperand;
-            case "/":
-                return leftOperand / rightOperand;
-            default:
-                throw new Exception("Not supported operation");
-        }
+        return switch (operator) {
+            case "-" -> leftOperand - rightOperand;
+            case "+" -> leftOperand + rightOperand;
+            case "*" -> leftOperand * rightOperand;
+            case "/" -> leftOperand / rightOperand;
+            default -> throw new UnsupportedOperationException("Not supported operation");
+        };
     }
 
     public List<String> toPostfixNotation(String mathExpression) throws Exception{
@@ -72,15 +67,10 @@ public class MathExpression {
     }
 
     private int priorityLevel(String operator) throws Exception {
-        switch (operator){
-            case "+":
-            case "-":
-                return 0;
-            case "*":
-            case "/":
-                return 1;
-            default:
-                throw new Exception("Unknown operator");
-        }
+        return switch (operator) {
+            case "+", "-" -> 0;
+            case "*", "/" -> 1;
+            default -> throw new UnsupportedOperationException("Unknown operator");
+        };
     }
 }
