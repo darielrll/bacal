@@ -23,7 +23,7 @@ public class Solution {
                 case 'R':
                     rightDirection++;
                     break;
-                case 'S':
+                default: //'S'
                     staying = true;
                     if (rightDirection > 0) {
                         collisions += 1 + (rightDirection - 1);
