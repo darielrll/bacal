@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Solution {
+
+    Solution() { }
+
     public static int countMaximumTeams(List<Integer> skill, int teamSize, int maxDiff) {
         if(skill.size() < teamSize){
             return 0;
