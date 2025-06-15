@@ -8,8 +8,8 @@ public class Trie {
     private int count;
 
     public Trie() {
-        Character INITIAL_CHARACTER = '*';
-        root = new Node(INITIAL_CHARACTER);
+        Character initialCharacter = '*';
+        root = new Node(initialCharacter);
     }
 
     public int count() {
@@ -45,8 +45,8 @@ public class Trie {
     }
 
     class Node {
-        public Character character;
-        public List<Node> adjacents;
+        private Character character;
+        private List<Node> adjacents;
 
         public Node(Character character) {
             this.character = character;
