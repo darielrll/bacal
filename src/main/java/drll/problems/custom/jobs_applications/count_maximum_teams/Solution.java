@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Solution {
 
-    Solution() { }
+    private Solution() { }
 
     public static int countMaximumTeams(List<Integer> skill, int teamSize, int maxDiff) {
         if(skill.size() < teamSize){

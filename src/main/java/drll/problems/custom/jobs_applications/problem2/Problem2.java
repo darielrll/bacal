@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem2 {
+
+    private Problem2() { }
+
     public static List<Integer> findValidDiscountCoupons(List<String> discounts) {
         List<Integer> validation = new ArrayList<>();
 
