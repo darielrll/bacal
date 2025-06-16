@@ -4,10 +4,8 @@ public class Solution {
     public int countTime(String time) {
         String[] splitTime = time.split(":");
         String hours = splitTime[0];
-        String minutes = splitTime[1];
 
         int validHoursTimes = 1;
-        int validMinutesTimes = 1;
 
         if(hours.charAt(0) == '?'){
             if(hours.charAt(1) == '?'){
@@ -27,14 +25,17 @@ public class Solution {
             }
         }
 
+        return validHoursTimes * getValidMinutesTimes(splitTime[1]);
+    }
 
+    private static int getValidMinutesTimes(String minutes) {
+        int validMinutesTimes = 1;
         if(minutes.charAt(0) == '?'){
             validMinutesTimes = 6;
         }
         if(minutes.charAt(1) == '?'){
-            validMinutesTimes = minutes.charAt(0) == '?' ? 60 : 10;
+            validMinutesTimes *= 10;
         }
-
-        return validHoursTimes * validMinutesTimes;
+        return validMinutesTimes;
     }
 }
