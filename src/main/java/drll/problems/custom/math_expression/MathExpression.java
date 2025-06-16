@@ -19,7 +19,7 @@ public class MathExpression {
         return Math.round(accumulativeResult.pop() * 100) / 100.0;
     }
 
-    private Double calculate(Double leftOperand, String operator, Double rightOperand) throws Exception {
+    private Double calculate(Double leftOperand, String operator, Double rightOperand) throws UnsupportedOperationException {
         return switch (operator) {
             case "-" -> leftOperand - rightOperand;
             case "+" -> leftOperand + rightOperand;
@@ -66,7 +66,7 @@ public class MathExpression {
         return priorityLevel(source) >= priorityLevel(target);
     }
 
-    private int priorityLevel(String operator) throws Exception {
+    private int priorityLevel(String operator) throws UnsupportedOperationException {
         return switch (operator) {
             case "+", "-" -> 0;
             case "*", "/" -> 1;
