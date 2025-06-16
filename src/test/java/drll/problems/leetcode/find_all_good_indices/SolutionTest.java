@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -31,19 +32,19 @@ class SolutionTest {
     @Test
     void should_return_correctly_for_test_case3() {
         assertThat(solution.goodIndices(new int[]{877464,394689,51354,348332,285490,570624}, 2)).
-                isEqualTo(Arrays.asList(3));
+                isEqualTo(List.of(3));
     }
 
     @Test
     void should_return_correctly_for_test_case4() {
         assertThat(solution.goodIndices(new int[]{440043,276285,336957}, 1)).
-                isEqualTo(Arrays.asList(1));
+                isEqualTo(List.of(1));
     }
 
     @Test
     void should_return_correctly_for_test_case5() {
         assertThat(solution.goodIndices(new int[]{4,2,3}, 1)).
-                isEqualTo(Arrays.asList(1));
+                isEqualTo(List.of(1));
     }
 
     @Test
@@ -60,7 +61,7 @@ class SolutionTest {
     @Test
     void should_return_correctly_for_test_case7() {
         assertThat(solution.goodIndices(new int[]{8,4,3,5,8,5,10}, 2)).
-                isEqualTo(Arrays.asList(2));
+                isEqualTo(List.of(2));
     }
 
     @Test
