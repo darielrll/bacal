@@ -13,14 +13,9 @@ public class Solution {
         boolean verifyAfter = true;
 
         while (candidateGoodIndex < nums.length - k){
-            int beforeStart =  candidateGoodIndex - k;
-            int beforeEnd = candidateGoodIndex - 1;
 
-            int afterStart = candidateGoodIndex + 1;
-            int afterEnd = candidateGoodIndex + k;
-
-            int nonIncreasingPositionBreak = getNonIncreasingPositionBreak(verifyBefore, checkNonIncreasing(nums, beforeStart, beforeEnd));
-            int nonDecreasingPositionBreak = getNonIncreasingPositionBreak(verifyAfter, checkNonDecreasing(nums, afterStart, afterEnd));
+            int nonIncreasingPositionBreak = getNonIncreasingPositionBreak(verifyBefore, checkNonIncreasing(nums, candidateGoodIndex, k));
+            int nonDecreasingPositionBreak = getNonIncreasingPositionBreak(verifyAfter, checkNonDecreasing(nums, candidateGoodIndex, k));
 
             if (nonIncreasingPositionBreak != -1) {
                 candidateGoodIndex = nonIncreasingPositionBreak + k + 1;
@@ -30,21 +25,17 @@ public class Solution {
                 goodIndices.add(candidateGoodIndex);
                 candidateGoodIndex++;
 
-                if(candidateGoodIndex >= nums.length - k){
-                    break;
-                }
-
-                if(nums[beforeEnd + 1] > nums[beforeEnd]){
-                    verifyBefore = true;
-                    verifyAfter = true;
-                    candidateGoodIndex = beforeEnd + k + 1;
-                }
-                else{
-                    verifyBefore = false;
-                    verifyAfter = false;
-                    if(nums[afterEnd + 1] < nums[afterEnd]){
-                        verifyBefore = true;
-                        candidateGoodIndex = afterEnd;
+                if(candidateGoodIndex < nums.length - k){
+                    verifyBefore = nums[candidateGoodIndex - 1] > nums[candidateGoodIndex - 2];
+                    verifyAfter = verifyBefore;
+                    if(verifyBefore){
+                        candidateGoodIndex += k - 1;
+                    }
+                    else{
+                        if(nums[candidateGoodIndex + k] < nums[candidateGoodIndex + k - 1]){
+                            verifyBefore = true;
+                            candidateGoodIndex += k - 1;
+                        }
                     }
                 }
             }
@@ -56,7 +47,10 @@ public class Solution {
         return verifyBefore ? nums : -1;
     }
 
-    private int checkNonIncreasing(int[] nums, int start, int end){
+    private int checkNonIncreasing(int[] nums, int candidateGoodIndex, int k){
+        int start =  candidateGoodIndex - k;
+        int end = candidateGoodIndex - 1;
+
         for (int i = start; i < end; i++) {
             if(nums[i] < nums[i + 1]){
                 return i;
@@ -65,7 +59,10 @@ public class Solution {
         return -1;
     }
 
-    private int checkNonDecreasing(int[] nums, int start, int end){
+    private int checkNonDecreasing(int[] nums, int candidateGoodIndex, int k){
+        int start = candidateGoodIndex + 1;
+        int end = candidateGoodIndex + k;
+
         for (int i = start; i < end; i++) {
             if(nums[i] > nums[i + 1]){
                 return i;
