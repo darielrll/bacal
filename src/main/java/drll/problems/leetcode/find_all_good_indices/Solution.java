@@ -28,14 +28,13 @@ public class Solution {
                 if(candidateGoodIndex < nums.length - k){
                     verifyBefore = nums[candidateGoodIndex - 1] > nums[candidateGoodIndex - 2];
                     verifyAfter = verifyBefore;
-                    if(verifyBefore){
+                    boolean isAfterNonDecreasingBroken = nums[candidateGoodIndex + k] < nums[candidateGoodIndex + k - 1];
+
+                    if(verifyBefore  || isAfterNonDecreasingBroken){
                         candidateGoodIndex += k - 1;
                     }
-                    else{
-                        if(nums[candidateGoodIndex + k] < nums[candidateGoodIndex + k - 1]){
-                            verifyBefore = true;
-                            candidateGoodIndex += k - 1;
-                        }
+                    if(isAfterNonDecreasingBroken){
+                        verifyBefore = true;
                     }
                 }
             }
