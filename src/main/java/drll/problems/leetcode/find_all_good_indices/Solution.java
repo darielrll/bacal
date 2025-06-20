@@ -26,12 +26,8 @@ public class Solution {
                     verifyAfter = verifyBefore;
                     boolean isAfterNonDecreasingBroken = nums[candidateGoodIndex + k] < nums[candidateGoodIndex + k - 1];
 
-                    if(verifyBefore  || isAfterNonDecreasingBroken){
-                        candidateGoodIndex += k - 1;
-                    }
-                    if(isAfterNonDecreasingBroken){
-                        verifyBefore = true;
-                    }
+                    candidateGoodIndex = getCandidateGoodIndex(k, verifyBefore, isAfterNonDecreasingBroken, candidateGoodIndex);
+                    verifyBefore = isVerifyBefore(isAfterNonDecreasingBroken, verifyBefore);
                 }
             }
             else {
@@ -41,6 +37,20 @@ public class Solution {
             }
         }
         return goodIndices;
+    }
+
+    private static boolean isVerifyBefore(boolean isAfterNonDecreasingBroken, boolean verifyBefore) {
+        if(isAfterNonDecreasingBroken){
+            return true;
+        }
+        return verifyBefore;
+    }
+
+    private static int getCandidateGoodIndex(int k, boolean verifyBefore, boolean isAfterNonDecreasingBroken, int candidateGoodIndex) {
+        if(verifyBefore || isAfterNonDecreasingBroken){
+            return candidateGoodIndex + k - 1;
+        }
+        return candidateGoodIndex;
     }
 
     private int getNonIncreasingPositionBreak(boolean verifyBefore, int nums) {
