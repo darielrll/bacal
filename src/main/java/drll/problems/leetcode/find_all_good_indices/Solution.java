@@ -17,11 +17,7 @@ public class Solution {
             int nonIncreasingPositionBreak = getNonIncreasingPositionBreak(verifyBefore, checkNonIncreasing(nums, candidateGoodIndex, k));
             int nonDecreasingPositionBreak = getNonIncreasingPositionBreak(verifyAfter, checkNonDecreasing(nums, candidateGoodIndex, k));
 
-            if (nonIncreasingPositionBreak != -1) {
-                candidateGoodIndex = nonIncreasingPositionBreak + k + 1;
-            } else if (nonDecreasingPositionBreak != -1) {
-                candidateGoodIndex = nonDecreasingPositionBreak;
-            } else {
+            if (nonIncreasingPositionBreak == -1 && nonDecreasingPositionBreak == -1) {
                 goodIndices.add(candidateGoodIndex);
                 candidateGoodIndex++;
 
@@ -37,6 +33,11 @@ public class Solution {
                         verifyBefore = true;
                     }
                 }
+            }
+            else {
+                candidateGoodIndex = nonIncreasingPositionBreak != -1
+                        ? nonIncreasingPositionBreak + k + 1
+                        : nonDecreasingPositionBreak;
             }
         }
         return goodIndices;
