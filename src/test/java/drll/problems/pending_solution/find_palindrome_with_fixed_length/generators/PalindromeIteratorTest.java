@@ -15,13 +15,11 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_return_true_has_next_palindrome() {
         assertThat(palindromeIterator.hasNext()).isTrue();
     }
 
     @Test
-    @Disabled
     void should_return_current_palindrome() {
         String palindrome = palindromeIterator.next();
 
@@ -29,7 +27,6 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_init_generator_at_a_given_number_palindrome() {
         palindromeIterator = new PalindromeNumberIterator("101");
 
@@ -37,20 +34,17 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_return_palindrome_1_for_a_new_palindrome_genertor() {
         assertThat(palindromeIterator.next()).isEqualTo("1");
     }
 
     @Test
-    @Disabled
     void should_return_palindrome_2_as_a_second_palindrome() {
         palindromeIterator.next();
         assertThat(palindromeIterator.next()).isEqualTo("2");
     }
 
     @Test
-    @Disabled
     void should_return_first_nine_palindromes_of_length_1() {
         for (int i = 0; i < 9; i++) {
             assertThat(palindromeIterator.next()).isEqualTo(String.valueOf(i + 1));
@@ -58,7 +52,6 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_return_11_as_a_first_palindromes_of_length_2() {
         for (int i = 0; i < 9; i++) {
             palindromeIterator.next();
@@ -68,7 +61,6 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_return_22_as_a_second_palindromes_of_length_2() {
         for (int i = 0; i < 9; i++) {
             palindromeIterator.next();
@@ -79,7 +71,6 @@ class PalindromeIteratorTest {
     }
 
     @Test
-    @Disabled
     void should_return_nine_palindromes_of_length_2() {
         for (int i = 0; i < 9; i++) {
             palindromeIterator.next();

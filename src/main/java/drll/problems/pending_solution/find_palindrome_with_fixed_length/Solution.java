@@ -1,5 +1,7 @@
 package drll.problems.pending_solution.find_palindrome_with_fixed_length;
 
+import drll.problems.pending_solution.find_palindrome_with_fixed_length.generators.PalindromeNumberIterator;
+
 public class Solution {
     public long[] kthPalindrome(int[] queries, int intLength) {
         long[] answer = new long[queries.length];
@@ -14,10 +16,26 @@ public class Solution {
             }
         }
 
+
+       /* PalindromeNumberIterator palindromeIterator = new PalindromeNumberIterator();
+        int currentIndex = 1;
+        for(int i = 0; i < queries.length; i++) {
+            while (currentIndex < queries[i]) {
+                palindromeIterator.next();
+                currentIndex++;
+            }
+            String nextPalindrome = palindromeIterator.next();
+            if (nextPalindrome.length() != intLength) {
+                answer[i] = -1;
+            } else {
+                answer[i] = Long.parseLong(nextPalindrome);
+            }
+        }*/
+
         return answer;
     }
 
-    class PalindromeGenerator {
+    static class PalindromeGenerator {
         private char[] currentPalindrome;
         private int currentNthPalindrome = 1;
 
