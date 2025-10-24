@@ -1,4 +1,4 @@
-package drll.problems.pending_solution.find_palindrome_with_fixed_length.generators;
+package drll.problems.leetcode.find_palindrome_with_fixed_length.generators;
 
 import java.util.Iterator;
 

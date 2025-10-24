@@ -35,18 +35,18 @@ from [Hacker Rank](https://www.hackerrank.com/dashboard),
           
 ##### Counter of solved problems according to the difficulty classifications of the online judges
 
-|                          Online Judge Problems                          | Easy | Medium | Hard | Advanced | Total |
-|:-----------------------------------------------------------------------:|:----:|:------:|:----:|:--------:|:-----:|
+|                          Online Judge Problems                           | Easy | Medium | Hard | Advanced | Total |
+|:------------------------------------------------------------------------:|:----:|:------:|:----:|:--------:|:-----:|
 | [HackerRank](/src/main/java/drll/problems/hacker_rank/SolvedProblems.md) |  9   |   14   |  3   |    1     |  27   |
-|   [LeetCode](/src/main/java/drll/problems/leetcode/SolvedProblems.md)   |  44  |   55   |  1   |          |  100  |
-|                                                                         |      |        |      |          |  127  |
+|   [LeetCode](/src/main/java/drll/problems/leetcode/SolvedProblems.md)    |  44  |   56   |  1   |          |  102  |
+|                                                                          |      |        |      |          |  129  |
 
 ##### My current classification in the online judges
 
-| Online Judge |  Rank  | Points  | Update Day | Trend* ▲▼  ◄► |
-|:------------:|:------:|:-------:|:----------:|:-------------:|
-|  HackerRank  | 132835 | 1040.63 |  09/04/22  |       ▲       |
-|   LeetCode   | 529423 |  1272   |  15/10/22  |       ▲       |
+| Online Judge |   Rank    | Points  | Update Day | Trend* ▲▼  ◄► |
+|:------------:|:---------:|:-------:|:----------:|:-------------:|
+|  HackerRank  |  132 835  | 1040.63 |  09/04/22  |       ▲       |
+|   LeetCode   | 1 212 207 |  1497   |  24/10/25  |       ▲       |
 *: Trend of the observed ranking
 
 #### CLI
