@@ -7,7 +7,6 @@ workspace:
   path: app
 
 steps:
-  # --- 1. CONFIGURACIÓN E INSTALACIÓN DE CACHÉ ---
   - name: cache
     image: plugins/cache:2
     settings:
@@ -17,53 +16,38 @@ steps:
         - ~/.gradle/caches
         - ~/.gradle/wrapper
       repo: bacal
-      # La clave de caché (similar a hashFiles de GitHub Actions)
       keys:
         - gradle-{{ checksum "build.gradle" }}
         - gradle-latest
 
-  # --- 2. BUILD Y TESTS ---
   - name: build_and_test
-    # Utilizamos una imagen que ya tiene Java 17 y Gradle
     image: gradle:7.6-jdk17
     commands:
-      # 1. Ejecutar el build (limpia, compila, etc.)
       - echo "Building with Gradle..."
       - ./gradlew build --no-daemon
-
-      # 2. Ejecutar los tests (redundante con 'build', pero lo mantenemos para claridad)
       - echo "Running tests..."
       - ./gradlew test
 
-  # --- 3. REPORTE DE COBERTURA (Jacoco) ---
   - name: generate_coverage_report
     image: gradle:7.6-jdk17
     commands:
       - echo "Generating Jacoco report..."
       - ./gradlew jacocoTestReport
 
-  # --- 4. CARGA DE COBERTURA A CODACY ---
-  # Usamos la imagen base para ejecutar la llamada cURL/CLI de Codacy
   - name: upload_coverage_codacy
     image: alpine/curl:latest
     environment:
-      # La variable se debe configurar como un secreto en la interfaz de Drone
       CODACY_PROJECT_TOKEN:
         from_secret: CODACY_PROJECT_TOKEN
     commands:
-      # Este comando puede variar ligeramente, pero utiliza cURL para enviar el XML
       - echo "Uploading coverage to Codacy..."
-      # Asume que el reporte está en build/reports/jacoco/test/jacocoTestReport.xml
       - curl -X POST -H 'Content-Type: application/json' --data '{"token": "$$CODACY_PROJECT_TOKEN", "commit": "$$DRONE_COMMIT_SHA", "coverageReports": ["build/reports/jacoco/test/jacocoTestReport.xml"]}' https://api.codacy.com/api/v3/coverage/upload
 
-  # --- 5. ANÁLISIS SONARQUBE ---
   - name: sonarqube_analysis
     image: gradle:7.6-jdk17
     environment:
-      # El token debe configurarse como un secreto en la interfaz de Drone
       SONAR_TOKEN:
         from_secret: SONAR_TOKEN
     commands:
       - echo "Running SonarQube analysis..."
-      # Ejecuta la tarea de SonarQube con el token
       - ./gradlew sonarqube -Dsonar.login=$$SONAR_TOKEN
