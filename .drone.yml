@@ -41,7 +41,7 @@ steps:
         from_secret: CODACY_PROJECT_TOKEN
     commands:
       - echo "Uploading coverage to Codacy..."
-      - curl -X POST -H 'Content-Type: application/json' --data '{"token": "$$CODACY_PROJECT_TOKEN", "commit": "$$DRONE_COMMIT_SHA", "coverageReports": ["build/reports/jacoco/test/jacocoTestReport.xml"]}' https://api.codacy.com/api/v3/coverage/upload
+      - curl -X POST -H 'Content-Type: application/json' --data '{"token":"$$CODACY_PROJECT_TOKEN","commit":"$$DRONE_COMMIT_SHA", "coverageReports":["build/reports/jacoco/test/jacocoTestReport.xml"]}' https://api.codacy.com/api/v3/coverage/upload
 
   - name: sonarqube_analysis
     image: gradle:7.6-jdk17
