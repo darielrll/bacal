@@ -8,7 +8,7 @@ workspace:
 
 steps:
   - name: cache
-    image: plugins/cache:2
+    image: drone/cache-extension:latest
     settings:
       restore: true
       rebuild: true
