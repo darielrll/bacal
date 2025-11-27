@@ -7,19 +7,6 @@ workspace:
   path: app
 
 steps:
-  - name: cache
-    image: drone/cache-extension:latest
-    settings:
-      restore: true
-      rebuild: true
-      mount:
-        - ~/.gradle/caches
-        - ~/.gradle/wrapper
-      repo: bacal
-      keys:
-        - gradle-{{ checksum "build.gradle" }}
-        - gradle-latest
-
   - name: build_and_test
     image: gradle:7.6-jdk17
     commands:
